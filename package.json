@@ -9,6 +9,8 @@
   "author": "gccdev",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.1"
+    "angular": "^1.6.1",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.21"
   }
 }
