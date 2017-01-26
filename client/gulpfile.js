@@ -4,7 +4,7 @@ var uglify = require('gulp-uglify');
 var ngAnnotate = require('gulp-ng-annotate');
 
 gulp.task("transpile", function(){
-  gulp.src(['assets/javascript/app.js', 'assets/javascript/**/*.js'])
+  gulp.src(['assets/javascript/app.js', '!assets/javascript/vendor/*.js', 'assets/javascript/**/*.js'])
     .pipe(concat('bundle.js'))
     .pipe(ngAnnotate())
     .pipe(uglify())
