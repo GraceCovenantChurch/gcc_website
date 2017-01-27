@@ -1,13 +1,19 @@
+* {
+  margin: 0;
+}
+
 html {
   position: relative;
   min-height: 100%;
 }
 
 body {
-  font-family:'Roboto', sans-serif;
+  font-family:'Karla', sans-serif;
   margin-bottom: 60px; /*this must be the height of the footer!*/
+  padding-top: 80px; /*this must be the height of the navbar!*/
 }
 
+/*Navbar CSS*/
 .navbar {
   background-color: white;
   height: 80px;
@@ -31,6 +37,21 @@ body {
   margin-top: 5px;
 }
 
+/*home page*/
+.jumbotron.banner {
+  background: url('../images/philly.jpg') top left/cover no-repeat;
+  height: 95vh;
+}
+
+.jumbotron .container {
+  text-align: center;
+  color: white;
+  height: auto;
+  margin: auto;
+}
+
+
+/*footer CSS*/
 .footer {
   position: absolute;
   bottom: 0;
@@ -38,8 +59,22 @@ body {
   height: 60px;
   background-color: black;
   color: white;
+  overflow: hidden;
 }
 
 .footer .container {
   padding: 0 100px;
+}
+
+.footer p, .footer i {
+  line-height: 55px;
+}
+
+.footer i {
+  margin-left: 40px;
+}
+
+.footer a {
+  font-size: 28px;
+  color: white;
 }

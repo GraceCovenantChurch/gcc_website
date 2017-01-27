@@ -1,1 +1,1 @@
-angular.module('gccweb', []);
+angular.module('gccweb', ['ngRoute']);

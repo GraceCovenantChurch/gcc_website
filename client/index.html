@@ -5,12 +5,19 @@
     <title></title>
     <link href="assets/styles/bootstrap.min.css" rel="stylesheet" />
     <link href="assets/styles/main.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
   </head>
   <body>
+
     <site-nav></site-nav>
+    <div ng-view></div>
     <site-footer></site-footer>
+
+
     <script src="assets/javascript/vendor/angular.js"></script>
+    <script src="assets/javascript/vendor/angular-route.js"></script>
+    <script src="assets/javascript/vendor/angular-resource.js"></script>
     <script src="dist/bundle.js"></script>
+    <script src="https://use.fontawesome.com/b1b5d46893.js"></script>
   </body>
 </html>
