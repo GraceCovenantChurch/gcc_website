@@ -10,13 +10,13 @@ html {
 body {
   font-family:'Karla', sans-serif;
   margin-bottom: 60px; /*this must be the height of the footer!*/
-  padding-top: 80px; /*this must be the height of the navbar!*/
+  padding-top: 10vh; /*this must be the height of the navbar!*/
 }
 
 /*Navbar CSS*/
 .navbar {
   background-color: white;
-  height: 80px;
+  height: 10vh;
 }
 
 .navbar .container {
@@ -34,22 +34,39 @@ body {
 }
 .navbar-brand img {
   height: 40px;
-  margin-top: 5px;
+  margin-top: 5px;cd
 }
 
 /*home page*/
-.jumbotron.banner {
-  background: url('../images/philly.jpg') top left/cover no-repeat;
-  height: 95vh;
+.jumbotron {
+  height: 90vh;
+  padding-top: 1px;
+  margin-bottom: 0;
 }
 
-.jumbotron .container {
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('../images/philly.jpg') top left/cover no-repeat;
+}
+
+#welcome {
   text-align: center;
   color: white;
-  height: auto;
-  margin: auto;
+  margin-top: 40vh;
 }
 
+.landing {
+  height: 45vh;
+  background: white;
+}
+
+#motto {
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.announcements {
+  background: url('../images/welcome.jpg') top left/cover no-repeat;
+}
 
 /*footer CSS*/
 .footer {
