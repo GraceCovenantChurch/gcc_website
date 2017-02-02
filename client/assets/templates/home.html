@@ -12,6 +12,13 @@
   </div>
 </div>
 
-<div class="jumbotron announcements">
-
+<div class="mainAnnouncements" ng-controller="mainAnnouncementsController">
+  <div ng-repeat="announcement in ma">
+    <div class="jumbotron announcements"  ng-style="{'background-image' : 'url({{'assets/images/' + announcement.pic}})'}">
+      <div class="container">
+        <h2>{{announcement.title}}</h2>
+        <h2>{{announcement.description}}</h2>
+      </div>
+    </div>
+  </div>
 </div>

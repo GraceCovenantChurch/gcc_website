@@ -10,13 +10,13 @@ html {
 body {
   font-family:'Karla', sans-serif;
   margin-bottom: 60px; /*this must be the height of the footer!*/
-  padding-top: 10vh; /*this must be the height of the navbar!*/
+  padding-top: 80px; /*this must be the height of the navbar!*/
 }
 
 /*Navbar CSS*/
 .navbar {
   background-color: white;
-  height: 10vh;
+  height: 80px;
 }
 
 .navbar .container {
@@ -60,12 +60,14 @@ body {
 }
 
 #motto {
-  margin-top: 10vh;
+  margin-top: 12vh;
   text-align: center;
 }
 
 .announcements {
-  background: url('../images/welcome.jpg') top left/cover no-repeat;
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*footer CSS*/
