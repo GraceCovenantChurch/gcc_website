@@ -22,3 +22,37 @@
     </div>
   </div>
 </div>
+
+<div class="row pillars">
+  <div class="container">
+    <div class="col-sm-3">
+      <h3>Family Groups</h3>
+      <p>Get to know the people you see on Sundays by studying the Word together</p>
+      <a href="#">Learn more here</a>
+    </div>
+    <div class="col-sm-3">
+      <h3>Ministries</h3>
+      <p>Learn about the ways to serve God and His people</p>
+      <a href="#">Learn more here</a>
+    </div>
+    <div class="col-sm-3">
+      <h3>Giving</h3>
+      <p>Learn more about how to give</p>
+      <a href="#">Learn more here</a>
+    </div>
+    <div class="col-sm-3">
+      <h3>Sign up for daily devotionals</h3>
+      <p>Daily devotionals for the AMI community of churches.</p>
+      <a href="https://amiquiettimes.com/">Read and subscribe here</a>
+    </div>
+  </div>
+</div>
+
+<div class="row info">
+  <div class="container" ng-controller="smallAnnouncementsController">
+      <h2>Announcements</h2>
+      <ul>
+        <li ng-repeat="announcement in sa">{{announcement}}</li>
+      </ul>
+  </div>
+</div>
