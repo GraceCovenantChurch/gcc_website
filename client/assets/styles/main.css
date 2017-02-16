@@ -113,12 +113,25 @@ body {
 }
 
 .memoryVerse {
-  background-position: top left;
+  background-position: 50% 10%;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  text-align: center;
+  color: white;
+  height: 40vh;
+  padding-top: 10vh;
 }
+
+.mvContainer {
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+.memoryVerse h5 {
+  margin-top: 30px;
+  text-align: right;
+}
+
+
 /*footer CSS*/
 .footer {
   position: absolute;

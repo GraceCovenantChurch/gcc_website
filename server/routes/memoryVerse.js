@@ -6,7 +6,7 @@ var data =
   {
     "verse" : "Jesus Christ is the same yesterday and today and forever.",
     "reference" : "Hebrews 13:8",
-    "pic" : "mv.jpg"
+    "pic" : "memory.jpg"
   }
 ]
 router.route('/')
