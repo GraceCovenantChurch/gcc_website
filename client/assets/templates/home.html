@@ -23,6 +23,14 @@
   </div>
 </div>
 
+<div ng-controller="memoryVerseController">
+  <div class="memoryVerse" ng-style="{'background-image' : 'url({{'assets/images/' + mv.pic}})'}">
+    <h3>Memory Verse of the Month</h3>
+    <h2>{{mv.verse}}</h2>
+    <h5>{{"-" + mv.reference}}</h5>
+  </div>
+</div>
+
 <div class="row pillars">
   <div class="container">
     <div class="col-sm-3">
@@ -43,7 +51,7 @@
     <div class="col-sm-3">
       <h3>Sign up for daily devotionals</h3>
       <p>Daily devotionals for the AMI community of churches.</p>
-      <a href="https://amiquiettimes.com/">Read and subscribe here</a>
+      <a target="_blank" href="https://amiquiettimes.com/">Read and subscribe here</a>
     </div>
   </div>
 </div>

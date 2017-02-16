@@ -111,6 +111,14 @@ body {
   text-align: center;
   font-size: 16px;
 }
+
+.memoryVerse {
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
 /*footer CSS*/
 .footer {
   position: absolute;

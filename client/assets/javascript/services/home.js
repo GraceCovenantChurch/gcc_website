@@ -4,4 +4,7 @@ angular.module('gccweb')
   })
   .factory("SmallAnnouncement", function SAFactory($resource) {
     return $resource("/smallAnnouncement", {}, {});
+  })
+  .factory("MemoryVerse", function MVFactory($resource) {
+    return $resource("/memoryVerse", {}, {});
   });
