@@ -14,7 +14,7 @@
 
 <div class="mainAnnouncements" ng-controller="mainAnnouncementsController">
   <div ng-repeat="announcement in ma">
-    <div class="jumbotron announcements" ng-if="announcement.pic" ng-style="{'background-image' : 'linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url({{'assets/images/' + announcement.pic}})'}">
+    <div class="jumbotron announcements" ng-if="announcement.pic" ng-style="{'background-image' : 'linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url({{'assets/images/home/' + announcement.pic}})'}">
       <div class="container">
         <h1 class="announcementHeader">{{announcement.title}}</h1>
         <h3 class="announcementDesc"><a href="#">{{announcement.description}}</a></h3>
@@ -58,7 +58,7 @@
 </div>
 
 <div ng-controller="memoryVerseController">
-  <div class="memoryVerse" ng-if="mv.pic" ng-style="{'background-image' : 'url({{'assets/images/' + mv.pic}})'}">
+  <div class="memoryVerse" ng-if="mv.pic" ng-style="{'background-image' : 'url({{'assets/images/home/' + mv.pic}})'}">
     <div class="mvContainer">
       <h3>Memory Verse of the Month</h3>
       <h2>"{{mv.verse}}"</h2>

@@ -1,3 +1,4 @@
+/******************************Whole document styles **************************/
 * {
   margin: 0;
   transition: opacity 3s;
@@ -17,7 +18,9 @@ body {
 .fade {
   opacity : 0;
 }
-/*Navbar CSS*/
+
+
+/******************************Navbar CSS**************************************/
 .navbar {
   background-color: white;
   height: 80px;
@@ -41,7 +44,7 @@ body {
   margin-top: 5px;cd
 }
 
-/*home page*/
+/******************************Homepage CSS**************************************/
 .jumbotron {
   height: 90vh;
   padding-top: 1px;
@@ -49,7 +52,7 @@ body {
 }
 
 .banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../images/philly.jpg') top left/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../images/home/philly.jpg') top left/cover no-repeat;
 }
 
 #welcome {
@@ -135,8 +138,34 @@ body {
   text-align: right;
 }
 
+/******************************About CSS**************************************/
+.col-sm-6 {
+  margin: 0;
+  padding: 10px 10px;
+}
 
-/*footer CSS*/
+.box1 {
+  background: url('/assets/images/about/new.jpg') top left/100% 100% no-repeat;
+  height: 45vh;
+}
+
+.box2 {
+  background:  url('/assets/images/about/believe.jpg') top left/100% 100% no-repeat;
+  height: 45vh;
+}
+
+.box3 {
+  background:url('/assets/images/about/staff.jpg') top left/100% 100% no-repeat;
+  height: 45vh;
+}
+
+.box4 {
+  background: url('/assets/images/about/ami.jpg') top left/100% 100% no-repeat;
+  height: 45vh;
+}
+
+
+/******************************Footer CSS**************************************/
 .footer {
   position: absolute;
   bottom: 0;
