@@ -1,0 +1,11 @@
+<div class="container staff" ng-controller="staffController">
+  <div class="row" ng-repeat="staff in staffList" ng-if="$index">
+    <div class="col-sm-6 person" ng-repeat="staff in staffList">
+      <img ng-if="staff.pic" ng-src=" {{'assets/images/about/staff/' + staff.pic}}"></img>
+      <h2>{{staff.name}}</h2>
+      <h4>{{staff.title}}</h4>
+      <a href="mailto:pastoryoung@gracecovenant.net">{{staff.email}}</a>
+      <p>{{staff.description}}</p>
+    </div>
+  </div>
+</div>
