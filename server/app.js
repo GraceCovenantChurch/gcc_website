@@ -7,11 +7,8 @@ var app = express();
 var db = require('./db.js');
 
 app.use(express.static('client'));
-app.use('/mainAnnouncement', mainAnnouncement);
-app.use('/smallAnnouncement', smallAnnouncement);
-app.use('/memoryVerse', memoryVerse);
-app.use('/staff', staff);
-app.use('/file', require('./routes/file.js'));
+app.use('/admin', require('./routes/admin'));
+app.use('/', require('./routes'));
 
 db.initialized.then(function() {
   app.listen(8000, function() {
