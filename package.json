@@ -4,6 +4,7 @@
   "description": "Website for Grace Covenant Church",
   "main": "server/app.js",
   "scripts": {
+    "start": "NODE_ENV=dev node server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "gccdev",
@@ -11,8 +12,11 @@
   "dependencies": {
     "angular": "^1.6.1",
     "angular-inview": "^2.1.0",
+    "async": "^2.1.5",
     "express": "^4.14.0",
-    "mongodb": "^2.2.21"
+    "mongodb": "^2.2.21",
+    "mongoose": "^4.8.5",
+    "node-mime": "^1.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
