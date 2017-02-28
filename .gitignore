@@ -39,3 +39,5 @@ jspm_packages
 #amazonKey
 ec2Key.ppk
 webuser.pem
+
+config.json
