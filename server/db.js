@@ -1,9 +1,10 @@
 
 var mongoose = require('mongoose');
+var nconf = require('nconf');
 
 var db = {
   initialized: new Promise(function(resolve, reject) {
-    mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/gccweb', function(err) {
+    mongoose.connect(nconf.get('MONGODB_URI') || 'mongodb://localhost:27017/gccweb', function(err) {
       if (err) reject(err);
       console.log('Connected to database')
       resolve();
@@ -24,9 +25,9 @@ var mime = require('mime');
 
 // INITIAL SEED DATA FOR DEV
 // drops collections and repoluates with seed data
-if (process.env.NODE_ENV === 'dev') {
+if (nconf.get('NODE_ENV') === 'dev') {
   db.initialized.then(function() {
-
+    console.log('seeding DB');
     fs.readdir(path.join(__dirname, 'seed/files'), function(err, filenames) {
       File.remove({}, function(err) {
         async.parallel(filenames.map(function(filename) {
