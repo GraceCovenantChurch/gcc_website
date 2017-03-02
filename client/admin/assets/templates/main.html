@@ -1,0 +1,26 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9 col-md-8">
+            <h2>
+                <span>{{title}}</span>
+                <a class="pull-right btn btn-default" ng-click="create()">Create</a>
+            </h2>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th ng-repeat="category in categories">{{category}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in data" ng-click="setItem(item)" ng-class="{ 'active': activeItem === item }">
+                        <td ng-repeat="category in categories">{{item[category]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-3 col-md-4">
+            <ng-include src="editForm"></ng-include>
+        </div>
+    </div>
+</div>
