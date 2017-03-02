@@ -11,5 +11,8 @@ angular.module('gccweb')
   })
   .when('/about/staff', {
     templateUrl: 'assets/templates/about/staff.html'
+  })
+  .when('/about/believe', {
+    templateUrl: 'assets/templates/about/believe.html'
   });
 });

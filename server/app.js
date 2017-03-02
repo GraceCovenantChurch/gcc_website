@@ -3,6 +3,7 @@ var mainAnnouncement = require('./routes/mainAnnouncements.js');
 var smallAnnouncement = require('./routes/smallAnnouncements.js');
 var memoryVerse = require('./routes/memoryVerse.js');
 var staff = require('./routes/staff.js');
+var believe = require('./routes/believe.js');
 var app = express();
 var db = require('./db.js');
 var path = require('path');
@@ -24,6 +25,8 @@ app.use(passport.session());
 app.use(express.static('client'));
 app.use('/admin', require('./routes/admin'));
 app.use('/', require('./routes'));
+app.use('/staff', staff);
+app.use('/believe', believe);
 
 db.initialized.then(function() {
   app.listen(8000, function() {
