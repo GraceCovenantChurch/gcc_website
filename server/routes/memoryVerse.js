@@ -1,18 +1,11 @@
 var express = require('express');
 var router = express.Router();
+var MemoryVerse = require('../models/memoryVerse.js');
 
-var data =
-[
-  {
-    "verse" : "Jesus Christ is the same yesterday and today and forever.",
-    "reference" : "Hebrews 13:8",
-    "pic" : "memory.jpg"
-  }
-]
-router.route('/')
-.get(function (request, response) {
-  console.log("request for mv");
-  response.json(data);
+router.get('/', function(req, res) {
+  MemoryVerse.find({}, function(err, verses) {
+    res.send(verses);
+  });
 });
 
 module.exports = router;

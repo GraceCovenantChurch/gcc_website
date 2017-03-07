@@ -4,6 +4,8 @@
   "description": "Website for Grace Covenant Church",
   "main": "server/app.js",
   "scripts": {
+    "watch": "cd client && gulp watch",
+    "start": "NODE_ENV=dev nodemon server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "gccdev",
@@ -11,13 +13,23 @@
   "dependencies": {
     "angular": "^1.6.1",
     "angular-inview": "^2.1.0",
+    "async": "^2.1.5",
+    "body-parser": "^1.16.1",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.1",
     "express": "^4.14.0",
-    "mongodb": "^2.2.21"
+    "mongodb": "^2.2.21",
+    "mongoose": "^4.8.5",
+    "nconf": "^0.8.4",
+    "node-mime": "^1.0.0",
+    "passport": "^0.3.2",
+    "passport-google-oauth20": "^1.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-ng-annotate": "^2.0.0",
-    "gulp-uglify": "^2.0.1"
+    "gulp-uglify": "^2.0.1",
+    "nodemon": "^1.11.0"
   }
 }
