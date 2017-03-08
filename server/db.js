@@ -6,7 +6,7 @@ var db = {
   initialized: new Promise(function(resolve, reject) {
     mongoose.connect(nconf.get('MONGODB_URI') || 'mongodb://localhost:27017/gccweb', function(err) {
       if (err) reject(err);
-      console.log('Connected to database')
+      console.log('Connected to database');
       resolve();
     });
   })
@@ -31,7 +31,7 @@ if (nconf.get('NODE_ENV') === 'dev') {
     fs.readdir(path.join(__dirname, 'seed/files'), function(err, filenames) {
       File.remove({}, function(err) {
         async.parallel(filenames.map(function(filename) {
-          return function(cb) {
+          return function(cb) {``
             var filepath = path.join(__dirname, 'seed/files', filename);
             fs.readFile(filepath, function(err, data) {
               File.create({
@@ -40,7 +40,7 @@ if (nconf.get('NODE_ENV') === 'dev') {
                 contentType: mime.lookup(filepath)
               }, cb);
             });
-          }  
+          }
         }), function(err, results) {
           if (err) throw err;
         });

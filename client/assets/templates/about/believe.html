@@ -1,6 +1,8 @@
-<div class="container believe" ng-controller="believeController">
-  <div class="panel" ng-repeat="believe in believeList">
-    <h2>{{believe.title}}</h4>
-    <h4>{{believe.description}}</p>
+<div class="jumbotron believe">
+  <div class="container believe" ng-controller="believeController">
+    <div class="panel" ng-click="select($index)" ng-repeat="believe in believeList">
+      <h2>{{believe.title}}</h2>
+      <h4 class="beliefDesc" ng-show="tab == $index">{{believe.description}}</h4>
+    </div>
   </div>
 </div>
