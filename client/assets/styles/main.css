@@ -270,7 +270,43 @@ ul {
   background-color: rgba(50, 50, 50, 0.4);
 }
 
+/******************************im new CSS*********************************/
+.container.imnew {
+  padding: 10px 100px;
+}
 
+.imnewcol {
+  height: 25vh;
+}
+
+.newVid {
+  height: 50vh;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.imnewcol img {
+  max-width: 105%;
+  max-height: 105%;
+}
+
+.words {
+  font-size: 16px;
+}
+
+#commonQ {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+#commonQList {
+  margin-top: 0;
+}
+
+.maps {
+  padding: 10px 0;
+  border: 1px solid #EEEEEE;
+}
 /******************************Footer CSS**************************************/
 .footer {
   position: absolute;
