@@ -17,5 +17,8 @@ angular.module('gccweb')
   })
   .when('/about/imnew', {
     templateUrl: 'assets/templates/about/imnew.html'
+  })
+  .when('/familygroup', {
+    templateUrl: 'assets/templates/familygroup/familygroup.html'
   });
 });

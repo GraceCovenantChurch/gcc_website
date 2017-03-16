@@ -142,18 +142,32 @@ body {
   text-align: right;
 }
 
-/******************************About landing CSS**************************************/
-.jumbotronAbout {
+/*****General Landing CSS*****************************************************/
+.jumbotronMini {
   height: 60vh;
   padding-top: 1px;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/about/jumbotron.jpg') center center/cover;
 }
 
-.jumbotronAbout h1 {
+.jumbotronMini h1 {
   margin-top: 25vh;
-  font-family: 'Kalam', sans-serif;
   color: white;
+  font-family: 'Kalam', sans-serif;
+}
+
+.tile {
+  text-align: center;
+  color: white;
+  padding-top: 15vh;
+}
+
+.tile:hover {
+  color: #DDDDDD
+}
+
+/******************************About landing CSS**************************************/
+.about {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/about/jumbotron.jpg') center center/cover;
 }
 
 .messageAbout {
@@ -175,34 +189,24 @@ body {
   padding: 0 2px;
 }
 
-.box1 {
+.aboutbox1 {
   background: url('/assets/images/about/new.jpg') top left/100% 100% no-repeat;
   height: 40vh;
 }
 
-.box2 {
+.aboutbox2 {
   background:  url('/assets/images/about/believe.jpg') top left/100% 100% no-repeat;
   height: 40vh;
 }
 
-.box3 {
+.aboutbox3 {
   background:url('/assets/images/about/staff.jpg') top left/100% 100% no-repeat;
   height: 40vh;
 }
 
-.box4 {
+.aboutbox4 {
   background: url('/assets/images/about/ami.jpg') top left/100% 100% no-repeat;
   height: 40vh;
-}
-
-.tile {
-  text-align: center;
-  color: white;
-  padding-top: 15vh;
-}
-
-.tile:hover {
-  color: #DDDDDD
 }
 
 /******************************About Staff CSS**************************************/
@@ -270,7 +274,7 @@ ul {
   background-color: rgba(50, 50, 50, 0.4);
 }
 
-/******************************im new CSS*********************************/
+/******************************About im new CSS*********************************/
 .container.imnew {
   padding: 10px 100px;
 }
@@ -307,6 +311,27 @@ ul {
   padding: 10px 0;
   border: 1px solid #EEEEEE;
 }
+
+/************ Family Group Landing CSS ****************************************/
+.familygroup {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/familygroup/jumbotron.jpeg') center center/cover;
+}
+
+.fgbox1 {
+  background: url('/assets/images/familygroup/ugrad.jpg') top left/100% 100% no-repeat;
+  height: 40vh;
+}
+
+.fgbox2 {
+  background: url('/assets/images/familygroup/crossroad.jpg') top left/100% 100% no-repeat;
+  height: 40vh;
+}
+
+.fgbox3 {
+  background: url('/assets/images/familygroup/ibs.jpg') top left/100% 100% no-repeat;
+  height: 40vh;
+}
+
 /******************************Footer CSS**************************************/
 .footer {
   position: absolute;
