@@ -20,5 +20,8 @@ angular.module('gccweb')
   })
   .when('/familygroup', {
     templateUrl: 'assets/templates/familygroup/familygroup.html'
+  })
+  .when('/giving', {
+    templateUrl: 'assets/templates/giving.html'
   });
 });

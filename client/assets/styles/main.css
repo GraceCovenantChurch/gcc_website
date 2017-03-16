@@ -158,7 +158,6 @@ body {
 .tile {
   text-align: center;
   color: white;
-  padding-top: 15vh;
 }
 
 .tile:hover {
@@ -192,21 +191,25 @@ body {
 .aboutbox1 {
   background: url('/assets/images/about/new.jpg') top left/100% 100% no-repeat;
   height: 40vh;
+  padding-top: 15vh;
 }
 
 .aboutbox2 {
   background:  url('/assets/images/about/believe.jpg') top left/100% 100% no-repeat;
   height: 40vh;
+  padding-top: 15vh;
 }
 
 .aboutbox3 {
   background:url('/assets/images/about/staff.jpg') top left/100% 100% no-repeat;
   height: 40vh;
+  padding-top: 15vh;
 }
 
 .aboutbox4 {
   background: url('/assets/images/about/ami.jpg') top left/100% 100% no-repeat;
   height: 40vh;
+  padding-top: 15vh;
 }
 
 /******************************About Staff CSS**************************************/
@@ -317,21 +320,58 @@ ul {
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/familygroup/jumbotron.jpeg') center center/cover;
 }
 
+.fgInfo {
+  margin-top: 50px;
+}
+
+.fgText {
+  font-size: 18px;
+}
+
+.imgfg{
+  padding: 0 2px;
+}
+
 .fgbox1 {
-  background: url('/assets/images/familygroup/ugrad.jpg') top left/100% 100% no-repeat;
-  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('/assets/images/familygroup/ugrad.jpg') top left/100% 100% no-repeat;
+  height: 30vh;
+  padding-top: 10vh;
 }
 
 .fgbox2 {
-  background: url('/assets/images/familygroup/crossroad.jpg') top left/100% 100% no-repeat;
-  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('/assets/images/familygroup/crossroad.jpg') top left/100% 100% no-repeat;
+  height: 30vh;
+  padding-top: 10vh;
 }
 
 .fgbox3 {
-  background: url('/assets/images/familygroup/ibs.jpg') top left/100% 100% no-repeat;
-  height: 40vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('/assets/images/familygroup/ibs.jpg') top left/100% 100% no-repeat;
+  width: 100%;
+  height: 30vh;
+  padding-top: 10vh;
 }
 
+.fgTiles {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.fgTiles h2 {
+  margin-bottom: 20px;
+}
+
+/******************************Giving CSS*************************************/
+.giving p, .giving li {
+  font-size: 16px;
+}
+
+#givingHelp {
+  margin-bottom: 0;
+}
+
+#givingList {
+  margin-top: 0;
+}
 /******************************Footer CSS**************************************/
 .footer {
   position: absolute;
