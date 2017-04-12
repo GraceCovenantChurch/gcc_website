@@ -4,11 +4,7 @@ angular.module('gccweb').directive('ministryTile', function() {
     templateUrl: 'assets/templates/ministries/tile.html',
     scope: {
       name: "=",
-      coordinator: "=",
-      contact: "=",
-      pic: "=",
-      privileges: "=",
-      timeCommitment: "="
+      pic: "="
     }
   };
 })
