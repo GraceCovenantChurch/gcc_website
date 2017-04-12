@@ -8,6 +8,7 @@ var smallAnnouncement = require('./routes/smallAnnouncements.js');
 var memoryVerse = require('./routes/memoryVerse.js');
 var staff = require('./routes/staff.js');
 var believe = require('./routes/believe.js');
+var ministry = require('./routes/ministry.js');
 var app = express();
 var db = require('./db.js');
 
@@ -28,6 +29,7 @@ app.use('/admin', require('./routes/admin'));
 app.use('/', require('./routes'));
 app.use('/staff', staff);
 app.use('/believe', believe);
+app.use('/ministry', ministry);
 
 db.initialized.then(function() {
   app.listen(8000, function() {

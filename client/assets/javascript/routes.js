@@ -23,5 +23,8 @@ angular.module('gccweb')
   })
   .when('/giving', {
     templateUrl: 'assets/templates/giving.html'
+  })
+  .when('/ministries', {
+    templateUrl: 'assets/templates/ministries/ministries.html'
   });
 });

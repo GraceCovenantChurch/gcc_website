@@ -372,6 +372,14 @@ ul {
 #givingList {
   margin-top: 0;
 }
+
+/******************************Minstries CSS***********************************/
+.ministries {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/ministries/jumbotron.jpeg') top left/cover;
+}
+
+
+
 /******************************Footer CSS**************************************/
 .footer {
   position: absolute;

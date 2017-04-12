@@ -1,0 +1,10 @@
+<div class="jumbotronMini ministries">
+  <h1>Ministries</h1>
+</div>
+
+<div class="container" ng-controller="ministryController">
+  <div ng-repeat="ministry in ministriesList">
+    <ministry-tile name="ministry.name" coordinator="ministry.coordinator" pic="ministry.pic" contact="ministry.contact" privileges="ministry.privileges" time-commitment="ministry.timeCommitment" >
+    </ministry-tile>
+  </div>
+</div>
