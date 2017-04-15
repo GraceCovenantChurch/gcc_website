@@ -1,3 +1,8 @@
 <div class="ministryInfo">
-  <h1>{{list[currentIndex]["name"]}}</h1>
+  <h1>{{name}}</h1>
+  <img ng-if="pic" ng-src=" {{'assets/images/ministries/' + pic}}" class="img-responsive" />
+  <h5><em><strong>Coordinator: </strong> {{coordinator}}</em></h5>
+  <h5><em><strong>Contact: </strong> {{contact}}</em></h5>
+  <p id="#privileges"><strong><ins>Privileges</ins></strong>: {{privileges}}</p>
+  <p id="#timeCommitment"><strong><ins>Time Commitment</ins></strong>: {{timeCommitment}}</p>
 </div>

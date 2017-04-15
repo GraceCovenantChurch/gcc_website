@@ -2,7 +2,6 @@ angular.module('gccweb')
   .controller("ministryController", function($scope, Ministry) {
     $scope.ministriesList = Ministry.query(function() {
       $scope.getSizeArray = function() {
-        console.log("Here");
         return Array(Math.ceil($scope.ministriesList.length / 4));
       };
       $scope.getRow = function(index) {
