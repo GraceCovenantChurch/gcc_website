@@ -6,6 +6,7 @@
 
 html {
   position: relative;
+  height: auto;
   min-height: 100%;
 }
 
@@ -352,16 +353,62 @@ ul {
 }
 
 /******************************Giving CSS*************************************/
-.giving p, .giving li {
-  font-size: 16px;
+.givingJumbo {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/giving/jumbotron.jpeg') 50% 75%/cover;
 }
 
-#givingHelp {
-  margin-bottom: 0;
+.giving {
+  padding: 100px 0;
 }
 
-#givingList {
-  margin-top: 0;
+.givingDesc {
+  text-align: center;
+  background-color: #F4F4F2;
+}
+
+.giveWays {
+  padding: 50px 0;
+}
+
+.ways3 {
+  border: 1px solid red;
+}
+.ways1 {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+}
+
+.ways2 {
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.giveNote h4 {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.giveTile1 {
+  background-color: red;
+  height: 100px;
+  color: white;
+  text-align: center;
+}
+
+.giveTile2 {
+  background-color: yellow;
+  height: 100px;
+  color: white;
+  text-align: center;
+}
+
+.giveTile3 {
+  background-color: blue;
+  height: 100px;
+  color: white;
+  text-align: center;
 }
 
 /******************************Minstries CSS***********************************/

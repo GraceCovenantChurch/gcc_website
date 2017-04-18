@@ -22,7 +22,7 @@ angular.module('gccweb')
     templateUrl: 'assets/templates/familygroup/familygroup.html'
   })
   .when('/giving', {
-    templateUrl: 'assets/templates/giving.html'
+    templateUrl: 'assets/templates/giving/giving.html'
   })
   .when('/ministries', {
     templateUrl: 'assets/templates/ministries/ministries.html'
