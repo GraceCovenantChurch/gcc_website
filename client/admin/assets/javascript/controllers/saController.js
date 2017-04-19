@@ -8,4 +8,11 @@ angular.module('gccweb-admin')
     $scope.setItem = function(item) {
         $scope.activeItem = item;
     };
+    $scope.create = function() {
+      $scope.activeItem = {
+        text: '',
+        new: true
+      }
+      $scope.data.unshift($scope.activeItem);
+    };
   });

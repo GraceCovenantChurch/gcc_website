@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-// var fs = require('fs');
 var mime = require('mime');
 var File = require('../../models/file.js');
 var Promise = require('bluebird');
@@ -15,8 +14,41 @@ function createCRUD(router, route, defaultObject, Model, guiRoute) {
   var catchRoute = path.join(route, '*');
   
   router.post(createRoute, function(req, res) {
-    return Model.create(defaultObject).finally(function() {
-      res.redirect(guiRoute);
+    var form = new formidable.IncomingForm();
+
+    form.parse(req, function(err, fields, files) {
+      var fileIds = Object.keys(files);
+
+      var filePromises = fileIds.map(function(fileId) {
+        var file = files[fileId];
+        if (file.size === 0) {
+          return Promise.resolve();
+        } else {
+          return fsReadFile(file.path).then(function(data) {
+            return File.create({
+              data: data,
+              contentType: mime.lookup(file.path)
+            });
+          });
+        }
+      });
+      
+      var document = new Model();
+      delete fields['_id'];
+      Object.assign(document, fields);
+      Promise.all(filePromises).then(function(fileDocuments) {
+        for (var i = 0; i < fileIds.length; ++i) {
+          if (fileDocuments[i]) {
+            document[fileIds[i]] = fileDocuments[i]._id;
+          }
+        }
+        document.save(function(err) {
+          if (err) {
+            console.log(err);
+          }
+          res.redirect(guiRoute);
+        });
+      });
     });
   });
 
