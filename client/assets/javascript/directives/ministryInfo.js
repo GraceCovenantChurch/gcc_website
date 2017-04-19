@@ -23,12 +23,14 @@ angular.module('gccweb').directive('ministryInfo', function($rootScope) {
           scope.$apply();
           element.show();
 
-          $('body').animate({
+          // $('html, body').scrollTop(element.offset().top - 100);
+
+          $('html, body').stop(true).animate({
             scrollTop: element.offset().top - 100
           }, 500);
         }
         else element.hide();
-      });
+      } );
     },
     controller : function($scope) {
       $scope.findIndex = function(row, col) {
