@@ -1,7 +1,8 @@
 angular.module('gccweb-admin')
   .controller('memoryVersesController', function($scope, MemoryVerse) {
     $scope.title = 'Memory Verses';
-    $scope.categories = ['reference', 'verse', 'pic_url'];
+    $scope.route = 'memoryVerse';
+    $scope.categories = ['reference', 'verse'];
     $scope.data = MemoryVerse.query();
     $scope.editForm = 'assets/templates/mvForm.html';
     $scope.setItem = function(item) {

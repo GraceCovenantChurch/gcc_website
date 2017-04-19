@@ -6,19 +6,20 @@
   "scripts": {
     "watch": "cd client && gulp watch",
     "start": "NODE_ENV=dev nodemon server/app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install"
   },
   "author": "gccdev",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.6.1",
-    "angular-animate": "^1.6.3",
-    "angular-inview": "^2.1.0",
     "async": "^2.1.5",
+    "bluebird": "^3.5.0",
     "body-parser": "^1.16.1",
+    "bower": "^1.8.0",
     "cookie-parser": "^1.4.3",
     "cookie-session": "^2.0.0-beta.1",
     "express": "^4.14.0",
+    "formidable": "^1.1.1",
     "jquery": "^3.2.1",
     "mongodb": "^2.2.21",
     "mongoose": "^4.8.5",

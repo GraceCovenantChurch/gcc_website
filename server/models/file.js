@@ -3,7 +3,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema({
   name: {
     type: String,
-    required: true,
     unique: true
   },
   data: {
@@ -13,6 +12,13 @@ var Schema = mongoose.Schema({
   contentType: {
     type: String
   }
+}, {
+  toObject: { virtuals: true },
+  toJSON: { virtuals: true }
+});
+
+Schema.virtual('url').get(function() {
+  return '/file/' + this._id;
 });
 
 var Model = mongoose.model('File', Schema);

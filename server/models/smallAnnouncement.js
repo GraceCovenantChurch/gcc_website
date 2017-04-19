@@ -1,4 +1,4 @@
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema({
   text: {
@@ -6,7 +6,6 @@ var Schema = mongoose.Schema({
     required: true
   }
 });
-
 
 var Model = mongoose.model('SmallAnnouncement', Schema);
 
