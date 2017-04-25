@@ -1,4 +1,5 @@
-var mongoose = require('mongoose')
+var mongoose = require('mongoose');
+var File = require('./file');
 
 var Schema = mongoose.Schema({
   verse: {
@@ -9,15 +10,23 @@ var Schema = mongoose.Schema({
     type: String,
     required: true
   },
-  pic: {
-    type: String
-  }
-}, {
-  toJSON: { virtuals: true }
+  pic: { type: mongoose.Schema.Types.ObjectId, ref: 'File' },
+  _pic: { type: mongoose.Schema.Types.ObjectId, ref: 'File', default: undefined },
 });
 
-Schema.virtual('pic_url').get(function() {
-  return '/file/' + this.pic.toString();
+Schema.pre('remove', function(next) {
+  File.findByIdAndRemove(this.pic).exec();
+  next();
+});
+
+Schema.pre('save', function(next) {
+  if (this.isModified('pic')) {
+    if (this._pic) {
+      File.findByIdAndRemove(this._pic).exec();
+    }
+    this._pic = this.pic;
+  }
+  next();
 });
 
 var Model = mongoose.model('MemoryVerse', Schema);

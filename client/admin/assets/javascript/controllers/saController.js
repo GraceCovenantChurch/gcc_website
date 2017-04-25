@@ -1,6 +1,7 @@
 angular.module('gccweb-admin')
   .controller('smallAnnouncementsController', function($scope, SmallAnnouncement) {
     $scope.title = 'Small Announcements';
+    $scope.route = 'smallAnnouncement';
     $scope.categories = ['text'];
     $scope.data = SmallAnnouncement.query();
     $scope.editForm = 'assets/templates/saForm.html';
@@ -9,7 +10,8 @@ angular.module('gccweb-admin')
     };
     $scope.create = function() {
       $scope.activeItem = {
-        text: ''
+        text: '',
+        new: true
       }
       $scope.data.unshift($scope.activeItem);
     };

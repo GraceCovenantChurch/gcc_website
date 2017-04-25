@@ -1,20 +1,12 @@
-<form>
-    <div class="form-group">
-        <label>Reference</label>
-        <input name="reference" class="form-control" type="text" value="{{activeItem.reference}}"></input>
-    </div>
 
-    <div class="form-group">
-        <label>Verse</label>
-        <textarea rows="10" name="verse" class="form-control" type="text" value="">{{activeItem.verse}}</textarea>
-    </div>
+<div class="form-group">
+    <label>Reference</label>
+    <input name="reference" class="form-control" type="text" value="{{activeItem.reference}}"></input>
+</div>
 
-    <div class="form-group">
-        <label>Picture</label>
-        <img style="width: 100%" src="{{activeItem.pic_url}}" />
-        <input name="pic" type="file"></input>
-    </div>
+<div class="form-group">
+    <label>Verse</label>
+    <textarea rows="10" name="verse" class="form-control" type="text" value="">{{activeItem.verse}}</textarea>
+</div>
 
-    <button type="submit" class="btn btn-primary">Save</button>
-    <button type="button" class="btn btn-danger">Delete</button>
-</form>
+<image-preview-input name="pic" label="Picture" item="activeItem"></image-preview-input>

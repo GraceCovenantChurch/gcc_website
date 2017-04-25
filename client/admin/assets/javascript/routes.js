@@ -1,5 +1,6 @@
 angular.module('gccweb-admin')
-.config(function($routeProvider) {
+.config(function($routeProvider, $locationProvider) {
+  $locationProvider.hashPrefix('');
   $routeProvider
   .when('/', {
     templateUrl: 'assets/templates/main.html'
