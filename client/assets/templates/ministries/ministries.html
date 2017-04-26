@@ -2,20 +2,22 @@
   <h1>Ministries</h1>
 </div>
 
-<div class="container" ng-controller="ministryController">
-  <div ng-repeat="a in getSizeArray() track by $index" ng-init="parent = $index">
-    <div class="row">
-      <div class="col-sm-3" ng-repeat="ministry in getRow(parent)">
-        <ministry-tile name="ministry.name"
-                       pic="ministry.pic"
-                       row="parent"
-                       col="$index">
-        </ministry-tile>
+<div class="ministryGrid">
+  <div class="container" ng-controller="ministryController">
+    <div ng-repeat="a in getSizeArray() track by $index" ng-init="parent = $index">
+      <div class="row">
+        <div class="col-sm-3" ng-repeat="ministry in getRow(parent)">
+          <ministry-tile name="ministry.name"
+                         pic="ministry.pic"
+                         row="parent"
+                         col="$index">
+          </ministry-tile>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-          <ministry-info list="ministriesList" row="parent" col="0"></ministry-info>
+      <div class="row">
+        <div class="col-sm-12">
+            <ministry-info list="ministriesList" row="parent" col="0"></ministry-info>
+        </div>
       </div>
     </div>
   </div>

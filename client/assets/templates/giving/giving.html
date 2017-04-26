@@ -20,6 +20,10 @@
       <div class="col-sm-8">
 
         <div class="row">
+          <h1>General Giving</h1>
+        </div>
+
+        <div class="row">
           <h4>Here are three general ways for you to contribute:</h4>
         </div>
 
@@ -59,21 +63,86 @@
             option in PayPal will also save GCC transaction fees.</h4>
         </div>
 
-        <div class="row giveLinks">        
+        <div class="row giveLinks">
           <h4>Those without a PayPal account can donate via credit card below.</h4>
+        </div>
+
+        <div class="row oneTimeGive">
+          <h4>One time</h4>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input name="cmd" type="hidden" value="_donations">
+            <input name="business" type="hidden" value="paypal@gracecovenant.net">
+            <input name="item_name" type="hidden" value="GCC Kingdom Vision Fund">
+            <input name="no_shipping" type="hidden" value="0">
+            <input name="no_note" type="hidden" value="1">
+            <input name="currency_code" type="hidden" value="USD">
+            <input name="tax" type="hidden" value="0">
+            <input name="lc" type="hidden" value="US">
+            <input name="bn" type="hidden" value="PP-DonationsBF">
+            <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" type="image">
+            <img src="https://www.paypal.com/en_US/i/scr/pixel.gif" alt="" border="0"></form>
+        </div>
+
+        <div class="row repeatGive">
+          <h4>Recurring Donations</h4>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input name="cmd" type="hidden" value="_xclick-subscriptions">
+            <input name="business" type="hidden" value="paypal@gracecovenant.net">
+            <input name="lc" type="hidden" value="US">
+            <input name="item_name" type="hidden" value="GCC Kingdom Vision Fund - Recurring Donation">
+            <input name="item_number" type="hidden" value="1234">
+            <input name="no_note" type="hidden" value="1">
+            <input name="no_shipping" type="hidden" value="0">
+            <input name="src" type="hidden" value="1">
+            <input name="p3" type="hidden" value="1">
+            <input name="currency_code" type="hidden" value="USD">
+            <input name="bn" type="hidden" value="PP-SubscriptionsBF:btn_subscribeCC_LG.gif:NonHosted"><p></p>
+
+            <h5>When would you like this to recur?</h5>
+            <select name="t3">
+              <option value="D">Daily</option>
+              <option value="M">Monthly</option>
+              <option value="Y">Yearly</option>
+            </select>
+
+            <h5>How many times would you like this to recur? (including this payment)</h5>
+            <select name="srt">
+              <option value="0">Never End</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+
+            <h5>Enter your donation amount:</h5>
+            <input maxlength="60" name="a3" type="text">
+            <h5><input alt="PayPal - The safer, easier way to<br /> pay online!" name="submit" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" type="image"><br>
+            <img src="https://www.paypal.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0"></h5>
+          </form>
         </div>
 
       </div>
       <div class="col-sm-4">
-        <div class="giveTile1">
+        <h1>Causes</h1>
+        <a href="#"><div class="giveTile1 tile">
           <h4>Singapore</h4>
-        </div>
-        <div class="giveTile2">
+        </div></a>
+
+        <a href="#"><div class="giveTile2 tile">
           <h4>Short term Missions</h4>
-        </div>
-        <div class="giveTile3">
+        </div></a>
+
+        <a href="#"><div class="giveTile3 tile">
           <h4>Ministry Center</h4>
-        </div>
+        </div></a>
+
       </div>
     </div>
   </div>

@@ -9,10 +9,10 @@ var path = require('path');
 
 function createCRUD(router, route, defaultObject, Model, guiRoute) {
   var createRoute = route;
-  var updateRoute = path.join(route, ':id');
-  var deleteRoute = path.join(route, ':id/delete');
-  var catchRoute = path.join(route, '*');
-  
+  var updateRoute = route + '/:id';
+  var deleteRoute = route + '/:id/delete';
+  var catchRoute = route + '/*';
+
   router.post(createRoute, function(req, res) {
     var form = new formidable.IncomingForm();
 
@@ -32,7 +32,7 @@ function createCRUD(router, route, defaultObject, Model, guiRoute) {
           });
         }
       });
-      
+
       var document = new Model();
       delete fields['_id'];
       Object.assign(document, fields);
@@ -71,7 +71,7 @@ function createCRUD(router, route, defaultObject, Model, guiRoute) {
           });
         }
       });
-    
+
       var promise = Model.findById(fields._id).exec();
       promise.then(function(document) {
         if (document) {
@@ -109,6 +109,6 @@ function createCRUD(router, route, defaultObject, Model, guiRoute) {
   router.get(catchRoute, function(req, res) {
     res.redirect(guiRoute);
   });
-}
+};
 
 module.exports = createCRUD;
