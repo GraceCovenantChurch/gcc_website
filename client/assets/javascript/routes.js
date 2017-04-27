@@ -27,5 +27,11 @@ angular.module('gccweb')
   })
   .when('/ministries', {
     templateUrl: 'assets/templates/ministries/ministries.html'
+  })
+  .when('/multimedia', {
+    templateUrl: 'assets/templates/multimedia/multimedia.html'
+  })
+  .when('/calendar', {
+    templateUrl: 'assets/templates/calendar/calendar.html'
   });
 });

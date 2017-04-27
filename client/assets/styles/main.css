@@ -60,7 +60,7 @@ body {
   text-align: center;
   color: white;
   margin-top: 40vh;
-  font-family: 'Kalam', sans-serif;
+  font-family: 'bebasN', sans-serif;
 }
 
 #welcome h1 {
@@ -75,7 +75,7 @@ body {
 #motto {
   margin-top: 12vh;
   text-align: center;
-  font-family: 'Kalam', sans-serif;
+  font-family: 'bebasN', sans-serif;
 }
 
 .announcements {
@@ -153,7 +153,7 @@ body {
 .jumbotronMini h1 {
   margin-top: 25vh;
   color: white;
-  font-family: 'Kalam', sans-serif;
+  font-family: 'bebasN', sans-serif;
 }
 
 .tile {
@@ -173,6 +173,7 @@ body {
 .messageAbout {
   text-align: center;
   padding: 8vh 0;
+  background-color: #F4F4F2;
 }
 
 #links {
@@ -180,37 +181,25 @@ body {
 }
 
 .containerAbout {
-  padding: 60px 100px;
-  background-color: #F4F4F2;
+  padding: 40px 50px;
 }
 
-.imgAbout {
-  margin: 0;
-  padding: 0 2px;
+.aboutcol {
+  padding: 2px;
+  position: relative;
+  text-align: center;
 }
 
-.aboutbox1 {
-  background: url('/assets/images/about/new.jpg') top left/100% 100% no-repeat;
-  height: 40vh;
-  padding-top: 15vh;
+.aboutThumb {
+  padding: 0;
 }
 
-.aboutbox2 {
-  background:  url('/assets/images/about/believe.jpg') top left/100% 100% no-repeat;
-  height: 40vh;
-  padding-top: 15vh;
-}
-
-.aboutbox3 {
-  background:url('/assets/images/about/staff.jpg') top left/100% 100% no-repeat;
-  height: 40vh;
-  padding-top: 15vh;
-}
-
-.aboutbox4 {
-  background: url('/assets/images/about/ami.jpg') top left/100% 100% no-repeat;
-  height: 40vh;
-  padding-top: 15vh;
+.aboutThumb h3 {
+  position: absolute;
+  top: 40%;
+  bottom: 50%;
+  left: 0;
+  right: 0;
 }
 
 /******************************About Staff CSS**************************************/
@@ -252,7 +241,7 @@ ul {
 /******************************About beliefs CSS*********************************/
 .jumbotron.believe {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25)), url('/assets/images/about/believe.jpg') center center/cover;
-  height: 90vh;
+  height: 1000px;
 }
 
 .container.believe {
@@ -293,9 +282,10 @@ ul {
   margin: 10px 0;
 }
 
-.imnewcol img {
-  max-width: 105%;
-  max-height: 105%;
+.imnewcol {
+  margin-bottom: 5px;
+  padding: 0 1px;
+  height: 100%;
 }
 
 .words {
@@ -323,7 +313,8 @@ ul {
 
 .fgBackground {
   background-color: #F4F4F2;
-  font-size: 16px;
+  font-size: 18px;
+  text-align: center;
 }
 
 .fgBackground2 {
@@ -364,6 +355,7 @@ ul {
 .givingDesc {
   text-align: center;
   background-color: #F4F4F2;
+  font-size: 18px;
 }
 
 .giveWays {
@@ -443,9 +435,16 @@ ul {
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/ministries/jumbotron.jpeg') top left/cover;
 }
 
+.ministriesMessage {
+  text-align: center;
+  background-color: #F4F4F2;
+  font-size: 18px;
+  text-align: center;
+  padding: 80px 100px;
+}
+
 .ministryGrid {
   padding-top: 50px;
-  background-color: #F4F4F2;
 }
 
 .ministryTile {
@@ -484,6 +483,46 @@ ministry-info p {
   font-size: 16px;
 }
 
+/******************************Multimedia CSS ********************************/
+.multimediaSermons {
+  height: 100vh;
+  padding-top: 45vh;
+  background: url('../images/multimedia/sermons.jpg');
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.multimediaPhotos {
+  height: 100vh;
+  padding-top: 45vh;
+  background: url('../images/multimedia/photos.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.multimediaVideos {
+  height: 100vh;
+  padding-top: 35vh;
+  background: url('../images/multimedia/videos.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.multimediaVideos a, .multimediaPhotos a, .multimediaSermons a {
+  font-size: 100px;
+  color: white;
+  display: block;
+}
+
 /******************************Footer CSS**************************************/
 .footer {
   position: absolute;
@@ -510,4 +549,10 @@ ministry-info p {
 .footer a {
   font-size: 28px;
   color: white;
+}
+
+/**************FONTS*****************************************************/
+@@font-face {
+  font-family: 'bebasN';
+  src: url('./assets/styes/fonts/bebasneue-webfont.woff'); format('woff');
 }
