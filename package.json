@@ -8,7 +8,7 @@
     "start": "NODE_ENV=dev nodemon server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "bower install",
-    "npm start forever": "forever start -c \"npm start\" ./"
+    "forever": "forever start -c \"npm start\" ./"
   },
   "author": "gccdev",
   "license": "ISC",
