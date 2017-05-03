@@ -42,7 +42,7 @@ body {
 }
 .navbar-brand img {
   height: 40px;
-  margin-top: 5px;cd
+  margin-top: 5px;
 }
 
 /******************************Homepage CSS**************************************/
@@ -104,6 +104,7 @@ body {
 
 .info {
   padding: 50px 0;
+  margin: 0;
 }
 
 .info h2 {
@@ -119,9 +120,11 @@ body {
 .pillars {
   margin-top: 50px;
 }
+
 .pillars .col-sm-3 {
   text-align: center;
   font-size: 16px;
+
 }
 
 .memoryVerse {
@@ -172,7 +175,7 @@ body {
 
 .messageAbout {
   text-align: center;
-  padding: 8vh 0;
+  padding: 10vh 0;
   background-color: #F4F4F2;
 }
 
@@ -356,6 +359,7 @@ ul {
   text-align: center;
   background-color: #F4F4F2;
   font-size: 18px;
+  padding: 26px 0;
 }
 
 .giveWays {
@@ -440,7 +444,7 @@ ul {
   background-color: #F4F4F2;
   font-size: 18px;
   text-align: center;
-  padding: 80px 100px;
+  padding: 110px 0;
 }
 
 .ministryGrid {
@@ -552,7 +556,7 @@ ministry-info p {
 }
 
 /**************FONTS*****************************************************/
-@@font-face {
-  font-family: 'bebasN';
-  src: url('./assets/styes/fonts/bebasneue-webfont.woff'); format('woff');
+@font-face {
+  font-family: bebasN;
+  src: url('/assets/styles/fonts/bebasneue-webfont.woff');
 }
