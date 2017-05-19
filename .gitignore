@@ -42,3 +42,7 @@ ec2Key.ppk
 webuser.pem
 
 config.json
+
+#typescript generated js files
+client2/app/*.js
+client2/app/*.js.map

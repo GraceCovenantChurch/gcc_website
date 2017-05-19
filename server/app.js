@@ -13,7 +13,8 @@ app.use('/', require('./routes'));
 app.use('/staff', staff);
 app.use('/believe', believe);
 app.use('/ministry', ministry);
-app.use(express.static('client'));
+app.use(express.static('../client2'));
+app.use('/node_modules', express.static('../node_modules'));
 
 var db = require('./db.js');
 db.initialized.then(function() {
