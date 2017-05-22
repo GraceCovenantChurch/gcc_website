@@ -1,3 +1,20 @@
-<p>
-  staff works!
-</p>
+<div class="container staff">
+  <div *ngFor="let staff of staffList; let i = index">
+    <div class="row" *ngIf="i % 2 === 0">
+      <div class="col-sm-6 person">
+        <img *ngIf="staff.pic" [src]="'assets/images/about/staff/' + staff.pic"/>
+        <h2>{{staff.name}}</h2>
+        <h4>{{staff.title}}</h4>
+        <a [href]=" 'mailto:' + staff.email">{{staff.email}}</a>
+        <p>{{staff.description}}</p>
+      </div>
+      <div class="col-sm-6 person">
+        <img *ngIf="staffList[i + 1].pic" [src]="'assets/images/about/staff/' + staffList[i + 1].pic"/>
+        <h2>{{staffList[i + 1].name}}</h2>
+        <h4>{{staffList[i + 1].title}}</h4>
+        <a [href]=" 'mailto:' + staff.email">{{staffList[i + 1].email}}</a>
+        <p>{{staffList[i + 1].description}}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AboutService } from '../about.service';
+import { Staff } from '../staff';
 
 @Component({
   selector: 'staff',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StaffComponent implements OnInit {
 
-  constructor() { }
+  constructor(private aboutService : AboutService) { }
+
+  staffList : Staff[];
 
   ngOnInit() {
+    this.aboutService.getStaff()
+      .subscribe(staff => this.staffList = staff);
   }
 
 }

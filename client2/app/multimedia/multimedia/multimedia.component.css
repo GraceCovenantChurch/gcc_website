@@ -1,0 +1,42 @@
+
+
+
+/******************************Multimedia CSS ********************************/
+.multimediaSermons {
+  height: 100vh;
+  padding-top: 45vh;
+  background: url('/assets/images/multimedia/sermons.jpg');
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.multimediaPhotos {
+  height: 100vh;
+  padding-top: 45vh;
+  background: url('/assets/images/multimedia/photos.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.multimediaVideos {
+  height: 100vh;
+  padding-top: 35vh;
+  background: url('/assets/images/multimedia/videos.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.multimediaVideos a, .multimediaPhotos a, .multimediaSermons a {
+  font-size: 100px;
+  color: white;
+  display: block;
+}

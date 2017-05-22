@@ -1,0 +1,14 @@
+
+/******************************About ami CSS**************************************/
+.container.ami {
+  padding: 0 100px;
+  font-size: 16px;
+}
+
+h1 {
+  margin: 40px 0;
+}
+ul {
+  margin: 15px;
+  padding: 0;
+}
