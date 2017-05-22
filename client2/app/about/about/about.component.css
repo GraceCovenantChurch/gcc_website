@@ -1,0 +1,36 @@
+/******************************About landing CSS**************************************/
+.about {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/about/jumbotron.jpg') center center/cover;
+}
+
+.messageAbout {
+  text-align: center;
+  padding: 10vh 0;
+  background-color: #F4F4F2;
+}
+
+#links {
+  margin-top: 40px;
+}
+
+.containerAbout {
+  padding: 40px 50px;
+}
+
+.aboutcol {
+  padding: 2px;
+  position: relative;
+  text-align: center;
+}
+
+.aboutThumb {
+  padding: 0;
+}
+
+.aboutThumb h3 {
+  position: absolute;
+  top: 40%;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+}

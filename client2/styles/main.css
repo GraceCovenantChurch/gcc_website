@@ -1,8 +1,4 @@
 /******************************Whole document styles **************************/
-* {
-  margin: 0;
-  transition: opacity 3s;
-}
 
 html {
   position: relative;
@@ -18,132 +14,6 @@ body {
 
 .fade {
   opacity : 0;
-}
-
-
-/******************************Navbar CSS**************************************/
-.navbar {
-  background-color: white;
-  height: 80px;
-}
-
-.navbar .container {
-  padding: 0 100px;
-}
-
-.navbar .nav > li > a{
-  line-height: 80px;
-  padding-top: 0;
-  padding-bottom: 0;
-  text-decoration: none;
-  text-shadow: 0 0 0 black;
-  font-size: 16px;
-
-}
-.navbar-brand img {
-  height: 40px;
-  margin-top: 5px;
-}
-
-/******************************Homepage CSS**************************************/
-.jumbotronHome {
-  height: 90vh;
-  padding-top: 1px;
-  margin-bottom: 0;
-}
-
-.banner {
-  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('../images/home/philly.jpg') top left/cover no-repeat;
-}
-
-#welcome {
-  text-align: center;
-  color: white;
-  margin-top: 40vh;
-  font-family: 'bebasN', sans-serif;
-}
-
-#welcome h1 {
-  font-size: 60px;
-}
-
-.landing {
-  height: 45vh;
-  background: white;
-}
-
-#motto {
-  margin-top: 12vh;
-  text-align: center;
-  font-family: 'bebasN', sans-serif;
-}
-
-.announcements {
-  height: 100vh;
-  background-position: top left;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  text-align: center;
-}
-
-.announcements h1{
-  color: white;
-  padding: 0;
-}
-
-.announcements h1 {
-  margin-top: 40vh;
-}
-
-.announcements a {
-  color: white;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-  padding: 3px 30px;
-}
-
-.info {
-  padding: 50px 0;
-  margin: 0;
-}
-
-.info h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  margin-top: 0;
-}
-
-.info li {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-.pillars {
-  margin-top: 50px;
-}
-
-.pillars .col-sm-3 {
-  text-align: center;
-  font-size: 16px;
-
-}
-
-.memoryVerse {
-  background-position: 50% 10%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: white;
-  height: 40vh;
-  padding-top: 10vh;
-}
-
-.mvContainer {
-  text-align: center;
-  width: 500px;
-  margin: auto;
-}
-.memoryVerse h5 {
-  margin-top: 30px;
-  text-align: right;
 }
 
 /*****General Landing CSS*****************************************************/
@@ -166,43 +36,6 @@ body {
 
 .tile:hover {
   color: #DDDDDD
-}
-
-/******************************About landing CSS**************************************/
-.about {
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/about/jumbotron.jpg') center center/cover;
-}
-
-.messageAbout {
-  text-align: center;
-  padding: 10vh 0;
-  background-color: #F4F4F2;
-}
-
-#links {
-  margin-top: 40px;
-}
-
-.containerAbout {
-  padding: 40px 50px;
-}
-
-.aboutcol {
-  padding: 2px;
-  position: relative;
-  text-align: center;
-}
-
-.aboutThumb {
-  padding: 0;
-}
-
-.aboutThumb h3 {
-  position: absolute;
-  top: 40%;
-  bottom: 50%;
-  left: 0;
-  right: 0;
 }
 
 /******************************About Staff CSS**************************************/
@@ -270,44 +103,6 @@ ul {
   background-color: rgba(50, 50, 50, 0.4);
 }
 
-/******************************About im new CSS*********************************/
-.container.imnew {
-  padding: 10px 100px;
-}
-
-.imnewcol {
-  height: 25vh;
-}
-
-.newVid {
-  height: 50vh;
-  text-align: center;
-  margin: 10px 0;
-}
-
-.imnewcol {
-  margin-bottom: 5px;
-  padding: 0 1px;
-  height: 100%;
-}
-
-.words {
-  font-size: 16px;
-}
-
-#commonQ {
-  margin-bottom: 0;
-  font-size: 20px;
-}
-
-#commonQList {
-  margin-top: 0;
-}
-
-.maps {
-  padding: 10px 0;
-  border: 1px solid #EEEEEE;
-}
 
 /************ Family Group Landing CSS ****************************************/
 .familygroup {
@@ -491,7 +286,7 @@ ministry-info p {
 .multimediaSermons {
   height: 100vh;
   padding-top: 45vh;
-  background: url('../images/multimedia/sermons.jpg');
+  background: url('../assets/images/multimedia/sermons.jpg');
   background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -502,7 +297,7 @@ ministry-info p {
 .multimediaPhotos {
   height: 100vh;
   padding-top: 45vh;
-  background: url('../images/multimedia/photos.jpg');
+  background: url('../assets/images/multimedia/photos.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -513,7 +308,7 @@ ministry-info p {
 .multimediaVideos {
   height: 100vh;
   padding-top: 35vh;
-  background: url('../images/multimedia/videos.jpg');
+  background: url('../assets/images/multimedia/videos.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -527,33 +322,6 @@ ministry-info p {
   display: block;
 }
 
-/******************************Footer CSS**************************************/
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 60px;
-  background-color: black;
-  color: white;
-  overflow: hidden;
-}
-
-.footer .container {
-  padding: 0 100px;
-}
-
-.footer p, .footer i {
-  line-height: 55px;
-}
-
-.footer i {
-  margin-left: 40px;
-}
-
-.footer a {
-  font-size: 28px;
-  color: white;
-}
 
 /**************FONTS*****************************************************/
 @font-face {

@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'gcc-web',
-  template: `<h1>Hello world {{name}}</h1>`,
+  templateUrl: 'app.component.html'
 })
-export class AppComponent  { name = 'Angular'; }
+export class AppComponent  { }

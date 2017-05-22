@@ -1,0 +1,104 @@
+.jumbotronHome {
+  height: 90vh;
+  padding-top: 1px;
+  margin-bottom: 0;
+}
+
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url('/assets/images/home/philly.jpg') top left/cover no-repeat;
+}
+
+#welcome {
+  text-align: center;
+  color: white;
+  margin-top: 40vh;
+  font-family: 'bebasN', sans-serif;
+}
+
+#welcome h1 {
+  font-size: 60px;
+}
+
+.landing {
+  background: white;
+  padding-top: 125px;
+  padding-bottom: 145px;
+  margin-bottom: 0;
+}
+
+.landing h2{
+  margin-top: 20px;
+}
+
+#motto {
+  text-align: center;
+  font-family: 'bebasN', sans-serif;
+}
+
+.announcements {
+  height: 100vh;
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.announcements h1{
+  color: white;
+  padding: 0;
+}
+
+.announcements h1 {
+  margin-top: 40vh;
+}
+
+.announcements a {
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  padding: 3px 30px;
+}
+
+.info {
+  padding: 50px 0;
+  margin: 0;
+}
+
+.info h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+
+.info li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.pillars {
+  margin-top: 50px;
+}
+
+.pillars .col-sm-3 {
+  text-align: center;
+  font-size: 16px;
+
+}
+
+.memoryVerse {
+  background-position: 50% 10%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  height: 40vh;
+  padding-top: 10vh;
+}
+
+.mvContainer {
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+.memoryVerse h5 {
+  margin-top: 30px;
+  text-align: right;
+}
