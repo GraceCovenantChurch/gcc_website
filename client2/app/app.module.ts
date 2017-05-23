@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home/home.component';
 
 import { HomeService } from './home/home.service';
 import { AboutService } from './about/about.service';
+import { MinistriesService } from './ministries/ministries.service';
 
 import { AboutComponent } from './about/about/about.component';
 import { ImnewComponent } from './about/imnew/imnew.component';
@@ -43,6 +44,6 @@ const appRoutes: Routes = [
   declarations: [ AppComponent, NavbarComponent, FooterComponent, HomeComponent, AboutComponent, ImnewComponent,
                   BeliefsComponent, StaffComponent, AmiComponent, FamilygroupComponent, MinistriesComponent, TileComponent, InfoComponent, GivingComponent, MultimediaComponent, CalendarComponent ],
   bootstrap:    [ AppComponent ],
-  providers:    [ HomeService, AboutService ]
+  providers:    [ HomeService, AboutService, MinistriesService ]
 })
 export class AppModule { }
