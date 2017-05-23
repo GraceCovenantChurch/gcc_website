@@ -1,3 +1,4 @@
-<p>
-  tile works!
-</p>
+<div (click)="clicked()"class="ministryTile">
+  <img *ngIf="pic" [src]=" 'assets/images/ministries/' + pic" class="img-responsive"/>
+  <h2>{{name}}</h2>
+</div>

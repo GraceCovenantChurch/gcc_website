@@ -4,4 +4,5 @@ export class Ministry {
   contact: string
   pic: string
   privileges: string
+  timeCommitment: string
 }

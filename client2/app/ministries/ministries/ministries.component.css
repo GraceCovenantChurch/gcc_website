@@ -15,39 +15,3 @@
 .ministryGrid {
   padding-top: 50px;
 }
-
-.ministryTile {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 50px;
-  padding-bottom: 50px;
-  text-align: center;
-}
-
-.ministryTile:hover {
-  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.35), 0 8px 20px 0 rgba(0, 0, 0, 0.35);
-  cursor: pointer;
-}
-
-.ministryTile h2 {
-  margin-top: 50px;
-}
-
-ministry-info {
-  display: none;
-  border-top: 1px solid gray;
-  border-bottom: 1px solid gray;
-  padding-bottom: 30px;
-  margin: 30px 0;
-}
-
-ministry-info h1, ministry-info h5 {
-  text-align: center;
-}
-
-ministry-info img {
-  margin: 0 auto;
-}
-
-ministry-info p {
-  font-size: 16px;
-}

@@ -1,0 +1,19 @@
+
+.ministryInfo {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding-bottom: 30px;
+  margin: 30px 0;
+}
+
+.ministryInfo h1, .ministryInfo h5 {
+  text-align: center;
+}
+
+.ministryInfo img {
+  margin: 0 auto;
+}
+
+.ministryInfo p {
+  font-size: 16px;
+}

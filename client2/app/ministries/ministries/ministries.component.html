@@ -13,19 +13,19 @@
 
 <div class="ministryGrid">
   <div class="container">
-    <div ng-repeat="a in getSizeArray() track by $index" ng-init="parent = $index">
+    <div *ngFor="let row of numRowArray; let rowNum = index">
       <div class="row">
-        <div class="col-sm-3" ng-repeat="ministry in getRow(parent)">
-          <ministry-tile name="ministry.name"
-                         pic="ministry.pic"
-                         row="parent"
-                         col="$index">
-          </ministry-tile>
+        <div class="col-sm-3" *ngFor="let ministry of getRowArray(rowNum); let col = index">
+          <tile (chosen)="openDescription($event)" [name]="ministry.name"
+                [pic]="ministry.pic"
+                [row]="rowNum"
+                [col]="col">
+          </tile>
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-12">
-            <ministry-info list="ministriesList" row="parent" col="0"></ministry-info>
+        <div class="col-sm-12" *ngIf="selectedMinistry">
+            <info [ministry]="selectedMinistry" [selectedRow]="selectedRow" [row]="rowNum"></info>
         </div>
       </div>
     </div>
