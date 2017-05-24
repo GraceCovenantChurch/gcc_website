@@ -29,8 +29,15 @@
 
 .aboutThumb h3 {
   position: absolute;
+  font-size: 1.5vw;
   top: 40%;
-  bottom: 50%;
+  bottom: 55%;
   left: 0;
   right: 0;
+}
+
+@media (max-width: 768px) {
+  .aboutThumb h3 {
+    font-size: 3vw;
+  }
 }

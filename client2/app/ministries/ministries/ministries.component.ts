@@ -51,6 +51,6 @@ export class MinistriesComponent implements OnInit {
 
     this.selectedMinistry = this.ministryList[index];
     this.selectedRow=row;
-    
+
   }
 }

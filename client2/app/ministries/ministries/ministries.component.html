@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-12" *ngIf="selectedMinistry">
+        <div [attr.id]=" 'info' + rowNum " class="col-sm-12" *ngIf="selectedMinistry">
             <info [ministry]="selectedMinistry" [selectedRow]="selectedRow" [row]="rowNum"></info>
         </div>
       </div>

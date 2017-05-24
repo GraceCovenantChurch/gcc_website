@@ -4,12 +4,10 @@
   "description": "Website for Grace Covenant Church",
   "main": "server/app.js",
   "scripts": {
-    "watch": "cd client && gulp watch",
-    "start": "NODE_ENV=dev nodemon server/app.js",
+    "watch": "ng build --watch",
+    "start": "ng build && NODE_ENV=dev nodemon server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "forever": "forever start -c \"npm start\" ./",
-    "build": "tsc -p client2/",
-    "build:watch": "tsc -p client2/ -w"
+    "forever": "forever start -c \"npm start\" ./"
   },
   "author": "gccdev",
   "license": "ISC",
@@ -37,6 +35,7 @@
     "mongodb": "^2.2.21",
     "mongoose": "^4.8.5",
     "nconf": "^0.8.4",
+    "ng2-page-scroll": "^4.0.0-beta.8",
     "node-mime": "^1.0.0",
     "passport": "^0.3.2",
     "passport-google-oauth20": "^1.0.0",

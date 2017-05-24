@@ -1,4 +1,6 @@
-import { Component, OnInit, Input, OnChanges, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, Inject, ElementRef } from '@angular/core';
+import { PageScrollConfig, PageScrollService, PageScrollInstance, EasingLogic } from 'ng2-page-scroll';
+import { DOCUMENT } from '@angular/platform-browser';
 
 import { Ministry } from '../../ministry';
 
@@ -12,12 +14,30 @@ export class InfoComponent implements OnInit, OnChanges {
   @Input() selectedRow : number;
   @Input() row : number;
 
-  constructor(private elementRef : ElementRef) { }
+  myEasing : EasingLogic = {
+    ease : (t: number, b: number, c: number, d: number): number => {
+      t /= d;
+      return -c * t*(t-2) + b;  
+    }
+  }
+
+  constructor(private e : ElementRef,
+              private psc : PageScrollService,
+              @Inject(DOCUMENT) private document: any) { }
 
   ngOnInit() {
   }
 
   ngOnChanges() {
+    if (!this.hideRow()) {
+      let psi : PageScrollInstance = PageScrollInstance.newInstance(
+        {document:this.document,
+        scrollTarget: this.e.nativeElement,
+        pageScrollDuration: 500,
+        pageScrollOffset: 100,
+        pageScrollEasingLogic : this.myEasing} );
+      this.psc.start(psi);
+    }
   }
 
   hideRow() : boolean {

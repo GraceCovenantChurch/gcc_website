@@ -16,11 +16,8 @@ app.use('/belief', belief);
 app.use('/ministry', ministry);
 
 app.use(express.static('dist'));
+app.use('/admin', express.static('distAdmin'));
 
-//angular2 needs all routes to redirect to index.html
-app.get('/*', function(req, res) {
-  res.sendFile(path.resolve(__dirname + '/../dist/index.html'));
-})
 
 var db = require('./db.js');
 db.initialized.then(function() {

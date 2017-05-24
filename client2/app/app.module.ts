@@ -2,6 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { Ng2PageScrollModule } from 'ng2-page-scroll';
 
 import { AppComponent }  from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -24,6 +25,7 @@ import { InfoComponent } from './ministries/ministries/info/info.component';
 import { GivingComponent } from './giving/giving/giving.component';
 import { MultimediaComponent } from './multimedia/multimedia/multimedia.component';
 import { CalendarComponent } from './calendar/calendar/calendar.component';
+import { SingaporeComponent } from './giving/singapore/singapore.component';
 
 const appRoutes: Routes = [
   {path: '', component : HomeComponent},
@@ -36,13 +38,14 @@ const appRoutes: Routes = [
   {path: 'ministries', component: MinistriesComponent},
   {path: 'giving', component: GivingComponent},
   {path: 'multimedia', component: MultimediaComponent},
-  {path: 'calendar', component: CalendarComponent}
+  {path: 'calendar', component: CalendarComponent},
+  {path: 'singapore', component: SingaporeComponent}
 ]
 
 @NgModule({
-  imports:      [ BrowserModule, HttpModule, JsonpModule, RouterModule.forRoot(appRoutes) ],
+  imports:      [ BrowserModule, HttpModule, JsonpModule, RouterModule.forRoot(appRoutes), Ng2PageScrollModule.forRoot() ],
   declarations: [ AppComponent, NavbarComponent, FooterComponent, HomeComponent, AboutComponent, ImnewComponent,
-                  BeliefsComponent, StaffComponent, AmiComponent, FamilygroupComponent, MinistriesComponent, TileComponent, InfoComponent, GivingComponent, MultimediaComponent, CalendarComponent ],
+                  BeliefsComponent, StaffComponent, AmiComponent, FamilygroupComponent, MinistriesComponent, TileComponent, InfoComponent, GivingComponent, MultimediaComponent, CalendarComponent, SingaporeComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ HomeService, AboutService, MinistriesService ]
 })

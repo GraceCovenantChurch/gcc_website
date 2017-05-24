@@ -35,8 +35,13 @@
   text-align: center;
 }
 
-.multimediaVideos a, .multimediaPhotos a, .multimediaSermons a {
+a {
   font-size: 100px;
   color: white;
   display: block;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #DDDDDD;
 }

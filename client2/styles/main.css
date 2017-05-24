@@ -35,7 +35,8 @@ body {
 }
 
 .tile:hover {
-  color: #DDDDDD
+  color: #DDDDDD;
+  text-decoration: none;
 }
 
 
@@ -44,4 +45,11 @@ body {
 @font-face {
   font-family: bebasN;
   src: url('/assets/fonts/bebasneue-webfont.woff');
+}
+
+/*******************************media properties*******************************/
+@media (max-width:768px) {
+    body{
+      padding-top: 0;
+    }
 }

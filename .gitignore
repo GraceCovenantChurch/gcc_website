@@ -45,3 +45,4 @@ config.json
 
 #typescript generated js files
 dist
+distAdmin
