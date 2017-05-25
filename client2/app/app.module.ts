@@ -26,9 +26,12 @@ import { GivingComponent } from './giving/giving/giving.component';
 import { MultimediaComponent } from './multimedia/multimedia/multimedia.component';
 import { CalendarComponent } from './calendar/calendar/calendar.component';
 import { SingaporeComponent } from './giving/singapore/singapore.component';
+import { AdminComponent } from './admin/admin/admin.component';
+import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
 
 const appRoutes: Routes = [
   {path: '', component : HomeComponent},
+  {path: '', outlet: "nav", component : NavbarComponent},
   {path: 'about', component : AboutComponent},
   {path: 'beliefs', component: BeliefsComponent},
   {path: 'imnew', component: ImnewComponent},
@@ -39,13 +42,18 @@ const appRoutes: Routes = [
   {path: 'giving', component: GivingComponent},
   {path: 'multimedia', component: MultimediaComponent},
   {path: 'calendar', component: CalendarComponent},
-  {path: 'singapore', component: SingaporeComponent}
+  {path: 'singapore', component: SingaporeComponent},
+  {path: 'admin', children: [
+    {path: '', component: AdminComponent},
+    {path: '', outlet: "nav", component: AdminNavComponent}
+  ]}
 ]
 
 @NgModule({
   imports:      [ BrowserModule, HttpModule, JsonpModule, RouterModule.forRoot(appRoutes), Ng2PageScrollModule.forRoot() ],
   declarations: [ AppComponent, NavbarComponent, FooterComponent, HomeComponent, AboutComponent, ImnewComponent,
-                  BeliefsComponent, StaffComponent, AmiComponent, FamilygroupComponent, MinistriesComponent, TileComponent, InfoComponent, GivingComponent, MultimediaComponent, CalendarComponent, SingaporeComponent ],
+                  BeliefsComponent, StaffComponent, AmiComponent, FamilygroupComponent, MinistriesComponent, TileComponent,
+                  InfoComponent, GivingComponent, MultimediaComponent, CalendarComponent, SingaporeComponent, AdminComponent, AdminNavComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ HomeService, AboutService, MinistriesService ]
 })

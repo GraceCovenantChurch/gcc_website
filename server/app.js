@@ -16,8 +16,10 @@ app.use('/belief', belief);
 app.use('/ministry', ministry);
 
 app.use(express.static('dist'));
-app.use('/admin', express.static('distAdmin'));
 
+app.get('/*', function(req, res) {
+  res.sendFile(path.join(__dirname + '/../dist/index.html'));
+})
 
 var db = require('./db.js');
 db.initialized.then(function() {

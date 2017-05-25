@@ -20,6 +20,4 @@ app.use(passport.session());
 
 app.use('/', require('./routes/admin'));
 
-app.use(express.static('distAdmin'));
-
 module.exports = app;
