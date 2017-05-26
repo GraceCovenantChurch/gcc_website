@@ -1,43 +1,4 @@
-.navbar {
-  background-color: white;
-  height: 80px;
-}
-
-.navbar .container {
+body {
   padding: 0;
-}
-
-.navbar .nav > li > a{
-  line-height: 70px;
-  padding-top: 5px;
-  padding-bottom: 0;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-}
-.navbar-brand img {
-  height: 40px;
-  margin-top: 5px;
-}
-
-button {
-  margin-top: 20px;
-}
-
-.navItems {
-  background-color: white;
-}
-
-@media (max-width:768px) {
-    .navbar-fixed-top {
-        position:static;
-    }
-    .navbar {
-      height: auto;
-      margin-bottom: 0;
-    }
-    .navbar .nav > li > a{
-      line-height: 40px;
-      text-align: center;
-    }
+  margin: 0;
 }

@@ -1,18 +1,26 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a routerLink="/" class="navbar-brand"><img src="assets/images/gcclogo.jpg" /></a>
-      <button (click)="toggleNav()" type="button" class="navbar-toggle collapsed">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
       </button>
+      <a class="navbar-brand" routerLink="/admin">GCC Web Admin Console</a>
     </div>
-    <div class="navItems collapse navbar-collapse" [class.in]="collapsed">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a routerLink="/about">Poop</a></li>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="headerController">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="mainAnnouncements">Main Announcements</a></li>
+        <li><a routerLink="smallAnnouncements">Small Announcements</a></li>
+        <li><a routerLink="memoryVerses">Memory Verses</a></li>
       </ul>
-    </div>
-  </div>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="/admin/logout">Log Out</a></li>
+    </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>

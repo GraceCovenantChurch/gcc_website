@@ -28,33 +28,45 @@ import { CalendarComponent } from './calendar/calendar/calendar.component';
 import { SingaporeComponent } from './giving/singapore/singapore.component';
 import { AdminComponent } from './admin/admin/admin.component';
 import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
+import { EmptyComponent } from './empty/empty.component';
+import { AdminFormDirective } from './admin/admin-form.directive';
+import { MaComponent } from './admin/ma/ma.component';
+import { ImagePreviewInputComponent } from './admin/image-preview-input/image-preview-input.component';
 
 const appRoutes: Routes = [
-  {path: '', component : HomeComponent},
-  {path: '', outlet: "nav", component : NavbarComponent},
-  {path: 'about', component : AboutComponent},
-  {path: 'beliefs', component: BeliefsComponent},
-  {path: 'imnew', component: ImnewComponent},
-  {path: 'gccstaff', component: StaffComponent},
-  {path: 'ami', component: AmiComponent},
-  {path: 'familygroup', component : FamilygroupComponent},
-  {path: 'ministries', component: MinistriesComponent},
-  {path: 'giving', component: GivingComponent},
-  {path: 'multimedia', component: MultimediaComponent},
-  {path: 'calendar', component: CalendarComponent},
-  {path: 'singapore', component: SingaporeComponent},
+  {path: '', children: [
+    {path: '', component : HomeComponent},
+    {path: '', component: NavbarComponent, outlet: "nav"},
+    {path: '', component: FooterComponent, outlet: "footer"},
+    {path: 'about', component : AboutComponent},
+    {path: 'beliefs', component: BeliefsComponent},
+    {path: 'imnew', component: ImnewComponent},
+    {path: 'gccstaff', component: StaffComponent},
+    {path: 'ami', component: AmiComponent},
+    {path: 'familygroup', component : FamilygroupComponent},
+    {path: 'ministries', component: MinistriesComponent},
+    {path: 'giving', component: GivingComponent},
+    {path: 'multimedia', component: MultimediaComponent},
+    {path: 'calendar', component: CalendarComponent},
+    {path: 'singapore', component: SingaporeComponent}
+  ]},
   {path: 'admin', children: [
     {path: '', component: AdminComponent},
-    {path: '', outlet: "nav", component: AdminNavComponent}
+    {path: '', outlet: "nav", component: AdminNavComponent},
+    {path: '', outlet: "footer", component: EmptyComponent},
+    {path: 'mainAnnouncements', component: AdminComponent},
+    {path: 'smallAnnouncements', component: AdminComponent},
+    {path: 'memoryVerses', component: AdminComponent}
   ]}
-]
+];
 
 @NgModule({
   imports:      [ BrowserModule, HttpModule, JsonpModule, RouterModule.forRoot(appRoutes), Ng2PageScrollModule.forRoot() ],
   declarations: [ AppComponent, NavbarComponent, FooterComponent, HomeComponent, AboutComponent, ImnewComponent,
                   BeliefsComponent, StaffComponent, AmiComponent, FamilygroupComponent, MinistriesComponent, TileComponent,
-                  InfoComponent, GivingComponent, MultimediaComponent, CalendarComponent, SingaporeComponent, AdminComponent, AdminNavComponent ],
+                  InfoComponent, GivingComponent, MultimediaComponent, CalendarComponent, SingaporeComponent, AdminComponent, AdminNavComponent, EmptyComponent, AdminFormDirective, MaComponent, ImagePreviewInputComponent ],
   bootstrap:    [ AppComponent ],
-  providers:    [ HomeService, AboutService, MinistriesService ]
+  providers:    [ HomeService, AboutService, MinistriesService ],
+  entryComponents: [MaComponent]
 })
 export class AppModule { }
