@@ -1,5 +1,7 @@
 export class MainAnnouncement {
-  title: string;
-  description: string;
-  pic: string;
+  constructor(
+    public title: string,
+    public description: string,
+    public pic: {url: string},
+  ) {  }
 }

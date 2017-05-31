@@ -54,7 +54,7 @@ function createCRUD(router, route, defaultObject, Model, guiRoute) {
 
   router.post(updateRoute, function(req, res) {
     var form = new formidable.IncomingForm();
-
+    console.log("trying to update");
     form.parse(req, function(err, fields, files) {
       var fileIds = Object.keys(files);
 

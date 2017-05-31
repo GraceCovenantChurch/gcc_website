@@ -15,4 +15,8 @@ export class MaComponent implements OnInit {
     this.activeItem = {title: "", description: "", pic : {url: ""}};
   }
 
+  onSubmit() {
+    console.log(this.activeItem["_id"]);
+    console.log(this.activeItem["pic"]);
+  }
 }

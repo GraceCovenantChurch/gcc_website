@@ -1,5 +1,5 @@
 <div class="form-group">
     <label>Picture</label>
-    <img style="width: 100%" [src]="item.pic.url" />
-    <input type="file" accept="image/*" [(ngModel)]="imgName" name="imgName"/>
+    <img style="width: 100%" [src]="item.pic.url" #img />
+    <input type="file" accept="image/*" (change)="setPreviewImage()" #input/>
 </div>

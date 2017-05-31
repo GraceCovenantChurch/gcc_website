@@ -5,6 +5,7 @@ import { AdminFormDirective } from '../admin-form.directive';
 import { HomeService } from '../../home/home.service';
 
 import { MaComponent } from '../ma/ma.component';
+import { MainAnnouncement } from '../../home/main-announcement'
 
 @Component({
   selector: 'admin',
@@ -20,6 +21,7 @@ export class AdminComponent implements OnInit {
   editForm : string;
   activeItem: object;
   formComponentRef : ComponentRef<any>;
+  createNew : Function;
 
   @ViewChild(AdminFormDirective) formDir: AdminFormDirective;
 
@@ -36,6 +38,9 @@ export class AdminComponent implements OnInit {
           this.data = mainAnnouncements;
           this.assignProperties("Main Announcements", "mainAnnouncement", ["title", "description"], 'assets/templates/maForm.html');
           this.loadForm(MaComponent, "mainAnnouncement");
+          this.createNew = function() {
+            return {_id:"", title: "", description: "", pic : {url: ""}};
+          };
         });
         break;
     }
@@ -49,7 +54,11 @@ export class AdminComponent implements OnInit {
     this.editForm = editform;
   }
 
-  create() {}
+  create() {
+    let elem = this.createNew();
+    console.log(elem);
+    this.data.unshift(elem);
+  }
 
   setItem(item) {
     this.formComponentRef.instance.activeItem = item;
@@ -69,6 +78,5 @@ export class AdminComponent implements OnInit {
     //pass in the route
     this.formComponentRef.instance.route = route;
   }
-
 
 }

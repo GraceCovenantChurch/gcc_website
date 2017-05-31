@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'image-preview-input',
@@ -8,15 +8,21 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 export class ImagePreviewInputComponent implements OnInit, OnChanges {
 
   @Input() item : object;
-  imgName : string;
+  @ViewChild("img") img : ElementRef;
+  @ViewChild("input") input : ElementRef;
 
   constructor() { }
 
   ngOnInit() {
-
   }
 
   ngOnChanges(changes : SimpleChanges) {
+    this.input.nativeElement.value = "";
+  }
+
+  setPreviewImage(event) {
+    let url = URL.createObjectURL(this.input.nativeElement.files[0]);
+    this.img.nativeElement.src = url;
   }
 
 }

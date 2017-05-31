@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ImgPreviewInputComponent } from './img-preview-input.component';
+import { ImagePreviewInputComponent } from './image-preview-input.component';
 
 describe('ImgPreviewInputComponent', () => {
-  let component: ImgPreviewInputComponent;
-  let fixture: ComponentFixture<ImgPreviewInputComponent>;
+  let component: ImagePreviewInputComponent;
+  let fixture: ComponentFixture<ImagePreviewInputComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ImgPreviewInputComponent ]
+      declarations: [ ImagePreviewInputComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ImgPreviewInputComponent);
+    fixture = TestBed.createComponent(ImagePreviewInputComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

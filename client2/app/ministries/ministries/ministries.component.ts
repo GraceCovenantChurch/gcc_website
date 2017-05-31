@@ -49,6 +49,7 @@ export class MinistriesComponent implements OnInit {
     //find the ministry we want from the list
     let index = row * this.numCol + col;
 
+    //resetting this will trigger the info element to reload
     this.selectedMinistry = this.ministryList[index];
     this.selectedRow=row;
 
