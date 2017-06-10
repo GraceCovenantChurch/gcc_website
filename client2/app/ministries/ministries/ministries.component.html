@@ -1,0 +1,33 @@
+<div class="jumbotronMini ministries">
+  <h1>Ministries</h1>
+</div>
+
+<div class="ministriesMessage">
+  <p>Matthew 20:28 says the Son of Man did not come to be served but to serve
+    others.</p>
+    <p>As followers of Christ, we at GCC believe in serving God and our community with the time, talents, and treasures that He has given to us.</p>
+
+    <p>Please check out the different opportunities to serve below and don't
+    be afraid to reach out to the coordinators!</p>
+</div>
+
+<div class="ministryGrid">
+  <div class="container">
+    <div *ngFor="let row of numRowArray; let rowNum = index">
+      <div class="row">
+        <div class="col-sm-3" *ngFor="let ministry of getRowArray(rowNum); let col = index">
+          <tile (chosen)="openDescription($event)" [name]="ministry.name"
+                [pic]="ministry.pic"
+                [row]="rowNum"
+                [col]="col">
+          </tile>
+        </div>
+      </div>
+      <div class="row">
+        <div [attr.id]=" 'info' + rowNum " class="col-sm-12" *ngIf="selectedMinistry">
+            <info [ministry]="selectedMinistry" [selectedRow]="selectedRow" [row]="rowNum"></info>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

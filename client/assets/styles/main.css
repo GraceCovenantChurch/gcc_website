@@ -6,6 +6,7 @@
 
 html {
   position: relative;
+  height: auto;
   min-height: 100%;
 }
 
@@ -41,7 +42,7 @@ body {
 }
 .navbar-brand img {
   height: 40px;
-  margin-top: 5px;cd
+  margin-top: 5px;
 }
 
 /******************************Homepage CSS**************************************/
@@ -59,7 +60,7 @@ body {
   text-align: center;
   color: white;
   margin-top: 40vh;
-  font-family: 'Kalam', sans-serif;
+  font-family: 'bebasN', sans-serif;
 }
 
 #welcome h1 {
@@ -74,7 +75,7 @@ body {
 #motto {
   margin-top: 12vh;
   text-align: center;
-  font-family: 'Kalam', sans-serif;
+  font-family: 'bebasN', sans-serif;
 }
 
 .announcements {
@@ -103,6 +104,7 @@ body {
 
 .info {
   padding: 50px 0;
+  margin: 0;
 }
 
 .info h2 {
@@ -118,9 +120,11 @@ body {
 .pillars {
   margin-top: 50px;
 }
+
 .pillars .col-sm-3 {
   text-align: center;
   font-size: 16px;
+
 }
 
 .memoryVerse {
@@ -142,23 +146,37 @@ body {
   text-align: right;
 }
 
-/******************************About landing CSS**************************************/
-.jumbotronAbout {
+/*****General Landing CSS*****************************************************/
+.jumbotronMini {
   height: 60vh;
   padding-top: 1px;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/about/jumbotron.jpg') center center/cover;
 }
 
-.jumbotronAbout h1 {
+.jumbotronMini h1 {
   margin-top: 25vh;
-  font-family: 'Kalam', sans-serif;
   color: white;
+  font-family: 'bebasN', sans-serif;
+}
+
+.tile {
+  text-align: center;
+  color: white;
+}
+
+.tile:hover {
+  color: #DDDDDD
+}
+
+/******************************About landing CSS**************************************/
+.about {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/about/jumbotron.jpg') center center/cover;
 }
 
 .messageAbout {
   text-align: center;
-  padding: 8vh 0;
+  padding: 10vh 0;
+  background-color: #F4F4F2;
 }
 
 #links {
@@ -166,43 +184,25 @@ body {
 }
 
 .containerAbout {
-  padding: 60px 100px;
-  background-color: #F4F4F2;
+  padding: 40px 50px;
 }
 
-.imgAbout {
-  margin: 0;
-  padding: 0 2px;
-}
-
-.box1 {
-  background: url('/assets/images/about/new.jpg') top left/100% 100% no-repeat;
-  height: 40vh;
-}
-
-.box2 {
-  background:  url('/assets/images/about/believe.jpg') top left/100% 100% no-repeat;
-  height: 40vh;
-}
-
-.box3 {
-  background:url('/assets/images/about/staff.jpg') top left/100% 100% no-repeat;
-  height: 40vh;
-}
-
-.box4 {
-  background: url('/assets/images/about/ami.jpg') top left/100% 100% no-repeat;
-  height: 40vh;
-}
-
-.tile {
+.aboutcol {
+  padding: 2px;
+  position: relative;
   text-align: center;
-  color: white;
-  padding-top: 15vh;
 }
 
-.tile:hover {
-  color: #DDDDDD
+.aboutThumb {
+  padding: 0;
+}
+
+.aboutThumb h3 {
+  position: absolute;
+  top: 40%;
+  bottom: 50%;
+  left: 0;
+  right: 0;
 }
 
 /******************************About Staff CSS**************************************/
@@ -244,7 +244,7 @@ ul {
 /******************************About beliefs CSS*********************************/
 .jumbotron.believe {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.25)), url('/assets/images/about/believe.jpg') center center/cover;
-  height: 90vh;
+  height: 1000px;
 }
 
 .container.believe {
@@ -261,7 +261,7 @@ ul {
   margin: 0 auto;
   color: white;
   background: rgba(0, 0, 0, 0.1);
-  padding: 0 10px;
+  padding: 0 20px;
   transition: background-color 0.5s;
 }
 
@@ -270,6 +270,262 @@ ul {
   background-color: rgba(50, 50, 50, 0.4);
 }
 
+/******************************About im new CSS*********************************/
+.container.imnew {
+  padding: 10px 100px;
+}
+
+.imnewcol {
+  height: 25vh;
+}
+
+.newVid {
+  height: 50vh;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.imnewcol {
+  margin-bottom: 5px;
+  padding: 0 1px;
+  height: 100%;
+}
+
+.words {
+  font-size: 16px;
+}
+
+#commonQ {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+
+#commonQList {
+  margin-top: 0;
+}
+
+.maps {
+  padding: 10px 0;
+  border: 1px solid #EEEEEE;
+}
+
+/************ Family Group Landing CSS ****************************************/
+.familygroup {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/familygroup/jumbotron.jpeg') center center/cover;
+}
+
+.fgBackground {
+  background-color: #F4F4F2;
+  font-size: 18px;
+  text-align: center;
+}
+
+.fgBackground2 {
+  background-color: #657F80;
+}
+
+.container.fg {
+  padding: 70px 100px;
+}
+
+.container.fg h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.signUpRow {
+  border-top: 1px solid gray;
+  padding: 50px 0;
+}
+
+.signUpRow h2 {
+  margin:0;
+}
+
+.signUpRow a {
+  font-size: 20px;
+}
+
+/******************************Giving CSS*************************************/
+.givingJumbo {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/giving/jumbotron.jpeg') 50% 75%/cover;
+}
+
+.giving {
+  padding: 100px 0;
+}
+
+.givingDesc {
+  text-align: center;
+  background-color: #F4F4F2;
+  font-size: 18px;
+  padding: 26px 0;
+}
+
+.giveWays {
+  padding-bottom: 50px;
+}
+
+.ways3 {
+  border: 1px solid red;
+}
+.ways1 {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+}
+
+.ways2 {
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.giveNote h4 {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.giveTile1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/giving/singapore.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 100px;
+  height: 250px;
+  margin-bottom: 10px;
+  color: white;
+  text-align: center;
+}
+
+.giveTile2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/giving/missions.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 100px;
+  height: 250px;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.giveTile3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/giving/ministryCenter.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 250px;
+  padding-top: 100px;
+  color: white;
+  text-align: center;
+}
+
+.oneTimeGive {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.repeatGive {
+  margin-top: 10px;
+}
+
+
+
+/******************************Minstries CSS***********************************/
+.ministries {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/ministries/jumbotron.jpeg') top left/cover;
+}
+
+.ministriesMessage {
+  text-align: center;
+  background-color: #F4F4F2;
+  font-size: 18px;
+  text-align: center;
+  padding: 110px 0;
+}
+
+.ministryGrid {
+  padding-top: 50px;
+}
+
+.ministryTile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+}
+
+.ministryTile:hover {
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.35), 0 8px 20px 0 rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+}
+
+.ministryTile h2 {
+  margin-top: 50px;
+}
+
+ministry-info {
+  display: none;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  padding-bottom: 30px;
+  margin: 30px 0;
+}
+
+ministry-info h1, ministry-info h5 {
+  text-align: center;
+}
+
+ministry-info img {
+  margin: 0 auto;
+}
+
+ministry-info p {
+  font-size: 16px;
+}
+
+/******************************Multimedia CSS ********************************/
+.multimediaSermons {
+  height: 100vh;
+  padding-top: 45vh;
+  background: url('../images/multimedia/sermons.jpg');
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.multimediaPhotos {
+  height: 100vh;
+  padding-top: 45vh;
+  background: url('../images/multimedia/photos.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.multimediaVideos {
+  height: 100vh;
+  padding-top: 35vh;
+  background: url('../images/multimedia/videos.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+}
+
+.multimediaVideos a, .multimediaPhotos a, .multimediaSermons a {
+  font-size: 100px;
+  color: white;
+  display: block;
+}
 
 /******************************Footer CSS**************************************/
 .footer {
@@ -297,4 +553,10 @@ ul {
 .footer a {
   font-size: 28px;
   color: white;
+}
+
+/**************FONTS*****************************************************/
+@font-face {
+  font-family: bebasN;
+  src: url('/assets/styles/fonts/bebasneue-webfont.woff');
 }

@@ -1,0 +1,36 @@
+/************ Family Group Landing CSS ****************************************/
+.familygroup {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/familygroup/jumbotron.jpeg') center center/cover;
+}
+
+.fgBackground {
+  background-color: #F4F4F2;
+  font-size: 18px;
+  text-align: center;
+}
+
+.fgBackground2 {
+  background-color: #657F80;
+}
+
+.container.fg {
+  padding: 70px 100px;
+}
+
+.container.fg h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.signUpRow {
+  border-top: 1px solid gray;
+  padding: 50px 0;
+}
+
+.signUpRow h2 {
+  margin:0;
+}
+
+.signUpRow a {
+  font-size: 20px;
+}

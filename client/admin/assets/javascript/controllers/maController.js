@@ -1,7 +1,8 @@
 angular.module('gccweb-admin')
   .controller('mainAnnouncementsController', function($scope, MainAnnouncement) {
     $scope.title = 'Main Announcements';
-    $scope.categories = ['title', 'description', 'pic_url'];
+    $scope.route = 'mainAnnouncement';
+    $scope.categories = ['title', 'description'];
     $scope.data = MainAnnouncement.query();
     $scope.editForm = 'assets/templates/maForm.html';
     $scope.setItem = function(item) {
@@ -10,7 +11,7 @@ angular.module('gccweb-admin')
     $scope.create = function() {
       $scope.activeItem = {
         title: '',
-        description: ''
+        description: '',
       }
       $scope.data.unshift($scope.activeItem);
     };

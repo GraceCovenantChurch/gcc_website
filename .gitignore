@@ -29,6 +29,7 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
+client/assets/vendor
 
 # Optional npm cache directory
 .npm
@@ -41,3 +42,7 @@ ec2Key.ppk
 webuser.pem
 
 config.json
+
+#typescript generated js files
+dist
+distAdmin

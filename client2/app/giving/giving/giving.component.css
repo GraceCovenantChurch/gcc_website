@@ -1,0 +1,84 @@
+/******************************Giving CSS*************************************/
+.givingJumbo {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/giving/jumbotron.jpeg') 50% 75%/cover;
+}
+
+.giving {
+  padding: 100px 0;
+}
+
+.givingDesc {
+  text-align: center;
+  background-color: #F4F4F2;
+  font-size: 18px;
+  padding: 26px 0;
+}
+
+.giveWays {
+  margin-top: 20px;
+  padding-bottom: 50px;
+}
+
+.general {
+  padding-right: 50px;
+}
+
+.ways3 {
+  border: 1px solid red;
+}
+.ways1 {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+}
+
+.ways2 {
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.giveNote h4 {
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.giveTile1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/giving/singapore.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 100px;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.giveTile2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/giving/missions.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 100px;
+  height: 250px;
+  margin-bottom: 10px;
+}
+
+.giveTile3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/giving/ministryCenter.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 250px;
+  padding-top: 100px;
+}
+
+.oneTimeGive {
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.repeatGive {
+  margin-top: 10px;
+}

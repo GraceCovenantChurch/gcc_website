@@ -1,0 +1,71 @@
+<div class="jumbotronHome banner">
+  <div id="welcome" class="container">
+    <h1>Grace Covenant Church</h1>
+  </div>
+</div>
+
+<div class="landing">
+  <div id="motto" class="container">
+    <h2>Raising up Kingdom Workers</h2>
+    <h2>Who Are Transformed by Christ</h2>
+    <h2>To Influence the World</h2>
+  </div>
+</div>
+
+
+<div class="mainAnnouncements">
+  <div *ngFor="let announcement of mainAnnouncements">
+    <div class="jumbotronHome announcements" [ngStyle]="{'background-image' : 'linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url(' + announcement.pic.url + ')'}">
+      <div class="container">
+        <h1 class="announcementHeader" style="font-family: bebasN;">{{announcement.title}}</h1>
+        <h3 class="announcementDesc"><a href="/#/">{{announcement.description}}</a></h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row pillars">
+    <div class="col-sm-3">
+      <h3>Family Groups</h3>
+      <p>Get to know the people you see on Sundays by studying the Word together</p>
+      <a href="#/familygroup">Learn more here</a>
+    </div>
+    <div class="col-sm-3">
+      <h3>Ministries</h3>
+      <p>Learn about the ways to serve God and His people</p>
+      <a href="#/ministries">Learn more here</a>
+    </div>
+    <div class="col-sm-3">
+      <h3>Giving</h3>
+      <p>Learn more about how to give</p>
+      <a href="#/giving">Learn more here</a>
+    </div>
+    <div class="col-sm-3">
+      <h3>Sign up for daily devotionals</h3>
+      <p>Daily devotionals for the AMI community of churches.</p>
+      <a target="_blank" href="https://amiquiettimes.com/">Read and subscribe here</a>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row info">
+      <h2>Announcements</h2>
+      <ul>
+        <li *ngFor="let announcement of smallAnnouncements">{{announcement.text}}</li>
+      </ul>
+  </div>
+</div>
+
+
+<div>
+  <div class="memoryVerse" *ngIf="memoryVerse" [ngStyle]="{'background-image' : 'url(' + memoryVerse.pic.url + ')'}">
+    <div class="mvContainer">
+      <h3>Memory Verse of the Month</h3>
+      <h2>"{{memoryVerse.verse}}"</h2>
+      <h5>{{"-" + memoryVerse.reference}}</h5>
+    </div>
+  </div>
+</div>
