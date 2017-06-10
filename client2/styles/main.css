@@ -1,0 +1,55 @@
+/******************************Whole document styles **************************/
+
+html {
+  position: relative;
+  height: auto;
+  min-height: 100%;
+}
+
+body {
+  font-family:'Gudea', sans-serif;
+  margin-bottom: 60px; /*this must be the height of the footer!*/
+  padding-top: 80px; /*this must be the height of the navbar!*/
+}
+
+.fade {
+  opacity : 0;
+}
+
+/*****General Landing CSS*****************************************************/
+.jumbotronMini {
+  height: 60vh;
+  padding-top: 1px;
+  text-align: center;
+}
+
+.jumbotronMini h1 {
+  margin-top: 25vh;
+  color: white;
+  font-family: 'bebasN', sans-serif;
+}
+
+.tile {
+  text-align: center;
+  color: white;
+}
+
+.tile:hover {
+  color: #DDDDDD;
+  text-decoration: none;
+}
+
+
+
+/**************FONTS*****************************************************/
+@font-face {
+  font-family: bebasN;
+  src: url('/assets/fonts/bebasneue-webfont.woff');
+}
+
+/*******************************media properties*******************************/
+@media (max-width:768px) {
+    body{
+      padding-top: 0;
+    }
+}

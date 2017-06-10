@@ -1,0 +1,23 @@
+
+/******************************About Staff CSS**************************************/
+.container.staff {
+  padding: 30px 80px;
+}
+
+.person {
+  margin-bottom: 20px;
+}
+
+.container.staff img {
+  width: 100%;
+  height: 100%;
+}
+
+.person h2 {
+  margin-bottom: 0;
+}
+
+.staff p {
+  margin-top: 20px;
+  font-size: 16px;
+}

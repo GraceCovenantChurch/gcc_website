@@ -1,0 +1,17 @@
+
+/******************************Ministries CSS***********************************/
+.ministries {
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/ministries/jumbotron.jpeg') top left/cover;
+}
+
+.ministriesMessage {
+  text-align: center;
+  background-color: #F4F4F2;
+  font-size: 18px;
+  text-align: center;
+  padding: 110px 0;
+}
+
+.ministryGrid {
+  padding-top: 50px;
+}

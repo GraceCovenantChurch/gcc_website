@@ -1,0 +1,8 @@
+<div class="jumbotron believe">
+  <div class="container believe">
+    <div class="panel" (click)="selectBelief(i)" *ngFor="let belief of beliefs; let i = index">
+      <h2>{{belief.title}}</h2>
+      <h4 class="beliefDesc" *ngIf="i === current">{{belief.description}}</h4>
+    </div>
+  </div>
+</div>

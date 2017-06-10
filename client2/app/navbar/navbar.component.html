@@ -1,0 +1,23 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a routerLink="/" class="navbar-brand"><img src="assets/images/gcclogo.jpg" /></a>
+      <button (click)="toggleNav()" type="button" class="navbar-toggle collapsed">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="navItems collapse navbar-collapse" [class.in]="collapsed">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/familygroup">Family Groups</a></li>
+        <li><a routerLink="/ministries">Ministries</a></li>
+        <li><a routerLink="/giving">Giving</a></li>
+        <li><a routerLink="/multimedia">Multimedia</a></li>
+        <li><a routerLink="/calendar">Calendar</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

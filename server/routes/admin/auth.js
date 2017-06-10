@@ -12,7 +12,7 @@ passport.use(new GoogleStrategy({
   var emails = profile.emails.map(el => {
     return el.value
   });
-    
+
   // if any one of emails is in whitelisted list
   var found = false;
   var authorized = nconf.get('ADMIN_EMAILS');

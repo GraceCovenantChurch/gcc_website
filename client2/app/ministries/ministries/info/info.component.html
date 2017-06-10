@@ -1,0 +1,8 @@
+<div [hidden]="hideRow()" class="ministryInfo">
+  <h1>{{ministry.name}}</h1>
+  <img *ngIf="ministry.pic" [src]=" 'assets/images/ministries/' + ministry.pic" class="img-responsive" />
+  <h5><em><strong>Coordinator: </strong> {{ministry.coordinator}}</em></h5>
+  <h5><em><strong>Contact: </strong> {{ministry.contact}}</em></h5>
+  <p id="#privileges"><strong><ins>Privileges</ins></strong>: {{ministry.privileges}}</p>
+  <p id="#timeCommitment"><strong><ins>Time Commitment</ins></strong>: {{ministry.timeCommitment}}</p>
+</div>
