@@ -27,6 +27,7 @@ import { GivingComponent } from './giving/giving/giving.component';
 import { MultimediaComponent } from './multimedia/multimedia/multimedia.component';
 import { CalendarComponent } from './calendar/calendar/calendar.component';
 import { SingaporeComponent } from './giving/singapore/singapore.component';
+import { MinistryCenterComponent } from './giving/ministrycenter/ministrycenter.component';
 import { AdminComponent } from './admin/admin/admin.component';
 import { AdminNavComponent } from './admin/admin-nav/admin-nav.component';
 import { EmptyComponent } from './empty/empty.component';
@@ -49,7 +50,8 @@ const appRoutes: Routes = [
     {path: 'giving', component: GivingComponent},
     {path: 'multimedia', component: MultimediaComponent},
     {path: 'calendar', component: CalendarComponent},
-    {path: 'singapore', component: SingaporeComponent}
+    {path: 'singapore', component: SingaporeComponent},
+    {path: 'ministrycenter', component: MinistryCenterComponent}
   ]},
   {path: 'admin', children: [
     {path: '', component: AdminComponent},
@@ -65,7 +67,7 @@ const appRoutes: Routes = [
   imports:      [ BrowserModule, FormsModule, HttpModule, JsonpModule, RouterModule.forRoot(appRoutes), Ng2PageScrollModule.forRoot() ],
   declarations: [ AppComponent, NavbarComponent, FooterComponent, HomeComponent, AboutComponent, ImnewComponent,
                   BeliefsComponent, StaffComponent, AmiComponent, FamilygroupComponent, MinistriesComponent, TileComponent,
-                  InfoComponent, GivingComponent, MultimediaComponent, CalendarComponent, SingaporeComponent, AdminComponent, AdminNavComponent, EmptyComponent, AdminFormDirective, MaComponent, ImagePreviewInputComponent ],
+                  InfoComponent, GivingComponent, MultimediaComponent, CalendarComponent, SingaporeComponent, MinistryCenterComponent, AdminComponent, AdminNavComponent, EmptyComponent, AdminFormDirective, MaComponent, ImagePreviewInputComponent ],
   bootstrap:    [ AppComponent ],
   providers:    [ HomeService, AboutService, MinistriesService ],
   entryComponents: [MaComponent]

@@ -43,7 +43,7 @@
   margin-bottom: 10px;
 }
 
-.giveTile1 {
+.singaporeTile {
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/giving/singapore.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@
   margin-bottom: 10px;
 }
 
-.giveTile2 {
+.missionsTile {
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/giving/missions.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -63,7 +63,7 @@
   margin-bottom: 10px;
 }
 
-.giveTile3 {
+.ministryCenterTile {
   background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/assets/images/giving/ministryCenter.jpg');
   background-size: cover;
   background-repeat: no-repeat;
