@@ -1,5 +1,5 @@
 
-<form  method="post" [action]=" '/admin/' + route + '/' + activeItem._id" enctype="multipart/form-data">
+<form ngNoForm method="post" [action]=" '/admin/' + route + '/' + activeItem._id " enctype="multipart/form-data">
     <input name="_id" class="form-control" type="hidden" [value]="activeItem._id" readonly/>
 
     <div class="form-group">
