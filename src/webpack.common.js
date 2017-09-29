@@ -1,0 +1,117 @@
+const fs = require('fs');
+const path = require('path');
+const webpack = require('webpack');
+
+const nconf = require('nconf');
+require('./config.js');
+nconf.set('APP_ENV', 'browser');
+
+function addHMR(target) {
+  return nconf.get('NODE_ENV') !== 'production' ? [
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://' + nconf.get('CLIENT_HOST') + ':' + nconf.get('CLIENT_PORT'),
+    'webpack/hot/only-dev-server',
+    target,
+  ] : target;
+}
+
+module.exports = (commonName, targets) => ({
+  devtool: nconf.get('NODE_ENV') !== 'production' ? 'cheap-module-eval-source-map' : undefined,
+  entry: (function() {
+    if (nconf.get('NODE_ENV') !== 'production') {
+      var hmrTargets = {};
+      Object.keys(targets).forEach(key => {
+        hmrTargets[key] = addHMR(targets[key]);
+      });
+      return hmrTargets;
+    } else {
+      return targets;
+    }
+  })(),
+  output: {
+    path: path.resolve(__dirname, '../build/public/js'),
+    filename: '[name].js',
+    chunkFilename: '[name]-chunk.js',
+    publicPath: '/public/js/',
+  },
+  resolve: {
+    modules: [
+      __dirname,
+      '../node_modules',
+      'node_modules',
+    ],
+    extensions: ['.js', '.jsx']
+  },
+  module: {
+    rules: [
+      {
+        test: /\.jsx?$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              ['env', { modules: false }],
+              'react',
+            ],
+            plugins: [
+              'dynamic-import-webpack',
+            ],
+          },
+        },
+      },
+    ],
+  },
+  plugins: [
+    nconf.get('NODE_ENV') !== 'production' ? new webpack.HotModuleReplacementPlugin() : null,
+    nconf.get('NODE_ENV') !== 'production' ? new webpack.NamedModulesPlugin() : null,
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.DefinePlugin({
+      'NCONF': JSON.stringify({
+        CLIENT_HOST: nconf.get('CLIENT_HOST'),
+        SERVER_HOST: nconf.get('SERVER_HOST'),
+        CLIENT_PORT: nconf.get('CLIENT_PORT'),
+        SERVER_PORT: nconf.get('SERVER_PORT'),
+        NODE_ENV: nconf.get('NODE_ENV'),
+        APP_ENV: nconf.get('APP_ENV'),
+      }),
+    }),
+    new webpack.NormalModuleReplacementPlugin(/nconf/, function(resource) {
+      resource.request = resource.request.replace(/nconf/, path.resolve(__dirname, 'nconf-browser'));
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'react',
+      minChunks(module, count) {
+        var context = module.context;
+        return context && (
+          context.indexOf(path.join('node_modules', 'react')) >= 0 ||
+          context.indexOf(path.join('node_modules', 'redux')) >= 0 ||
+          context.indexOf(path.join('node_modules', 'fbjs')) >= 0 ||
+          context.indexOf(path.join('node_modules', 'prop-types')) >= 0
+        );
+      },
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: commonName,
+      chunks: Object.keys(targets),
+      minChunks: 2,
+    }),
+    new webpack.optimize.CommonsChunkPlugin({ name: 'manifest' }),
+  ].filter(plugin => plugin),
+
+  devServer: {
+    host: nconf.get('CLIENT_HOST'),
+    port: nconf.get('CLIENT_PORT'),
+    historyApiFallback: true, // respond to 404s with index.html
+    hot: true, // enable HMR on the server
+    inline: true,
+    compress: true,
+    overlay: {
+      errors: true,
+    },
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers': 'X-Requested-With, Accept, Origin, Referer, User-Agent, Content-Type, Authorization',
+    },
+  },
+});
