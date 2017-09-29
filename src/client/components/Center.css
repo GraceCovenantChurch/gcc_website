@@ -1,0 +1,25 @@
+.center {
+  position: relative;
+}
+
+.center-horizontal {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+.center-horizontal > .centered {
+  width: 100%;
+}
+
+.center-vertical {
+  height: 100%;
+}
+
+.center-vertical > .centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+

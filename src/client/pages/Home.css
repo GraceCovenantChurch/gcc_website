@@ -1,0 +1,11 @@
+
+#mainAnnouncements {
+  .announcement {
+    padding: 20px;
+    position: relative;
+
+    h3, a {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+nav li a {
+  text-align: center;
+}
+
+.navbar-brand > img {
+  display: block;
+  height: 40px;
+  margin-top: 5px;
+}
+
+.navbar-header {
+  height: 75px;
+}
+
+.navbar-toggle {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@media(min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
+}

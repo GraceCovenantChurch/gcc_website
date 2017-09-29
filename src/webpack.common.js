@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const nconf = require('nconf');
 require('./config.js');
@@ -14,6 +15,27 @@ function addHMR(target) {
     target,
   ] : target;
 }
+
+const styleLoaders = [
+  nconf.get('NODE_ENV') !== 'production' ? 'style-loader' : undefined,
+  {
+    loader: 'css-loader',
+    options: { importLoaders: 1, minimize: nconf.get('NODE_ENV') === 'production' },
+  },
+  {
+    loader: 'postcss-loader',
+    options: {
+      plugins: (loader) => [
+        require('postcss-import')({ root: loader.resourcePath }),
+        require('postcss-nested')(),
+        require('postcss-cssnext')({
+          browsers: ['last 2 versions', '> 5%'],
+        }),
+      ],
+      sourceMap: nconf.get('NODE_ENV') !== 'production' ? 'inline' : undefined,
+    },
+  },
+].filter(loader => loader);
 
 module.exports = (commonName, targets) => ({
   devtool: nconf.get('NODE_ENV') !== 'production' ? 'cheap-module-eval-source-map' : undefined,
@@ -29,10 +51,10 @@ module.exports = (commonName, targets) => ({
     }
   })(),
   output: {
-    path: path.resolve(__dirname, '../build/public/js'),
+    path: path.resolve(__dirname, '../build/public/assets'),
     filename: '[name].js',
     chunkFilename: '[name]-chunk.js',
-    publicPath: '/public/js/',
+    publicPath: '/public/assets/',
   },
   resolve: {
     modules: [
@@ -44,6 +66,13 @@ module.exports = (commonName, targets) => ({
   },
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        use: nconf.get('NODE_ENV') !== 'production' ? styleLoaders : ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: styleLoaders,
+        }),
+      },
       {
         test: /\.jsx?$/,
         use: {
@@ -74,7 +103,9 @@ module.exports = (commonName, targets) => ({
         NODE_ENV: nconf.get('NODE_ENV'),
         APP_ENV: nconf.get('APP_ENV'),
       }),
+      CSS: 'true',
     }),
+    nconf.get('NODE_ENV') === 'production' ? new ExtractTextPlugin(`[name].bundle.css`, {allChunks: true}) : null,
     new webpack.NormalModuleReplacementPlugin(/nconf/, function(resource) {
       resource.request = resource.request.replace(/nconf/, path.resolve(__dirname, 'nconf-browser'));
     }),

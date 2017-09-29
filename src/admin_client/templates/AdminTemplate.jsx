@@ -1,7 +1,7 @@
 import React from 'react';
 import { renderRoutes } from 'react-router-config';
-import Head from '../../client/templates/Head';
-import AdminNavbar from './AdminNavbar';
+import Head from '../../client/components/Head';
+import AdminNavbar from '../components/AdminNavbar';
 
 const MainTemplate = ({route}) => {
   return (

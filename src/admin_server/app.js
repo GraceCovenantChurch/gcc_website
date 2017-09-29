@@ -22,13 +22,15 @@ app.use(compression());
 
 if (nconf.get('NODE_ENV') !== 'production') {
   const proxy = require('http-proxy-middleware');
-  app.use(proxy(`http://${nconf.get('CLIENT_HOST')}:${nconf.get('CLIENT_PORT')}/public/js/*`));
+  app.use(proxy(`http://${nconf.get('CLIENT_HOST')}:${nconf.get('CLIENT_PORT')}/public/assets/*`));
 
   app.use(require('morgan')('dev'));
 } else {
   app.use(require('morgan')('tiny'));
 }
 
+app.use('/static', express.static(path.join(__dirname, '../../static')));
+app.use('/bower_components', express.static(path.join(__dirname, '../../bower_components')));
 app.use('/public', express.static(path.join(__dirname, '../public')))
 
 app.use(cookieParser());
@@ -57,10 +59,10 @@ app.use(PageRouter(routes, reducers, (head, content, state) => {
       <body ${head.bodyAttributes.toString()}>
         ${content}
         <script type="text/javascript">window.__INITIAL_STATE__ = ${JSON.stringify(state)}</script>
-        <script type="text/javascript" src="/public/js/manifest.js"></script>
-        <script type="text/javascript" src="/public/js/react.js"></script>
-        <script type="text/javascript" src="/public/js/adminCommon.js"></script>
-        <script type="text/javascript" src="/public/js/adminApp.js"></script>
+        <script type="text/javascript" src="/public/assets/manifest.js"></script>
+        <script type="text/javascript" src="/public/assets/react.js"></script>
+        <script type="text/javascript" src="/public/assets/adminCommon.js"></script>
+        <script type="text/javascript" src="/public/assets/adminApp.js"></script>
       </body>
     </html>
   `;

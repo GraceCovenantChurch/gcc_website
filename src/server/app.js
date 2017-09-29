@@ -19,14 +19,16 @@ app.use(compression());
 
 if (nconf.get('NODE_ENV') !== 'production') {
   const proxy = require('http-proxy-middleware');
-  app.use(proxy(`http://${nconf.get('CLIENT_HOST')}:${nconf.get('CLIENT_PORT')}/public/js/*`));
+  app.use(proxy(`http://${nconf.get('CLIENT_HOST')}:${nconf.get('CLIENT_PORT')}/public/assets/*`));
 
   app.use(require('morgan')('dev'));
 } else {
   app.use(require('morgan')('tiny'));
 }
 
-app.use('/public', express.static(path.join(__dirname, '../public')))
+app.use('/static', express.static(path.join(__dirname, '../../static')));
+app.use('/bower_components', express.static(path.join(__dirname, '../../bower_components')));
+app.use('/public', express.static(path.join(__dirname, '../public')));
 app.use('/api', api);
 
 const routes = require('../client/routes').default;
@@ -39,14 +41,16 @@ app.use(PageRouter(routes, reducers, (head, content, state) => {
         ${head.title.toString()}
         ${head.meta.toString()}
         ${head.link.toString()}
+        <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/public/assets/app.bundle.css" />
       </head>
       <body ${head.bodyAttributes.toString()}>
         ${content}
         <script type="text/javascript">window.__INITIAL_STATE__ = ${JSON.stringify(state)}</script>
-        <script type="text/javascript" src="/public/js/manifest.js"></script>
-        <script type="text/javascript" src="/public/js/react.js"></script>
-        <script type="text/javascript" src="/public/js/common.js"></script>
-        <script type="text/javascript" src="/public/js/app.js"></script>
+        <script type="text/javascript" src="/public/assets/manifest.js"></script>
+        <script type="text/javascript" src="/public/assets/react.js"></script>
+        <script type="text/javascript" src="/public/assets/common.js"></script>
+        <script type="text/javascript" src="/public/assets/app.js"></script>
       </body>
     </html>
   `;
