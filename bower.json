@@ -1,0 +1,21 @@
+{
+  "name": "gcc_website",
+  "description": "Website for Grace Covenant Church",
+  "main": "server/app.js",
+  "authors": [
+    "gccdev"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/GraceCovenantChurch/gccweb",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}

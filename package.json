@@ -13,7 +13,8 @@
     "webpack-admin": "cross-env NODE_ENV=production webpack --config src/webpack.admin.js -p",
     "serve": "cross-env NODE_ENV=production node build/server/app.js",
     "serve-admin": "cross-env NODE_ENV=production node build/admin_server/app.js",
-    "babel": "cross-env NODE_ENV=production babel src -d build --copy-files --presets=env,react --plugins=dynamic-import-node"
+    "babel": "cross-env NODE_ENV=production babel src -d build --copy-files --presets=env,react --plugins=dynamic-import-node",
+    "postinstall": "bower install"
   },
   "author": "gccdev",
   "license": "ISC",
