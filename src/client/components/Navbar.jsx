@@ -55,21 +55,14 @@ class Navbar extends Component {
   }
 
   render() {
-    const navbar = this;
-    class NavLink extends Component {
-      render() {
-        return <Link {...this.props} onClick={() => navbar.close()} />;
-      }
-    };
-
     return (
       <nav className="navbar navbar-default navbar-fixed-top">
         <div className="container-fluid">
           <div className="navbar-header">
-            <NavLink className="navbar-brand" to="/">
-              <h1 className="sr-only">Grace Covenant Church</h1>
-              <img src="/static/images/gcclogo.jpg" />
-            </NavLink>
+            {React.cloneElement(this.props.brand, {
+              className: "navbar-brand",
+              onClick: this.close.bind(this),
+            })}
             <button className={classnames('navbar-toggle', {
               collapsed: this.state.collapsed,
             })} type="button" onClick={this.toggle.bind(this)}>
@@ -88,8 +81,15 @@ class Navbar extends Component {
             height: this.state.height,
           }}>
             <ul className="nav navbar-nav navbar-right">
-              <li><NavLink to="/page">Page</NavLink></li>
-              <li><NavLink to="/pages/async">Async Page</NavLink></li>
+              {React.Children.map(this.props.links, link => {
+                return (
+                  <li>
+                    {React.cloneElement(link, {
+                    onClick: this.close.bind(this),
+                    })}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
