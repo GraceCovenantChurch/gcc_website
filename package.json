@@ -19,6 +19,7 @@
   "author": "gccdev",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "bower": "^1.8.2",
     "classnames": "^2.2.5",
     "compression": "^1.7.0",

@@ -17,8 +17,9 @@ class Navbar extends Component {
 
   toggle() {
     let collapsed = this.state.collapsed;
-    let previousHeight = !collapsed ? `${15 + 40 * 2 + 1}px` : '1px';
-    let nextHeight = collapsed ? `${15 + 40 * 2 + 1}px` : '1px'
+    const count = React.Children.count(this.props.links);
+    let previousHeight = !collapsed ? `${15 + 40 * count + 1}px` : '1px';
+    let nextHeight = collapsed ? `${15 + 40 * count + 1}px` : '1px'
 
     this.setState({
       collapsed: !collapsed,
@@ -85,7 +86,7 @@ class Navbar extends Component {
                 return (
                   <li>
                     {React.cloneElement(link, {
-                    onClick: this.close.bind(this),
+                      onClick: this.close.bind(this),
                     })}
                   </li>
                 );
