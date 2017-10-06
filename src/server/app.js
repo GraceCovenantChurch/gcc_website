@@ -10,7 +10,6 @@ import api from './api';
 import PageRouter from './pageRouter';
 
 process.on('unhandledRejection', err => {
-  console.log("Caught unhandledRejection");
   console.log(err);
 });
 

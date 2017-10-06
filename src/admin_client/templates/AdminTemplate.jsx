@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Link from 'react-router-dom/Link';
 import { renderRoutes } from 'react-router-config';
 import Head from '../../client/components/Head';
 import Navbar from '../../client/components/Navbar';
 const styles = (typeof CSS !== 'undefined') && require('./AdminTemplate.css');
 
-const MainTemplate = ({route}) => {
+const AdminTemplate = ({route}) => {
   return (
     <div>
       <Head />
@@ -31,4 +31,4 @@ const MainTemplate = ({route}) => {
   );
 };
 
-export default MainTemplate;
+export default AdminTemplate;

@@ -29,8 +29,9 @@ export default function asyncComponent(path, getComponent) {
         const { WrappedAsyncComponent } = this.state;
         if (WrappedAsyncComponent) {
           return <WrappedAsyncComponent {...this.props} />;
+        } else {
+          return null;
         }
-        return null;
       }
     };
   }

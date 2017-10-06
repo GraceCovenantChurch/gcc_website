@@ -10,7 +10,7 @@ export default function withTitle(title) {
         return dispatch(setTitle(title));
       }
 
-      componentDidMount() {
+      componentWillMount() {
         this.props.setTitle();
       }
 
@@ -19,10 +19,14 @@ export default function withTitle(title) {
       }
     };
 
-    return connect(undefined, dispatch => {
+    return connect(undefined, (dispatch, ownProps) => {
       return {
         setTitle() {
-          dispatch(setTitle(title))
+          if (typeof title === 'function') {
+            dispatch(setTitle(title(ownProps)));
+          } else {
+            dispatch(setTitle(title));
+          }
         },
       };
     })(TitleWrapper);

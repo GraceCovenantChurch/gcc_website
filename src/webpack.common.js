@@ -83,6 +83,7 @@ module.exports = (commonName, targets) => ({
               'react',
             ],
             plugins: [
+              'transform-object-rest-spread',
               'dynamic-import-webpack',
             ],
           },
@@ -104,6 +105,7 @@ module.exports = (commonName, targets) => ({
         APP_ENV: nconf.get('APP_ENV'),
       }),
       CSS: 'true',
+      'typeof window': '\"object\"', // for client-side mongoose build
     }),
     nconf.get('NODE_ENV') === 'production' ? new ExtractTextPlugin(`[name].bundle.css`, {allChunks: true}) : null,
     new webpack.NormalModuleReplacementPlugin(/nconf/, function(resource) {

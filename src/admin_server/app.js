@@ -10,7 +10,12 @@ import cookieParser from 'cookie-parser';
 import cookieSession from 'cookie-session';
 import passport from 'passport';
 import publicAPI from '../server/api';
+import api from './api';
 import PageRouter from '../server/pageRouter';
+import mongoose from 'mongoose';
+import Promise from 'bluebird';
+
+mongoose.Promise = Promise;
 
 process.on('unhandledRejection', err => {
   console.log("Caught unhandledRejection");
@@ -43,6 +48,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 require('./auth')(app);
 
+app.use('/api', api);
 app.use('/api', publicAPI);
 
 const routes = require('../admin_client/routes').default;
@@ -70,6 +76,13 @@ app.use(PageRouter(routes, reducers, (head, content, state) => {
   `;
 }));
 
-app.listen(nconf.get('SERVER_PORT'), function() {
-  console.log('Server listening on port', nconf.get('SERVER_PORT'));
+mongoose.connect(nconf.get('MONGODB_URI'), {useMongoClient: true}, function(err) {
+  if (err) {
+    throw err;
+  }
+  console.log('Connected to database');
+
+  app.listen(nconf.get('SERVER_PORT'), function() {
+    console.log('Server listening on port', nconf.get('SERVER_PORT'));
+  });
 });
