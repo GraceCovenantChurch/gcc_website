@@ -3,6 +3,7 @@ import Link from 'react-router-dom/Link';
 import { renderRoutes } from 'react-router-config';
 import Head from '../../client/components/Head';
 import Navbar from '../../client/components/Navbar';
+import Notifications from '../components/Notifications';
 const styles = (typeof CSS !== 'undefined') && require('./AdminTemplate.css');
 
 const AdminTemplate = ({route}) => {
@@ -21,6 +22,7 @@ const AdminTemplate = ({route}) => {
           <a href="/logout">Log Out</a>,
         ]}
       />
+      <Notifications />
       <main>{renderRoutes(route.routes)}</main>
       <footer>
         <div className="container">

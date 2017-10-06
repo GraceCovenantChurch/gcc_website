@@ -16,7 +16,7 @@ router.post('/create', (req, res, next) => {
 });
 
 router.post('/:id/update', (req, res, next) => {
-  Announcement.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true })
+  Announcement.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true, runValidators: true })
     .then(result => res.json(result))
     .catch(err => next(err));
 });

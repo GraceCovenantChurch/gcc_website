@@ -5,6 +5,7 @@ import {renderRoutes} from 'react-router-config';
 import {Link, withRouter} from 'react-router-dom';
 import Switch from 'react-router/Switch';
 import Route from 'react-router/Route';
+import Helmet from 'react-helmet';
 import pluralize from 'pluralize';
 import TableView, {TableRow, TableCell} from '../components/TableView';
 import Modal from '../components/Modal';
@@ -56,6 +57,9 @@ class ModelPage extends Component {
   render() {
     return (
       <div className="container">
+        <Helmet>
+          <link rel="stylesheet" type="text/css" href="/public/assets/adminModelPage.bundle.css" />
+        </Helmet>
         <Switch>
           <Route path={`${this.props.match.url}/new`} render={(props) => (
             <ModalEditForm page={this} open={true} formKey="new"

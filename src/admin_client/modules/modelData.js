@@ -45,7 +45,7 @@ function model(state = initialModelState, action) {
       });
 
     case DOCUMENT_DELETED:
-    return Object.assign({}, state, {
+      return Object.assign({}, state, {
         __DB__: Object.assign({}, state.__DB__, {
           [action.id]: undefined,
         }),
@@ -75,9 +75,10 @@ export default function page(state = initialState, action) {
 
 function handleErrors(res) {
   if (!res.ok) {
-    throw Error(res.statusText);
+    return Promise.reject(res);
+  } else {
+    return Promise.resolve(res);
   }
-  return res;
 }
 
 export const fetchModelData = (modelName) => (dispatch) => {

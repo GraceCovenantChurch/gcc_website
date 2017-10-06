@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import pluralize from 'pluralize';
 import {createDocument, updateDocument, deleteDocument} from '../modules/modelData';
+import {postNotification, clearNotification, SUCCESS, INFO, ERROR} from '../modules/notifications';
 
 class EditForm extends Component {
   constructor(props) {
@@ -32,18 +33,43 @@ class EditForm extends Component {
   }
 
   handleDelete(e) {
+    if (!this.props.id) {
+      return false;
+    }
+    const deletingNotification = this.props.postNotification(INFO, 'Deleting...');
     return this.props.delete()
-    .then(this.props.onClose)
-    .catch(err => console.error(err));
+      .then(() => {
+        this.props.clearNotification(deletingNotification.key);
+        this.props.postNotification(SUCCESS, 'Deleted successfully!');
+        return this.props.onClose();
+      })
+      .catch(err => err.json())
+      .then(error => {
+        if (error) {
+          this.props.clearNotification(deletingNotification.key);
+          this.props.postNotification(ERROR, error.message);
+        }
+      });
   }
 
   handleSubmit(e) {
     e.preventDefault();
+    const savingNotification = this.props.postNotification(INFO, 'Saving...');
     return (this.props.id ?
       this.props.update(this.state) :
       this.props.create(this.state)
-    ).then(this.props.onClose)
-    .catch(err => console.error(err));
+    ).then(() => {
+      this.props.clearNotification(savingNotification.key);
+      this.props.postNotification(SUCCESS, 'Saved successfully!');
+      return this.props.onClose();
+    })
+    .catch(err => err.json())
+    .then(error => {
+      if (error) {
+        this.props.clearNotification(savingNotification.key);
+        this.props.postNotification(ERROR, error.message);
+      }
+    });
   }
 
   render() {
@@ -89,6 +115,12 @@ export default connect((state, ownProps) => {
     },
     delete() {
       return dispatch(deleteDocument(ownProps.modelName, ownProps.id));
+    },
+    postNotification(status, message) {
+      return dispatch(postNotification(status, message));
+    },
+    clearNotification(key) {
+      return dispatch(clearNotification(key));
     },
   };
 })(EditForm);
