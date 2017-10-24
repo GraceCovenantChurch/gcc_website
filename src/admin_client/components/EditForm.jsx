@@ -79,12 +79,12 @@ class EditForm extends Component {
         {this.props.fields.map(field => (
           <div key={field.key} className="form-group">
             <label htmlFor={field.key}>{field.key}</label>
-            <input type="text" className="form-control" placeholder={field.key}
-
+            <field.editorComponent
+              field={field}
               value={this.state[field.key] || ''}
-              onChange={e => {
+              valueChanged={value => {
                 this.setState({
-                  [field.key]: e.target.value,
+                  [field.key]: value,
                 });
               }}
             />

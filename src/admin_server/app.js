@@ -62,6 +62,7 @@ app.use(PageRouter(routes, reducers, (head, content, state) => {
         ${head.meta.toString()}
         ${head.link.toString()}
         <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css" />
         <link rel="stylesheet" type="text/css" href="/public/assets/adminApp.bundle.css" />
       </head>
       <body ${head.bodyAttributes.toString()}>

@@ -18,7 +18,7 @@ const AdminTemplate = ({route}) => {
           </Link>
         }
         links = {[
-          <Link to="/announcements">Announcements</Link>,
+          <Link to="/events">Events</Link>,
           <a href="/logout">Log Out</a>,
         ]}
       />

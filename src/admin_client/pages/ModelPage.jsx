@@ -55,6 +55,13 @@ class ModelPage extends Component {
   }
 
   render() {
+    const fieldColumnIndices = {};
+    this.props.modelFields.forEach((field, i) => {
+      Object.assign(fieldColumnIndices, {
+        [field.key]: i,
+      });
+    });
+
     return (
       <div className="container">
         <Helmet>
@@ -86,17 +93,20 @@ class ModelPage extends Component {
           <h1>{pluralize(this.props.modelName)}</h1>
         </div>
         <TableView columns={this.props.modelFields}>
-          {this.props.data.map(datum => (
+          {(this.props.sort ? this.props.data.concat().sort(this.props.sort) : this.props.data).map(datum => (
             <TableRow
                 key={datum._id}
                 onClick={() => this.props.history.push(`${this.props.match.url}/${datum._id}/edit`)}
                 style={{ cursor: 'pointer' }}
             >
-              {Object.keys(datum).map((key, i) => (
-                <TableCell column={key} key={key}>
-                  {datum[key]}
-                </TableCell>
-              ))}
+              {Object.keys(datum).map((key, i) => {
+                const field = this.props.modelFields[fieldColumnIndices[key]];
+                return (
+                  <TableCell column={key} key={key}>
+                    {field && field.displayComponent ? <field.displayComponent value={datum[key]} /> : datum[key]}
+                  </TableCell>
+                );
+              })}
             </TableRow>
           ))}
         </TableView>
