@@ -31,7 +31,16 @@ class ModalEditForm extends Component {
 
   render() {
     const page = this.props.page;
-    const closeModal = () => page.props.history.push(page.props.match.url);
+    const closeModal = () => {
+      this.setState({
+        open: false,
+      }, () => {
+        // Wait for modal to close before pushing history
+        setTimeout(() => {
+          page.props.history.push(page.props.match.url);
+        }, 300);
+      });
+    };
     const confirmAndClose = () => confirm('Are you sure you want to cancel?') && closeModal();
 
     return (
