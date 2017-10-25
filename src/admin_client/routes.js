@@ -2,15 +2,15 @@ import path from 'path';
 import asyncComponent from '../client/hoc/asyncComponent';
 import AdminTemplate from './templates/AdminTemplate';
 import NotFound from '../client/pages/NotFound';
-import Announcements from './pages/Announcements';
+import Events from './pages/Events';
 
 const routes = [
   {
     component: AdminTemplate,
     routes: [
       {
-        path: '/announcements',
-        component: Announcements,
+        path: '/events',
+        component: Events,
       },
       {
         component: NotFound,

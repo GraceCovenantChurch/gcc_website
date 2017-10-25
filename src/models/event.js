@@ -1,9 +1,6 @@
 import mongoose from 'mongoose';
 
-export const AnnouncementSchema = mongoose.Schema({
-  index: {
-    type: Number,
-  },
+export const EventSchema = mongoose.Schema({
   title: {
     type: String,
     required: true,
@@ -13,13 +10,20 @@ export const AnnouncementSchema = mongoose.Schema({
   },
   published: {
     type: Boolean,
+    default: false,
   },
   link: {
     type: String,
+  },
+  startDate: {
+    type: Date,
+  },
+  endDate: {
+    type: Date,
   },
   expiration: {
     type: Date,
   },
 });
 
-export default mongoose.model('Announcement', AnnouncementSchema);
+export default mongoose.model('Event', EventSchema);

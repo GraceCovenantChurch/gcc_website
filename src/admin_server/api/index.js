@@ -1,11 +1,11 @@
 import {Router} from 'express';
 import bodyParser from 'body-parser';
-import Announcements from './Announcements';
+import Events from './Events';
 
 const router = Router();
 router.use(bodyParser.json());
 
-router.use('/modelData/Announcements', Announcements);
+router.use('/modelData/Events', Events);
 
 router.use((err, req, res, next) => {
   res.status(err.status || 500);

@@ -8,6 +8,7 @@ export const ERROR = 'ERROR';
 export const SUCCESS = 'SUCCESS';
 export const WARNING = 'WARNING';
 export const INFO = 'INFO';
+export const DANGER = 'DANGER';
 
 export default function notifications(state = initialState, action) {
   switch(action.type) {
