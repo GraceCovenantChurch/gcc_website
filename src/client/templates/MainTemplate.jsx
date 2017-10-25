@@ -13,12 +13,17 @@ const MainTemplate = ({route}) => {
         brand={
           <Link to="/">
             <h1 className="sr-only">Grace Covenant Church</h1>
-            <img src="/static/images/gcclogo.jpg" />
+            <img id="logo" src="/static/images/gcclogo.png" />
           </Link>
         }
         links = {[
-          <Link to="/page">Page</Link>,
-          <Link to="/pages/async">Async Page</Link>
+          <Link to="/page">I'm New</Link>,
+          <Link to="/pages">About</Link>,
+          <Link to="/page">Family Groups</Link>,
+          <Link to="/pages">Ministries</Link>,
+          <Link to="/page">Giving</Link>,
+          <Link to="/pages">Multimedia</Link>,
+          <Link to="/pages">Events</Link>
         ]}
       />
       <main>{renderRoutes(route.routes)}</main>

@@ -5,24 +5,70 @@ import withTitle from '../hoc/withTitle';
 import BackgroundImage from '../components/BackgroundImage';
 import Center from '../components/Center';
 import Jumbotron from '../components/Jumbotron';
+import Event from '../components/Event';
+
 const styles = (typeof CSS !== 'undefined') && require('./Home.css');
 
 const mainAnnouncements = [
   {
-    title: 'Sign up for family groups',
-    content: 'You haven\'t checked out GCC unless you\'ve checked out our family groups',
+    title: 'Passion Conference',
+    content: 'Content goes here',
+    published: true,
     link: '/page',
     internalLink: true,
-    image: '/static/images/home/philly.jpg',
+    startDate: '10-26-2017',
+    endDate: '10-28-2017',
+    expiration: '',
+    tag: 'UC'
   },
   {
-    title: 'Crossroad retreat',
-    content: 'Click here to sign up for Crossroads Retreat!',
-    link: 'http://google.com',
-    internalLink: false,
-    image: '/static/images/home/philly.jpg',
+    title: 'Crossroad Fall Reflection Retreat',
+    content: 'What a Son & Daughter Need from Their Father',
+    published: true,
+    link: '/page',
+    internalLink: true,
+    startDate: '10-07-2017',
+    endDate: '',
+    expiration: '10-27-2017',
+    tag: 'ML'
+  },
+  {
+    title: 'Other Important Event',
+    content: 'Content goes here',
+    published: true,
+    link: '/page',
+    internalLink: true,
+    startDate: '10-07-2017',
+    endDate: '',
+    expiration: '10-27-2017',
+    tag: 'ML'
+  },
+  {
+    title: 'Other Important Event',
+    content: 'Content goes here',
+    published: true,
+    link: '/page',
+    internalLink: true,
+    startDate: '10-07-2017',
+    endDate: '',
+    expiration: '10-27-2017',
+    tag: 'ML'
   },
 ];
+
+//memory verse schema
+//i'm just using index 0 for now if we're forced to grab arrays, but if we can just get the first row, that'd work too and prob save time
+
+const memoryVerse = [
+  {
+    verse: "I have said these things to you, that you may have peace. In this world you will have tribulation. But take heart; I have overcome the world.",
+    ref: "John 16:33",
+    month: 10,
+    year: 2017, //not sure if we will save this every month, but i think it's a good idea
+    image: '', // image
+    color: 'black' //prob need to specify text color depending on image? 
+  }
+]
 
 class Home extends Component {
   render() {
@@ -31,91 +77,112 @@ class Home extends Component {
         <Helmet>
           <link rel="stylesheet" type="text/css" href="/public/assets/pages/Home.bundle.css" />
         </Helmet>
-        <Jumbotron style={{height: '80vh'}}>
-          <BackgroundImage src="/static/images/home/philly.jpg" backgroundSize="cover" backgroundPosition="top left" />
-          <Center vertical horizontal>
+
+        <Jumbotron style={{height: '100vh'}}>
+          <BackgroundImage src="/static/images/home/philly.jpg" backgroundSize="cover" backgroundPosition="top left" backgroundAttachment="fixed"/>
             <div className="container">
-              <h1 style={{color: 'white'}}>Grace Covenant Church</h1>
+              <h1 className="bottomLeft" style={{color: 'white'}}>Grace Covenant Church</h1>
             </div>
-          </Center>
         </Jumbotron>
-        <Jumbotron style={{ paddingTop: '125px', paddingBottom: '125px' }}>
-          <Center horizontal>
+
+        <Jumbotron style={{height: '100vh'}}>
+          <BackgroundImage src="/static/images/home/philly.jpg" backgroundSize="cover" backgroundPosition="top left" backgroundAttachment="fixed"/>
             <div className="container">
-              <h2>Raising up Kingdom Workers<br /> Who are Transformed by Christ<br/>To Influence the World</h2>
+              <h1 className="bottomLeft" style={{color: 'white'}}>
+                Raising up kingdom workers who are transformed by Christ to influence the world. <Link to="#"><i className="glyphicon glyphicon-arrow-right"></i></Link>
+              </h1>
             </div>
-          </Center>
         </Jumbotron>
-        <div id="mainAnnouncements">
-          {mainAnnouncements.map((announcement, i) => {
-            return (
-              <Jumbotron style={{height: '60vh'}} key={i}>
-                <BackgroundImage
-                  src={announcement.image}
-                  backgroundSize="cover"
-                  backgroundPosition="center"
-                  backgroundAttachment="fixed"
-                />
-                <Center vertical horizontal>
-                  <div className="container">
-                    <div className="announcement">
-                      <div className="container-fluid">
-                        <h3>{announcement.title}</h3>
-                        {
-                          announcement.internalLink ? 
-                          <Link to={announcement.link || '#'}>{announcement.content}</Link> :
-                          <a href={announcement.link || '#'}>{announcement.content}</a>
-                        }
+
+        <Jumbotron style={{height: '65vh'}}>
+          <BackgroundImage backgroundColor="white"/>
+            <Center horizontal vertical>
+            <div className="container" style={ { color:"black"} }>
+              <h1 id="joinUs">Join Us In Worship</h1>
+
+              <div className="col-sm-4 col-sm-offset-2 joinCol">
+                <h2><strong>Friday Night Live</strong></h2>
+
+                <h3><strong>University City</strong> 7:30pm</h3>
+                <h3>Meyerson Hall (34th & Walnut)</h3>
+              </div>
+              
+              <div className="col-sm-4 joinCol">
+                <h2><strong>Sunday Service</strong></h2>
+
+                <h3><strong>University City</strong> 7:30pm</h3>
+                <h3>Meyerson Hall (34th & Walnut)</h3>
+
+                <h3><strong>Mainline </strong> 9:45am</h3>
+                <h3>Agnes Irwin School</h3>
+              </div>
+
+            </div>
+            </Center>
+        </Jumbotron>
+
+        <Jumbotron style={{height: '100vh'}}>
+          <BackgroundImage src="/static/images/home/bros.jpg" backgroundSize="cover" backgroundPosition="top left"/>
+            <div className="container">
+              <h1 className="bottomLeft" style={{color: 'white', fontSize: '70px'}}>
+                You haven't checked out GCC unless you've checked out our family groups. <i className="glyphicon glyphicon-arrow-right"></i>
+              </h1>
+            </div>
+        </Jumbotron>
+
+        <Jumbotron style={{height: '70vh'}}>
+          <BackgroundImage backgroundColor="white"/>
+            <Center horizontal vertical>
+            <div className="container">
+              <h1 style={{color: 'black', marginBottom: '30px'}}>Events</h1>
+
+              <div className="events">
+                {mainAnnouncements.map( (event, i, events ) => {
+                  return (i % 2 == 1) ? null : (
+                    <div className="row">
+                      <div className="col-sm-5 col-sm-offset-1">
+                        <Event 
+                          key={i} 
+                          index={i} 
+                          tag={event.tag} 
+                          startDate={event.startDate} 
+                          endDate={event.endDate} 
+                          title={event.title} 
+                          content={event.content}>
+                        </Event>
+                      </div>
+                      <div className="col-sm-5">
+                        <Event 
+                          key={i + 1} 
+                          index={i + 1} 
+                          tag={events[i + 1].tag} 
+                          startDate={events[i + 1].startDate} 
+                          endDate={events[i + 1].endDate} 
+                          title={events[i + 1].title} 
+                          content={events[i + 1].content}>
+                        </Event>
                       </div>
                     </div>
-                  </div>
-                </Center>
-              </Jumbotron>
-            );
-          })}
-        </div>
-        <div className="container">
-          <div className="row" style={{textAlign: 'center'}}>
-            <div className="col-sm-3">
-              <h3>Family Groups</h3>
-              <p>Get to know the people you see on Sundays by studying the Word together</p>
-              <Link to="/familygroup">Learn more here</Link>
+                  )
+                })}
+              </div>
+              
+              <div>
+                <Link to="/" className="moreEvents">More Events</Link>
+              </div>
             </div>
-            <div className="col-sm-3">
-              <h3>Ministries</h3>
-              <p>Learn about the ways to serve God and His people</p>
-              <Link to="/ministries">Learn more here</Link>
-            </div>
-            <div className="col-sm-3">
-              <h3>Giving</h3>
-              <p>Learn more about how to give</p>
-              <Link to="/giving">Learn more here</Link>
-            </div>
-            <div className="col-sm-3">
-              <h3>Sign up for daily devotionals</h3>
-              <p>Daily devotionals for the AMI community of churches.</p>
-              <a href="https://amiquiettimes.com/" target="_blank">Read and subscribe here</a>
-            </div>
-          </div>
-        </div>
-        <div className="container">
-          <div className="row info">
-              <h2 style={{textAlign: 'center'}}>Announcements</h2>
-              <ul>
-                <li>Family Group is where you can grow in Christ as you study the Word, pray, and fellowship together with a small group of brothers and sisters in Christ. Please sign up online for our fall family groups!</li><li>Please continue to join AMI for our daily devotionals at the AMI Quiet Times website. Download the Acts Ministries International mobile app (available on both the Google Play Store and the Apple App Store), and join us in staying close to the Father by remaining in His Word.</li>
-                <li>Morning prayer is held on Friday mornings at 7am in at Ralston House (36th &amp; Chestnut St.)</li>
-                <li>Let’s keep praying for the Grace Covenant Church Singapore! Also check out their new website! Their Sunday services and small groups have started and they are reaching out to their community. Please consider building up God’s Kingdom in Singapore through your faith pledges, offerings and prayers. Please include your name on your check.</li>
-                <li>Please also continue to pray for our one-year missionary interns!</li>
-              </ul>
-          </div>
-        </div>
-        <Jumbotron style={{ paddingTop: '125px', paddingBottom: '125px' }}>
-          <BackgroundImage src="/static/images/home/philly.jpg" backgroundSize="cover" backgroundPosition="center" />
-          <Center horizontal>
-            <div className="container">
-              <h3>Memory Verse of the Month</h3>
-              <h2>"Jesus Christ is the same yesterday and today and forever."</h2>
-              <h5 className="pull-right">Hebrews 13:8</h5>
+            </Center>
+        </Jumbotron>
+        
+        <Jumbotron style={{ height:"60vh" }}>
+          <BackgroundImage src={memoryVerse[0].image} backgroundSize="cover" backgroundPosition="center" />
+          <Center horizontal vertical>
+            <div className="container" style={ { color: memoryVerse[0].color, width: "40vw" } }>
+              <h2 className="memoryVerse">Memory Verse of the Month</h2>
+              <h2 className="memoryVerse verse">
+                "{memoryVerse[0].verse}"
+              </h2>
+              <h2 className="memoryVerse">{memoryVerse[0].ref}</h2>
             </div>
           </Center>
         </Jumbotron>

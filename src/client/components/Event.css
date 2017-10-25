@@ -1,0 +1,32 @@
+.card {
+    border: 1px solid black;
+    width: auto;
+    padding: 50px 0;
+    height: 200px;
+    color: black;
+    margin-top: 20px;
+}
+
+.tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.dates {
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.content {
+    font-style: italic;
+    font-size: 20px;
+}

@@ -1,15 +1,35 @@
-nav li a {
+/*link elements on nav*/
+.navbar-default .navbar-nav li a {
   text-align: center;
+  color: white;
+  font-size: 16px;
+  margin-right: 40px;
+  font-weight: 500;
+}
+
+.navbar {
+  background-color: transparent;
+  border: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+/* brand anchor tag has margin/padding we don't need*/
+.navbar-brand {
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-brand > img {
   display: block;
-  height: 40px;
-  margin-top: 5px;
+  height: 100px;
+  margin-left: 5px;
 }
 
 .navbar-header {
-  height: 75px;
+  height: 70px;
 }
 
 .navbar-toggle {
