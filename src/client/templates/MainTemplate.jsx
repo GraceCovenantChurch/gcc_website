@@ -3,6 +3,7 @@ import Link from 'react-router-dom/Link';
 import { renderRoutes } from 'react-router-config';
 import Head from '../components/Head';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 const styles = (typeof CSS !== 'undefined') && require('./MainTemplate.css');
 
 const MainTemplate = ({route}) => {
@@ -27,11 +28,7 @@ const MainTemplate = ({route}) => {
         ]}
       />
       <main>{renderRoutes(route.routes)}</main>
-      <footer>
-        <div className="container">
-          <p>&copy; Grace Covenant Church</p>
-        </div>
-      </footer>
+      <Footer></Footer>
     </div>
   );
 };

@@ -5,6 +5,13 @@
   width: 70vw;
 }
 
+.bottomLeft2 {
+  position: absolute;
+  bottom: 300px;
+  left: 100px;
+  width: 70vw;
+}
+
 .jumbotron h1 {
   font-weight: bold;
   font-size: 60px;
@@ -52,10 +59,10 @@
   text-decoration: none;
 }
 
-a {
+.arrow {
   color: white;
 }
 
-a:hover {
+.arrow:hover {
   color: white;
 }

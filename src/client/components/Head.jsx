@@ -7,7 +7,6 @@ class Head extends Component {
     return (
       <Helmet>
         <title>{this.props.title}</title>
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"/> 
       </Helmet>
     );
   }

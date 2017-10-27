@@ -6,6 +6,7 @@ import BackgroundImage from '../components/BackgroundImage';
 import Center from '../components/Center';
 import Jumbotron from '../components/Jumbotron';
 import Event from '../components/Event';
+import {SparkScroll} from '../modules/spark.js';
 
 const styles = (typeof CSS !== 'undefined') && require('./Home.css');
 
@@ -81,16 +82,30 @@ class Home extends Component {
         <Jumbotron style={{height: '100vh'}}>
           <BackgroundImage src="/static/images/home/philly.jpg" backgroundSize="cover" backgroundPosition="top left" backgroundAttachment="fixed"/>
             <div className="container">
-              <h1 className="bottomLeft" style={{color: 'white'}}>Grace Covenant Church</h1>
+              <SparkScroll.h1 
+                className="bottomLeft" 
+                style={{color: 'white'}}
+                timeline={{
+                  centerCenter: {opacity: 0},
+                  bottomBottom: {opacity: 1}
+                }}>
+                  Grace Covenant Church
+              </SparkScroll.h1>
             </div>
         </Jumbotron>
 
         <Jumbotron style={{height: '100vh'}}>
           <BackgroundImage src="/static/images/home/philly.jpg" backgroundSize="cover" backgroundPosition="top left" backgroundAttachment="fixed"/>
             <div className="container">
-              <h1 className="bottomLeft" style={{color: 'white'}}>
-                Raising up kingdom workers who are transformed by Christ to influence the world. <Link to="#"><i className="glyphicon glyphicon-arrow-right"></i></Link>
-              </h1>
+              <SparkScroll.h1 
+                className="bottomLeft2" 
+                style={{color: 'white'}}
+                timeline={{
+                  topCenter: {opacity: 1},
+                  topBottom: {opacity: 0}
+                }}>
+                Raising up kingdom workers who are transformed by Christ to influence the world. <Link to="#" className="arrow"><i className="glyphicon glyphicon-arrow-right"></i></Link>
+              </SparkScroll.h1>
             </div>
         </Jumbotron>
 
