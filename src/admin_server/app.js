@@ -40,6 +40,11 @@ app.use('/static', express.static(path.join(__dirname, '../../static')));
 app.use('/bower_components', express.static(path.join(__dirname, '../../bower_components')));
 app.use('/public', express.static(path.join(__dirname, '../public')));
 
+
+if (!nconf.get('COOKIE_SECRET')) {
+  throw 'No cookie secret provided. Please add one to config.json';
+}
+
 app.use(cookieParser());
 app.use(cookieSession({
   name: 'session',
