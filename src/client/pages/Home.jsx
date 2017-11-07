@@ -12,6 +12,7 @@ const styles = (typeof CSS !== 'undefined') && require('./Home.css');
 
 const mainAnnouncements = [
   {
+    _id: 0,
     title: 'Passion Conference',
     content: 'Content goes here',
     published: true,
@@ -23,6 +24,7 @@ const mainAnnouncements = [
     tag: 'UC'
   },
   {
+    _id: 1,
     title: 'Crossroad Fall Reflection Retreat',
     content: 'What a Son & Daughter Need from Their Father',
     published: true,
@@ -34,6 +36,7 @@ const mainAnnouncements = [
     tag: 'ML'
   },
   {
+    _id: 2,
     title: 'Other Important Event',
     content: 'Content goes here',
     published: true,
@@ -45,6 +48,7 @@ const mainAnnouncements = [
     tag: 'ML'
   },
   {
+    _id: 3,
     title: 'Other Important Event',
     content: 'Content goes here',
     published: true,
@@ -154,7 +158,7 @@ class Home extends Component {
               <div className="events">
                 {mainAnnouncements.map( (event, i, events ) => {
                   return (i % 2 == 1) ? null : (
-                    <div className="row">
+                    <div className="row" key={event._id}>
                       <div className="col-sm-5 col-sm-offset-1">
                         <Event 
                           key={i} 
