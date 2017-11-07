@@ -71,7 +71,7 @@ const memoryVerse = [
     month: 10,
     year: 2017, //not sure if we will save this every month, but i think it's a good idea
     image: '', // image
-    color: 'black' //prob need to specify text color depending on image? 
+    color: 'black' //prob need to specify text color depending on image?
   }
 ]
 
@@ -86,8 +86,8 @@ class Home extends Component {
         <Jumbotron style={{height: '100vh'}}>
           <BackgroundImage src="/static/images/home/philly.jpg" backgroundSize="cover" backgroundPosition="top left" backgroundAttachment="fixed"/>
             <div className="container">
-              <SparkScroll.h1 
-                className="bottomLeft" 
+              <SparkScroll.h1
+                className="bottomLeft"
                 style={{color: 'white'}}
                 timeline={{
                   centerCenter: {opacity: 0},
@@ -101,8 +101,8 @@ class Home extends Component {
         <Jumbotron style={{height: '100vh'}}>
           <BackgroundImage src="/static/images/home/philly.jpg" backgroundSize="cover" backgroundPosition="top left" backgroundAttachment="fixed"/>
             <div className="container">
-              <SparkScroll.h1 
-                className="bottomLeft2" 
+              <SparkScroll.h1
+                className="bottomLeft2"
                 style={{color: 'white'}}
                 timeline={{
                   topCenter: {opacity: 1},
@@ -125,7 +125,7 @@ class Home extends Component {
                 <h3><strong>University City</strong> 7:30pm</h3>
                 <h3>Meyerson Hall (34th & Walnut)</h3>
               </div>
-              
+
               <div className="col-sm-4 joinCol">
                 <h2><strong>Sunday Service</strong></h2>
 
@@ -149,35 +149,35 @@ class Home extends Component {
             </div>
         </Jumbotron>
 
-        <Jumbotron style={{height: '70vh'}}>
+        <Jumbotron style={{height: '100vh'}}>
           <BackgroundImage backgroundColor="white"/>
             <Center horizontal vertical>
             <div className="container">
-              <h1 style={{color: 'black', marginBottom: '30px'}}>Events</h1>
+              <h1 style={{color: 'black', marginBottom: '30px', marginTop: '70px'}}>Events</h1>
 
               <div className="events">
                 {mainAnnouncements.map( (event, i, events ) => {
                   return (i % 2 == 1) ? null : (
                     <div className="row" key={event._id}>
                       <div className="col-sm-5 col-sm-offset-1">
-                        <Event 
-                          key={i} 
-                          index={i} 
-                          tag={event.tag} 
-                          startDate={event.startDate} 
-                          endDate={event.endDate} 
-                          title={event.title} 
+                        <Event
+                          key={i}
+                          index={i}
+                          tag={event.tag}
+                          startDate={event.startDate}
+                          endDate={event.endDate}
+                          title={event.title}
                           content={event.content}>
                         </Event>
                       </div>
                       <div className="col-sm-5">
-                        <Event 
-                          key={i + 1} 
-                          index={i + 1} 
-                          tag={events[i + 1].tag} 
-                          startDate={events[i + 1].startDate} 
-                          endDate={events[i + 1].endDate} 
-                          title={events[i + 1].title} 
+                        <Event
+                          key={i + 1}
+                          index={i + 1}
+                          tag={events[i + 1].tag}
+                          startDate={events[i + 1].startDate}
+                          endDate={events[i + 1].endDate}
+                          title={events[i + 1].title}
                           content={events[i + 1].content}>
                         </Event>
                       </div>
@@ -185,14 +185,14 @@ class Home extends Component {
                   )
                 })}
               </div>
-              
+
               <div>
                 <Link to="/" className="moreEvents">More Events</Link>
               </div>
             </div>
             </Center>
         </Jumbotron>
-        
+
         <Jumbotron style={{ height:"60vh" }}>
           <BackgroundImage src={memoryVerse[0].image} backgroundSize="cover" backgroundPosition="center" />
           <Center horizontal vertical>
