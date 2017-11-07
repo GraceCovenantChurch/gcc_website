@@ -29,7 +29,7 @@ class Welcome extends Component {
           </div>
 
           <div className="media">
-            <iframe width="800" height="600" src="https://www.youtube.com/embed/5M8H4xhSPWc" frameborder="0" allowFullScreen="true"></iframe>
+            <iframe width="800" height="600" src="https://www.youtube.com/embed/5M8H4xhSPWc" frameBorder="0" allowFullScreen="true"></iframe>
           </div>
 
           <div className="verbiage">
