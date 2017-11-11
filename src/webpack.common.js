@@ -5,12 +5,13 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const nconf = require('nconf');
 require('./config.js');
+
 nconf.set('APP_ENV', 'browser');
 
 function addHMR(target) {
   return nconf.get('NODE_ENV') !== 'production' ? [
     'react-hot-loader/patch',
-    'webpack-dev-server/client?http://' + nconf.get('CLIENT_HOST') + ':' + nconf.get('CLIENT_PORT'),
+    `webpack-dev-server/client?http://${nconf.get('CLIENT_HOST')}:${nconf.get('CLIENT_PORT')}`,
     'webpack/hot/only-dev-server',
     target,
   ] : target;
@@ -25,7 +26,7 @@ const styleLoaders = [
   {
     loader: 'postcss-loader',
     options: {
-      plugins: (loader) => [
+      plugins: loader => [
         require('postcss-import')({ root: loader.resourcePath }),
         require('postcss-nested')(),
         require('postcss-cssnext')({
@@ -39,17 +40,16 @@ const styleLoaders = [
 
 module.exports = (commonName, targets) => ({
   devtool: nconf.get('NODE_ENV') !== 'production' ? 'cheap-module-eval-source-map' : undefined,
-  entry: (function() {
+  entry: (function () {
     if (nconf.get('NODE_ENV') !== 'production') {
-      var hmrTargets = {};
-      Object.keys(targets).forEach(key => {
+      const hmrTargets = {};
+      Object.keys(targets).forEach((key) => {
         hmrTargets[key] = addHMR(targets[key]);
       });
       return hmrTargets;
-    } else {
-      return targets;
     }
-  })(),
+    return targets;
+  }()),
   output: {
     path: path.resolve(__dirname, '../build/public/assets'),
     filename: '[name].js',
@@ -62,7 +62,7 @@ module.exports = (commonName, targets) => ({
       '../node_modules',
       'node_modules',
     ],
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
@@ -75,6 +75,7 @@ module.exports = (commonName, targets) => ({
       },
       {
         test: /\.jsx?$/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -89,6 +90,29 @@ module.exports = (commonName, targets) => ({
           },
         },
       },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                ['env', { modules: false }],
+                'react',
+              ],
+              plugins: [
+                'transform-object-rest-spread',
+                'dynamic-import-webpack',
+              ],
+            },
+          },
+          {
+            loader: 'eslint-loader',
+          },
+        ],
+        // loaders: ['babel-loader', 'eslint-loader'],
+      },
     ],
   },
   plugins: [
@@ -96,7 +120,7 @@ module.exports = (commonName, targets) => ({
     nconf.get('NODE_ENV') !== 'production' ? new webpack.NamedModulesPlugin() : null,
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
-      'NCONF': JSON.stringify({
+      NCONF: JSON.stringify({
         CLIENT_HOST: nconf.get('CLIENT_HOST'),
         SERVER_HOST: nconf.get('SERVER_HOST'),
         CLIENT_PORT: nconf.get('CLIENT_PORT'),
@@ -107,14 +131,14 @@ module.exports = (commonName, targets) => ({
       CSS: 'true',
       'typeof window': '\"object\"', // for client-side mongoose build
     }),
-    nconf.get('NODE_ENV') === 'production' ? new ExtractTextPlugin(`[name].bundle.css`, {allChunks: true}) : null,
-    new webpack.NormalModuleReplacementPlugin(/nconf/, function(resource) {
+    nconf.get('NODE_ENV') === 'production' ? new ExtractTextPlugin('[name].bundle.css', { allChunks: true }) : null,
+    new webpack.NormalModuleReplacementPlugin(/nconf/, ((resource) => {
       resource.request = resource.request.replace(/nconf/, path.resolve(__dirname, 'nconf-browser'));
-    }),
+    })),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'react',
       minChunks(module, count) {
-        var context = module.context;
+        const context = module.context;
         return context && (
           context.indexOf(path.join('node_modules', 'react')) >= 0 ||
           context.indexOf(path.join('node_modules', 'redux')) >= 0 ||

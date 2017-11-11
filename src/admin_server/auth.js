@@ -1,5 +1,5 @@
 import passport from 'passport';
-import {Strategy as GoogleStrategy} from 'passport-google-oauth20';
+import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import nconf from 'nconf';
 
 const SERVER_ROOT = `http://${nconf.get('SERVER_HOST')}:${nconf.get('SERVER_PORT')}`;
@@ -9,25 +9,23 @@ if (nconf.get('NODE_ENV') === 'production') {
     clientID: nconf.get('GOOGLE_CLIENT_ID'),
     clientSecret: nconf.get('GOOGLE_CLIENT_SECRET'),
     callbackURL: `${SERVER_ROOT}/login/callback`,
-  }, function(accessToken, refreshToken, profile, cb) {
-    var emails = profile.emails.map(el => {
-      return el.value;
-    });
-    var approved = nconf.get('ADMIN_EMAILS').split(' ');
-    for (var email of emails) {
-      if (approved.indexOf(email) >= 0) {
-        return cb(null, profile);
+  }, ((accessToken, refreshToken, profile, cb) => {
+      const emails = profile.emails.map(el => el.value);
+      const approved = nconf.get('ADMIN_EMAILS').split(' ');
+      for (let i = 0; i < emails.length; ++i) {
+        if (approved.indexOf(emails[i]) >= 0) {
+          return cb(null, profile);
+        }
       }
-    }
-    return cb(null, false);
-  }));
+      return cb(null, false);
+    })));
 }
 
-passport.serializeUser(function(user, cb) {
+passport.serializeUser((user, cb) => {
   cb(null, user);
 });
 
-passport.deserializeUser(function(obj, cb) {
+passport.deserializeUser((obj, cb) => {
   cb(null, obj);
 });
 
@@ -43,13 +41,12 @@ function devAuth(req, res, next) {
   }, (err) => {
     if (err) {
       return next(err);
-    } else {
-      return res.redirect('/login/success');
     }
+    return res.redirect('/login/success');
   });
 }
 
-module.exports = function(app) {
+module.exports = function auth(app) {
   app.get('/login', nconf.get('NODE_ENV') !== 'production' ? devAuth : googleAuth);
 
   app.get('/login/callback', passport.authenticate('google', {
@@ -57,21 +54,20 @@ module.exports = function(app) {
     failureRedirect: '/',
   }));
 
-  app.get('/login/success', function(req, res) {
+  app.get('/login/success', (req, res) => {
     res.redirect(req.session.lastUrl || '/');
   });
 
-  app.get('/logout', function(req, res) {
+  app.get('/logout', (req, res) => {
     req.logout();
     res.redirect('/');
   });
 
-  app.use('/', function(req, res, next) {
+  app.use('/', (req, res, next) => {
     if (!req.isAuthenticated()) {
       req.session.lastUrl = req.originalUrl;
       return res.redirect('/login');
-    } else {
-      return next();
     }
+    return next();
   });
-}
+};

@@ -11,18 +11,18 @@ export const INFO = 'INFO';
 export const DANGER = 'DANGER';
 
 export default function notifications(state = initialState, action) {
-  switch(action.type) {
+  switch (action.type) {
     case POST_NOTIFICATION:
       return Object.assign({}, state, {
         [action.key]: {
           status: action.status,
           message: action.message,
-        }
+        },
       });
 
     case CLEAR_NOTIFICATION:
       return (() => {
-        let s = Object.assign({}, state);
+        const s = Object.assign({}, state);
         delete s[action.key];
         return s;
       })();
@@ -32,16 +32,16 @@ export default function notifications(state = initialState, action) {
   }
 }
 
-var key = 0;
+let KEY = 0;
 
 export function postNotification(status, message) {
   return {
     type: POST_NOTIFICATION,
-    key: key++,
+    key: KEY++,
     status,
     message,
   };
-};
+}
 
 export function clearNotification(key) {
   return {

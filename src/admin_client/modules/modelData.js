@@ -16,9 +16,9 @@ const initialModelState = {
 function model(state = initialModelState, action) {
   const DB = Object.assign({}, state.__DB__);
 
-  switch(action.type) {
+  switch (action.type) {
     case MODEL_DATA_LOADED:
-      action.data.forEach(datum => {
+      action.data.forEach((datum) => {
         Object.assign(DB, {
           [datum._id]: datum,
         });
@@ -34,7 +34,7 @@ function model(state = initialModelState, action) {
         __DB__: Object.assign({}, state.__DB__, {
           [action.data._id]: action.data,
         }),
-        ids: [...state.ids, action.data._id]
+        ids: [...state.ids, action.data._id],
       });
 
     case DOCUMENT_UPDATED:
@@ -58,15 +58,16 @@ function model(state = initialModelState, action) {
 }
 
 export default function page(state = initialState, action) {
-  switch(action.type) {
+  switch (action.type) {
     case MODEL_DATA_LOADED:
     case DOCUMENT_CREATED:
     case DOCUMENT_UPDATED:
-    case DOCUMENT_DELETED:
+    case DOCUMENT_DELETED: {
       const key = pluralize(action.modelName);
       return Object.assign({}, state, {
         [key]: model(state[key], action),
       });
+    }
 
     default:
       return state;
@@ -76,12 +77,11 @@ export default function page(state = initialState, action) {
 function handleErrors(res) {
   if (!res.ok) {
     return Promise.reject(res);
-  } else {
-    return Promise.resolve(res);
   }
+  return Promise.resolve(res);
 }
 
-export const fetchModelData = (modelName) => (dispatch) => {
+export const fetchModelData = modelName => (dispatch) => {
   const SERVER_HOST = nconf.get('SERVER_HOST');
   const SERVER_PORT = nconf.get('SERVER_PORT');
 
@@ -89,7 +89,7 @@ export const fetchModelData = (modelName) => (dispatch) => {
     credentials: 'same-origin',
     method: 'GET',
     headers: {
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json',
     },
   }).then(handleErrors).then(res => res.json()).then(data => dispatch({
@@ -107,7 +107,7 @@ export const createDocument = (modelName, document) => (dispatch) => {
     credentials: 'same-origin',
     method: 'POST',
     headers: {
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(document),
@@ -126,7 +126,7 @@ export const updateDocument = (modelName, id, document) => (dispatch) => {
     credentials: 'same-origin',
     method: 'POST',
     headers: {
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(document),
@@ -146,7 +146,7 @@ export const deleteDocument = (modelName, id) => (dispatch) => {
     credentials: 'same-origin',
     method: 'POST',
     headers: {
-      'Accept': 'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json',
     },
   }).then(handleErrors).then(res => res.json()).then(data => dispatch({

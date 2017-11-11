@@ -6,7 +6,7 @@ const initialState = {
 export const SET_TITLE = 'SET_TITLE';
 
 export default function metadata(state = initialState, action) {
-  switch(action.type) {
+  switch (action.type) {
     case SET_TITLE:
       return Object.assign({}, state, { title: action.title });
 
@@ -15,10 +15,8 @@ export default function metadata(state = initialState, action) {
   }
 }
 
-export const setTitle = (title) => (dispatch) => {
-  return dispatch({
-    type: SET_TITLE,
-    title: [title, 'Grace Covenant Church'].filter(v => v).join(' - '),
-  });
-}
+export const setTitle = title => dispatch => dispatch({
+  type: SET_TITLE,
+  title: [title, 'Grace Covenant Church'].filter(v => v).join(' - '),
+});
 

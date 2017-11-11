@@ -1,8 +1,8 @@
-import {Router} from 'express';
+import { Router } from 'express';
 
-import React, {Component} from 'react';
-import {renderToStaticMarkup} from 'react-dom/server';
-import {Helmet} from 'react-helmet';
+import React from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import { Helmet } from 'react-helmet';
 
 import StaticRouter from 'react-router-dom/StaticRouter';
 import { matchRoutes, renderRoutes } from 'react-router-config';
@@ -17,13 +17,13 @@ export default function PageRouter(routes, reducers, renderCallback) {
 
   router.get('*', (req, res) => {
     const branch = matchRoutes(routes, req.url);
-    const promises = branch.map(({route, match}) => {
-      let fetchData = route.component.fetchData;
+    const promises = branch.map(({ route, match }) => {
+      const fetchData = route.component.fetchData;
 
       return fetchData instanceof Function ? fetchData(store, match) : Promise.resolve(null);
     });
-    return Promise.all(promises).then((data) => {
-      let context = {};
+    return Promise.all(promises).then(() => {
+      const context = {};
       const content = renderToStaticMarkup(
         <Provider store={store}>
           <StaticRouter location={req.url} context={context}>
@@ -37,8 +37,9 @@ export default function PageRouter(routes, reducers, renderCallback) {
       }
       if (context.status === 302) {
         return res.redirect(302, context.url);
+      } else {
+        return res.send(renderCallback(helmet, content, store.getState()));
       }
-      res.send(renderCallback(helmet, content, store.getState()));
     });
   });
 

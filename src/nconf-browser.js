@@ -1,5 +1,6 @@
+/* global NCONF:true */
 export default {
-  get: function(name) {
+  get(name) {
     return NCONF[name];
   },
 };

@@ -1,10 +1,9 @@
-import {Router} from 'express';
+import { Router } from 'express';
 import EventModel from '../../models/event';
 
 const router = Router();
 
 router.get('/', (req, res, next) => {
-  console.log('here');
   EventModel.find({})
     .then(results => res.json(results))
     .catch(err => next(err));
@@ -17,7 +16,11 @@ router.post('/create', (req, res, next) => {
 });
 
 router.post('/:id/update', (req, res, next) => {
-  EventModel.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true, runValidators: true })
+  EventModel.findByIdAndUpdate(
+    req.params.id,
+    { $set: req.body },
+    { new: true, runValidators: true },
+  )
     .then(result => res.json(result))
     .catch(err => next(err));
 });
