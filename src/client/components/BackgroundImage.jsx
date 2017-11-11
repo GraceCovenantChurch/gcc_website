@@ -15,6 +15,7 @@ class BackgroundImage extends Component {
           backgroundRepeat: this.props.backgroundRepeat,
           backgroundOrigin: this.props.backgroundOrigin,
           backgroundSize: this.props.backgroundSize,
+          backgroundColor: this.props.backgroundColor,
           filter: this.props.backgroundFilter,
         }}>
           {this.props.children}

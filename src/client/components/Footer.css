@@ -1,0 +1,22 @@
+footer {
+    height: 70px;
+    color: black;
+}
+
+p {
+    display: inline;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+i {
+    margin-right: 30px;
+}
+
+.icons {
+    float: right;
+}
+
+.footerLinks, .footerLinks:visited, .footerLinks:hover {
+    color: black;
+}
