@@ -1,15 +1,15 @@
 import nconf from 'nconf';
-require('../config.js');
-nconf.set('APP_ENV', 'server');
-
 import express from 'express';
 import path from 'path';
-import http from 'http';
 import compression from 'compression';
 import api from './api';
 import PageRouter from './pageRouter';
 
-process.on('unhandledRejection', err => {
+require('../config.js');
+
+nconf.set('APP_ENV', 'server');
+
+process.on('unhandledRejection', (err) => {
   console.log(err);
 });
 
@@ -17,12 +17,14 @@ const app = express();
 app.use(compression());
 
 if (nconf.get('NODE_ENV') !== 'production') {
-  const proxy = require('http-proxy-middleware');
+  // eslint-disable-next-line import/no-extraneous-dependencies
+  const proxy = require('http-proxy-middleware'); // eslint-disable-line global-require
+
   app.use(proxy(`http://${nconf.get('CLIENT_HOST')}:${nconf.get('CLIENT_PORT')}/public/assets/*`));
 
-  app.use(require('morgan')('dev'));
+  app.use(require('morgan')('dev')); // eslint-disable-line global-require
 } else {
-  app.use(require('morgan')('tiny'));
+  app.use(require('morgan')('tiny')); // eslint-disable-line global-require
 }
 
 app.use('/static', express.static(path.join(__dirname, '../../static')));
@@ -32,8 +34,8 @@ app.use('/api', api);
 
 const routes = require('../client/routes').default;
 const reducers = require('../client/modules').default;
-app.use(PageRouter(routes, reducers, (head, content, state) => {
-  return `
+
+app.use(PageRouter(routes, reducers, (head, content, state) => `
     <!doctype html>
     <html ${head.htmlAttributes.toString()}>
       <head>
@@ -42,7 +44,7 @@ app.use(PageRouter(routes, reducers, (head, content, state) => {
         ${head.link.toString()}
         <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css" />
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"/> 
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href="/public/assets/app.bundle.css" />
       </head>
       <body ${head.bodyAttributes.toString()}>
@@ -54,9 +56,8 @@ app.use(PageRouter(routes, reducers, (head, content, state) => {
         <script type="text/javascript" src="/public/assets/app.js"></script>
       </body>
     </html>
-  `;
-}));
+  `));
 
-app.listen(nconf.get('SERVER_PORT'), function() {
+app.listen(nconf.get('SERVER_PORT'), () => {
   console.log('Server listening on port', nconf.get('SERVER_PORT'));
 });

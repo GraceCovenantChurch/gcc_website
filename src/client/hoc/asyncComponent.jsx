@@ -7,7 +7,7 @@ export default function asyncComponent(path, getComponent) {
     return require(path).default;
   } else {
     return class AsyncComponent extends Component {
-      static WrappedAsyncComponent;
+      static WrappedAsyncComponent
 
       constructor(props) {
         super(props);

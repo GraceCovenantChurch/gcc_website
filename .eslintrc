@@ -1,0 +1,16 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true,
+    "mocha": true
+  },
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "rules": {
+    "no-plusplus": "off",
+    "no-underscore-dangle": "off",
+    "linebreak-style": "off",
+    "prefer-destructuring": "warn"
+  }
+}
