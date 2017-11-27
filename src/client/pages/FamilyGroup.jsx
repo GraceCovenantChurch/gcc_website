@@ -14,8 +14,7 @@ class FamilyGroup extends Component {
           <link rel="stylesheet" type="text/css" href="/public/assets/pages/FamilyGroup.bundle.css" />
         </Helmet>
 
-        <Header image="/static/images/home/philly.jpg" text="Family Group">
-        </Header>
+        <Header image="/static/images/home/philly.jpg" text="Family Group"></Header>
 
         <div>
           This is where actual content will go 
