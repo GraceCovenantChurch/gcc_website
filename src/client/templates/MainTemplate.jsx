@@ -20,7 +20,7 @@ const MainTemplate = ({route}) => {
         links = {[
           <Link to="/page">I'm New</Link>,
           <Link to="/pages">About</Link>,
-          <Link to="/page">Family Groups</Link>,
+          <Link to="/familygroup">Family Groups</Link>,
           <Link to="/pages">Ministries</Link>,
           <Link to="/page">Giving</Link>,
           <Link to="/pages">Multimedia</Link>,
