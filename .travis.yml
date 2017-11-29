@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - "6"
+
+services:
+  - mongodb
+
+cache:
+  directories:
+    - "node_modules"
+    - "bower_components"
+
+script:
+  - npm run lint
+  - npm run babel
+  - npm run webpack
+  - rm -rf build/public
+  - npm run webpack-admin

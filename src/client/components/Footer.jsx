@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import classnames from 'classnames';
 import Center from './Center';
-const styles = (typeof CSS !== 'undefined') && require('./footer.css');
+const styles = (typeof CSS !== 'undefined') && require('./Footer.css');
 
 class Footer extends Component {
     render () {
-        return ( 
+        return (
             <footer>
                 <Center vertical>
                 <div className="container footer">

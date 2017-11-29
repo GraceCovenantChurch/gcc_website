@@ -4,18 +4,9 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const nconf = require('nconf');
-require('./config.js');
+require(path.resolve(__dirname, 'config.js'));
 
 nconf.set('APP_ENV', 'browser');
-
-function addHMR(target) {
-  return nconf.get('NODE_ENV') !== 'production' ? [
-    'react-hot-loader/patch',
-    `webpack-dev-server/client?http://${nconf.get('CLIENT_HOST')}:${nconf.get('CLIENT_PORT')}`,
-    'webpack/hot/only-dev-server',
-    target,
-  ] : target;
-}
 
 const styleLoaders = [
   nconf.get('NODE_ENV') !== 'production' ? 'style-loader' : undefined,
@@ -40,16 +31,7 @@ const styleLoaders = [
 
 module.exports = (commonName, targets) => ({
   devtool: nconf.get('NODE_ENV') !== 'production' ? 'cheap-module-eval-source-map' : undefined,
-  entry: (function () {
-    if (nconf.get('NODE_ENV') !== 'production') {
-      const hmrTargets = {};
-      Object.keys(targets).forEach((key) => {
-        hmrTargets[key] = addHMR(targets[key]);
-      });
-      return hmrTargets;
-    }
-    return targets;
-  }()),
+  entry: targets,
   output: {
     path: path.resolve(__dirname, '../build/public/assets'),
     filename: '[name].js',
@@ -111,7 +93,6 @@ module.exports = (commonName, targets) => ({
             loader: 'eslint-loader',
           },
         ],
-        // loaders: ['babel-loader', 'eslint-loader'],
       },
     ],
   },
@@ -123,8 +104,6 @@ module.exports = (commonName, targets) => ({
       NCONF: JSON.stringify({
         CLIENT_HOST: nconf.get('CLIENT_HOST'),
         SERVER_HOST: nconf.get('SERVER_HOST'),
-        CLIENT_PORT: nconf.get('CLIENT_PORT'),
-        SERVER_PORT: nconf.get('SERVER_PORT'),
         NODE_ENV: nconf.get('NODE_ENV'),
         APP_ENV: nconf.get('APP_ENV'),
       }),
@@ -154,21 +133,4 @@ module.exports = (commonName, targets) => ({
     }),
     new webpack.optimize.CommonsChunkPlugin({ name: 'manifest' }),
   ].filter(plugin => plugin),
-
-  devServer: {
-    host: nconf.get('CLIENT_HOST'),
-    port: nconf.get('CLIENT_PORT'),
-    historyApiFallback: true, // respond to 404s with index.html
-    hot: true, // enable HMR on the server
-    inline: true,
-    compress: true,
-    overlay: {
-      errors: true,
-    },
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-      'Access-Control-Allow-Headers': 'X-Requested-With, Accept, Origin, Referer, User-Agent, Content-Type, Authorization',
-    },
-  },
 });
