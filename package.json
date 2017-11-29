@@ -4,11 +4,7 @@
   "description": "Website for Grace Covenant Church",
   "main": "server/app.js",
   "scripts": {
-    "start": "concurrently \"npm run dev-client\" \"npm run dev-server\" \"npm run dev-admin-client\" \"npm run dev-admin-server\" --kill-others",
-    "dev-server": "cross-env SERVER_PORT=8080 CLIENT_PORT=3000 nodemon src/server/app.js --exec babel-node --presets=env,react --plugins=dynamic-import-node,transform-object-rest-spread",
-    "dev-client": "cross-env SERVER_PORT=8080 CLIENT_PORT=3000 webpack-dev-server --config src/webpack.config.js",
-    "dev-admin-server": "cross-env SERVER_PORT=8081 CLIENT_PORT=3001 nodemon src/admin_server/app.js --exec babel-node --presets=env,react --plugins=dynamic-import-node,transform-object-rest-spread",
-    "dev-admin-client": "cross-env SERVER_PORT=8081 CLIENT_PORT=3001 webpack-dev-server --config src/webpack.admin.js",
+    "start": "node scripts/dev.js",
     "webpack": "cross-env NODE_ENV=production webpack --config src/webpack.config.js -p",
     "webpack-admin": "cross-env NODE_ENV=production webpack --config src/webpack.admin.js -p",
     "serve": "cross-env NODE_ENV=production node build/server/app.js",

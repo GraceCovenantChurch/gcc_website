@@ -7,6 +7,7 @@ import cookieSession from 'cookie-session';
 import passport from 'passport';
 import mongoose from 'mongoose';
 import Promise from 'bluebird';
+import logger from 'morgan';
 import publicAPI from '../server/api';
 import api from './api';
 import PageRouter from '../server/pageRouter';
@@ -28,11 +29,11 @@ app.use(compression());
 if (nconf.get('NODE_ENV') !== 'production') {
   // eslint-disable-next-line import/no-extraneous-dependencies
   const proxy = require('http-proxy-middleware'); // eslint-disable-line global-require
-  app.use(proxy(`http://${nconf.get('CLIENT_HOST')}:${nconf.get('CLIENT_PORT')}/public/assets/*`));
+  app.use(proxy(`http://${nconf.get('CLIENT_HOST')}/public/assets`));
 
-  app.use(require('morgan')('dev')); // eslint-disable-line global-require
+  app.use(logger('dev'));
 } else {
-  app.use(require('morgan')('tiny')); // eslint-disable-line global-require
+  app.use(logger('tiny'));
 }
 
 app.use('/static', express.static(path.join(__dirname, '../../static')));
@@ -83,7 +84,8 @@ mongoose.connect(nconf.get('MONGODB_URI'), { useMongoClient: true }, (err) => {
   }
   console.log('Connected to database');
 
-  app.listen(nconf.get('SERVER_PORT'), () => {
-    console.log('Server listening on port', nconf.get('SERVER_PORT'));
+  const port = nconf.get('SERVER_HOST').split(':')[1] || 80;
+  app.listen(port, () => {
+    console.log('Server listening on port', port);
   });
 });

@@ -2,6 +2,7 @@ import nconf from 'nconf';
 import express from 'express';
 import path from 'path';
 import compression from 'compression';
+import logger from 'morgan';
 import api from './api';
 import PageRouter from './pageRouter';
 
@@ -20,11 +21,11 @@ if (nconf.get('NODE_ENV') !== 'production') {
   // eslint-disable-next-line import/no-extraneous-dependencies
   const proxy = require('http-proxy-middleware'); // eslint-disable-line global-require
 
-  app.use(proxy(`http://${nconf.get('CLIENT_HOST')}:${nconf.get('CLIENT_PORT')}/public/assets/*`));
+  app.use(proxy(`http://${nconf.get('CLIENT_HOST')}/public/assets`));
 
-  app.use(require('morgan')('dev')); // eslint-disable-line global-require
+  app.use(logger('dev'));
 } else {
-  app.use(require('morgan')('tiny')); // eslint-disable-line global-require
+  app.use(logger('tiny'));
 }
 
 app.use('/static', express.static(path.join(__dirname, '../../static')));
@@ -58,6 +59,7 @@ app.use(PageRouter(routes, reducers, (head, content, state) => `
     </html>
   `));
 
-app.listen(nconf.get('SERVER_PORT'), () => {
-  console.log('Server listening on port', nconf.get('SERVER_PORT'));
+const port = nconf.get('SERVER_HOST').split(':')[1] || 80;
+app.listen(port, () => {
+  console.log('Server listening on port', port);
 });

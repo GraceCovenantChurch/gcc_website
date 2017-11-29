@@ -83,9 +83,7 @@ function handleErrors(res) {
 
 export const fetchModelData = modelName => (dispatch) => {
   const SERVER_HOST = nconf.get('SERVER_HOST');
-  const SERVER_PORT = nconf.get('SERVER_PORT');
-
-  return fetch(`http://${SERVER_HOST}:${SERVER_PORT}/api/modelData/${pluralize(modelName)}`, {
+  return fetch(`http://${SERVER_HOST}/api/modelData/${pluralize(modelName)}`, {
     credentials: 'same-origin',
     method: 'GET',
     headers: {
@@ -101,9 +99,7 @@ export const fetchModelData = modelName => (dispatch) => {
 
 export const createDocument = (modelName, document) => (dispatch) => {
   const SERVER_HOST = nconf.get('SERVER_HOST');
-  const SERVER_PORT = nconf.get('SERVER_PORT');
-
-  return fetch(`http://${SERVER_HOST}:${SERVER_PORT}/api/modelData/${pluralize(modelName)}/create`, {
+  return fetch(`http://${SERVER_HOST}/api/modelData/${pluralize(modelName)}/create`, {
     credentials: 'same-origin',
     method: 'POST',
     headers: {
@@ -120,9 +116,7 @@ export const createDocument = (modelName, document) => (dispatch) => {
 
 export const updateDocument = (modelName, id, document) => (dispatch) => {
   const SERVER_HOST = nconf.get('SERVER_HOST');
-  const SERVER_PORT = nconf.get('SERVER_PORT');
-
-  return fetch(`http://${SERVER_HOST}:${SERVER_PORT}/api/modelData/${pluralize(modelName)}/${id}/update`, {
+  return fetch(`http://${SERVER_HOST}/api/modelData/${pluralize(modelName)}/${id}/update`, {
     credentials: 'same-origin',
     method: 'POST',
     headers: {
@@ -140,9 +134,7 @@ export const updateDocument = (modelName, id, document) => (dispatch) => {
 
 export const deleteDocument = (modelName, id) => (dispatch) => {
   const SERVER_HOST = nconf.get('SERVER_HOST');
-  const SERVER_PORT = nconf.get('SERVER_PORT');
-
-  return fetch(`http://${SERVER_HOST}:${SERVER_PORT}/api/modelData/${pluralize(modelName)}/${id}/delete`, {
+  return fetch(`http://${SERVER_HOST}/api/modelData/${pluralize(modelName)}/${id}/delete`, {
     credentials: 'same-origin',
     method: 'POST',
     headers: {

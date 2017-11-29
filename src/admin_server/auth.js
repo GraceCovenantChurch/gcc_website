@@ -2,7 +2,7 @@ import passport from 'passport';
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20';
 import nconf from 'nconf';
 
-const SERVER_ROOT = `http://${nconf.get('SERVER_HOST')}:${nconf.get('SERVER_PORT')}`;
+const SERVER_ROOT = `http://${nconf.get('SERVER_HOST')}`;
 
 if (nconf.get('NODE_ENV') === 'production') {
   passport.use(new GoogleStrategy({
