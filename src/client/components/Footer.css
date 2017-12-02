@@ -1,6 +1,8 @@
 footer {
-    height: 70px;
+    border-top: 1px solid rgba(0,0,0,0.3);
+    padding: 30px;
     color: black;
+    width: 100%;
 }
 
 p {

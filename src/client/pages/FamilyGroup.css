@@ -1,0 +1,32 @@
+#familyGroup{
+	.pageContent{
+		margin: 50px 10%;
+		font-size: 18px;
+		font-family: 'Helvetica Neue';
+		font-weight: 200;
+	}
+
+	.video{
+		margin: 30px auto;
+		width: 90%;
+		height: 500px;
+		background: gray;
+	}
+
+	.signupTable{
+		border-top: 8px solid #F3F3F3;
+		border-bottom: 8px solid #F3F3F3;
+		padding: 0px 25px;
+	}
+
+	.tableRow{
+		width: 90%;
+		margin: auto;
+		padding: 40px 0px;
+		border-bottom: 8px solid #F3F3F3;
+	}
+
+	.signupTable > :last-child{
+		border-bottom: none;
+	}
+}

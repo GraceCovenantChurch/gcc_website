@@ -28,6 +28,11 @@ const routes = [
         component: asyncComponent(path.resolve(__dirname, './pages/AsyncPage'), () => import('./pages/AsyncPage')),
       },
       {
+        path: '/familygroup',
+        exact: true,
+        component: asyncComponent(path.resolve(__dirname, './pages/FamilyGroup'), () => import('./pages/FamilyGroup')),
+      },
+      {
         component: NotFound,
       },
     ],
