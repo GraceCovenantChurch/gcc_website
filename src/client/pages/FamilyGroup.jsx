@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Link from 'react-router-dom/Link';
 import Helmet from 'react-helmet';
 import withTitle from '../hoc/withTitle';
-import Header from '../components/Header';
+import TitleBanner from '../components/TitleBanner';
 
 const styles = (typeof CSS !== 'undefined') && require('./FamilyGroup.css');
 
@@ -14,9 +14,9 @@ class FamilyGroup extends Component {
           <link rel="stylesheet" type="text/css" href="/public/assets/pages/FamilyGroup.bundle.css" />
         </Helmet>
 
-        <Header image="/static/images/home/philly.jpg" text="Family Group"></Header>
+        <TitleBanner src="/static/images/home/philly.jpg" display="Family Group"></TitleBanner>
 
-        <div>
+        <div className="pageContent">
           This is where actual content will go 
         </div>
       </div>
