@@ -18,7 +18,7 @@ const MainTemplate = ({route}) => {
           </Link>
         }
         links = {[
-          <Link to="/page">I'm New</Link>,
+          <Link to="/welcome">I'm New</Link>,
           <Link to="/pages">About</Link>,
           <Link to="/page">Family Groups</Link>,
           <Link to="/pages">Ministries</Link>,
