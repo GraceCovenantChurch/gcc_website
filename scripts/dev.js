@@ -46,7 +46,7 @@ function makeWebpackServer(webpackConfig, port) {
   webpackServer.listen(port);
 }
 
-spawn('nodemon', [
+spawn(path.resolve(__dirname, '../node_modules/.bin/nodemon'), [
   path.resolve(__dirname, '../src/server/app.js'),
   ...['--exec', 'babel-node', ...[
         '--presets=env,react',
@@ -63,7 +63,7 @@ spawn('nodemon', [
   }
 });
 
-spawn('nodemon', [
+spawn(path.resolve(__dirname, '../node_modules/.bin/nodemon'), [
   path.resolve(__dirname, '../src/admin_server/app.js'),
   ...['--exec', 'babel-node', ...[
         '--presets=env,react',
