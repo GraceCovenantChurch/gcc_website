@@ -30,7 +30,7 @@ const routes = [
       {
         path: '/familygroup',
         exact: true,
-        component: asyncComponent(path.resolve(__dirname, './pages/FamilyGroup'), () => import('./pages/FamilyGroup')),
+        component: asyncComponent(path.resolve(__dirname, './pages/familygroup/FamilyGroup'), () => import('./pages/familygroup/FamilyGroup')),
       },
       {
         component: NotFound,

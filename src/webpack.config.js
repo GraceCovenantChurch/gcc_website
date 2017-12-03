@@ -6,5 +6,5 @@ module.exports = require('./webpack.common')('common', {
   'pages/welcome/Welcome': path.resolve(__dirname, 'client/pages/welcome/Welcome.jsx'),
   'pages/Page': path.resolve(__dirname, 'client/pages/Page.jsx'),
   'pages/AsyncPage': path.resolve(__dirname, 'client/pages/AsyncPage.jsx'),
-  'pages/FamilyGroup': path.resolve(__dirname, 'client/pages/FamilyGroup.jsx'),
+  'pages/familygroup/FamilyGroup': path.resolve(__dirname, 'client/pages/familygroup/FamilyGroup.jsx'),
 });

@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
 import Link from 'react-router-dom/Link';
 import Helmet from 'react-helmet';
-import withTitle from '../hoc/withTitle';
-import TitleBanner from '../components/TitleBanner';
+import withTitle from '../../hoc/withTitle';
+
+import Banner from '../../components/Banner';
+import TableRow from '../../components/TableRow';
 
 const styles = (typeof CSS !== 'undefined') && require('./FamilyGroup.css');
 
@@ -14,10 +16,11 @@ class FamilyGroup extends Component {
           <link rel="stylesheet" type="text/css" href="/public/assets/pages/FamilyGroup.bundle.css" />
         </Helmet>
 
-        <TitleBanner src="/static/images/home/philly.jpg" display="Family Group"></TitleBanner>
+        <Banner src="/static/images/home/philly.jpg">
+          Family Group
+        </Banner>
 
         <div className="pageContent">
-
           <div className="description">
             At GCC we place a high emphasis on Family Groups because we believe that it is in
             these smaller settings that we are able to meet with God, building meaningful relationships,
@@ -40,47 +43,26 @@ class FamilyGroup extends Component {
           <div className="video">Video Placeholder Div</div>
 
           <div className="signupTable">
-              <TableRow
-                 title="College"
-                 days="Mondays to Thursdays"
-                 description="Our College Family Groups meet once a week on Drexel, Moore, Penn, Temple, and USciences!"
-                 signupLink="#"></TableRow>
-              <TableRow
-                 title="Young Adults"
-                 days="Mondays to Thursdays"
-                 description="Our Young Adult Family Groups have a mix of post-undergraduate, grad students, PhD's, working adults, and young married couples."
-                 signupLink="#"></TableRow>
-              <TableRow
-                 title="International"
-                 days="Thursdays"
-                 description="Description needed"
-                 signupLink="#"></TableRow>
+            <TableRow
+               title="College"
+               days="Mondays to Thursdays"
+               description="Our College Family Groups meet once a week on Drexel, Moore, Penn, Temple, and USciences!"
+               signupLink="#"></TableRow>
+            <TableRow
+               title="Young Adults"
+               days="Mondays to Thursdays"
+               description="Our Young Adult Family Groups have a mix of post-undergraduate, grad students, PhD's, working adults, and young married couples."
+               signupLink="#"></TableRow>
+            <TableRow
+               title="International"
+               days="Thursdays"
+               description="Description needed"
+               signupLink="#"></TableRow>
           </div>
         </div>
-
       </div>
     );
   }
 };
-
-class TableRow extends Component {
-  render() {
-    return (
-      <div className="tableRow row">
-        <div className="col-sm-4">
-          <strong>{this.props.title}</strong>
-          <br></br>
-          {this.props.days}
-        </div>
-        <div className="col-sm-8">
-          {this.props.description}
-          <br></br>
-          <br></br>
-          <a href={this.props.signupLink}>Signup here!</a>
-        </div>
-      </div>
-      );
-  }
-}
 
 export default withTitle('Family Group')(FamilyGroup);

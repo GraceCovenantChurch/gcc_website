@@ -1,24 +1,17 @@
-.container .title {
-  margin-top: 75px;
+#welcome {
+
 }
 
-.container .verbiage {
-  font-size: small;
+#welcome .pageContent {
+	margin: 50px 10%;
+	font-size: 18px;
+	font-family: 'Helvetica Neue';
+	font-weight: 200;
 }
 
-.container .verbiage p {
-  padding-bottom: 1em;
-}
-
-.container .media {
-  text-align: center;
-  margin: 25px;
-}
-
-.container h3 {
-  text-align: center;
-}
-
-.container .locations {
-  text-align: center;
+#welcome .video {
+	margin: 30px auto;
+	width: 90%;
+	height: 500px;
+	background: gray;
 }
