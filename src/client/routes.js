@@ -33,6 +33,11 @@ const routes = [
         component: asyncComponent(path.resolve(__dirname, './pages/familygroup/FamilyGroup'), () => import('./pages/familygroup/FamilyGroup')),
       },
       {
+        path: '/ministries',
+        exact: true,
+        component: asyncComponent(path.resolve(__dirname, './pages/ministries/Ministries'), () => import('./pages/ministries/Ministries')),
+      },
+      {
         component: NotFound,
       },
     ],

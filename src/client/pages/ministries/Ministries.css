@@ -1,0 +1,15 @@
+#ministries{
+	.pageContent{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		/*grid-template-rows: 1fr 1fr 1fr 1fr;*/
+		grid-gap: 50px;
+		border: 1px solid red;
+		margin: 50px 10%;
+		font-size: 18px;
+		font-family: 'Helvetica Neue';
+		font-weight: 200;
+	}
+
+	
+}
