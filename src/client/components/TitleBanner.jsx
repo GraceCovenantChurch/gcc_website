@@ -8,7 +8,7 @@ import { SparkScroll } from '../modules/spark.js';
 
 const styles = (typeof CSS !== 'undefined') && require ('./TitleBanner.css');
 
-class Banner extends Component {
+class TitleBanner extends Component {
   render() {
     return (
       <Jumbotron style={{ height: '100vh' }}>
@@ -17,18 +17,20 @@ class Banner extends Component {
           backgroundSize="cover"
           backgroundPosition="top left"
           backgroundAttachment="fixed" />
-        <SparkScroll
-          className="title"
-          style={{ color: 'white' }}
-          timeline={{
-            centerCenter: { opacity: 1 },
-            topTop: { opacity: 0 }
-          }}>
-          { this.props.children }
-        </SparkScroll>
+          <Center horizontal vertical>
+            <SparkScroll.h1
+              className="titleText"
+              style={{ color: 'white' }}
+              timeline={{
+                centerCenter: { opacity: 1 },
+                topTop: { opacity: 0 }
+              }}>
+              { this.props.children }
+            </SparkScroll.h1>
+          </Center>
       </Jumbotron>
     );
   }
 };
 
-export default Banner;
+export default TitleBanner;

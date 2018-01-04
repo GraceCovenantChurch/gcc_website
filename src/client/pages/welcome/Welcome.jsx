@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import withTitle from '../../hoc/withTitle';
 import BackgroundImage from '../../components/BackgroundImage';
 import Center from '../../components/Center';
-import Banner from '../../components/Banner';
+import TitleBanner from '../../components/TitleBanner';
 import Jumbotron from '../../components/Jumbotron';
 import { SparkScroll } from '../../modules/spark.js';
 
@@ -18,9 +18,11 @@ class Welcome extends Component {
           <link rel="stylesheet" type="text/css" href="public/assets/pages/welcome/Welcome.bundle.css" />
         </Helmet>
 
-        <Banner src="/static/images/welcome/welcome_background.jpg">
-          Welcome!
-        </Banner>
+        <TitleBanner src="/static/images/welcome/welcome_background.jpg">
+          <Center horizontal vertical>
+            Welcome!
+          </Center>
+        </TitleBanner>
 
 
         <div className="pageContent">

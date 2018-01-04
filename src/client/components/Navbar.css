@@ -47,3 +47,8 @@
     padding-bottom: 27px;
   }
 }
+
+/* There can be room for transitions */
+.navbar-nav li a:visited {
+  color: white;
+}

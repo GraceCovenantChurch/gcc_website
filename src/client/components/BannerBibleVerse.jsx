@@ -8,18 +8,15 @@ import { SparkScroll } from '../modules/spark.js';
 
 const styles = (typeof CSS !== 'undefined') && require ('./TitleBanner.css');
 
-class Banner extends Component {
+class BannerBibleVerse extends Component {
   render() {
     return (
-      <Jumbotron style={{ height: '100vh' }}>
-        <BackgroundImage
-          src={ this.props.src }
-          backgroundSize="cover"
-          backgroundPosition="top left"
-          backgroundAttachment="fixed" />
+      <Jumbotron
+        className="bibleVerse"
+        style={{ height: '100vh' }}>
         <SparkScroll
           className="title"
-          style={{ color: 'white' }}
+          style={{ color: 'black' }}
           timeline={{
             centerCenter: { opacity: 1 },
             topTop: { opacity: 0 }
@@ -31,4 +28,4 @@ class Banner extends Component {
   }
 };
 
-export default Banner;
+export default BannerBibleVerse;

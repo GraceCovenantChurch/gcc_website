@@ -3,7 +3,7 @@ import Link from 'react-router-dom/Link';
 import Helmet from 'react-helmet';
 import withTitle from '../../hoc/withTitle';
 
-import Banner from '../../components/Banner';
+import TitleBanner from '../../components/TitleBanner';
 import TableRow from '../../components/TableRow';
 
 const styles = (typeof CSS !== 'undefined') && require('./FamilyGroup.css');
@@ -16,9 +16,9 @@ class FamilyGroup extends Component {
           <link rel="stylesheet" type="text/css" href="/public/assets/pages/FamilyGroup.bundle.css" />
         </Helmet>
 
-        <Banner src="/static/images/home/philly.jpg">
+        <TitleBanner src="/static/images/home/philly.jpg">
           Family Group
-        </Banner>
+        </TitleBanner>
 
         <div className="pageContent">
           <div className="description">
