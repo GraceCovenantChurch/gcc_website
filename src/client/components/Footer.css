@@ -1,24 +1,19 @@
-footer {
-    border-top: 1px solid rgba(0,0,0,0.3);
-    padding: 30px;
-    color: black;
-    width: 100%;
-}
+footer{
 
-p {
-    display: inline;
-    font-weight: bold;
-    font-size: 16px;
-}
+    p {
+        font-weight: bold;
+        font-size: 16px;
+    }
 
-i {
-    margin-right: 30px;
-}
+    i {
+        margin: 0px 15px;
+    }
 
-.icons {
-    float: right;
-}
+    .icons{
+        margin: 10px auto;
+    }
 
-.footerLinks, .footerLinks:visited, .footerLinks:hover {
-    color: black;
+    .footerLinks, .footerLinks:visited, .footerLinks:hover {
+        color: black;
+    }
 }
