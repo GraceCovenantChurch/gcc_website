@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import withTitle from '../../hoc/withTitle';
 
 import Center from '../../components/Center';
+import TitleBanner from '../../components/TitleBanner';
 import Banner from '../../components/Banner';
 import TableRow from '../../components/TableRow';
 
@@ -22,9 +23,11 @@ class Ministries extends Component {
           <link rel="stylesheet" type="text/css" href="/public/assets/pages/Ministries.bundle.css" />
         </Helmet>
 
-        <Banner src="/static/images/home/philly.jpg">
-          Ministries
-        </Banner>
+        <TitleBanner src="/static/images/home/philly.jpg">
+          <Center horizontal vertical>
+            Ministries
+          </Center>
+        </TitleBanner>
 
         <div className="pageContent">
           {ministryList.map( (minName) => {

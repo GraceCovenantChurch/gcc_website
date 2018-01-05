@@ -24,7 +24,6 @@ class Welcome extends Component {
           </Center>
         </TitleBanner>
 
-
         <div className="pageContent">
           <div className="description">
             Our doors are wide open to people from all backgrounds. Whether you are a spiritual seeker just beginning to ask questions about God or a committed Christian wanting to deepen your faith, Grace Covenant Church is a place you can call home and find spiritual help, hope, and encouragement. Wherever you are in your spiritual journey, we invite you to discover GCC—and discover for yourself God’s wonderful love and plan for your life!
