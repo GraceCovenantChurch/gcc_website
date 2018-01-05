@@ -12,7 +12,7 @@ import TitleBanner from '../components/TitleBanner';
 import Banner from '../components/Banner';
 import BannerBibleVerse from '../components/BannerBibleVerse';
 
-import * as constVars from './data/vars-home.js';
+import * as constVars from './utilities/home-vars.js';
 
 const styles = (typeof CSS !== 'undefined') && require('./Home.css');
 
@@ -50,7 +50,7 @@ class Home extends Component {
         </Jumbotron>
 
         <Banner
-          src="/static/images/home/familygroup.jpg">
+          src="/static/images/home/welcome.jpg">
           <h1>
             Join Us In Worship
           </h1>
@@ -69,12 +69,39 @@ class Home extends Component {
           </div>
         </Banner>
 
-        <BannerBibleVerse>
+        <Banner
+          src="/static/images/home/familygroup.jpg">
+          <h1>
+            Family Group
+          </h1>
+          <div className="subtitle">
+            <h3>
+              You haven't checked out GCC if you haven't checked out our family groups.
+            </h3>
+            <a href="/familygroup">
+              <button className="infoButton">Sign Up Here</button>
+            </a>
+          </div>
+        </Banner>
 
-        </BannerBibleVerse>
+        <Banner
+          src="/static/images/home/events.jpg">
+          <h1>
+            Events
+          </h1>
+          <div className="subtitle">
+            <a href="/events">
+              <button className="infoButton">More Info</button>
+            </a>
+          </div>
+        </Banner>
+
+        <BannerBibleVerse
+          className="bibleVerse"
+        />
       </div>
     );
   }
-};
+}
 
 export default withTitle()(Home);
