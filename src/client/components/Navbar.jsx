@@ -20,17 +20,14 @@ class Navbar extends Component {
     };
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.scollCallback = this.handleScroll.bind(this);
     window.addEventListener('scroll', this.scollCallback);
+    this.handleScroll();
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.scollCallback);
-  }
-
-  componentDidMount() {
-    this.handleScroll();
   }
 
   toggle() {
