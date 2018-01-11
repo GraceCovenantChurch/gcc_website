@@ -90,11 +90,13 @@ export const fetchModelData = modelName => (dispatch) => {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-  }).then(handleErrors).then(res => res.json()).then(data => dispatch({
-    type: MODEL_DATA_LOADED,
-    modelName,
-    data,
-  }));
+  }).then(handleErrors)
+    .then(res => res.json())
+    .then(data => dispatch({
+      type: MODEL_DATA_LOADED,
+      modelName,
+      data,
+    }));
 };
 
 export const createDocument = (modelName, document) => (dispatch) => {

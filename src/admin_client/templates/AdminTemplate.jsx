@@ -19,6 +19,7 @@ const AdminTemplate = ({route}) => {
         }
         links = {[
           <Link to="/events">Events</Link>,
+          <Link to="/ministries">Ministries</Link>,
           <a href="/logout">Log Out</a>,
         ]}
         className="navbar-light"

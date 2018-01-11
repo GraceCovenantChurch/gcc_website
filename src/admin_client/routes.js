@@ -1,6 +1,7 @@
 import AdminTemplate from './templates/AdminTemplate';
 import NotFound from '../client/pages/NotFound';
 import Events from './pages/Events';
+import Ministries from './pages/Ministries';
 
 const routes = [
   {
@@ -9,6 +10,10 @@ const routes = [
       {
         path: '/events',
         component: Events,
+      },
+      {
+        path: '/ministries',
+        component: Ministries,
       },
       {
         component: NotFound,

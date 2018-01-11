@@ -26,6 +26,7 @@ class EditForm extends Component {
   }
 
   handleCancel(e) {
+    e.preventDefault();
     return (
       (!this.hasChanges() || confirm('Are you sure you want to cancel?')) &&
       this.props.onClose &&
@@ -34,6 +35,7 @@ class EditForm extends Component {
   }
 
   handleDelete(e) {
+    e.preventDefault();
     if (!this.props.id) {
       return false;
     }
