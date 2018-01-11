@@ -20,6 +20,8 @@ const styleLoaders = [
       plugins: loader => [
         require('postcss-import')({ root: loader.resourcePath }),
         require('postcss-nested')(),
+        require('postcss-css-variables'),
+        require('postcss-calc'),
         require('postcss-cssnext')({
           browsers: ['last 2 versions', '> 5%'],
         }),

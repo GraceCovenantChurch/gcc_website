@@ -26,6 +26,7 @@ const MainTemplate = ({route}) => {
           <Link to="/pages">Multimedia</Link>,
           <Link to="/pages">Events</Link>
         ]}
+        className="navbar-transparent navbar-dark"
       />
       <main>{renderRoutes(route.routes)}</main>
       <Footer></Footer>
