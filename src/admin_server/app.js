@@ -42,7 +42,7 @@ app.use('/public', express.static(path.join(__dirname, '../public')));
 
 
 if (!nconf.get('COOKIE_SECRET')) {
-  throw 'No cookie secret provided. Please add one to config.json';
+  throw new Error('No cookie secret provided. Please add one to config.json');
 }
 
 app.use(cookieParser());

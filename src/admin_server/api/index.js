@@ -10,19 +10,16 @@ router.use('/modelData/Events', Events);
 router.use('/modelData/Ministries', Ministries);
 
 router.use((err, req, res, next) => {
-  res.status(err.status || 500);
-  res.json({
-    message: err.message,
-    error: err,
-  });
+  res.status(500);
+  next();
 });
 
 router.use('*', (req, res) => {
-  var err = new Error('Bad Request');
+  const err = new Error('Bad Request');
   res.status(400);
   res.json({
     message: err.message,
-    error: err
+    error: err,
   });
 });
 

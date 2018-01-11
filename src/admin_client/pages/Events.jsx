@@ -27,8 +27,8 @@ class EventDisplay extends Component {
           <p className="card-text">{datum.content}</p>
           <a href={datum.link} className="card-link">{datum.link}</a>
           {datum.expiration ?
-            <p class="card-text">
-              <small class="text-muted">Expires <DateDisplay value={datum.expiration}/></small>
+            <p className="card-text">
+              <small className="text-muted">Expires <DateDisplay value={datum.expiration}/></small>
             </p>
           : null}
         </div>
