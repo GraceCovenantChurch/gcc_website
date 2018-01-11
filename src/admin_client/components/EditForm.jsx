@@ -78,8 +78,8 @@ class EditForm extends Component {
       <form className="form" key={this.props.id && this.props.document} onSubmit={this.handleSubmit.bind(this)}>
         {this.props.fields.map(field => (
           <div key={field.key} className="form-group">
-            <label htmlFor={field.key}>{field.key}</label>
             <field.editorComponent
+              label={field.key}
               field={field}
               value={this.state[field.key] || ''}
               valueChanged={value => {
@@ -91,8 +91,8 @@ class EditForm extends Component {
           </div>
         ))}
         <div className="btn-toolbar">
-          <a disabled={!this.props.id} className="btn btn-danger" onClick={this.handleDelete.bind(this)}>Delete</a>
-          <a className="btn btn-default" onClick={this.handleCancel.bind(this)}>Cancel</a>
+          <a href="#" disabled={!this.props.id} className="btn btn-danger" onClick={this.handleDelete.bind(this)}>Delete</a>
+          <a href="#" className="btn btn-light" onClick={this.handleCancel.bind(this)}>Cancel</a>
           <button className="btn btn-primary pull-right" type="submit">Save</button>
         </div>
       </form>

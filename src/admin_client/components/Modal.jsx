@@ -67,12 +67,16 @@ class Modal extends Component {
   render() {
     return (
       <div className={classnames({'modal-open': !this.state.hidden})}>
-        <div className={classnames('modal fade', {in: this.state.open})} style={{display: this.state.hidden ? 'none' : 'block'}}>
+        <div className={classnames('modal fade', {
+          show: this.state.open
+        })} style={{
+          display: this.state.hidden ? 'none' : 'block'
+        }}>
           <div className="modal-dialog">
             <div className="modal-content">
               <div className="modal-header">
-                <button type="button" className="close" onClick={this.handleClose.bind(this)}><span>&times;</span></button>
                 <h4 className="modal-title">{this.props.title}</h4>
+                <button type="button" className="close" onClick={this.handleClose.bind(this)}><span>&times;</span></button>
               </div>
               <div className="modal-body">
                 {this.props.children}
