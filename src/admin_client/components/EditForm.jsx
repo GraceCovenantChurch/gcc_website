@@ -16,8 +16,9 @@ class EditForm extends Component {
 
   hasChanges() {
     var changed = false;
+    const document = this.props.document || {};
     Object.keys(this.state).forEach(key => {
-      if (this.state[key] !== this.props.document[key]) {
+      if (this.state[key] !== document[key]) {
         changed = true;
       }
     });
