@@ -8,6 +8,40 @@ import DateDisplay from '../components/displayFields/DateDisplay';
 import TextField from '../components/editFields/TextField';
 import DateField from '../components/editFields/DateField';
 import BooleanField from '../components/editFields/BooleanField';
+import classnames from 'classnames';
+
+class EventDisplay extends Component {
+  render() {
+    const {datum, ...props} = this.props;
+    return (
+      <div className="card" {...props}>
+        <div className={classnames('card-body', {
+          'text-secondary': !datum.published,
+        })}>
+          <h5 className="card-title">{datum.title}</h5>
+          <h6 className="card-subtitle mb-2 text-muted">
+            {datum.startDate ? <DateDisplay value={datum.startDate}/> : null}
+            {datum.endDate ? ' - ' : null}
+            {datum.endDate ? <DateDisplay value={datum.endDate}/> : null}
+          </h6>
+          <p className="card-text">{datum.content}</p>
+          <a href={datum.link} className="card-link">{datum.link}</a>
+          {datum.expiration ?
+            <p class="card-text">
+              <small class="text-muted">Expires <DateDisplay value={datum.expiration}/></small>
+            </p>
+          : null}
+        </div>
+      </div>
+    );
+  }
+};
+
+class EventDisplayWrapper extends Component {
+  render() {
+    return <div className="card-columns">{this.props.children}</div>
+  }
+};
 
 export default class Events extends Component {
 
@@ -64,6 +98,8 @@ export default class Events extends Component {
             editorComponent: DateField,
           },
         ]}
+        ModelDisplayWrapper={EventDisplayWrapper}
+        ModelDisplay={EventDisplay}
       />
     );
   }

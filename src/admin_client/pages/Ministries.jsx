@@ -4,6 +4,25 @@ import asyncComponent from '../../client/hoc/asyncComponent';
 import TextDisplay from '../components/displayFields/TextDisplay';
 import TextField from '../components/editFields/TextField';
 
+class MinistryDisplay extends Component {
+  render() {
+    const {datum, ...props} = this.props;
+    return (
+      <div className="card" {...props}>
+        <div className="card-body">
+          <h5 className="card-title">{datum.name}</h5>
+        </div>
+      </div>
+    );
+  }
+};
+
+class MinistryDisplayWrapper extends Component {
+  render() {
+    return <div className="card-columns">{this.props.children}</div>
+  }
+};
+
 export default class Ministries extends Component {
 
   componentWillMount() {
@@ -23,6 +42,8 @@ export default class Ministries extends Component {
             editorComponent: TextField,
           },
         ]}
+        ModelDisplayWrapper={MinistryDisplayWrapper}
+        ModelDisplay={MinistryDisplay}
       />
     );
   }

@@ -24,6 +24,9 @@ class TableView extends Component {
     this.columnsDirty = false;
     return Promise.map(this.props.columns, column => {
       const cell = this.refs[`${column.key}-header`];
+      if (!cell) {
+        return Promise.resolve();
+      }
       const el = cell.refs.cell;
       return new Promise(resolve => {
         this.setState({
