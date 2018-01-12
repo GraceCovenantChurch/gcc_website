@@ -14,13 +14,14 @@ const AdminTemplate = ({route}) => {
         brand={
           <Link to="/">
             <h1 className="sr-only">Grace Covenant Church Admin Panel</h1>
-            <img src="/static/images/gcclogo.jpg" />
+            <img src="/static/images/gcclogo-black.png" />
           </Link>
         }
         links = {[
           <Link to="/events">Events</Link>,
           <a href="/logout">Log Out</a>,
         ]}
+        className="navbar-light"
       />
       <Notifications />
       <main>{renderRoutes(route.routes)}</main>
