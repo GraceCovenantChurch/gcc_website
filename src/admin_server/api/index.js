@@ -10,6 +10,7 @@ router.use('/modelData/Events', Events);
 router.use('/modelData/Ministries', Ministries);
 
 router.use((err, req, res, next) => {
+  console.error(err);
   res.status(500);
   next();
 });
