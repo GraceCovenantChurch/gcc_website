@@ -53,7 +53,8 @@ spawn('nodemon', [
         '--plugins=dynamic-import-node,transform-object-rest-spread'
       ]
   ],
-  ...['--watch', path.resolve(__dirname, '../src/server')]
+  ...['--watch', path.resolve(__dirname, '../src/server')],
+  ...['--watch', path.resolve(__dirname, '../src/models')]
 ], {
   shell: true,
   stdio: 'inherit',
@@ -71,7 +72,8 @@ spawn('nodemon', [
         '--plugins=dynamic-import-node,transform-object-rest-spread'
       ]
   ],
-  ...['--watch', path.resolve(__dirname, '../src/admin_server')]
+  ...['--watch', path.resolve(__dirname, '../src/admin_server')],
+  ...['--watch', path.resolve(__dirname, '../src/models')]
 ], {
   shell: true,
   stdio: 'inherit',
