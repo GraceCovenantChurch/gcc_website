@@ -4,12 +4,15 @@ import Field from './Field';
 class BooleanField extends Field {
   render() {
     return (
-      <input type="checkbox" className="checkbox"
-        checked={this.props.value}
-        onChange={e => {
-          this.props.valueChanged(e.target.checked);
-        }}
-      />
+      <div className="form-check">
+        <input type="checkbox" className="form-check-input"
+          checked={this.props.value}
+          onChange={e => {
+            this.props.valueChanged(e.target.checked);
+          }}
+        />
+        <label className="form-check-label">{this.props.label}</label>
+      </div>
     );
   }
 };

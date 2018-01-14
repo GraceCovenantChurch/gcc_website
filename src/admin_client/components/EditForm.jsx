@@ -16,8 +16,9 @@ class EditForm extends Component {
 
   hasChanges() {
     var changed = false;
+    const document = this.props.document || {};
     Object.keys(this.state).forEach(key => {
-      if (this.state[key] !== this.props.document[key]) {
+      if (this.state[key] !== document[key]) {
         changed = true;
       }
     });
@@ -25,6 +26,7 @@ class EditForm extends Component {
   }
 
   handleCancel(e) {
+    e.preventDefault();
     return (
       (!this.hasChanges() || confirm('Are you sure you want to cancel?')) &&
       this.props.onClose &&
@@ -33,6 +35,7 @@ class EditForm extends Component {
   }
 
   handleDelete(e) {
+    e.preventDefault();
     if (!this.props.id) {
       return false;
     }
@@ -78,8 +81,8 @@ class EditForm extends Component {
       <form className="form" key={this.props.id && this.props.document} onSubmit={this.handleSubmit.bind(this)}>
         {this.props.fields.map(field => (
           <div key={field.key} className="form-group">
-            <label htmlFor={field.key}>{field.key}</label>
             <field.editorComponent
+              label={field.key}
               field={field}
               value={this.state[field.key] || ''}
               valueChanged={value => {
@@ -91,8 +94,8 @@ class EditForm extends Component {
           </div>
         ))}
         <div className="btn-toolbar">
-          <a disabled={!this.props.id} className="btn btn-danger" onClick={this.handleDelete.bind(this)}>Delete</a>
-          <a className="btn btn-default" onClick={this.handleCancel.bind(this)}>Cancel</a>
+          <a href="#" disabled={!this.props.id} className="btn btn-danger" onClick={this.handleDelete.bind(this)}>Delete</a>
+          <a href="#" className="btn btn-light" onClick={this.handleCancel.bind(this)}>Cancel</a>
           <button className="btn btn-primary pull-right" type="submit">Save</button>
         </div>
       </form>

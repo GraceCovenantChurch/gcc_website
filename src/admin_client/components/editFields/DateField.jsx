@@ -8,12 +8,15 @@ import moment from 'moment';
 class DateField extends Field {
   render() {
     return (
-      <DatePicker className="form-control"
-        placeholder="Enter a date"
-        selected={this.props.value && moment(this.props.value)}
-        onChange={date => {
-          this.props.valueChanged(date)
-        }} />
+      <div>
+        <label>{this.props.label}</label>
+        <DatePicker className="form-control"
+          placeholder="Enter a date"
+          selected={this.props.value && moment(this.props.value)}
+          onChange={date => {
+            this.props.valueChanged(date)
+          }} />
+      </div>
     );
   }
 };

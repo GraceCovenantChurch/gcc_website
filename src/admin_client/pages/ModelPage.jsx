@@ -71,6 +71,47 @@ class ModelPage extends Component {
       });
     });
 
+    const ModelDisplay = () => {
+      if (this.props.ModelDisplay) {
+        const data = this.props.sort ? this.props.data.concat().sort(this.props.sort) : this.props.data;
+        const items = data.map(datum => (
+          <this.props.ModelDisplay
+            key={datum._id}
+            datum={datum}
+            onClick={() => this.props.history.push(`${this.props.match.url}/${datum._id}/edit`)}
+            style={{ cursor: 'pointer' }}
+          />
+        ));
+        if (this.props.ModelDisplayWrapper) {
+          return <this.props.ModelDisplayWrapper>{items}</this.props.ModelDisplayWrapper>;
+        } else {
+          return items;
+        }
+
+      } else {
+        return (
+          <TableView columns={this.props.modelFields}>
+            {(this.props.sort ? this.props.data.concat().sort(this.props.sort) : this.props.data).map(datum => (
+              <TableRow
+                  key={datum._id}
+                  onClick={() => this.props.history.push(`${this.props.match.url}/${datum._id}/edit`)}
+                  style={{ cursor: 'pointer' }}
+              >
+                {Object.keys(datum).map((key, i) => {
+                  const field = this.props.modelFields[fieldColumnIndices[key]];
+                  return (
+                    <TableCell column={key} key={key}>
+                      {field && field.displayComponent ? <field.displayComponent value={datum[key]} /> : datum[key]}
+                    </TableCell>
+                  );
+                })}
+              </TableRow>
+            ))}
+          </TableView>
+        );
+      }
+    };
+
     return (
       <div className="container">
         <Helmet>
@@ -101,24 +142,7 @@ class ModelPage extends Component {
           </div>
           <h1>{pluralize(this.props.modelName)}</h1>
         </div>
-        <TableView columns={this.props.modelFields}>
-          {(this.props.sort ? this.props.data.concat().sort(this.props.sort) : this.props.data).map(datum => (
-            <TableRow
-                key={datum._id}
-                onClick={() => this.props.history.push(`${this.props.match.url}/${datum._id}/edit`)}
-                style={{ cursor: 'pointer' }}
-            >
-              {Object.keys(datum).map((key, i) => {
-                const field = this.props.modelFields[fieldColumnIndices[key]];
-                return (
-                  <TableCell column={key} key={key}>
-                    {field && field.displayComponent ? <field.displayComponent value={datum[key]} /> : datum[key]}
-                  </TableCell>
-                );
-              })}
-            </TableRow>
-          ))}
-        </TableView>
+        <ModelDisplay />
       </div>
     )
   }
