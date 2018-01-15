@@ -12,7 +12,7 @@ import TitleBanner from '../components/TitleBanner';
 import Banner from '../components/Banner';
 import BannerBibleVerse from '../components/BannerBibleVerse';
 
-import * as constVars from './utilities/home-vars.js';
+import * as constVars from './vars/home-vars.js';
 
 const styles = (typeof CSS !== 'undefined') && require('./Home.css');
 
@@ -49,8 +49,7 @@ class Home extends Component {
           </SparkScroll>
         </Jumbotron>
 
-        <Banner
-          src="/static/images/home/welcome.jpg">
+        <Banner src="/static/images/home/welcome.jpg">
           <h1>
             Join Us In Worship
           </h1>
@@ -69,8 +68,7 @@ class Home extends Component {
           </div>
         </Banner>
 
-        <Banner
-          src="/static/images/home/familygroup.jpg">
+        <Banner src="/static/images/home/familygroup.jpg">
           <h1>
             Family Group
           </h1>
@@ -84,8 +82,7 @@ class Home extends Component {
           </div>
         </Banner>
 
-        <Banner
-          src="/static/images/home/events.jpg">
+        <Banner src="/static/images/home/events.jpg">
           <h1>
             Events
           </h1>
