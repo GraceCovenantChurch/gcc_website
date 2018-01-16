@@ -108,6 +108,7 @@ module.exports = (commonName, targets) => ({
         SERVER_HOST: nconf.get('SERVER_HOST'),
         NODE_ENV: nconf.get('NODE_ENV'),
         APP_ENV: nconf.get('APP_ENV'),
+        GOOGLE_MAPS_KEY: nconf.get('GOOGLE_MAPS_KEY'),
       }),
       CSS: 'true',
       'typeof window': '\"object\"', // for client-side mongoose build

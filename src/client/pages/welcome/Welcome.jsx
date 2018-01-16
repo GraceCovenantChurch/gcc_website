@@ -1,3 +1,4 @@
+import nconf from 'nconf';
 import React, {Component} from 'react';
 import Link from 'react-router-dom/Link';
 import Helmet from 'react-helmet';
@@ -6,7 +7,7 @@ import BackgroundImage from '../../components/BackgroundImage';
 import Center from '../../components/Center';
 import TitleBanner from '../../components/TitleBanner';
 import Jumbotron from '../../components/Jumbotron';
-import { SparkScroll } from '../../modules/spark.js';
+import AspectRatio from '../../components/AspectRatio';
 
 const styles = (typeof CSS !== 'undefined') && require('./Welcome.css');
 
@@ -41,6 +42,19 @@ class Welcome extends Component {
             Again, whether you’re a spiritual seeker who’s just starting to ask questions about God, or a committed Christian who wants to sink the roots of your faith even deeper, you can find a home here at Grace Covenant Church.
             <br/> <br/>
             Our Sunday Services and Friday Night Large Groups are typically located at Meyerson Hall Room B-1, 3401 Walnut Street Philadelphia, PA 19104. We oftentimes meet at Ralston House, 3615 Chestnut Street Philadelphia, PA 19104, as well. Keep an eye out for Grace Covenant Church signs and our welcomers to find us!
+          </div>
+
+          <div className="row">
+            <div className="col-sm-6">
+              <AspectRatio ratio={4/3}>
+                <iframe frameBorder="0" src={`https://www.google.com/maps/embed/v1/place?q=Meyerson+Hall,+Philadelphia,+PA,+United+States&key=${nconf.get('GOOGLE_MAPS_KEY')}`} style={{width: '100%', height: '100%'}} />
+              </AspectRatio>
+            </div>
+            <div className="col-sm-6">
+              <AspectRatio ratio={4/3}>
+                <iframe frameBorder="0" src={`https://www.google.com/maps/embed/v1/place?q=Ralston+House,+Chestnut+Street,+Philadelphia,+PA,+United+States&key=${nconf.get('GOOGLE_MAPS_KEY')}`} style={{width: '100%', height: '100%'}} />
+              </AspectRatio>
+            </div>
           </div>
         </div>
       </div>
