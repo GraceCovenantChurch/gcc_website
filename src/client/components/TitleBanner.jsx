@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import Center from './Center';
 import Jumbotron from './Jumbotron';
@@ -15,7 +16,7 @@ class TitleBanner extends Component {
         <BackgroundImage
           src={ this.props.src }
           backgroundSize="cover"
-          backgroundPosition="top left"
+          backgroundPosition={ this.props.backgroundPosition || 'center' }
           backgroundAttachment="fixed" />
           <Center horizontal vertical>
             <SparkScroll.h1
@@ -31,6 +32,11 @@ class TitleBanner extends Component {
       </Jumbotron>
     );
   }
+};
+
+TitleBanner.propTypes = {
+  src: PropTypes.string.isRequired,
+  backgroundPosition: PropTypes.string,
 };
 
 export default TitleBanner;
