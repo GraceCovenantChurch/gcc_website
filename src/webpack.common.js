@@ -34,6 +34,9 @@ const styleLoaders = [
 module.exports = (commonName, targets) => ({
   devtool: nconf.get('NODE_ENV') !== 'production' ? 'cheap-module-eval-source-map' : undefined,
   entry: targets,
+  devServer: {
+    disableHostCheck: true
+  },
   output: {
     path: path.resolve(__dirname, '../build/public/assets'),
     filename: '[name].js',
