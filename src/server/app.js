@@ -2,6 +2,7 @@ import nconf from 'nconf';
 import express from 'express';
 import path from 'path';
 import compression from 'compression';
+import mongoose from 'mongoose';
 import logger from 'morgan';
 import api from './api';
 import PageRouter from './pageRouter';
@@ -59,7 +60,15 @@ app.use(PageRouter(routes, reducers, (head, content, state) => `
     </html>
   `));
 
-const port = nconf.get('SERVER_HOST').split(':')[1] || 80;
-app.listen(port, () => {
-  console.log('Server listening on port', port);
+mongoose.set('debug', nconf.get('NODE_ENV') !== 'production');
+mongoose.connect(nconf.get('MONGODB_URI'), { useMongoClient: true }, (err) => {
+  if (err) {
+    throw err;
+  }
+  console.log('Connected to database');
+
+  const port = nconf.get('SERVER_HOST').split(':')[1] || 80;
+  app.listen(port, () => {
+    console.log('Server listening on port', port);
+  });
 });
