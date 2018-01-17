@@ -1,21 +1,30 @@
 import React, {Component} from 'react';
-import Link from 'react-router-dom/Link';
+import {compose} from 'redux';
+import {connect} from 'react-redux';
+import {Link, withRouter} from 'react-router-dom';
 import Helmet from 'react-helmet';
 import withTitle from '../../hoc/withTitle';
+import pluralize from 'pluralize';
 
 import Center from '../../components/Center';
 import TitleBanner from '../../components/TitleBanner';
 import Banner from '../../components/Banner';
 import TableRow from '../../components/TableRow';
+import {fetchModelData} from '../../modules/modelData';
+
 
 const styles = (typeof CSS !== 'undefined') && require('./Ministries.css');
 
 class Ministries extends Component {
 
-  render() {
+  componentDidMount() {
+    this.props.fetchData();
+  }
 
-    let ministryList = ['Diakonos', 'Evangelism', 'Finance', 'Graphics', 'Hospitality', 'Multimedia',
-     'Overflow', 'Transportation', 'Worship', 'Welcoming', 'Web'];
+  render() {
+    let ministryList = this.props.data.map((ministryObj) => {return ministryObj['name']});
+    // let ministryList = ['Diakonos', 'Evangelism', 'Finance', 'Graphics', 'Hospitality', 'Multimedia',
+    //  'Overflow', 'Transportation', 'Worship', 'Welcoming', 'Web'];
 
     return (
       <div id="ministries">
@@ -43,4 +52,17 @@ class Ministries extends Component {
   }
 };
 
-export default withTitle('Ministries')(Ministries);
+const withData = connect((state) => {
+  const modelData = state.modelData[pluralize('Ministry')];
+  return {
+    data: modelData ? modelData.ids.map(id => modelData.__DB__[id]) : [],
+  }
+}, (dispatch, ownProps) => {
+  return {
+    fetchData() {
+      return dispatch(fetchModelData('Ministry'));
+    }
+  }
+});
+
+export default compose(withData, withTitle(ownProps => pluralize('Ministry')), withRouter)(Ministries);
