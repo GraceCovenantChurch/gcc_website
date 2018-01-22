@@ -30,6 +30,21 @@ function model(state = initialModelState, action) {
   }
 }
 
+export default function page(state = initialState, action) {
+  switch (action.type) {
+    case MODEL_DATA_LOADED:
+    {
+      const key = pluralize(action.modelName);
+      return Object.assign({}, state, {
+        [key]: model(state[key], action),
+      });
+    }
+
+    default:
+      return state;
+  }
+}
+
 function handleErrors(res) {
   if (!res.ok) {
     return Promise.reject(res);
