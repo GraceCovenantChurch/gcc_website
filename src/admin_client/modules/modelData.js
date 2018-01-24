@@ -82,8 +82,8 @@ function handleErrors(res) {
 }
 
 export const fetchModelData = modelName => (dispatch) => {
-  const SERVER_HOST = nconf.get('SERVER_HOST');
-  return fetch(`http://${SERVER_HOST}/api/modelData/${pluralize(modelName)}`, {
+  const ADMIN_SERVER_HOST = nconf.get('ADMIN_SERVER_HOST');
+  return fetch(`http://${ADMIN_SERVER_HOST}/api/modelData/${pluralize(modelName)}`, {
     credentials: 'same-origin',
     method: 'GET',
     headers: {
@@ -100,8 +100,8 @@ export const fetchModelData = modelName => (dispatch) => {
 };
 
 export const createDocument = (modelName, document) => (dispatch) => {
-  const SERVER_HOST = nconf.get('SERVER_HOST');
-  return fetch(`http://${SERVER_HOST}/api/modelData/${pluralize(modelName)}/create`, {
+  const ADMIN_SERVER_HOST = nconf.get('ADMIN_SERVER_HOST');
+  return fetch(`http://${ADMIN_SERVER_HOST}/api/modelData/${pluralize(modelName)}/create`, {
     credentials: 'same-origin',
     method: 'POST',
     headers: {
@@ -117,8 +117,8 @@ export const createDocument = (modelName, document) => (dispatch) => {
 };
 
 export const updateDocument = (modelName, id, document) => (dispatch) => {
-  const SERVER_HOST = nconf.get('SERVER_HOST');
-  return fetch(`http://${SERVER_HOST}/api/modelData/${pluralize(modelName)}/${id}/update`, {
+  const ADMIN_SERVER_HOST = nconf.get('ADMIN_SERVER_HOST');
+  return fetch(`http://${ADMIN_SERVER_HOST}/api/modelData/${pluralize(modelName)}/${id}/update`, {
     credentials: 'same-origin',
     method: 'POST',
     headers: {
@@ -135,8 +135,8 @@ export const updateDocument = (modelName, id, document) => (dispatch) => {
 };
 
 export const deleteDocument = (modelName, id) => (dispatch) => {
-  const SERVER_HOST = nconf.get('SERVER_HOST');
-  return fetch(`http://${SERVER_HOST}/api/modelData/${pluralize(modelName)}/${id}/delete`, {
+  const ADMIN_SERVER_HOST = nconf.get('ADMIN_SERVER_HOST');
+  return fetch(`http://${ADMIN_SERVER_HOST}/api/modelData/${pluralize(modelName)}/${id}/delete`, {
     credentials: 'same-origin',
     method: 'POST',
     headers: {

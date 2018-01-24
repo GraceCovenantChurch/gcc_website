@@ -22,8 +22,8 @@ export default function page(state = initialState, action) {
 }
 
 export const fetchPage = pageName => (dispatch) => {
-  const SERVER_HOST = nconf.get('SERVER_HOST');
-  return fetch(`http://${SERVER_HOST}/api/pages/${pageName}`)
+  const PUBLIC_SERVER_HOST = nconf.get('PUBLIC_SERVER_HOST');
+  return fetch(`http://${PUBLIC_SERVER_HOST}/api/pages/${pageName}`)
     .then(res => res.json())
     .then(({ title, content }) => dispatch({
       type: PAGE_LOADED,

@@ -2,17 +2,22 @@ const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-const nconf = require('nconf');
-require(path.resolve(__dirname, 'config.js'));
-
+const nconf = require('./src/config.js');
 nconf.set('APP_ENV', 'browser');
+
+const ASSET_HOST = nconf.get('ASSET_HOST');
+const [assetHost, assetPort] = ASSET_HOST ? ASSET_HOST.split(':') : [];
 
 const styleLoaders = [
   nconf.get('NODE_ENV') !== 'production' ? 'style-loader' : undefined,
   {
     loader: 'css-loader',
-    options: { importLoaders: 1, minimize: nconf.get('NODE_ENV') === 'production' },
+    options: {
+      importLoaders: 1,
+      minimize: nconf.get('NODE_ENV') === 'production'
+    },
   },
   {
     loader: 'postcss-loader',
@@ -31,19 +36,39 @@ const styleLoaders = [
   },
 ].filter(loader => loader);
 
-module.exports = (commonName, targets) => ({
+const publicEntry = {
+  app: 'client/app.jsx',
+  'pages/Home': 'client/pages/Home.jsx',
+  'pages/welcome/Welcome': 'client/pages/welcome/Welcome.jsx',
+  'pages/Page': 'client/pages/Page.jsx',
+  'pages/AsyncPage': 'client/pages/AsyncPage.jsx',
+  'pages/familygroup/FamilyGroup': 'client/pages/familygroup/FamilyGroup.jsx',
+  'pages/ministries/Ministries': 'client/pages/ministries/Ministries.jsx',
+};
+
+const adminEntry = {
+  adminApp: 'admin_client/app.jsx',
+  adminModelPage: 'admin_client/pages/ModelPage.jsx',
+};
+
+const extractCSS = new ExtractTextPlugin({
+  filename: '[name].bundle.css',
+  allChunks: true,
+});
+
+module.exports = {
+  context: path.resolve(__dirname, 'src'),
   devtool: nconf.get('NODE_ENV') !== 'production' ? 'cheap-module-eval-source-map' : undefined,
-  entry: targets,
+  entry: Object.assign({}, publicEntry, adminEntry),
   output: {
-    path: path.resolve(__dirname, '../build/public/assets'),
+    path: path.resolve(__dirname, 'build/public/assets'),
     filename: '[name].js',
     chunkFilename: '[name]-chunk.js',
     publicPath: '/public/assets/',
   },
   resolve: {
     modules: [
-      __dirname,
-      '../node_modules',
+      path.resolve(__dirname, 'src'),
       'node_modules',
     ],
     extensions: ['.js', '.jsx'],
@@ -52,30 +77,13 @@ module.exports = (commonName, targets) => ({
     rules: [
       {
         test: /\.css$/,
-        use: nconf.get('NODE_ENV') !== 'production' ? styleLoaders : ExtractTextPlugin.extract({
+        use: nconf.get('NODE_ENV') !== 'production' ? styleLoaders : extractCSS.extract({
           fallback: 'style-loader',
           use: styleLoaders,
         }),
       },
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              ['env', { modules: false }],
-              'react',
-            ],
-            plugins: [
-              'transform-object-rest-spread',
-              'dynamic-import-webpack',
-            ],
-          },
-        },
-      },
-      {
-        test: /\.js$/,
         exclude: /node_modules/,
         use: [
           {
@@ -91,9 +99,7 @@ module.exports = (commonName, targets) => ({
               ],
             },
           },
-          {
-            loader: 'eslint-loader',
-          },
+          // 'eslint-loader',
         ],
       },
     ],
@@ -102,10 +108,13 @@ module.exports = (commonName, targets) => ({
     nconf.get('NODE_ENV') !== 'production' ? new webpack.HotModuleReplacementPlugin() : null,
     nconf.get('NODE_ENV') !== 'production' ? new webpack.NamedModulesPlugin() : null,
     new webpack.NoEmitOnErrorsPlugin(),
+    nconf.get('NODE_ENV') !== 'production' ? new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }) : null,
     new webpack.DefinePlugin({
       NCONF: JSON.stringify({
-        CLIENT_HOST: nconf.get('CLIENT_HOST'),
-        SERVER_HOST: nconf.get('SERVER_HOST'),
+        PUBLIC_SERVER_HOST: nconf.get('PUBLIC_SERVER_HOST'),
+        ADMIN_SERVER_HOST: nconf.get('ADMIN_SERVER_HOST'),
         NODE_ENV: nconf.get('NODE_ENV'),
         APP_ENV: nconf.get('APP_ENV'),
         GOOGLE_MAPS_KEY: nconf.get('GOOGLE_MAPS_KEY'),
@@ -113,9 +122,8 @@ module.exports = (commonName, targets) => ({
       CSS: 'true',
       'typeof window': '\"object\"', // for client-side mongoose build
     }),
-    nconf.get('NODE_ENV') === 'production' ? new ExtractTextPlugin('[name].bundle.css', { allChunks: true }) : null,
     new webpack.NormalModuleReplacementPlugin(/nconf/, ((resource) => {
-      resource.request = resource.request.replace(/nconf/, path.resolve(__dirname, 'nconf-browser'));
+      resource.request = resource.request.replace(/nconf/, path.resolve(__dirname, 'src/nconf-browser'));
     })),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'react',
@@ -130,10 +138,36 @@ module.exports = (commonName, targets) => ({
       },
     }),
     new webpack.optimize.CommonsChunkPlugin({
-      name: commonName,
-      chunks: Object.keys(targets),
+      name: 'public',
+      chunks: Object.keys(publicEntry),
+      minChunks: 2,
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'admin',
+      chunks: Object.keys(adminEntry),
       minChunks: 2,
     }),
     new webpack.optimize.CommonsChunkPlugin({ name: 'manifest' }),
+    nconf.get('NODE_ENV') === 'production' ? extractCSS : null,
   ].filter(plugin => plugin),
-});
+
+  devServer: {
+    host: assetHost,
+    port: assetPort,
+    historyApiFallback: true,
+    hot: true,
+    compress: true,
+    overlay: {
+      errors: true,
+    },
+    stats: {
+      colors: true,
+    },
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers': 'X-Requested-With, Accept, Origin, Referer, User-Agent, Content-Type, Authorization',
+    },
+    publicPath: '/public/assets/',
+  },
+};

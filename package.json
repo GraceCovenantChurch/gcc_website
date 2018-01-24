@@ -5,14 +5,12 @@
   "main": "server/app.js",
   "scripts": {
     "start": "node scripts/dev.js",
-    "webpack": "cross-env NODE_ENV=production webpack --config src/webpack.config.js -p",
-    "webpack-admin": "cross-env NODE_ENV=production webpack --config src/webpack.admin.js -p",
-    "serve": "cross-env NODE_ENV=production node build/server/app.js",
-    "serve-admin": "cross-env NODE_ENV=production node build/admin_server/app.js",
+    "webpack": "cross-env NODE_ENV=production webpack -p",
     "babel": "cross-env NODE_ENV=production babel src -d build --copy-files --presets=env,react --plugins=dynamic-import-node,transform-object-rest-spread",
+    "serve": "cross-env NODE_ENV=production node build/main.js",
     "postinstall": "bower install",
-    "lint": "eslint --ignore-pattern webpack* src",
-    "autoformat": "eslint --ignore-pattern webpack* --fix src"
+    "lint": "eslint --ignore-pattern webpack* --ext .jsx,.js src",
+    "autoformat": "eslint --ignore-pattern webpack* --fix --ext .jsx,.js src"
   },
   "author": "gccdev",
   "license": "ISC",
@@ -81,6 +79,7 @@
     "react-hot-loader": "^3.0.0-beta.7",
     "style-loader": "^0.18.2",
     "webpack": "^3.6.0",
+    "webpack-bundle-analyzer": "^2.9.2",
     "webpack-dev-server": "^2.8.2"
   }
 }
