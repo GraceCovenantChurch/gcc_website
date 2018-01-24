@@ -5,7 +5,7 @@ import Jumbotron from './Jumbotron';
 import BackgroundImage from './BackgroundImage';
 import { SparkScroll } from '../modules/spark.js';
 
-import * as constFunc from './utilities/functions.jsx';
+import * as constFunc from './utilities/functions';
 
 const styles = (typeof CSS !== 'undefined') && require ('./BannerBibleVerse.css');
 

@@ -1,4 +1,3 @@
-import nconf from 'nconf';
 import express from 'express';
 import path from 'path';
 import compression from 'compression';
@@ -12,8 +11,7 @@ import publicAPI from '../server/api';
 import api from './api';
 import PageRouter from '../server/pageRouter';
 
-require('../config.js');
-
+const nconf = require('../config.js');
 nconf.set('APP_ENV', 'server');
 
 mongoose.Promise = Promise;
@@ -29,7 +27,7 @@ app.use(compression());
 if (nconf.get('NODE_ENV') !== 'production') {
   // eslint-disable-next-line import/no-extraneous-dependencies
   const proxy = require('http-proxy-middleware'); // eslint-disable-line global-require
-  app.use(proxy(`http://${nconf.get('CLIENT_HOST')}/public/assets`));
+  app.use(proxy(`http://${nconf.get('ASSET_HOST')}/public/assets`));
 
   app.use(logger('dev'));
 } else {
@@ -77,7 +75,7 @@ app.use(PageRouter(routes, reducers, (head, content, state) => `
         <script type="text/javascript">window.__INITIAL_STATE__ = ${JSON.stringify(state)}</script>
         <script type="text/javascript" src="/public/assets/manifest.js"></script>
         <script type="text/javascript" src="/public/assets/react.js"></script>
-        <script type="text/javascript" src="/public/assets/adminCommon.js"></script>
+        <script type="text/javascript" src="/public/assets/admin.js"></script>
         <script type="text/javascript" src="/public/assets/adminApp.js"></script>
       </body>
     </html>
@@ -90,7 +88,7 @@ mongoose.connect(nconf.get('MONGODB_URI'), { useMongoClient: true }, (err) => {
   }
   console.log('Connected to database');
 
-  const port = nconf.get('SERVER_HOST').split(':')[1] || 80;
+  const port = nconf.get('ADMIN_SERVER_HOST').split(':')[1] || 80;
   app.listen(port, () => {
     console.log('Server listening on port', port);
   });
