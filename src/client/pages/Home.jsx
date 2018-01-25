@@ -1,8 +1,11 @@
 import React, {Component} from 'react';
-import Link from 'react-router-dom/Link';
 import Helmet from 'react-helmet';
 import withTitle from '../hoc/withTitle';
 import {SparkScroll} from '../modules/spark.js';
+import {compose} from 'redux';
+import {connect} from 'react-redux';
+import {Link, withRouter} from 'react-router-dom';
+import pluralize from 'pluralize';
 
 import BackgroundImage from '../components/BackgroundImage';
 import Center from '../components/Center';
@@ -11,12 +14,20 @@ import Event from '../components/Event';
 import TitleBanner from '../components/TitleBanner';
 import Banner from '../components/Banner';
 import BannerBibleVerse from '../components/BannerBibleVerse';
+import EventBox from '../components/EventBox';
+import AspectRatio from '../components/AspectRatio';
+import {fetchModelData} from '../modules/modelData';
 
 import * as constVars from './vars/home-vars.js';
 
 const styles = (typeof CSS !== 'undefined') && require('./Home.css');
 
 class Home extends Component {
+
+  componentDidMount(){
+    this.props.fetchData();
+  }
+
   render() {
     return (
       <div id="home">
@@ -87,6 +98,18 @@ class Home extends Component {
             Events
           </h1>
           <div className="subtitle">
+            <AspectRatio ratio={2}>
+              {this.props.data.map(eventObj => {
+                console.log(eventObj)
+                return <EventBox 
+                          eventName={eventObj.title}
+                          eventDate={new Date(eventObj.startDate).toLocaleDateString()}
+                          key={eventObj._id}
+                        />
+              })}
+            </AspectRatio>
+          </div>
+          <div className="subtitle">
             <a href="/events">
               <button className="infoButton">More Info</button>
             </a>
@@ -101,4 +124,17 @@ class Home extends Component {
   }
 }
 
-export default withTitle()(Home);
+const withData = connect((state) => {
+  const modelData = state.modelData[pluralize('Event')];
+  return {
+    data: modelData ? modelData.ids.map(id => modelData.__DB__[id]) : [],
+  }
+}, (dispatch, ownProps) => {
+  return {
+    fetchData() {
+      return dispatch(fetchModelData('Event'));
+    }
+  }
+});
+
+export default compose(withData, withTitle(), withRouter)(Home);
