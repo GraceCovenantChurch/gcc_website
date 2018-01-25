@@ -19,7 +19,7 @@ class Banner extends Component {
           backgroundAttachment="fixed" />
         <SparkScroll
           className="title"
-          style={{ color: 'white' }}
+          style={{ color: 'white', top: this.props.topMargin + "%"}}
           timeline={{
             centerCenter: { opacity: 1 },
             topTop: { opacity: 0 }
