@@ -42,10 +42,9 @@ app.use(PageRouter(routes, reducers, (head, content, state) => `
         ${head.title.toString()}
         ${head.meta.toString()}
         ${head.link.toString()}
-        <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css" />
         <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href="/public/assets/app.bundle.css" />
+        <link rel="stylesheet" type="text/css" href="/public/assets/public.bundle.css" />
       </head>
       <body ${head.bodyAttributes.toString()}>
         ${content}

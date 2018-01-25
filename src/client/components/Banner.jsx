@@ -5,8 +5,7 @@ import Jumbotron from './Jumbotron';
 import BackgroundImage from './BackgroundImage';
 import { SparkScroll } from '../modules/spark.js';
 
-
-const styles = (typeof CSS !== 'undefined') && require ('./TitleBanner.css');
+import styles from './Banner.css';
 
 class Banner extends Component {
   render() {
@@ -16,9 +15,9 @@ class Banner extends Component {
           src={ this.props.src }
           backgroundSize="cover"
           backgroundPosition="top left"
-          backgroundAttachment="fixed" />
+          backgroundAttachment="local"/>
         <SparkScroll
-          className="title"
+          className={styles.title}
           style={{ color: 'white', top: this.props.topMargin + "%"}}
           timeline={{
             centerCenter: { opacity: 1 },

@@ -2,21 +2,21 @@
   position: relative;
 }
 
-.center-horizontal {
+.centerHorizontal {
   margin: auto;
   text-align: center;
   width: 100%;
 }
 
-.center-horizontal > .centered {
+.centerHorizontal > .centered {
   width: 100%;
 }
 
-.center-vertical {
+.centerVertical {
   height: 100%;
 }
 
-.center-vertical > .centered {
+.centerVertical > .centered {
   position: absolute;
   top: 50%;
   left: 50%;

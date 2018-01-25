@@ -9,12 +9,12 @@ import TitleBanner from '../../components/TitleBanner';
 import Jumbotron from '../../components/Jumbotron';
 import AspectRatio from '../../components/AspectRatio';
 
-const styles = (typeof CSS !== 'undefined') && require('./Welcome.css');
+import styles from './Welcome.css';
 
 class Welcome extends Component {
   render() {
     return (
-      <div id="welcome">
+      <div id={styles.welcome}>
         <Helmet>
           <link rel="stylesheet" type="text/css" href="public/assets/pages/welcome/Welcome.bundle.css" />
         </Helmet>
@@ -25,12 +25,12 @@ class Welcome extends Component {
           </Center>
         </TitleBanner>
 
-        <div className="pageContent">
+        <div className={styles.pageContent}>
           <div className="description">
             Our doors are wide open to people from all backgrounds. Whether you are a spiritual seeker just beginning to ask questions about God or a committed Christian wanting to deepen your faith, Grace Covenant Church is a place you can call home and find spiritual help, hope, and encouragement. Wherever you are in your spiritual journey, we invite you to discover GCC—and discover for yourself God’s wonderful love and plan for your life!
           </div>
 
-          <div className="video">
+          <div className={styles.video}>
             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/5M8H4xhSPWc" frameBorder="0" allowFullScreen="true"></iframe>
           </div>
 

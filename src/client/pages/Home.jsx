@@ -19,8 +19,7 @@ import AspectRatio from '../components/AspectRatio';
 import {fetchModelData} from '../modules/modelData';
 
 import * as constVars from './vars/home-vars.js';
-
-const styles = (typeof CSS !== 'undefined') && require('./Home.css');
+import styles from './Home.css';
 
 class Home extends Component {
 
@@ -40,9 +39,9 @@ class Home extends Component {
             src="/static/images/home/philly.jpg"
             backgroundSize="cover"
             backgroundPosition="top left"
-            backgroundAttachment="fixed"/>
+            backgroundAttachment="local"/>
           <SparkScroll
-            className="title"
+            className={styles.title}
             style={{ color: 'white', top: '40%'}}
             timeline={{
               centerCenter: {opacity: 0},
@@ -51,7 +50,7 @@ class Home extends Component {
               <h1>
                 Grace Covenant Church
               </h1>
-              <div className="subtitle">
+              <div className={styles.subtitle}>
                 <h3>
                   Raising up Kingdom workers who are <br/>
                   influenced by Christ to change the world.
@@ -64,7 +63,7 @@ class Home extends Component {
           <h1>
             Join Us In Worship
           </h1>
-          <div className="subtitle">
+          <div className={styles.subtitle}>
             <h3>
               Sunday Service 11:15AM <br/>
               Friday Night Live 7:30PM
@@ -74,7 +73,7 @@ class Home extends Component {
               Philadelphia, PA 19104
             </h4>
             <a href="/welcome">
-              <button className="infoButton">More Info</button>
+              <button className={styles.infoButton}>More Info</button>
             </a>
           </div>
         </Banner>
@@ -83,12 +82,12 @@ class Home extends Component {
           <h1>
             Family Group
           </h1>
-          <div className="subtitle">
+          <div className={styles.subtitle}>
             <h3>
               You haven't checked out GCC if you haven't checked out our family groups.
             </h3>
             <a href="/familygroup">
-              <button className="infoButton">Sign Up Here</button>
+              <button className={styles.infoButton}>Sign Up Here</button>
             </a>
           </div>
         </Banner>
@@ -97,19 +96,18 @@ class Home extends Component {
           <h1>
             Events
           </h1>
-          <div className="subtitle">
-              {this.props.data.map(eventObj => {
-                console.log(eventObj)
-                return <EventBox 
-                          eventName={eventObj.title}
-                          eventDate={new Date(eventObj.startDate).toLocaleDateString()}
-                          key={eventObj._id}
-                        />
-              })}
+          <div className={styles.subtitle}>
+              {this.props.data.map(eventObj => (
+                <EventBox
+                  eventName={eventObj.title}
+                  eventDate={new Date(eventObj.startDate).toLocaleDateString()}
+                  key={eventObj._id}
+                />
+              ))}
           </div>
           <div className="subtitle">
             <a href="/events">
-              <button className="infoButton">More Info</button>
+              <button className={styles.infoButton}>More Info</button>
             </a>
           </div>
         </Banner>

@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import Link from 'react-router-dom/Link';
 import classnames from 'classnames';
 import { PAGE_LOADED } from '../modules/page';
-const styles = (typeof CSS !== 'undefined') && require('./Navbar.css');
+
+import styles from './Navbar.css';
 
 class Navbar extends Component {
 
@@ -117,17 +118,17 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav id="navbar" className={classnames(`navbar navbar-expand-lg ${(this.props.className || '')}`, {
-        popup: !this.state.atTop && !this.state.hidden,
+      <nav id={styles.mainNavbar} className={classnames(`navbar navbar-expand-lg ${(this.props.className || '')}`, {
+        [styles.popup]: !this.state.atTop && !this.state.hidden,
       })} style={{
         top: this.state.atTop ? '0px' : this.state.top,
       }}>
         {React.cloneElement(this.props.brand, {
-          className: "navbar-brand",
+          className: `navbar-brand ${styles['navbar-brand']}`,
           onClick: this.close.bind(this),
         })}
-        <button className="navbar-toggler" type="button" onClick={this.toggle.bind(this)}>
-          <span className="navbar-toggler-icon"></span>
+        <button className={`navbar-toggler ${styles['navbar-toggler']}`} type="button" onClick={this.toggle.bind(this)}>
+          <span className={`navbar-toggler-icon ${styles['navbar-toggler-icon']}`}></span>
         </button>
 
         <div className={classnames('navbar-collapse', {
@@ -137,13 +138,13 @@ class Navbar extends Component {
           })} style={{
             height: this.state.height,
           }}>
-          <ul className="navbar-nav ml-auto" ref="navbar-nav">
+          <ul className={`navbar-nav ml-auto ${styles['navbar-nav']}`} ref="navbar-nav">
             {React.Children.map(this.props.links, link => {
               return (
                 <li className="nav-item">
                   {React.cloneElement(link, {
                     onClick: this.close.bind(this),
-                    className: 'nav-link',
+                    className: `nav-link ${styles['nav-link']}`,
                   })}
                 </li>
               );

@@ -11,6 +11,9 @@ import { Provider } from 'react-redux';
 import routes from './routes';
 import reducers from './modules';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
+
 const store = createStore(reducers, window.__INITIAL_STATE__, applyMiddleware(thunk));
 delete window.__INITIAL_STATE__;
 

@@ -4,7 +4,7 @@ import classnames from 'classnames';
 class TableRow extends Component {
   render() {
     return (
-      <div className="tableRow row">
+      <div className={classnames('row', this.props.className)}>
         <div className="col-sm-4">
           <strong>{this.props.title}</strong>
           <br></br>

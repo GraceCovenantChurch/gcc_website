@@ -4,7 +4,9 @@ import { renderRoutes } from 'react-router-config';
 import Head from '../components/Head';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-const styles = (typeof CSS !== 'undefined') && require('./MainTemplate.css');
+
+import styles from './MainTemplate.css';
+import navStyles from '../components/Navbar.css';
 
 const MainTemplate = ({route}) => {
   return (
@@ -26,7 +28,7 @@ const MainTemplate = ({route}) => {
           <Link to="/pages">Multimedia</Link>,
           <Link to="/pages">Events</Link>
         ]}
-        className="navbar-transparent navbar-dark"
+        className={`navbar-transparent navbar-dark ${navStyles['navbar-transparent']}`}
       />
       <main>{renderRoutes(route.routes)}</main>
       <Footer></Footer>

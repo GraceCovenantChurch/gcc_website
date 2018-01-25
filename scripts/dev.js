@@ -6,30 +6,21 @@ const WebpackDevServer = require('webpack-dev-server');
 const nconf = require(path.resolve(__dirname, '../src/config.js'));
 nconf.set('NODE_ENV', 'dev');
 
-const execBabel = ['--exec', 'babel-node', ...[
-    '--presets=env,react',
-    '--plugins=dynamic-import-node,transform-object-rest-spread'
-  ]
-];
 
-spawn('nodemon', [
-  path.resolve(__dirname, '../src/server/app.js'),
-  ...execBabel,
-  ...['--watch', path.resolve(__dirname, '../src/server')],
-  ...['--watch', path.resolve(__dirname, '../src/models')]
-], {
+spawn('babel-watch', ['./src/server/app.js'], {
   shell: true,
   stdio: 'inherit',
+  env: Object.assign({}, process.env, {
+    BABEL_ENV: 'server',
+  }),
 });
 
-spawn('nodemon', [
-  path.resolve(__dirname, '../src/admin_server/app.js'),
-  ...execBabel,
-  ...['--watch', path.resolve(__dirname, '../src/admin_server')],
-  ...['--watch', path.resolve(__dirname, '../src/models')]
-], {
+spawn('babel-watch', ['./src/admin_server/app.js'], {
   shell: true,
   stdio: 'inherit',
+  env: Object.assign({}, process.env, {
+    BABEL_ENV: 'server',
+  }),
 });
 
 const webpackConfig = require('../webpack.config.js');

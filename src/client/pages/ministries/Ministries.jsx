@@ -13,7 +13,7 @@ import TableRow from '../../components/TableRow';
 import {fetchModelData} from '../../modules/modelData';
 
 
-const styles = (typeof CSS !== 'undefined') && require('./Ministries.css');
+import styles from './Ministries.css';
 
 class Ministries extends Component {
 
@@ -27,7 +27,7 @@ class Ministries extends Component {
     //  'Overflow', 'Transportation', 'Worship', 'Welcoming', 'Web'];
 
     return (
-      <div id="ministries">
+      <div id={styles.ministries}>
         <Helmet>
           <link rel="stylesheet" type="text/css" href="/public/assets/pages/Ministries.bundle.css" />
         </Helmet>
@@ -38,10 +38,10 @@ class Ministries extends Component {
           </Center>
         </TitleBanner>
 
-        <div className="pageContent">
+        <div className={styles.pageContent}>
           {ministryList.map( (minName) => {
                   return (
-                    <div className="ministryBox" key={minName}>
+                    <div className={styles.ministryBox} key={minName}>
                       <Center vertical>{minName}</Center>
                     </div>
                   )

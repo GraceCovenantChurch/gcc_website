@@ -1,15 +1,15 @@
 import React, {Component} from 'react';
 import classnames from 'classnames';
-const styles = (typeof CSS !== 'undefined') && require('./Center.css');
+import styles from './Center.css';
 
 class Center extends Component {
   render() {
     return (
-      <div className={classnames('center', {
-        'center-vertical': this.props.vertical,
-        'center-horizontal': this.props.horizontal,
+      <div className={classnames(styles.center, {
+        [styles.centerVertical]: this.props.vertical,
+        [styles.centerHorizontal]: this.props.horizontal,
       })}>
-        <div className="centered">
+        <div className={styles.centered}>
           {this.props.children}
         </div>
       </div>
