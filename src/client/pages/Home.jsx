@@ -43,7 +43,7 @@ class Home extends Component {
             backgroundAttachment="fixed"/>
           <SparkScroll
             className="title"
-            style={{ color: 'white' }}
+            style={{ color: 'white', top: '40%'}}
             timeline={{
               centerCenter: {opacity: 0},
               bottomBottom: {opacity: 1}
@@ -60,7 +60,7 @@ class Home extends Component {
           </SparkScroll>
         </Jumbotron>
 
-        <Banner src="/static/images/home/welcome.jpg">
+        <Banner src="/static/images/home/welcome.jpg" topMargin={30}>
           <h1>
             Join Us In Worship
           </h1>
@@ -79,7 +79,7 @@ class Home extends Component {
           </div>
         </Banner>
 
-        <Banner src="/static/images/home/familygroup.jpg">
+        <Banner src="/static/images/home/familygroup.jpg" topMargin={30}>
           <h1>
             Family Group
           </h1>
@@ -93,12 +93,11 @@ class Home extends Component {
           </div>
         </Banner>
 
-        <Banner src="/static/images/home/events.jpg">
+        <Banner src="/static/images/home/events.jpg" topMargin={20}>
           <h1>
             Events
           </h1>
           <div className="subtitle">
-            <AspectRatio ratio={2}>
               {this.props.data.map(eventObj => {
                 console.log(eventObj)
                 return <EventBox 
@@ -107,7 +106,6 @@ class Home extends Component {
                           key={eventObj._id}
                         />
               })}
-            </AspectRatio>
           </div>
           <div className="subtitle">
             <a href="/events">
