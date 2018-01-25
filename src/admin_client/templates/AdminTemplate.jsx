@@ -4,7 +4,9 @@ import { renderRoutes } from 'react-router-config';
 import Head from '../../client/components/Head';
 import Navbar from '../../client/components/Navbar';
 import Notifications from '../components/Notifications';
-const styles = (typeof CSS !== 'undefined') && require('./AdminTemplate.css');
+
+import styles from './AdminTemplate.css';
+import navStyles from '../../client/components/Navbar.css';
 
 const AdminTemplate = ({route}) => {
   return (
@@ -22,7 +24,7 @@ const AdminTemplate = ({route}) => {
           <Link to="/ministries">Ministries</Link>,
           <a href="/logout">Log Out</a>,
         ]}
-        className="navbar-light"
+        className={`navbar-light ${navStyles['navbar-light']}`}
       />
       <Notifications />
       <main>{renderRoutes(route.routes)}</main>

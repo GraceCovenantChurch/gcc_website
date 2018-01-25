@@ -1,20 +1,21 @@
 import React, {Component} from 'react';
 import classnames from 'classnames';
 import Center from './Center'
-const styles = (typeof CSS !== 'undefined') && require('./EventBox.css');
+
+import styles from './EventBox.css';
 
 class EventBox extends Component {
     render() {
-        return(
-            <div className="eventBox">
+        return (
+            <div className={styles.eventBox}>
                 <Center vertical horizontal>
-                    <div className="eventName">{this.props.eventName}</div>
-                    <div className="eventDate">{this.props.eventDate}</div>
+                    <div className={styles.eventName}>{this.props.eventName}</div>
+                    <div className={styles.eventDate}>{this.props.eventDate}</div>
                 </Center>
             </div>
         )
     }
 
-  };
-  
-  export default EventBox;
+};
+
+export default EventBox;

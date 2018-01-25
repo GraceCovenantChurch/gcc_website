@@ -6,12 +6,12 @@ import withTitle from '../../hoc/withTitle';
 import TitleBanner from '../../components/TitleBanner';
 import TableRow from '../../components/TableRow';
 
-const styles = (typeof CSS !== 'undefined') && require('./FamilyGroup.css');
+import styles from './FamilyGroup.css';
 
 class FamilyGroup extends Component {
   render() {
     return (
-      <div id="familyGroup">
+      <div id={styles.familyGroup}>
         <Helmet>
           <link rel="stylesheet" type="text/css" href="/public/assets/pages/FamilyGroup.bundle.css" />
         </Helmet>
@@ -20,7 +20,7 @@ class FamilyGroup extends Component {
           Family Group
         </TitleBanner>
 
-        <div className="pageContent">
+        <div className={styles.pageContent}>
           <div className="description">
             At GCC we place a high emphasis on Family Groups because we believe that it is in
             these smaller settings that we are able to meet with God, building meaningful relationships,
@@ -40,24 +40,27 @@ class FamilyGroup extends Component {
             Please watch the video below to learn more!
           </div>
 
-          <div className="video">Video Placeholder Div</div>
+          <div className={styles.video}>Video Placeholder Div</div>
 
-          <div className="signupTable">
+          <div className={styles.signupTable}>
             <TableRow
-               title="College"
-               days="Mondays to Thursdays"
-               description="Our College Family Groups meet once a week on Drexel, Moore, Penn, Temple, and USciences!"
-               signupLink="#"></TableRow>
+              className={styles.tableRow}
+              title="College"
+              days="Mondays to Thursdays"
+              description="Our College Family Groups meet once a week on Drexel, Moore, Penn, Temple, and USciences!"
+              signupLink="#"></TableRow>
             <TableRow
-               title="Young Adults"
-               days="Mondays to Thursdays"
-               description="Our Young Adult Family Groups have a mix of post-undergraduate, grad students, PhD's, working adults, and young married couples."
-               signupLink="#"></TableRow>
+              className={styles.tableRow}
+              title="Young Adults"
+              days="Mondays to Thursdays"
+              description="Our Young Adult Family Groups have a mix of post-undergraduate, grad students, PhD's, working adults, and young married couples."
+              signupLink="#"></TableRow>
             <TableRow
-               title="International"
-               days="Thursdays"
-               description="Description needed"
-               signupLink="#"></TableRow>
+              className={styles.tableRow}
+              title="International"
+              days="Thursdays"
+              description="Description needed"
+              signupLink="#"></TableRow>
           </div>
         </div>
       </div>

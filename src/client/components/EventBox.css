@@ -1,12 +1,12 @@
-.eventName{
-	font-size: 24px;
+.eventName {
+  font-size: 24px;
 }
 
-.eventDate{
-	font-size: 16px;
+.eventDate {
+  font-size: 16px;
 }
 
-.eventBox{
+.eventBox {
   border: 2px solid white;
   padding: 5px;
   height: 200px;
@@ -15,8 +15,8 @@
   margin: 50px 50px 50px 0px;
   text-align: center;
 
-  &:hover{
-  	background: rgba(255, 255, 255, 0.2);
-  	cursor: pointer;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
   }
 }

@@ -6,8 +6,7 @@ import Jumbotron from './Jumbotron';
 import BackgroundImage from './BackgroundImage';
 import { SparkScroll } from '../modules/spark.js';
 
-
-const styles = (typeof CSS !== 'undefined') && require ('./TitleBanner.css');
+import styles from './TitleBanner.css';
 
 class TitleBanner extends Component {
   render() {
@@ -17,10 +16,10 @@ class TitleBanner extends Component {
           src={ this.props.src }
           backgroundSize="cover"
           backgroundPosition={ this.props.backgroundPosition || 'center' }
-          backgroundAttachment="fixed" />
+          backgroundAttachment="local" />
           <Center horizontal vertical>
             <SparkScroll.h1
-              className="titleText"
+              className={styles.titleText}
               style={{ color: 'white' }}
               timeline={{
                 centerCenter: { opacity: 1 },

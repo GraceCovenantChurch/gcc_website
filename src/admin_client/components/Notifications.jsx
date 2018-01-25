@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import classnames from 'classnames';
 import {clearNotification, SUCCESS, INFO, WARNING, DANGER} from '../modules/notifications';
-const styles = (typeof CSS !== 'undefined') && require('./Notifications.css');
+
+import styles from './Notifications.css';
 
 function alertClass(status) {
   switch (status) {
@@ -68,7 +69,7 @@ class Notification extends Component {
 class Notifications extends Component {
   render() {
     return (
-      <div className="notifications">
+      <div className={styles.notifications}>
         <div className="container">
           {Object.keys(this.props.notifications || {}).map(k => (
             <Notification key={k} notification={this.props.notifications[k]} clear={() => this.props.clearNotification(k)} />

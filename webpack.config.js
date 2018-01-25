@@ -10,31 +10,39 @@ nconf.set('APP_ENV', 'browser');
 const ASSET_HOST = nconf.get('ASSET_HOST');
 const [assetHost, assetPort] = ASSET_HOST ? ASSET_HOST.split(':') : [];
 
-const styleLoaders = [
-  nconf.get('NODE_ENV') !== 'production' ? 'style-loader' : undefined,
-  {
-    loader: 'css-loader',
-    options: {
-      importLoaders: 1,
-      minimize: nconf.get('NODE_ENV') === 'production'
+function getStyleLoaders(options) {
+  return [
+    nconf.get('NODE_ENV') !== 'production' ? 'style-loader' : undefined,
+    {
+      loader: 'css-loader',
+      options: {
+        importLoaders: 1,
+        localIdentName: options.local ? '[name]__[local]___[hash:base64:5]' : '[name]',
+        modules: options.local,
+        minimize: nconf.get('NODE_ENV') === 'production',
+      },
     },
-  },
-  {
-    loader: 'postcss-loader',
-    options: {
-      plugins: loader => [
-        require('postcss-import')({ root: loader.resourcePath }),
-        require('postcss-nested')(),
-        require('postcss-css-variables'),
-        require('postcss-calc'),
-        require('postcss-cssnext')({
-          browsers: ['last 2 versions', '> 5%'],
-        }),
-      ],
-      sourceMap: nconf.get('NODE_ENV') !== 'production' ? 'inline' : undefined,
+    {
+      loader: 'postcss-loader',
+      options: {
+        plugins: loader => [
+          require('postcss-import')({ root: loader.resourcePath }),
+          require('postcss-nested')(),
+          require('postcss-extend')(),
+          require('postcss-css-variables'),
+          require('postcss-calc'),
+          require('postcss-cssnext')({
+            browsers: ['last 2 versions', '> 5%'],
+          }),
+        ],
+        sourceMap: nconf.get('NODE_ENV') !== 'production' ? 'inline' : undefined,
+      },
     },
-  },
-].filter(loader => loader);
+  ].filter(loader => loader);
+}
+
+const styleLoaders = getStyleLoaders({local: true});
+const externalStyleLoaders = getStyleLoaders({local: false});
 
 const publicEntry = {
   app: 'client/app.jsx',
@@ -77,10 +85,29 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: nconf.get('NODE_ENV') !== 'production' ? styleLoaders : extractCSS.extract({
           fallback: 'style-loader',
           use: styleLoaders,
         }),
+      },
+      {
+        test: /\.css$/,
+        include: /node_modules/,
+        use: nconf.get('NODE_ENV') !== 'production' ? externalStyleLoaders : extractCSS.extract({
+          fallback: 'style-loader',
+          use: externalStyleLoaders,
+        }),
+      },
+      {
+        test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/',    // where the fonts will go
+          }
+        }]
       },
       {
         test: /\.jsx?$/,
@@ -88,16 +115,6 @@ module.exports = {
         use: [
           {
             loader: 'babel-loader',
-            options: {
-              presets: [
-                ['env', { modules: false }],
-                'react',
-              ],
-              plugins: [
-                'transform-object-rest-spread',
-                'dynamic-import-webpack',
-              ],
-            },
           },
           // 'eslint-loader',
         ],
@@ -119,7 +136,6 @@ module.exports = {
         APP_ENV: nconf.get('APP_ENV'),
         GOOGLE_MAPS_KEY: nconf.get('GOOGLE_MAPS_KEY'),
       }),
-      CSS: 'true',
       'typeof window': '\"object\"', // for client-side mongoose build
     }),
     new webpack.NormalModuleReplacementPlugin(/nconf/, ((resource) => {

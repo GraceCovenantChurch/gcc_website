@@ -7,7 +7,7 @@ import { SparkScroll } from '../modules/spark.js';
 
 import * as constFunc from './utilities/functions';
 
-const styles = (typeof CSS !== 'undefined') && require ('./BannerBibleVerse.css');
+import styles from './BannerBibleVerse.css';
 
 class BannerBibleVerse extends Component {
   render() {
@@ -22,7 +22,7 @@ class BannerBibleVerse extends Component {
           backgroundAttachment="fixed" />
         <Center horizontal vertical>
           <SparkScroll
-          className="bibleVerse"
+          className={styles.bibleVerse}
           style={{ color: 'black' }}>
               <h1>
                 { constFunc.getMonth() }: Monthly Memory Verse

@@ -1,0 +1,24 @@
+{
+  "presets": [
+    "env",
+    "react"
+  ],
+  "env": {
+    "server": {
+      "plugins": [
+        "dynamic-import-node",
+        "transform-object-rest-spread",
+        ["css-modules-transform", {
+          "generateScopedName": "[name]__[local]___[hash:base64:5]",
+          "extensions": [".css"]
+        }]
+      ]
+    },
+    "webpack": {
+      "plugins": [
+        "dynamic-import-webpack",
+        "transform-object-rest-spread"
+      ]
+    }
+  }
+}

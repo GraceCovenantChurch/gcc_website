@@ -2,8 +2,9 @@ import React from 'react';
 import Field from './Field';
 import DatePicker from 'react-datepicker';
 import moment from 'moment';
-(typeof CSS !== 'undefined') && require('react-datepicker/dist/react-datepicker.css');
-(typeof CSS !== 'undefined') && require('./DateField.css');
+
+import 'react-datepicker/dist/react-datepicker.css';
+import './DateField.css';
 
 class DateField extends Field {
   render() {
