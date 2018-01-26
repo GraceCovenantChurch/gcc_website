@@ -146,7 +146,11 @@ module.exports = {
       minChunks(module, count) {
         const context = module.context;
         return context && (
-          context.indexOf(path.join('node_modules', 'react')) >= 0 ||
+          context.endsWith(path.join('node_modules', 'react')) ||
+          context.endsWith(path.join('node_modules', 'react-dom')) ||
+          context.endsWith(path.join('node_modules', 'react-helmet')) ||
+          context.endsWith(path.join('node_modules', 'react-redux')) ||
+          context.endsWith(path.join('node_modules', 'react-router')) ||
           context.indexOf(path.join('node_modules', 'redux')) >= 0 ||
           context.indexOf(path.join('node_modules', 'fbjs')) >= 0 ||
           context.indexOf(path.join('node_modules', 'prop-types')) >= 0
