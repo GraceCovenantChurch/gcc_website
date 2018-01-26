@@ -1,5 +1,6 @@
 import fetch from 'isomorphic-fetch';
 import pluralize from 'pluralize';
+import nconf from 'nconf';
 
 export const MODEL_DATA_LOADED = 'MODEL_DATA_LOADED';
 
@@ -53,8 +54,8 @@ function handleErrors(res) {
 }
 
 export const fetchModelData = modelName => (dispatch) => {
-  const SERVER_HOST = 'localhost:8080';
-  return fetch(`http://${SERVER_HOST}/api/modelData/${pluralize(modelName)}`, {
+  const PUBLIC_SERVER_HOST = nconf.get('PUBLIC_SERVER_HOST');
+  return fetch(`http://${PUBLIC_SERVER_HOST}/api/modelData/${pluralize(modelName)}`, {
     credentials: 'same-origin',
     method: 'GET',
     headers: {

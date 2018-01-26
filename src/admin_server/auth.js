@@ -11,7 +11,7 @@ if (nconf.get('NODE_ENV') === 'production') {
     callbackURL: `${SERVER_ROOT}/login/callback`,
   }, ((accessToken, refreshToken, profile, cb) => {
       const emails = profile.emails.map(el => el.value);
-      const approved = nconf.get('ADMIN_EMAILS').split(' ');
+      const approved = nconf.get('ADMIN_EMAILS');
       for (let i = 0; i < emails.length; ++i) {
         if (approved.indexOf(emails[i]) >= 0) {
           return cb(null, profile);
