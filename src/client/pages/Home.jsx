@@ -43,7 +43,7 @@ class Home extends Component {
           <div
             className={styles.title}
             style={{ color: 'white', top: '40%'}}>
-              <h1 className={templateStyles.header}>
+              <h1 className={templateStyles.headerHome}>
                 Grace Covenant Church
               </h1>
               <div className={styles.subtitle}>
@@ -56,7 +56,7 @@ class Home extends Component {
         </Jumbotron>
 
         <Banner src="/static/images/home/welcome.jpg" topMargin={30}>
-          <h1 className={templateStyles.header}>
+          <h1 className={templateStyles.headerHome}>
             Join Us In Worship
           </h1>
           <div className={styles.subtitle}>
@@ -75,7 +75,7 @@ class Home extends Component {
         </Banner>
 
         <Banner src="/static/images/home/familygroup.jpg" topMargin={30}>
-          <h1 className={templateStyles.header}>
+          <h1 className={templateStyles.headerHome}>
             Family Group
           </h1>
           <div className={styles.subtitle}>
@@ -89,7 +89,7 @@ class Home extends Component {
         </Banner>
 
         <Banner src="/static/images/home/events.jpg" topMargin={20}>
-          <h1 className={templateStyles.header}>
+          <h1 className={templateStyles.headerHome}>
             Events
           </h1>
           <div className={styles.subtitle}>

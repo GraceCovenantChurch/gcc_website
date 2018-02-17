@@ -4,8 +4,16 @@ main {
     font-size: 1em;
 }
 
+h1.headerHome {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 3em;
+  width: 350px;
+}
+
 h1.header {
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   font-size: 3em;
+  text-align: center;
 }
