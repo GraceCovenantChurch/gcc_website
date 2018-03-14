@@ -1,4 +1,5 @@
-/* global mount, expect */
+/* eslint-env node, jest */
+/* global mount */
 
 import React from 'react';
 import toJSON from 'enzyme-to-json';
