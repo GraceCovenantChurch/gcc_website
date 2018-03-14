@@ -1,0 +1,551 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Client Pages renders 404 page 1`] = `
+"<!doctype html>
+<html>
+
+  <head>
+    <title data-react-helmet=\\"true\\">Error: Not Found - Grace Covenant Church</title>
+
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto:300,700\\" rel=\\"stylesheet\\" />
+    <link href=\\"https://fonts.googleapis.com/css?family=PT+Sans\\" rel=\\"stylesheet\\" />
+    <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
+    <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
+  </head>
+
+  <body>
+    <div id=\\"app\\">
+      <div>
+        <nav id=\\"Navbar__mainNavbar___25Zv8\\" class=\\"navbar navbar-expand-lg navbar-transparent navbar-dark Navbar__navbar-transparent___VTVng\\" style=\\"top:0px\\">
+          <a class=\\"navbar-brand Navbar__navbar-brand____1rPB\\" href=\\"/\\">
+            <h1 class=\\"sr-only\\">Grace Covenant Church</h1>
+            <img id=\\"logo\\" src=\\"/static/images/gcclogo.png\\" />
+          </a>
+          <button class=\\"navbar-toggler Navbar__navbar-toggler___lqVi1\\" type=\\"button\\"><span class=\\"navbar-toggler-icon Navbar__navbar-toggler-icon___3hzKQ\\"></span></button>
+          <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
+            <ul class=\\"navbar-nav ml-auto Navbar__navbar-nav___kOuiO\\">
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/welcome\\">I&#x27;m New</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/pages\\">About</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/familygroup\\">Family Groups</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/ministries\\">Ministries</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/page\\">Giving</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/pages\\">Multimedia</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/pages\\">Events</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <main>
+          <div>Nothing here!</div>
+        </main>
+        <footer>
+          <div class=\\"Center__center___2-vlY Center__centerVertical___2qHQt Center__centerHorizontal___1HP-5\\">
+            <div class=\\"Center__centered___3l37E\\">
+              <div class=\\"container footer\\">
+                <div class=\\"Footer__icons___2MptE\\">
+                  <a target=\\"_blank\\" class=\\"Footer__footerLinks___3u8Rv\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                    <i class=\\"fa fa-facebook fa-2x\\"></i>
+                  </a>
+                  <a target=\\"_blank\\" class=\\"Footer__footerLinks___3u8Rv\\" href=\\"https://twitter.com/gccphiladelphia\\">
+                    <i class=\\"fa fa-twitter fa-2x\\"></i>
+                  </a>
+                  <a target=\\"_blank\\" class=\\"Footer__footerLinks___3u8Rv\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
+                    <i class=\\"fa fa-instagram fa-2x\\"></i>
+                  </a>
+                </div>
+                <p>© Grace Covenant Church</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script type=\\"text/javascript\\">
+      window.__INITIAL_STATE__ = {
+        \\"metadata\\": {
+          \\"title\\": \\"Error: Not Found - Grace Covenant Church\\"
+        },
+        \\"modelData\\": {},
+        \\"page\\": {
+          \\"title\\": \\"\\",
+          \\"content\\": \\"\\"
+        }
+      }
+    </script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/manifest.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/react.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/public.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/app.js\\"></script>
+  </body>
+
+</html>"
+`;
+
+exports[`Client Pages renders Family Group page 1`] = `
+"<!doctype html>
+<html>
+
+  <head>
+    <title data-react-helmet=\\"true\\">Family Group - Grace Covenant Church</title>
+
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto:300,700\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/pages/FamilyGroup.bundle.css\\" />
+    <link href=\\"https://fonts.googleapis.com/css?family=PT+Sans\\" rel=\\"stylesheet\\" />
+    <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
+    <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
+  </head>
+
+  <body>
+    <div id=\\"app\\">
+      <div>
+        <nav id=\\"Navbar__mainNavbar___25Zv8\\" class=\\"navbar navbar-expand-lg navbar-transparent navbar-dark Navbar__navbar-transparent___VTVng\\" style=\\"top:0px\\">
+          <a class=\\"navbar-brand Navbar__navbar-brand____1rPB\\" href=\\"/\\">
+            <h1 class=\\"sr-only\\">Grace Covenant Church</h1>
+            <img id=\\"logo\\" src=\\"/static/images/gcclogo.png\\" />
+          </a>
+          <button class=\\"navbar-toggler Navbar__navbar-toggler___lqVi1\\" type=\\"button\\"><span class=\\"navbar-toggler-icon Navbar__navbar-toggler-icon___3hzKQ\\"></span></button>
+          <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
+            <ul class=\\"navbar-nav ml-auto Navbar__navbar-nav___kOuiO\\">
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/welcome\\">I&#x27;m New</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/pages\\">About</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/familygroup\\">Family Groups</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/ministries\\">Ministries</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/page\\">Giving</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/pages\\">Multimedia</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/pages\\">Events</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <main>
+          <div id=\\"FamilyGroup__familyGroup___1N_kr\\">
+            <div class=\\"jumbotron Jumbotron__jumbotron___3GbsE\\" style=\\"height:100vh\\">
+              <div class=\\"BackgroundImage__backgroundImageContainer___267Re\\">
+                <div class=\\"BackgroundImage__backgroundImage___1KLRt\\" style=\\"background-image:url(/static/images/home/philly.jpg);background-attachment:local;background-position:center;background-size:cover\\"></div>
+              </div>
+              <div class=\\"Center__center___2-vlY Center__centerVertical___2qHQt Center__centerHorizontal___1HP-5\\">
+                <div class=\\"Center__centered___3l37E\\">
+                  <div class=\\"TitleBanner__titleText___jQk-y MainTemplate__header___1_D_6\\" style=\\"color:white\\">Family Group</div>
+                </div>
+              </div>
+            </div>
+            <div class=\\"FamilyGroup__pageContent___sgvqK\\">
+              <div class=\\"description\\">At GCC we place a high emphasis on Family Groups because we believe that it is in these smaller settings that we are able to meet with God, building meaningful relationships, and develop biblical accountability. Family groups meet on a weekly
+                basis at various places.
+                <br/>
+                <br/>Through Bible study, discussions, sharing and prayer, we learn to live out the teachings of the Bible in our daily lives. You are strongly encouraged to join a family group that fits your needs, interests and life situation.
+                <br/>
+                <br/>Family groups are divided between the Harvest (undergraduate), Crossroad (post-college), and International groups.
+                <br/>
+                <br/>Please watch the video below to learn more!</div>
+              <div class=\\"FamilyGroup__video___2s7HX\\">Video Placeholder Div</div>
+              <div class=\\"FamilyGroup__signupTable___3l2KM\\">
+                <div class=\\"row FamilyGroup__tableRow___1wauf\\">
+                  <div class=\\"col-sm-4\\"><strong>College</strong>
+                    <br/>Mondays to Thursdays</div>
+                  <div class=\\"col-sm-8\\">Our College Family Groups meet once a week on Drexel, Moore, Penn, Temple, and USciences!
+                    <br/>
+                    <br/>
+                    <a href=\\"#\\">Signup here!</a>
+                  </div>
+                </div>
+                <div class=\\"row FamilyGroup__tableRow___1wauf\\">
+                  <div class=\\"col-sm-4\\"><strong>Young Adults</strong>
+                    <br/>Mondays to Thursdays</div>
+                  <div class=\\"col-sm-8\\">Our Young Adult Family Groups have a mix of post-undergraduate, grad students, PhD&#x27;s, working adults, and young married couples.
+                    <br/>
+                    <br/>
+                    <a href=\\"#\\">Signup here!</a>
+                  </div>
+                </div>
+                <div class=\\"row FamilyGroup__tableRow___1wauf\\">
+                  <div class=\\"col-sm-4\\"><strong>International</strong>
+                    <br/>Thursdays</div>
+                  <div class=\\"col-sm-8\\">Description needed
+                    <br/>
+                    <br/>
+                    <a href=\\"#\\">Signup here!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <div class=\\"Center__center___2-vlY Center__centerVertical___2qHQt Center__centerHorizontal___1HP-5\\">
+            <div class=\\"Center__centered___3l37E\\">
+              <div class=\\"container footer\\">
+                <div class=\\"Footer__icons___2MptE\\">
+                  <a target=\\"_blank\\" class=\\"Footer__footerLinks___3u8Rv\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                    <i class=\\"fa fa-facebook fa-2x\\"></i>
+                  </a>
+                  <a target=\\"_blank\\" class=\\"Footer__footerLinks___3u8Rv\\" href=\\"https://twitter.com/gccphiladelphia\\">
+                    <i class=\\"fa fa-twitter fa-2x\\"></i>
+                  </a>
+                  <a target=\\"_blank\\" class=\\"Footer__footerLinks___3u8Rv\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
+                    <i class=\\"fa fa-instagram fa-2x\\"></i>
+                  </a>
+                </div>
+                <p>© Grace Covenant Church</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script type=\\"text/javascript\\">
+      window.__INITIAL_STATE__ = {
+        \\"metadata\\": {
+          \\"title\\": \\"Family Group - Grace Covenant Church\\"
+        },
+        \\"modelData\\": {},
+        \\"page\\": {
+          \\"title\\": \\"\\",
+          \\"content\\": \\"\\"
+        }
+      }
+    </script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/manifest.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/react.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/public.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/app.js\\"></script>
+  </body>
+
+</html>"
+`;
+
+exports[`Client Pages renders Home page 1`] = `
+"<!doctype html>
+<html>
+
+  <head>
+    <title data-react-helmet=\\"true\\">Grace Covenant Church</title>
+
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto:300,700\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/pages/Home.bundle.css\\" />
+    <link href=\\"https://fonts.googleapis.com/css?family=PT+Sans\\" rel=\\"stylesheet\\" />
+    <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
+    <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
+  </head>
+
+  <body>
+    <div id=\\"app\\">
+      <div>
+        <nav id=\\"Navbar__mainNavbar___25Zv8\\" class=\\"navbar navbar-expand-lg navbar-transparent navbar-dark Navbar__navbar-transparent___VTVng\\" style=\\"top:0px\\">
+          <a class=\\"navbar-brand Navbar__navbar-brand____1rPB\\" href=\\"/\\">
+            <h1 class=\\"sr-only\\">Grace Covenant Church</h1>
+            <img id=\\"logo\\" src=\\"/static/images/gcclogo.png\\" />
+          </a>
+          <button class=\\"navbar-toggler Navbar__navbar-toggler___lqVi1\\" type=\\"button\\"><span class=\\"navbar-toggler-icon Navbar__navbar-toggler-icon___3hzKQ\\"></span></button>
+          <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
+            <ul class=\\"navbar-nav ml-auto Navbar__navbar-nav___kOuiO\\">
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/welcome\\">I&#x27;m New</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/pages\\">About</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/familygroup\\">Family Groups</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/ministries\\">Ministries</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/page\\">Giving</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/pages\\">Multimedia</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/pages\\">Events</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <main>
+          <div id=\\"home\\">
+            <div class=\\"jumbotron Jumbotron__jumbotron___3GbsE\\" style=\\"height:100vh\\">
+              <div class=\\"BackgroundImage__backgroundImageContainer___267Re\\">
+                <div class=\\"BackgroundImage__backgroundImage___1KLRt\\" style=\\"background-image:url(/static/images/home/philly.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
+              </div>
+              <div class=\\"Home__title___1gUAL\\" style=\\"color:white;top:40%\\">
+                <h1 class=\\"MainTemplate__header___1_D_6\\">Grace Covenant Church</h1>
+                <div class=\\"Home__subtitle___21FXY\\">
+                  <h3>Raising up Kingdom workers who are
+                    <br/>influenced by Christ to change the world.</h3>
+                </div>
+              </div>
+            </div>
+            <div class=\\"jumbotron Jumbotron__jumbotron___3GbsE\\" style=\\"height:100vh\\">
+              <div class=\\"BackgroundImage__backgroundImageContainer___267Re\\">
+                <div class=\\"BackgroundImage__backgroundImage___1KLRt\\" style=\\"background-image:url(/static/images/home/welcome.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
+              </div>
+              <div class=\\"Banner__title___2fJM2\\" style=\\"color:white;top:30%\\">
+                <h1 class=\\"MainTemplate__header___1_D_6\\">Join Us In Worship</h1>
+                <div class=\\"Home__subtitle___21FXY\\">
+                  <h3>Sunday Service 11:15AM
+                    <br/>Friday Night Live 7:30PM</h3>
+                  <h4>Meyerson Hall B-1, 210 South 34th Street
+                    <br/>Philadelphia, PA 19104</h4>
+                  <a href=\\"/welcome\\">
+                    <button class=\\"Home__infoButton___D36us\\">More Info</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class=\\"jumbotron Jumbotron__jumbotron___3GbsE\\" style=\\"height:100vh\\">
+              <div class=\\"BackgroundImage__backgroundImageContainer___267Re\\">
+                <div class=\\"BackgroundImage__backgroundImage___1KLRt\\" style=\\"background-image:url(/static/images/home/familygroup.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
+              </div>
+              <div class=\\"Banner__title___2fJM2\\" style=\\"color:white;top:30%\\">
+                <h1 class=\\"MainTemplate__header___1_D_6\\">Family Group</h1>
+                <div class=\\"Home__subtitle___21FXY\\">
+                  <h3>You haven&#x27;t checked out GCC if you haven&#x27;t checked out our family groups.</h3>
+                  <a href=\\"/familygroup\\">
+                    <button class=\\"Home__infoButton___D36us\\">Sign Up Here</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class=\\"jumbotron Jumbotron__jumbotron___3GbsE\\" style=\\"height:100vh\\">
+              <div class=\\"BackgroundImage__backgroundImageContainer___267Re\\">
+                <div class=\\"BackgroundImage__backgroundImage___1KLRt\\" style=\\"background-image:url(/static/images/home/events.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
+              </div>
+              <div class=\\"Banner__title___2fJM2\\" style=\\"color:white;top:20%\\">
+                <h1 class=\\"MainTemplate__header___1_D_6\\">Events</h1>
+                <div class=\\"Home__subtitle___21FXY\\"></div>
+                <div class=\\"subtitle\\">
+                  <a href=\\"/events\\">
+                    <button class=\\"Home__infoButton___D36us\\">More Info</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class=\\"bibleVerse\\" style=\\"height:100vh\\">
+              <div class=\\"BackgroundImage__backgroundImageContainer___267Re\\">
+                <div class=\\"BackgroundImage__backgroundImage___1KLRt\\" style=\\"background-image:url(null);background-attachment:fixed;background-position:top left;background-size:cover\\"></div>
+              </div>
+              <div class=\\"Center__center___2-vlY Center__centerVertical___2qHQt Center__centerHorizontal___1HP-5\\">
+                <div class=\\"Center__centered___3l37E\\">
+                  <div class=\\"BannerBibleVerse__bibleVerse___3JbB1\\" style=\\"color:black\\">
+                    <h1>March: Monthly Memory Verse</h1>
+                    <h3>Whom have I in heaven but you? And there is nothing on earth that I desire besides you. My flesh and my heart may fail, but God is the strength of my heart and my portion forever.</h3>
+                    <h4>Psalm 73:25-26</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <div class=\\"Center__center___2-vlY Center__centerVertical___2qHQt Center__centerHorizontal___1HP-5\\">
+            <div class=\\"Center__centered___3l37E\\">
+              <div class=\\"container footer\\">
+                <div class=\\"Footer__icons___2MptE\\">
+                  <a target=\\"_blank\\" class=\\"Footer__footerLinks___3u8Rv\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                    <i class=\\"fa fa-facebook fa-2x\\"></i>
+                  </a>
+                  <a target=\\"_blank\\" class=\\"Footer__footerLinks___3u8Rv\\" href=\\"https://twitter.com/gccphiladelphia\\">
+                    <i class=\\"fa fa-twitter fa-2x\\"></i>
+                  </a>
+                  <a target=\\"_blank\\" class=\\"Footer__footerLinks___3u8Rv\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
+                    <i class=\\"fa fa-instagram fa-2x\\"></i>
+                  </a>
+                </div>
+                <p>© Grace Covenant Church</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script type=\\"text/javascript\\">
+      window.__INITIAL_STATE__ = {
+        \\"metadata\\": {
+          \\"title\\": \\"Grace Covenant Church\\"
+        },
+        \\"modelData\\": {},
+        \\"page\\": {
+          \\"title\\": \\"\\",
+          \\"content\\": \\"\\"
+        }
+      }
+    </script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/manifest.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/react.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/public.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/app.js\\"></script>
+  </body>
+
+</html>"
+`;
+
+exports[`Client Pages renders Welcome page 1`] = `
+"<!doctype html>
+<html>
+
+  <head>
+    <title data-react-helmet=\\"true\\">Grace Covenant Church</title>
+
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto:300,700\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"public/assets/pages/welcome/Welcome.bundle.css\\" />
+    <link href=\\"https://fonts.googleapis.com/css?family=PT+Sans\\" rel=\\"stylesheet\\" />
+    <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
+    <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
+  </head>
+
+  <body>
+    <div id=\\"app\\">
+      <div>
+        <nav id=\\"Navbar__mainNavbar___25Zv8\\" class=\\"navbar navbar-expand-lg navbar-transparent navbar-dark Navbar__navbar-transparent___VTVng\\" style=\\"top:0px\\">
+          <a class=\\"navbar-brand Navbar__navbar-brand____1rPB\\" href=\\"/\\">
+            <h1 class=\\"sr-only\\">Grace Covenant Church</h1>
+            <img id=\\"logo\\" src=\\"/static/images/gcclogo.png\\" />
+          </a>
+          <button class=\\"navbar-toggler Navbar__navbar-toggler___lqVi1\\" type=\\"button\\"><span class=\\"navbar-toggler-icon Navbar__navbar-toggler-icon___3hzKQ\\"></span></button>
+          <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
+            <ul class=\\"navbar-nav ml-auto Navbar__navbar-nav___kOuiO\\">
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/welcome\\">I&#x27;m New</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/pages\\">About</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/familygroup\\">Family Groups</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/ministries\\">Ministries</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/page\\">Giving</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/pages\\">Multimedia</a>
+              </li>
+              <li class=\\"nav-item\\">
+                <a class=\\"nav-link Navbar__nav-link___fGkAA\\" href=\\"/pages\\">Events</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <main>
+          <div>
+            <div class=\\"jumbotron Jumbotron__jumbotron___3GbsE\\" style=\\"height:100vh\\">
+              <div class=\\"BackgroundImage__backgroundImageContainer___267Re\\">
+                <div class=\\"BackgroundImage__backgroundImage___1KLRt\\" style=\\"background-image:url(/static/images/welcome/welcome_background.jpg);background-attachment:local;background-position:center;background-size:cover\\"></div>
+              </div>
+              <div class=\\"Center__center___2-vlY Center__centerVertical___2qHQt Center__centerHorizontal___1HP-5\\">
+                <div class=\\"Center__centered___3l37E\\">
+                  <div class=\\"TitleBanner__titleText___jQk-y MainTemplate__header___1_D_6\\" style=\\"color:white\\">
+                    <div class=\\"Center__center___2-vlY Center__centerVertical___2qHQt Center__centerHorizontal___1HP-5\\">
+                      <div class=\\"Center__centered___3l37E\\">Welcome!</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class=\\"description\\">Our doors are wide open to people from all backgrounds. Whether you are a spiritual seeker just beginning to ask questions about God or a committed Christian wanting to deepen your faith, Grace Covenant Church is a place you can call home
+                and find spiritual help, hope, and encouragement. Wherever you are in your spiritual journey, we invite you to discover GCC—and discover for yourself God’s wonderful love and plan for your life!</div>
+              <div>
+                <iframe width=\\"100%\\" height=\\"100%\\" src=\\"https://www.youtube.com/embed/5M8H4xhSPWc\\" frameBorder=\\"0\\" allowfullscreen=\\"\\"></iframe>
+              </div>
+              <div class=\\"description\\">What makes us unique? It isn’t our beliefs. We affirm the same basic Christian doctrines that have been a part of the Church for hundreds of years. Rather, we are committed to presenting these truths in a practical, relevant, contemporary,
+                and loving manner. Our desire is to introduce you to Jesus Christ and to help you grow and become a kingdom worker. We want to help you to become a kingdom worker who can influence the world around you with the love of Jesus Christ.
+                <br/>
+                <br/>Our church is comprised of a network of “family groups“; small group settings where honest friendships, Bible study, constant prayer, and compassionate care are emphasized. It is within these dynamic family groups where the core of our
+                evangelism and discipleship take place. We invite you to become of a part of these contagious Christian communities that strive to influence and encourage one another.
+                <br/>
+                <br/>Again, whether you’re a spiritual seeker who’s just starting to ask questions about God, or a committed Christian who wants to sink the roots of your faith even deeper, you can find a home here at Grace Covenant Church.
+                <br/>
+                <br/>Our Sunday Services and Friday Night Large Groups are typically located at Meyerson Hall Room B-1, 3401 Walnut Street Philadelphia, PA 19104. We oftentimes meet at Ralston House, 3615 Chestnut Street Philadelphia, PA 19104, as well. Keep
+                an eye out for Grace Covenant Church signs and our welcomers to find us!</div>
+              <div class=\\"row\\">
+                <div class=\\"col-sm-6\\">
+                  <div style=\\"width:100%;position:relative;padding-top:75%\\">
+                    <div style=\\"position:absolute;top:0;left:0;bottom:0;right:0\\">
+                      <iframe frameBorder=\\"0\\" src=\\"https://www.google.com/maps/embed/v1/place?q=Meyerson+Hall,+Philadelphia,+PA,+United+States&amp;key=AIzaSyCOwMOGgibQEx_bc3qn35LQl0oit6_HqC8\\" style=\\"width:100%;height:100%\\"></iframe>
+                    </div>
+                  </div>
+                </div>
+                <div class=\\"col-sm-6\\">
+                  <div style=\\"width:100%;position:relative;padding-top:75%\\">
+                    <div style=\\"position:absolute;top:0;left:0;bottom:0;right:0\\">
+                      <iframe frameBorder=\\"0\\" src=\\"https://www.google.com/maps/embed/v1/place?q=Ralston+House,+Chestnut+Street,+Philadelphia,+PA,+United+States&amp;key=AIzaSyCOwMOGgibQEx_bc3qn35LQl0oit6_HqC8\\" style=\\"width:100%;height:100%\\"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer>
+          <div class=\\"Center__center___2-vlY Center__centerVertical___2qHQt Center__centerHorizontal___1HP-5\\">
+            <div class=\\"Center__centered___3l37E\\">
+              <div class=\\"container footer\\">
+                <div class=\\"Footer__icons___2MptE\\">
+                  <a target=\\"_blank\\" class=\\"Footer__footerLinks___3u8Rv\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                    <i class=\\"fa fa-facebook fa-2x\\"></i>
+                  </a>
+                  <a target=\\"_blank\\" class=\\"Footer__footerLinks___3u8Rv\\" href=\\"https://twitter.com/gccphiladelphia\\">
+                    <i class=\\"fa fa-twitter fa-2x\\"></i>
+                  </a>
+                  <a target=\\"_blank\\" class=\\"Footer__footerLinks___3u8Rv\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
+                    <i class=\\"fa fa-instagram fa-2x\\"></i>
+                  </a>
+                </div>
+                <p>© Grace Covenant Church</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script type=\\"text/javascript\\">
+      window.__INITIAL_STATE__ = {
+        \\"metadata\\": {
+          \\"title\\": \\"Grace Covenant Church\\"
+        },
+        \\"modelData\\": {},
+        \\"page\\": {
+          \\"title\\": \\"\\",
+          \\"content\\": \\"\\"
+        }
+      }
+    </script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/manifest.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/react.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/public.js\\"></script>
+    <script type=\\"text/javascript\\" src=\\"/public/assets/app.js\\"></script>
+  </body>
+
+</html>"
+`;
