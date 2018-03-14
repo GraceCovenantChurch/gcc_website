@@ -11,7 +11,9 @@
     "lint": "eslint --ignore-pattern webpack* --ext .jsx,.js src",
     "lint:watch": "esw --ignore-pattern webpack* --ext .jsx,.js src --watch --changed",
     "autoformat": "eslint --ignore-pattern webpack* --fix --ext .jsx,.js src",
-    "test": "jest"
+    "test:backend": "cross-env BABEL_ENV=test_backend jest --testNamePattern=\"ServerTest\" --setupTestFrameworkScriptFile=\"<rootDir>/test/serverSetup.js\"",
+    "test:frontend": "cross-env BABEL_ENV=test_frontend jest --testNamePattern=\"^(?!.*ServerTest).*$\"",
+    "test": "npm run test:backend && npm run test:frontend"
   },
   "author": "gccdev",
   "license": "ISC",
