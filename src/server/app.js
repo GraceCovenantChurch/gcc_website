@@ -7,6 +7,7 @@ import api from './api';
 import PageRouter from './pageRouter';
 
 const nconf = require('../config.js');
+
 nconf.set('APP_ENV', 'server');
 
 process.on('unhandledRejection', (err) => {

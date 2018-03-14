@@ -1,10 +1,17 @@
-import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 
-class DateDisplay extends Component {
-  render() {
-    return moment(this.props.value).format('ll');
-  }
+const DateDisplay = props => moment(props.value).format('ll');
+
+DateDisplay.propTypes = {
+  value: PropTypes.oneOfType([
+    PropTypes.instanceOf(Date),
+    PropTypes.string,
+  ]),
+};
+
+DateDisplay.defaultProps = {
+  value: '',
 };
 
 export default DateDisplay;

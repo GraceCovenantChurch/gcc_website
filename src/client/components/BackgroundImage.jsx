@@ -1,31 +1,66 @@
-import React, {Component} from 'react';
-import classnames from 'classnames';
+import React from 'react';
+import PropTypes from 'prop-types';
+import Optional from './Optional';
+
 import styles from './BackgroundImage.css';
 
-class BackgroundImage extends Component {
-  render() {
-    return (
-      <div className={styles.backgroundImageContainer} style={{
-        zIndex: this.props.zIndex,
-      }}>
-        <div className={styles.backgroundImage} style={{
-          backgroundImage: `url(${this.props.src})`,
-          backgroundAttachment: this.props.backgroundAttachment,
-          backgroundPosition: this.props.backgroundPosition,
-          backgroundRepeat: this.props.backgroundRepeat,
-          backgroundOrigin: this.props.backgroundOrigin,
-          backgroundSize: this.props.backgroundSize,
-          backgroundColor: this.props.backgroundColor,
-          filter: this.props.backgroundFilter,
-        }}>
-          {this.props.children}
-        </div>
-        {this.props.overlay ? <div className={styles.backgroundImageOverlay} style={{
-          background: this.props.overlay,
-        }} /> : null }
-      </div>
-    );
-  }
+const BackgroundImage = props => (
+  <div
+    className={styles.backgroundImageContainer}
+    style={{ zIndex: props.zIndex }}
+  >
+    <div
+      className={styles.backgroundImage}
+      style={{
+        backgroundImage: `url(${props.src})`,
+        backgroundAttachment: props.backgroundAttachment,
+        backgroundPosition: props.backgroundPosition,
+        backgroundRepeat: props.backgroundRepeat,
+        backgroundOrigin: props.backgroundOrigin,
+        backgroundSize: props.backgroundSize,
+        backgroundColor: props.backgroundColor,
+        filter: props.backgroundFilter,
+      }}
+    >
+      {props.children}
+    </div>
+    <Optional test={props.overlay}>
+      <div
+        className={styles.backgroundImageOverlay}
+        style={{
+          background: props.overlay,
+        }}
+      />
+    </Optional>
+  </div>
+);
+
+BackgroundImage.propTypes = {
+  zIndex: PropTypes.number,
+  src: PropTypes.string,
+  backgroundAttachment: PropTypes.string,
+  backgroundPosition: PropTypes.string,
+  backgroundRepeat: PropTypes.string,
+  backgroundOrigin: PropTypes.string,
+  backgroundSize: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  backgroundFilter: PropTypes.string,
+  overlay: PropTypes.string,
+  children: PropTypes.node,
+};
+
+BackgroundImage.defaultProps = {
+  zIndex: undefined,
+  src: '',
+  backgroundAttachment: undefined,
+  backgroundPosition: undefined,
+  backgroundRepeat: undefined,
+  backgroundOrigin: undefined,
+  backgroundSize: undefined,
+  backgroundColor: undefined,
+  backgroundFilter: undefined,
+  overlay: undefined,
+  children: null,
 };
 
 export default BackgroundImage;

@@ -1,9 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class BooleanDisplay extends Component {
-  render() {
-    return this.props.value ? <i className="fa fa-check" aria-hidden="true"></i> : null;
-  }
+const BooleanDisplay = props => (props.value ? <i className="fa fa-check" aria-hidden="true" /> : null);
+
+BooleanDisplay.propTypes = {
+  value: PropTypes.bool,
+};
+
+BooleanDisplay.defaultProps = {
+  value: false,
 };
 
 export default BooleanDisplay;

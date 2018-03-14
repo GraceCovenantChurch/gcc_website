@@ -1,30 +1,34 @@
 import path from 'path';
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import asyncComponent from '../../client/hoc/asyncComponent';
 import TextDisplay from '../components/displayFields/TextDisplay';
 import TextField from '../components/editFields/TextField';
 
-class MinistryDisplay extends Component {
-  render() {
-    const {datum, ...props} = this.props;
-    return (
-      <div className="card" {...props}>
-        <div className="card-body">
-          <h5 className="card-title">{datum.name}</h5>
-        </div>
-      </div>
-    );
-  }
+const MinistryDisplay = ({ datum, ...props }) => (
+  <div className="card" {...props}>
+    <div className="card-body">
+      <h5 className="card-title">{datum.name}</h5>
+    </div>
+  </div>
+);
+
+MinistryDisplay.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  datum: PropTypes.object.isRequired,
 };
 
-class MinistryDisplayWrapper extends Component {
-  render() {
-    return <div className="card-columns">{this.props.children}</div>
-  }
+const MinistryDisplayWrapper = ({ children }) => <div className="card-columns">{children}</div>;
+
+MinistryDisplayWrapper.propTypes = {
+  children: PropTypes.node,
+};
+
+MinistryDisplayWrapper.defaultProps = {
+  children: null,
 };
 
 export default class Ministries extends Component {
-
   componentWillMount() {
     this.ModelPage = asyncComponent(path.resolve(__dirname, './ModelPage'), () => import('./ModelPage'));
   }

@@ -1,42 +1,85 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import Center from './Center';
 import Jumbotron from './Jumbotron';
 import BackgroundImage from './BackgroundImage';
 
-import * as constFunc from './utilities/functions';
-
 import styles from './BannerBibleVerse.css';
 
 class BannerBibleVerse extends Component {
+  componentDidMount() {
+    this.props.fetchData();
+  }
+
   render() {
     return (
-      <Jumbotron
-        className={ this.props.className }
-        style={{ height: '100vh' }}>
+      <Jumbotron className="bibleVerse" style={{ height: '100vh' }}>
         <BackgroundImage
-          src={ constFunc.getVerseImage() }
+          src={this.props.image}
           backgroundSize="cover"
           backgroundPosition="top left"
-          backgroundAttachment="fixed" />
+          backgroundAttachment="fixed"
+        />
         <Center horizontal vertical>
           <div
-          className={styles.bibleVerse}
-          style={{ color: 'black' }}>
-              <h1>
-                { constFunc.getMonth() }: Monthly Memory Verse
-              </h1>
-              <h3>
-                { constFunc.getVerse() }
-              </h3>
-              <h4>
-                { constFunc.getCitation() }
-              </h4>
-            </div>
-          </Center>
+            className={styles.bibleVerse}
+            style={{ color: 'black' }}
+          >
+            <h1>{this.props.month}</h1>
+            <h3>{this.props.verse}</h3>
+            <h4>{this.props.reference}</h4>
+          </div>
+        </Center>
       </Jumbotron>
     );
   }
+}
+
+BannerBibleVerse.propTypes = {
+  fetchData: PropTypes.func.isRequired,
+  month: PropTypes.string,
+  verse: PropTypes.string,
+  reference: PropTypes.string,
+  image: PropTypes.string,
 };
 
-export default BannerBibleVerse;
+BannerBibleVerse.defaultProps = {
+  month: '',
+  verse: '',
+  reference: '',
+  image: '',
+};
+
+const withData = connect(() => {
+  // TODO: get data from state
+  const months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+
+  return {
+    month: months[(new Date()).getMonth()],
+    verse: 'Whom have I in heaven but you? And there is nothing on earth that I desire besides you. My flesh and my heart may fail, but God is the strength of my heart and my portion forever.',
+    reference: 'Psalm 73:25-26',
+    image: null,
+  };
+}, () => (
+  {
+    fetchData() {
+      // TODO: fetch monthly bible verse
+    },
+  }
+));
+
+export default withData(BannerBibleVerse);
