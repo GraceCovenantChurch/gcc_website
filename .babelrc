@@ -29,6 +29,16 @@
           "extensions": [".css"]
         }]
       ]
+    },
+    "test_frontend": {
+      "plugins": [
+        "dynamic-import-webpack",
+        "transform-object-rest-spread",
+        ["css-modules-transform", {
+          "generateScopedName": "[name]__[local]",
+          "extensions": [".css"]
+        }]
+      ]
     }
   }
 }

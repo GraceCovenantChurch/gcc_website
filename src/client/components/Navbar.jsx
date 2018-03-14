@@ -127,7 +127,7 @@ class Navbar extends Component {
         })}
         style={{ top: this.state.atTop ? '0px' : this.state.top }}
       >
-        {React.cloneElement(this.props.brand, {
+        {this.props.brand && React.cloneElement(this.props.brand, {
           className: `navbar-brand ${styles['navbar-brand']}`,
           onClick: this._close,
         })}

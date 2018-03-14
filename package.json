@@ -15,6 +15,11 @@
     "test:frontend": "cross-env BABEL_ENV=test_frontend jest --testNamePattern=\"^(?!.*ServerTest).*$\"",
     "test": "npm run test:backend && npm run test:frontend"
   },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/test/enzymeSetup.js"
+    ]
+  },
   "author": "gccdev",
   "license": "ISC",
   "dependencies": {
@@ -67,6 +72,8 @@
     "concurrently": "^3.5.0",
     "css-loader": "^0.28.7",
     "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
     "eslint": "^4.11.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-loader": "^1.9.0",

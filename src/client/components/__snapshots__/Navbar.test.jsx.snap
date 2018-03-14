@@ -1,0 +1,536 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component opens and closes 1`] = `
+<Navbar
+  brand={
+    <a
+      href="/"
+    >
+      Brand
+    </a>
+  }
+  className=""
+  links={
+    Array [
+      <a
+        href="/"
+      >
+        a
+      </a>,
+      <a
+        href="/"
+      >
+        b
+      </a>,
+      <a
+        href="/"
+      >
+        c
+      </a>,
+    ]
+  }
+>
+  <nav
+    className="navbar navbar-expand-lg "
+    id="Navbar__mainNavbar"
+    style={
+      Object {
+        "top": "0px",
+      }
+    }
+  >
+    <a
+      className="navbar-brand Navbar__navbar-brand"
+      href="/"
+    >
+      Brand
+    </a>
+    <button
+      className="navbar-toggler Navbar__navbar-toggler"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon Navbar__navbar-toggler-icon"
+      />
+    </button>
+    <div
+      className="navbar-collapse collapse"
+      style={
+        Object {
+          "height": "auto",
+        }
+      }
+    >
+      <ul
+        className="navbar-nav ml-auto Navbar__navbar-nav"
+      >
+        <li
+          className="nav-item"
+          key=".0"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            a
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          key=".1"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            b
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          key=".2"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            c
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</Navbar>
+`;
+
+exports[`Navbar component opens and closes 2`] = `
+<Navbar
+  brand={
+    <a
+      href="/"
+    >
+      Brand
+    </a>
+  }
+  className=""
+  links={
+    Array [
+      <a
+        href="/"
+      >
+        a
+      </a>,
+      <a
+        href="/"
+      >
+        b
+      </a>,
+      <a
+        href="/"
+      >
+        c
+      </a>,
+    ]
+  }
+>
+  <nav
+    className="navbar navbar-expand-lg "
+    id="Navbar__mainNavbar"
+    style={
+      Object {
+        "top": "0px",
+      }
+    }
+  >
+    <a
+      className="navbar-brand Navbar__navbar-brand"
+      href="/"
+    >
+      Brand
+    </a>
+    <button
+      className="navbar-toggler Navbar__navbar-toggler"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon Navbar__navbar-toggler-icon"
+      />
+    </button>
+    <div
+      className="navbar-collapse collapsing"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <ul
+        className="navbar-nav ml-auto Navbar__navbar-nav"
+      >
+        <li
+          className="nav-item"
+          key=".0"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            a
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          key=".1"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            b
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          key=".2"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            c
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</Navbar>
+`;
+
+exports[`Navbar component opens and closes 3`] = `
+<Navbar
+  brand={
+    <a
+      href="/"
+    >
+      Brand
+    </a>
+  }
+  className=""
+  links={
+    Array [
+      <a
+        href="/"
+      >
+        a
+      </a>,
+      <a
+        href="/"
+      >
+        b
+      </a>,
+      <a
+        href="/"
+      >
+        c
+      </a>,
+    ]
+  }
+>
+  <nav
+    className="navbar navbar-expand-lg "
+    id="Navbar__mainNavbar"
+    style={
+      Object {
+        "top": "0px",
+      }
+    }
+  >
+    <a
+      className="navbar-brand Navbar__navbar-brand"
+      href="/"
+    >
+      Brand
+    </a>
+    <button
+      className="navbar-toggler Navbar__navbar-toggler"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon Navbar__navbar-toggler-icon"
+      />
+    </button>
+    <div
+      className="navbar-collapse show collapse"
+      style={
+        Object {
+          "height": "auto",
+        }
+      }
+    >
+      <ul
+        className="navbar-nav ml-auto Navbar__navbar-nav"
+      >
+        <li
+          className="nav-item"
+          key=".0"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            a
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          key=".1"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            b
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          key=".2"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            c
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</Navbar>
+`;
+
+exports[`Navbar component opens and closes 4`] = `
+<Navbar
+  brand={
+    <a
+      href="/"
+    >
+      Brand
+    </a>
+  }
+  className=""
+  links={
+    Array [
+      <a
+        href="/"
+      >
+        a
+      </a>,
+      <a
+        href="/"
+      >
+        b
+      </a>,
+      <a
+        href="/"
+      >
+        c
+      </a>,
+    ]
+  }
+>
+  <nav
+    className="navbar navbar-expand-lg "
+    id="Navbar__mainNavbar"
+    style={
+      Object {
+        "top": "0px",
+      }
+    }
+  >
+    <a
+      className="navbar-brand Navbar__navbar-brand"
+      href="/"
+    >
+      Brand
+    </a>
+    <button
+      className="navbar-toggler Navbar__navbar-toggler"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon Navbar__navbar-toggler-icon"
+      />
+    </button>
+    <div
+      className="navbar-collapse show collapsing"
+      style={
+        Object {
+          "height": 0,
+        }
+      }
+    >
+      <ul
+        className="navbar-nav ml-auto Navbar__navbar-nav"
+      >
+        <li
+          className="nav-item"
+          key=".0"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            a
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          key=".1"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            b
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          key=".2"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            c
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</Navbar>
+`;
+
+exports[`Navbar component opens and closes 5`] = `
+<Navbar
+  brand={
+    <a
+      href="/"
+    >
+      Brand
+    </a>
+  }
+  className=""
+  links={
+    Array [
+      <a
+        href="/"
+      >
+        a
+      </a>,
+      <a
+        href="/"
+      >
+        b
+      </a>,
+      <a
+        href="/"
+      >
+        c
+      </a>,
+    ]
+  }
+>
+  <nav
+    className="navbar navbar-expand-lg "
+    id="Navbar__mainNavbar"
+    style={
+      Object {
+        "top": "0px",
+      }
+    }
+  >
+    <a
+      className="navbar-brand Navbar__navbar-brand"
+      href="/"
+    >
+      Brand
+    </a>
+    <button
+      className="navbar-toggler Navbar__navbar-toggler"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        className="navbar-toggler-icon Navbar__navbar-toggler-icon"
+      />
+    </button>
+    <div
+      className="navbar-collapse collapse"
+      style={
+        Object {
+          "height": "auto",
+        }
+      }
+    >
+      <ul
+        className="navbar-nav ml-auto Navbar__navbar-nav"
+      >
+        <li
+          className="nav-item"
+          key=".0"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            a
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          key=".1"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            b
+          </a>
+        </li>
+        <li
+          className="nav-item"
+          key=".2"
+        >
+          <a
+            className="nav-link Navbar__nav-link"
+            href="/"
+            onClick={[Function]}
+          >
+            c
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</Navbar>
+`;
