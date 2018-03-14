@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import classnames from 'classnames';
-import {clearNotification, SUCCESS, INFO, WARNING, DANGER} from '../modules/notifications';
+import { clearNotification, SUCCESS, INFO, WARNING, DANGER } from '../modules/notifications';
 
 import styles from './Notifications.css';
 
@@ -20,12 +21,12 @@ function alertClass(status) {
 }
 
 class Notification extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
       in: false,
-    }
+    };
+    this.closeHandler = this.handleClose.bind(this);
   }
 
   componentDidMount() {
@@ -35,7 +36,7 @@ class Notification extends Component {
       });
     }, 0);
 
-    this.autoCloseTimeout = setTimeout(this.handleClose.bind(this), 5000);
+    this.autoCloseTimeout = setTimeout(this.closeHandler, 5000);
   }
 
   componentWillUnmount() {
@@ -57,37 +58,48 @@ class Notification extends Component {
       <div className={classnames(
         'alert fade alert-dismissable',
         alertClass(this.props.notification.status),
-        { in: this.state.in }
+        { show: this.state.in },
       )}>
-        <a className="close" onClick={this.handleClose.bind(this)}>&times;</a>
+        <button className="close" onClick={this.closeHandler}>&times;</button>
         {this.props.notification.message}
-      </div>
-    )
-  }
-};
-
-class Notifications extends Component {
-  render() {
-    return (
-      <div className={styles.notifications}>
-        <div className="container">
-          {Object.keys(this.props.notifications || {}).map(k => (
-            <Notification key={k} notification={this.props.notifications[k]} clear={() => this.props.clearNotification(k)} />
-          ))}
-        </div>
       </div>
     );
   }
+}
+
+Notification.propTypes = {
+  notification: PropTypes.shape({
+    status: PropTypes.oneOf([SUCCESS, INFO, WARNING, DANGER]),
+    message: PropTypes.string,
+  }).isRequired,
 };
 
-export default connect(state => {
-  return {
-    notifications: state.notifications,
-  };
-}, dispatch => {
-  return {
+const Notifications = props => (
+  <div className={styles.notifications}>
+    <div className="container">
+      {Object.keys(props.notifications).map(k => (
+        <Notification
+          key={k}
+          notification={props.notifications[k]}
+          clear={() => props.clearNotification(k)}
+        />
+      ))}
+    </div>
+  </div>
+);
+
+Notifications.propTypes = {
+  notifications: PropTypes.objectOf(Notification.propTypes.notification).isRequired,
+};
+
+export default connect(state => (
+  {
+    notifications: state.notifications || {},
+  }
+), dispatch => (
+  {
     clearNotification(key) {
       return dispatch(clearNotification(key));
     },
-  };
-})(Notifications);
+  }
+))(Notifications);

@@ -19,6 +19,16 @@
         "dynamic-import-webpack",
         "transform-object-rest-spread"
       ]
+    },
+    "test": {
+      "plugins": [
+        "dynamic-import-node",
+        "transform-object-rest-spread",
+        ["css-modules-transform", {
+          "generateScopedName": "[name]__[local]",
+          "extensions": [".css"]
+        }]
+      ]
     }
   }
 }

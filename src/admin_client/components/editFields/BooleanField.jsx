@@ -5,9 +5,11 @@ class BooleanField extends Field {
   render() {
     return (
       <div className="form-check">
-        <input type="checkbox" className="form-check-input"
+        <input
+          type="checkbox"
+          className="form-check-input"
           checked={this.props.value}
-          onChange={e => {
+          onChange={(e) => {
             this.props.valueChanged(e.target.checked);
           }}
         />
@@ -15,6 +17,6 @@ class BooleanField extends Field {
       </div>
     );
   }
-};
+}
 
 export default BooleanField;

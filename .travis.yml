@@ -14,5 +14,8 @@ script:
   - npm run lint
   - npm run babel
   - npm run webpack
-  - rm -rf build/public
-  - npm run webpack-admin
+  - npm run test
+  - npm run esdoc
+
+after_success:
+  - if [ $TRAVIS_BRANCH = 'master' ]; then ./.travis/build_docs.sh; fi

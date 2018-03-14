@@ -24,22 +24,22 @@ export default function PageRouter(routes, reducers, renderCallback) {
     });
     return Promise.all(promises).then(() => {
       const context = {};
-      const content = renderToStaticMarkup(
+      const app = (
         <Provider store={store}>
           <StaticRouter location={req.url} context={context}>
             <div id="app">{renderRoutes(routes)}</div>
           </StaticRouter>
         </Provider>
       );
+      const content = renderToStaticMarkup(app);
       const helmet = Helmet.renderStatic();
       if (context.status === 404) {
         res.status(404);
       }
       if (context.status === 302) {
         return res.redirect(302, context.url);
-      } else {
-        return res.send(renderCallback(helmet, content, store.getState()));
       }
+      return res.send(renderCallback(helmet, content, store.getState()));
     });
   });
 

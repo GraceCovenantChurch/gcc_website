@@ -1,16 +1,7 @@
-import React, {Component} from 'react';
-import classnames from 'classnames';
+import React from 'react';
 
 import styles from './Jumbotron.css';
 
-class Jumbotron extends Component {
-  render() {
-    return (
-      <div className={`jumbotron ${styles.jumbotron}`} {...this.props}>
-        {this.props.children}
-      </div>
-    );
-  }
-};
+const Jumbotron = props => <div className={`jumbotron ${styles.jumbotron}`} {...props} />;
 
 export default Jumbotron;

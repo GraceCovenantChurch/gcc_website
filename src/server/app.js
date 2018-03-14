@@ -7,6 +7,7 @@ import api from './api';
 import PageRouter from './pageRouter';
 
 const nconf = require('../config.js');
+
 nconf.set('APP_ENV', 'server');
 
 process.on('unhandledRejection', (err) => {
@@ -57,15 +58,18 @@ app.use(PageRouter(routes, reducers, (head, content, state) => `
     </html>
   `));
 
-mongoose.set('debug', nconf.get('NODE_ENV') !== 'production');
-mongoose.connect(nconf.get('MONGODB_URI'), { useMongoClient: true }, (err) => {
-  if (err) {
-    throw err;
-  }
-  console.log('Connected to database');
+export default new Promise((resolve) => {
+  mongoose.set('debug', nconf.get('NODE_ENV') !== 'production');
+  const db = mongoose.connect(nconf.get('MONGODB_URI'), { useMongoClient: true }, (err) => {
+    if (err) {
+      throw err;
+    }
+    console.log('Connected to database');
 
-  const port = nconf.get('PUBLIC_SERVER_HOST').split(':')[1] || 80;
-  app.listen(port, () => {
-    console.log('Server listening on port', port);
+    const port = nconf.get('PUBLIC_SERVER_HOST').split(':')[1] || 80;
+    const server = app.listen(port, () => {
+      console.log('Server listening on port', port);
+      resolve({ server, db });
+    });
   });
 });

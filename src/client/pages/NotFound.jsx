@@ -1,12 +1,8 @@
-import React, {Component} from 'react';
+import React from 'react';
 import withTitle from '../hoc/withTitle';
 
-class NotFound extends Component {
-  render() {
-    return (
-      <div>Nothing here!</div>
-    );
-  }
-};
+const NotFound = () => <div>Nothing here!</div>;
 
-export default withTitle('Error: Not Found')(NotFound);
+const NotFoundPage = withTitle('Error: Not Found')(NotFound);
+
+export default NotFoundPage;
