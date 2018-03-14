@@ -1,12 +1,10 @@
-import React, {Component} from 'react';
-import Link from 'react-router-dom/Link';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { PAGE_LOADED } from '../modules/page';
 
 import styles from './Navbar.css';
 
 class Navbar extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -19,6 +17,10 @@ class Navbar extends Component {
       hiding: false,
       top: -100,
     };
+
+    this.open = this.open.bind(this);
+    this.close = this.close.bind(this);
+    this.toggle = this.toggle.bind(this);
   }
 
   componentDidMount() {
@@ -36,22 +38,22 @@ class Navbar extends Component {
       return;
     }
 
-    let collapsed = this.state.collapsed;
+    const collapsed = this.state.collapsed;
     this.setState({
       collapsed: !collapsed,
       collapsing: true,
-      height: collapsed ? 0 : this.refs['navbar-nav'].clientHeight,
+      height: collapsed ? 0 : this.navLinkList.clientHeight,
     }, () => {
       setTimeout(() => {
         this.setState({
-          height: collapsed ? this.refs['navbar-nav'].clientHeight : 0,
+          height: collapsed ? this.navLinkList.clientHeight : 0,
         }, () => {
           setTimeout(() => {
             this.setState({
               collapsing: false,
               height: 'auto',
               in: collapsed ? true : undefined,
-            })
+            });
           }, 300);
         });
       }, 10);
@@ -70,13 +72,13 @@ class Navbar extends Component {
     }
   }
 
-  handleScroll(e) {
+  handleScroll() {
     this.setState({
       atTop: window.scrollY < 200,
     });
 
-    let hidden = this.state.hidden;
-    let shouldHide = window.scrollY < 800;
+    const hidden = this.state.hidden;
+    const shouldHide = window.scrollY < 800;
     if (hidden !== shouldHide && !this.state.hiding) {
       if (!shouldHide) {
         this.setState({
@@ -86,14 +88,14 @@ class Navbar extends Component {
         }, () => {
           setTimeout(() => {
             this.setState({
-              top: 0
+              top: 0,
             }, () => {
               this.setState({
                 hiding: false,
               });
             });
-          }, 100)
-        })
+          }, 100);
+        });
       } else {
         this.setState({
           hiding: true,
@@ -101,7 +103,7 @@ class Navbar extends Component {
         }, () => {
           setTimeout(() => {
             this.setState({
-              top: -100
+              top: -100,
             }, () => {
               setTimeout(() => {
                 this.setState({
@@ -118,42 +120,55 @@ class Navbar extends Component {
 
   render() {
     return (
-      <nav id={styles.mainNavbar} className={classnames(`navbar navbar-expand-lg ${(this.props.className || '')}`, {
-        [styles.popup]: !this.state.atTop && !this.state.hidden,
-      })} style={{
-        top: this.state.atTop ? '0px' : this.state.top,
-      }}>
+      <nav
+        id={styles.mainNavbar}
+        className={classnames(`navbar navbar-expand-lg ${(this.props.className || '')}`, {
+          [styles.popup]: !this.state.atTop && !this.state.hidden,
+        })}
+        style={{ top: this.state.atTop ? '0px' : this.state.top }}
+      >
         {React.cloneElement(this.props.brand, {
           className: `navbar-brand ${styles['navbar-brand']}`,
-          onClick: this.close.bind(this),
+          onClick: this._close,
         })}
-        <button className={`navbar-toggler ${styles['navbar-toggler']}`} type="button" onClick={this.toggle.bind(this)}>
-          <span className={`navbar-toggler-icon ${styles['navbar-toggler-icon']}`}></span>
+        <button className={`navbar-toggler ${styles['navbar-toggler']}`} type="button" onClick={this.toggle}>
+          <span className={`navbar-toggler-icon ${styles['navbar-toggler-icon']}`} />
         </button>
 
-        <div className={classnames('navbar-collapse', {
+        <div
+          className={classnames('navbar-collapse', {
             show: this.state.in,
             collapsing: this.state.collapsing,
             collapse: !this.state.collapsing,
-          })} style={{
-            height: this.state.height,
-          }}>
-          <ul className={`navbar-nav ml-auto ${styles['navbar-nav']}`} ref="navbar-nav">
-            {React.Children.map(this.props.links, link => {
-              return (
-                <li className="nav-item">
-                  {React.cloneElement(link, {
-                    onClick: this.close.bind(this),
-                    className: `nav-link ${styles['nav-link']}`,
-                  })}
-                </li>
-              );
-            })}
+          })}
+          style={{ height: this.state.height }}
+        >
+          <ul className={`navbar-nav ml-auto ${styles['navbar-nav']}`} ref={(el) => { this.navLinkList = el; }}>
+            {React.Children.map(this.props.links, link => (
+              <li className="nav-item">
+                {React.cloneElement(link, {
+                  onClick: this.close,
+                  className: `nav-link ${styles['nav-link']}`,
+                })}
+              </li>
+            ))}
           </ul>
         </div>
       </nav>
     );
   }
 }
+
+Navbar.propTypes = {
+  className: PropTypes.string,
+  brand: PropTypes.element,
+  links: PropTypes.arrayOf(PropTypes.element),
+};
+
+Navbar.defaultProps = {
+  className: '',
+  brand: null,
+  links: [],
+};
 
 export default Navbar;

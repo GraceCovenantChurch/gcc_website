@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
+/* eslint-disable */
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 
-class Field extends Component { };
+class Field extends Component { }
 
 Field.propTypes = {
   value: PropTypes.any.isRequired,

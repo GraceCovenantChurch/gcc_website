@@ -1,30 +1,26 @@
-import React, {Component} from 'react';
-import {compose} from 'redux';
-import {connect} from 'react-redux';
-import {Link, withRouter} from 'react-router-dom';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { compose } from 'redux';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
-import withTitle from '../../hoc/withTitle';
 import pluralize from 'pluralize';
 
+import withTitle from '../../hoc/withTitle';
 import Center from '../../components/Center';
 import TitleBanner from '../../components/TitleBanner';
-import Banner from '../../components/Banner';
-import TableRow from '../../components/TableRow';
-import {fetchModelData} from '../../modules/modelData';
+import { fetchModelData } from '../../modules/modelData';
 
 
 import styles from './Ministries.css';
 
 class Ministries extends Component {
-
   componentDidMount() {
     this.props.fetchData();
   }
 
   render() {
-    let ministryList = this.props.data.map((ministryObj) => {return ministryObj['name']});
-    // let ministryList = ['Diakonos', 'Evangelism', 'Finance', 'Graphics', 'Hospitality', 'Multimedia',
-    //  'Overflow', 'Transportation', 'Worship', 'Welcoming', 'Web'];
+    const ministryList = this.props.data.map(ministryObj => ministryObj.name);
 
     return (
       <div id={styles.ministries}>
@@ -39,30 +35,35 @@ class Ministries extends Component {
         </TitleBanner>
 
         <div className={styles.pageContent}>
-          {ministryList.map( (minName) => {
-                  return (
-                    <div className={styles.ministryBox} key={minName}>
-                      <Center vertical>{minName}</Center>
-                    </div>
-                  )
-                })}
+          {ministryList.map(ministryName => (
+            <div className={styles.ministryBox} key={ministryName}>
+              <Center vertical>{ministryName}</Center>
+            </div>
+          ))}
         </div>
       </div>
     );
   }
+}
+
+Ministries.propTypes = {
+  fetchData: PropTypes.func.isRequired,
+  data: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+  })).isRequired,
 };
 
 const withData = connect((state) => {
   const modelData = state.modelData[pluralize('Ministry')];
   return {
     data: modelData ? modelData.ids.map(id => modelData.__DB__[id]) : [],
-  }
-}, (dispatch, ownProps) => {
-  return {
+  };
+}, dispatch => (
+  {
     fetchData() {
       return dispatch(fetchModelData('Ministry'));
-    }
+    },
   }
-});
+));
 
-export default compose(withData, withTitle(ownProps => pluralize('Ministry')), withRouter)(Ministries);
+export default compose(withData, withTitle('Ministries'), withRouter)(Ministries);

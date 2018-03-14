@@ -1,9 +1,13 @@
-import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
-class TextDisplay extends Component {
-  render() {
-    return this.props.value;
-  }
+const TextDisplay = props => props.value;
+
+TextDisplay.propTypes = {
+  value: PropTypes.string,
+};
+
+TextDisplay.defaultProps = {
+  value: '',
 };
 
 export default TextDisplay;

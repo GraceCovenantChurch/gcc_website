@@ -1,13 +1,17 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import pluralize from 'pluralize';
-import {createDocument, updateDocument, deleteDocument} from '../modules/modelData';
-import {postNotification, clearNotification, SUCCESS, INFO, ERROR} from '../modules/notifications';
+import { createDocument, updateDocument, deleteDocument } from '../modules/modelData';
+import { postNotification, clearNotification, SUCCESS, INFO, ERROR } from '../modules/notifications';
 
 class EditForm extends Component {
   constructor(props) {
     super(props);
     this.state = props.document || {};
+    this.cancelHandler = this.handleCancel.bind(this);
+    this.deleteHandler = this.handleDelete.bind(this);
+    this.submitHandler = this.handleSubmit.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -15,9 +19,9 @@ class EditForm extends Component {
   }
 
   hasChanges() {
-    var changed = false;
+    let changed = false;
     const document = this.props.document || {};
-    Object.keys(this.state).forEach(key => {
+    Object.keys(this.state).forEach((key) => {
       if (this.state[key] !== document[key]) {
         changed = true;
       }
@@ -47,7 +51,7 @@ class EditForm extends Component {
         return this.props.onClose();
       })
       .catch(err => err.json())
-      .then(error => {
+      .then((error) => {
         if (error) {
           this.props.clearNotification(deletingNotification.key);
           this.props.postNotification(ERROR, error.message);
@@ -66,26 +70,25 @@ class EditForm extends Component {
       this.props.postNotification(SUCCESS, 'Saved successfully!');
       return this.props.onClose();
     })
-    .catch(err => err.json())
-    .then(error => {
-      if (error) {
-        this.props.clearNotification(savingNotification.key);
-        this.props.postNotification(ERROR, error.message);
-      }
-    });
+      .catch(err => err.json())
+      .then((error) => {
+        if (error) {
+          this.props.clearNotification(savingNotification.key);
+          this.props.postNotification(ERROR, error.message);
+        }
+      });
   }
 
   render() {
-    const document = this.props.document || {};
     return (
-      <form className="form" key={this.props.id && this.props.document} onSubmit={this.handleSubmit.bind(this)}>
+      <form className="form" key={this.props.id && this.props.document} onSubmit={this.submitHandler}>
         {this.props.fields.map(field => (
           <div key={field.key} className="form-group">
             <field.editorComponent
               label={field.key}
               field={field}
               value={this.state[field.key] || ''}
-              valueChanged={value => {
+              valueChanged={(value) => {
                 this.setState({
                   [field.key]: value,
                 });
@@ -94,8 +97,8 @@ class EditForm extends Component {
           </div>
         ))}
         <div className="btn-toolbar">
-          <a href="#" disabled={!this.props.id} className="btn btn-danger" onClick={this.handleDelete.bind(this)}>Delete</a>
-          <a href="#" className="btn btn-light" onClick={this.handleCancel.bind(this)}>Cancel</a>
+          <button disabled={!this.props.id} className="btn btn-danger" onClick={this.deleteHandler}>Delete</button>
+          <button className="btn btn-light" onClick={this.cancelHandler}>Cancel</button>
           <button className="btn btn-primary pull-right" type="submit">Save</button>
         </div>
       </form>
@@ -103,13 +106,34 @@ class EditForm extends Component {
   }
 }
 
+EditForm.propTypes = {
+  id: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
+  document: PropTypes.object,
+  fields: PropTypes.arrayOf(PropTypes.shape({
+    key: PropTypes.string.isRequired,
+    editorComponent: PropTypes.func.isRequired,
+  })).isRequired,
+  create: PropTypes.func.isRequired,
+  update: PropTypes.func.isRequired,
+  delete: PropTypes.func.isRequired,
+  clearNotification: PropTypes.func.isRequired,
+  postNotification: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
+};
+
+EditForm.defaultProps = {
+  id: undefined,
+  document: {},
+};
+
 export default connect((state, ownProps) => {
   const modelData = state.modelData[pluralize(ownProps.modelName)];
   return {
     document: modelData && modelData.__DB__[ownProps.id],
   };
-}, (dispatch, ownProps) => {
-  return {
+}, (dispatch, ownProps) => (
+  {
     create(document) {
       return dispatch(createDocument(ownProps.modelName, document));
     },
@@ -125,5 +149,5 @@ export default connect((state, ownProps) => {
     clearNotification(key) {
       return dispatch(clearNotification(key));
     },
-  };
-})(EditForm);
+  }
+))(EditForm);
