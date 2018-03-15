@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import withTitle from '../../hoc/withTitle';
-import TitleBanner from '../../components/TitleBanner';
+import withTitle from '../hoc/withTitle';
+import TitleBanner from '../components/TitleBanner';
 
 import styles from './FamilyGroup.css';
 
@@ -80,4 +80,6 @@ const FamilyGroup = () => (
   </div>
 );
 
-export default withTitle('Family Group')(FamilyGroup);
+const FamilyGroupPage = withTitle('Family Group')(FamilyGroup);
+
+export default FamilyGroupPage;
