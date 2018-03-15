@@ -1,30 +1,33 @@
 /* eslint-env node, jest */
-/* global publicServer */
 
 import request from 'supertest-as-promised';
 import pretty from 'pretty';
 
+import { withPublicServer } from '../serverSetup';
+
 describe('Public ServerTest', () => {
+  let server = withPublicServer();
+
   it('renders Home page', () =>
-    request(publicServer)
+    request(server())
       .get('/')
       .expect(200)
       .then(res => expect(pretty(res.text)).toMatchSnapshot()));
 
   it('renders Welcome page', () =>
-    request(publicServer)
+    request(server())
       .get('/welcome')
       .expect(200)
       .then(res => expect(pretty(res.text)).toMatchSnapshot()));
 
   it('renders Family Group page', () =>
-    request(publicServer)
+    request(server())
       .get('/familygroup')
       .expect(200)
       .then(res => expect(pretty(res.text)).toMatchSnapshot()));
 
   it('renders 404 page', () =>
-    request(publicServer)
+    request(server())
       .get('/invalid')
       .expect(200)
       .then(res => expect(pretty(res.text)).toMatchSnapshot()));

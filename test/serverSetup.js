@@ -2,19 +2,24 @@
 
 import Helmet from 'react-helmet';
 
-let db;
+export function withPublicServer() {
+  let result = {};
 
-beforeAll(() => {
-  Helmet.canUseDOM = false;
-  // eslint-disable-next-line global-require
-  return require('../src/server/app').default.then((obj) => {
-    global.publicServer = obj.server;
-    db = obj.db;
+  beforeAll(() => {
+    Helmet.canUseDOM = false;
+    // eslint-disable-next-line global-require
+    return require('../src/server/app').default.then((obj) => {
+      Object.assign(result, obj);
+    });
   });
-});
 
-afterAll(() => {
-  Helmet.canUseDOM = true;
-  global.publicServer.close();
-  db.close();
-});
+  afterAll(() => {
+    Helmet.canUseDOM = true;
+    result.server.close();
+    result.db.close();
+  });
+
+  return function() {
+    return result.server;
+  }
+}
