@@ -1,5 +1,8 @@
-# gccweb
-Website for GCC
+# GCC Website
+Main Website for Grace Covenant Church
 
-Link to InVision
-https://invis.io/DKDRIATQ6#/257935397_about-Main
+## Developing
+Please see `manual/DEVELOPING.md` for the developer's guide.
+
+## Contributing
+Please see `manual/CONTRIBUTING.md` for the contributor's guide.
