@@ -11,11 +11,51 @@
     "lint": "eslint --ignore-pattern webpack* --ext .jsx,.js src",
     "lint:watch": "esw --ignore-pattern webpack* --ext .jsx,.js src --watch --changed",
     "autoformat": "eslint --ignore-pattern webpack* --fix --ext .jsx,.js src",
-    "test": "cross-env NODE_ENV=test BABEL_ENV=test jest"
+    "test": "cross-env NODE_ENV=test BABEL_ENV=test jest",
+    "esdoc": "esdoc"
   },
   "jest": {
     "setupFiles": [
       "<rootDir>/test/enzymeSetup.js"
+    ]
+  },
+  "esdoc": {
+    "source": "./src",
+    "includes": [
+      "\\.js(x)?$"
+    ],
+    "destination": "./docs",
+    "plugins": [
+      {
+        "name": "esdoc-standard-plugin",
+        "option": {
+          "manual": {
+            "index": "./README.md",
+            "globalIndex": true,
+            "files": [
+              "./manual/CONTRIBUTING.md",
+              "./manual/DEVELOPING.md"
+            ]
+          }
+        }
+      },
+      {
+        "name": "esdoc-jsx-plugin"
+      },
+      {
+        "name": "esdoc-ecmascript-proposal-plugin",
+        "option": {
+          "classProperties": true,
+          "objectRestSpread": true,
+          "doExpressions": true,
+          "functionBind": true,
+          "functionSent": true,
+          "asyncGenerators": true,
+          "decorators": true,
+          "exportExtensions": true,
+          "dynamicImport": true
+        }
+      }
     ]
   },
   "author": "gccdev",
@@ -72,6 +112,10 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.1",
+    "esdoc": "^1.0.4",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "esdoc-jsx-plugin": "^1.0.0",
+    "esdoc-standard-plugin": "^1.0.0",
     "eslint": "^4.11.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-loader": "^1.9.0",

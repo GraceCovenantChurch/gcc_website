@@ -15,7 +15,7 @@ const routes = [
       {
         path: '/welcome',
         exact: true,
-        component: asyncComponent(path.resolve(__dirname, './pages/welcome/Welcome'), () => import('./pages/welcome/Welcome')),
+        component: asyncComponent(path.resolve(__dirname, './pages/Welcome'), () => import('./pages/Welcome')),
       },
       {
         path: '/page',
@@ -30,12 +30,12 @@ const routes = [
       {
         path: '/familygroup',
         exact: true,
-        component: asyncComponent(path.resolve(__dirname, './pages/familygroup/FamilyGroup'), () => import('./pages/familygroup/FamilyGroup')),
+        component: asyncComponent(path.resolve(__dirname, './pages/FamilyGroup'), () => import('./pages/FamilyGroup')),
       },
       {
         path: '/ministries',
         exact: true,
-        component: asyncComponent(path.resolve(__dirname, './pages/ministries/Ministries'), () => import('./pages/ministries/Ministries')),
+        component: asyncComponent(path.resolve(__dirname, './pages/Ministries'), () => import('./pages/Ministries')),
       },
       {
         component: NotFound,

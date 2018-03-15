@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { setTitle } from '../modules/metadata';
 import { fetchPage } from '../modules/page';
 
-class AsyncPage extends Component {
+class Async extends Component {
   static fetchData({ dispatch }, match) {
     return dispatch(fetchPage(match.params.page)).then(result => dispatch(setTitle(result.title)));
   }
@@ -23,12 +23,12 @@ class AsyncPage extends Component {
   }
 }
 
-AsyncPage.defaultProps = {
+Async.defaultProps = {
   title: null,
   content: null,
 };
 
-AsyncPage.propTypes = {
+Async.propTypes = {
   fetchPage: PropTypes.func.isRequired,
   title: PropTypes.node,
   content: PropTypes.node,
@@ -43,5 +43,7 @@ function mapDispatchToProps(dispatch, ownProps) {
   };
 }
 
-export default connect(state => state.page, mapDispatchToProps)(AsyncPage);
+const AsyncPage = connect(state => state.page, mapDispatchToProps)(Async);
+
+export default AsyncPage;
 
