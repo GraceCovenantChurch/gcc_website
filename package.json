@@ -6,14 +6,12 @@
   "scripts": {
     "start": "cross-env BABEL_ENV=webpack node scripts/dev.js",
     "webpack": "cross-env NODE_ENV=production BABEL_ENV=webpack webpack -p",
-    "babel": "cross-env NODE_ENV=production BABEL_ENV=server babel src -d build --copy-files",
+    "babel": "cross-env NODE_ENV=production BABEL_ENV=server babel src -d build --copy-files --ignore *.test.js,*.snap,*.spec.js",
     "serve": "cross-env NODE_ENV=production node build/main.js",
     "lint": "eslint --ignore-pattern webpack* --ext .jsx,.js src",
     "lint:watch": "esw --ignore-pattern webpack* --ext .jsx,.js src --watch --changed",
     "autoformat": "eslint --ignore-pattern webpack* --fix --ext .jsx,.js src",
-    "test:backend": "cross-env NODE_ENV=test BABEL_ENV=test_backend jest --testNamePattern=\"ServerTest\" --setupTestFrameworkScriptFile=\"<rootDir>/test/serverSetup.js\"",
-    "test:frontend": "cross-env NODE_ENV=test BABEL_ENV=test_frontend jest --testNamePattern=\"^(?!.*ServerTest).*$\"",
-    "test": "npm run test:backend && npm run test:frontend"
+    "test": "cross-env NODE_ENV=test BABEL_ENV=test jest"
   },
   "jest": {
     "setupFiles": [
