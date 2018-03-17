@@ -66,3 +66,94 @@ const publicEntry = {
   // nameOfBundle: path/to/file
 };
 ```
+
+## Styling Components
+
+For consistency, each new `.jsx` file should have a corresonding `.css` stylesheet. We're using PostCSS which allows some nice convenient extensions to CSS.
+
+```scss
+/* Example: nested styles */
+.box {
+  .title {
+    color: white;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+/* Translates to:
+
+.box .title {
+  color: white;
+}
+
+.box .title:hover {
+  color: black;
+}
+
+*/
+```
+
+The build systems also configures _local namespacing_ for each stylesheet which is very different from traditional CSS. When apply styles, the class names are not applied as strings because there may be multiple stylesheets with the same class name.
+
+**Example: Conflicting class names**
+
+```jsx
+// Box1.jsx
+const Box1 = () => <div className="box"></div>
+```
+
+```css
+/* Box1.css */
+.box {
+  color: white;
+}
+```
+
+```jsx
+// Box2.jsx
+const Box2 = () => <div className="box"></div>
+```
+
+```css
+/* Box2.css */
+.box {
+  color: black;
+}
+```
+
+**CSS Modules**
+
+To avoid these problems, we're using [CSS Modules](https://github.com/css-modules/css-modules). The above code is instead written as follows:
+
+```jsx
+// Box1.jsx
+import styles from './Box1.css';
+
+const Box1 = () => <div className={styles.box}></div>
+```
+
+```css
+/* Box1.css */
+.box {
+  color: white;
+}
+```
+
+```jsx
+// Box2.jsx
+import styles from './Box2.css';
+
+const Box2 = () => <div className={styles.box}></div>
+```
+
+```css
+/* Box2.css */
+.box {
+  color: black;
+}
+```
+
+In each file, `styles.box` will be replaced with a unique class name to avoid conflicts.
