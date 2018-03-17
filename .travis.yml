@@ -16,3 +16,6 @@ script:
   - npm run webpack
   - npm run test
   - npm run esdoc
+
+after_success:
+  - if [ $TRAVIS_BRANCH = 'master' ]; then ./.travis/build_docs.sh; fi
