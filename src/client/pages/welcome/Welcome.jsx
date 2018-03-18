@@ -1,10 +1,10 @@
 import nconf from 'nconf';
 import React from 'react';
 import Helmet from 'react-helmet';
-import withTitle from '../hoc/withTitle';
-import Center from '../components/Center';
-import TitleBanner from '../components/TitleBanner';
-import AspectRatio from '../components/AspectRatio';
+import withTitle from '../../hoc/withTitle';
+import Center from '../../components/Center';
+import TitleBanner from '../../components/TitleBanner';
+import AspectRatio from '../../components/AspectRatio';
 
 import styles from './Welcome.css';
 
@@ -55,6 +55,4 @@ const Welcome = () => (
   </div>
 );
 
-const WelcomePage = withTitle()(Welcome);
-
-export default WelcomePage;
+export default withTitle()(Welcome);

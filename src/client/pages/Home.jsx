@@ -133,6 +133,4 @@ const withData = connect((state) => {
   }
 ));
 
-const HomePage = compose(withData, withTitle(), withRouter)(Home);
-
-export default HomePage;
+export default compose(withData, withTitle(), withRouter)(Home);

@@ -47,11 +47,11 @@ const externalStyleLoaders = getStyleLoaders({local: false});
 const publicEntry = {
   app: 'client/app.jsx',
   'pages/Home': 'client/pages/Home.jsx',
-  'pages/Welcome': 'client/pages/Welcome.jsx',
+  'pages/welcome/Welcome': 'client/pages/welcome/Welcome.jsx',
   'pages/Page': 'client/pages/Page.jsx',
   'pages/AsyncPage': 'client/pages/AsyncPage.jsx',
-  'pages/FamilyGroup': 'client/pages/FamilyGroup.jsx',
-  'pages/Ministries': 'client/pages/Ministries.jsx',
+  'pages/familygroup/FamilyGroup': 'client/pages/familygroup/FamilyGroup.jsx',
+  'pages/ministries/Ministries': 'client/pages/ministries/Ministries.jsx',
 };
 
 const adminEntry = {

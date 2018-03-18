@@ -6,10 +6,10 @@ import { withRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import pluralize from 'pluralize';
 
-import withTitle from '../hoc/withTitle';
-import Center from '../components/Center';
-import TitleBanner from '../components/TitleBanner';
-import { fetchModelData } from '../modules/modelData';
+import withTitle from '../../hoc/withTitle';
+import Center from '../../components/Center';
+import TitleBanner from '../../components/TitleBanner';
+import { fetchModelData } from '../../modules/modelData';
 
 
 import styles from './Ministries.css';
@@ -66,6 +66,4 @@ const withData = connect((state) => {
   }
 ));
 
-const MinistriesPage = compose(withData, withTitle('Ministries'), withRouter)(Ministries);
-
-export default MinistriesPage;
+export default compose(withData, withTitle('Ministries'), withRouter)(Ministries);

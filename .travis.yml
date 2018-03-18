@@ -15,4 +15,3 @@ script:
   - npm run babel
   - npm run webpack
   - npm run test
-  - npm run esdoc
