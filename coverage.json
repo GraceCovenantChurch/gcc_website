@@ -1,0 +1,600 @@
+{
+  "coverage": "6.3%",
+  "expectCount": 238,
+  "actualCount": 15,
+  "files": {
+    "src/admin_client/app.jsx": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        17,
+        20,
+        28,
+        39
+      ]
+    },
+    "src/admin_client/components/EditForm.jsx": {
+      "expectCount": 12,
+      "actualCount": 0,
+      "undocumentLines": [
+        8,
+        9,
+        11,
+        12,
+        13,
+        14,
+        17,
+        21,
+        32,
+        41,
+        62,
+        82
+      ]
+    },
+    "src/admin_client/components/Modal.jsx": {
+      "expectCount": 11,
+      "actualCount": 0,
+      "undocumentLines": [
+        6,
+        7,
+        9,
+        13,
+        16,
+        20,
+        30,
+        36,
+        45,
+        57,
+        69
+      ]
+    },
+    "src/admin_client/components/Notifications.jsx": {
+      "expectCount": 12,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        23,
+        24,
+        26,
+        29,
+        32,
+        33,
+        39,
+        42,
+        47,
+        56,
+        77
+      ]
+    },
+    "src/admin_client/components/TableView.jsx": {
+      "expectCount": 31,
+      "actualCount": 0,
+      "undocumentLines": [
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        16,
+        17,
+        20,
+        26,
+        31,
+        35,
+        39,
+        55,
+        58,
+        63,
+        68,
+        80,
+        84,
+        88,
+        91,
+        98,
+        136,
+        137,
+        174,
+        175,
+        177,
+        180,
+        184,
+        189
+      ]
+    },
+    "src/admin_client/components/displayFields/BooleanDisplay.jsx": {
+      "expectCount": 1,
+      "actualCount": 1,
+      "undocumentLines": []
+    },
+    "src/admin_client/components/displayFields/DateDisplay.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "src/admin_client/components/displayFields/TextDisplay.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/admin_client/components/editFields/BooleanField.jsx": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        4,
+        5
+      ]
+    },
+    "src/admin_client/components/editFields/DateField.jsx": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        10,
+        11
+      ]
+    },
+    "src/admin_client/components/editFields/Field.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "src/admin_client/components/editFields/TextField.jsx": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        4,
+        5
+      ]
+    },
+    "src/admin_client/modules/index.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        6
+      ]
+    },
+    "src/admin_client/modules/modelData.js": {
+      "expectCount": 13,
+      "actualCount": 0,
+      "undocumentLines": [
+        5,
+        6,
+        7,
+        8,
+        10,
+        11,
+        16,
+        60,
+        77,
+        84,
+        102,
+        119,
+        137
+      ]
+    },
+    "src/admin_client/modules/notifications.js": {
+      "expectCount": 12,
+      "actualCount": 0,
+      "undocumentLines": [
+        2,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        35,
+        37,
+        46
+      ]
+    },
+    "src/admin_client/pages/Events.jsx": {
+      "expectCount": 6,
+      "actualCount": 0,
+      "undocumentLines": [
+        14,
+        41,
+        51,
+        52,
+        53,
+        56
+      ]
+    },
+    "src/admin_client/pages/Ministries.jsx": {
+      "expectCount": 6,
+      "actualCount": 0,
+      "undocumentLines": [
+        8,
+        21,
+        31,
+        32,
+        33,
+        36
+      ]
+    },
+    "src/admin_client/pages/ModelPage.jsx": {
+      "expectCount": 9,
+      "actualCount": 0,
+      "undocumentLines": [
+        16,
+        17,
+        19,
+        24,
+        32,
+        60,
+        61,
+        65,
+        170
+      ]
+    },
+    "src/admin_client/routes.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        6
+      ]
+    },
+    "src/admin_client/templates/AdminTemplate.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        12
+      ]
+    },
+    "src/admin_server/api/Events.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "src/admin_server/api/Ministries.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "src/admin_server/api/index.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        6
+      ]
+    },
+    "src/admin_server/app.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        14,
+        25,
+        60,
+        61
+      ]
+    },
+    "src/admin_server/auth.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        5,
+        32,
+        38,
+        49
+      ]
+    },
+    "src/client/app.jsx": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        17,
+        20,
+        28,
+        39
+      ]
+    },
+    "src/client/components/AspectRatio.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "src/client/components/BackgroundImage.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        7
+      ]
+    },
+    "src/client/components/Banner.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        8
+      ]
+    },
+    "src/client/components/BannerBibleVerse.jsx": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        10,
+        11,
+        15,
+        54
+      ]
+    },
+    "src/client/components/Center.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        6
+      ]
+    },
+    "src/client/components/Event.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "src/client/components/EventBox.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        7
+      ]
+    },
+    "src/client/components/Footer.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "src/client/components/Head.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        6
+      ]
+    },
+    "src/client/components/Jumbotron.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "src/client/components/Navbar.jsx": {
+      "expectCount": 14,
+      "actualCount": 14,
+      "undocumentLines": []
+    },
+    "src/client/components/Optional.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/client/components/TitleBanner.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        11
+      ]
+    },
+    "src/client/hoc/asyncComponent.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "src/client/hoc/withTitle.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        6
+      ]
+    },
+    "src/client/modules/index.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        6
+      ]
+    },
+    "src/client/modules/metadata.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        2,
+        6,
+        8,
+        18
+      ]
+    },
+    "src/client/modules/modelData.js": {
+      "expectCount": 7,
+      "actualCount": 0,
+      "undocumentLines": [
+        5,
+        7,
+        8,
+        13,
+        34,
+        49,
+        56
+      ]
+    },
+    "src/client/modules/page.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        4,
+        9,
+        11,
+        24
+      ]
+    },
+    "src/client/pages/AsyncPage.jsx": {
+      "expectCount": 6,
+      "actualCount": 0,
+      "undocumentLines": [
+        7,
+        8,
+        12,
+        16,
+        37,
+        46
+      ]
+    },
+    "src/client/pages/FamilyGroup.jsx": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        10,
+        33,
+        83
+      ]
+    },
+    "src/client/pages/Home.jsx": {
+      "expectCount": 5,
+      "actualCount": 0,
+      "undocumentLines": [
+        20,
+        21,
+        25,
+        123,
+        136
+      ]
+    },
+    "src/client/pages/Ministries.jsx": {
+      "expectCount": 5,
+      "actualCount": 0,
+      "undocumentLines": [
+        17,
+        18,
+        22,
+        56,
+        69
+      ]
+    },
+    "src/client/pages/NotFound.jsx": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        4,
+        6
+      ]
+    },
+    "src/client/pages/Page.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "src/client/pages/Welcome.jsx": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        11,
+        58
+      ]
+    },
+    "src/client/routes.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        6
+      ]
+    },
+    "src/client/templates/MainTemplate.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        12
+      ]
+    },
+    "src/config.js": {
+      "expectCount": 7,
+      "actualCount": 0,
+      "undocumentLines": [
+        1,
+        2,
+        5,
+        11,
+        16,
+        30,
+        31
+      ]
+    },
+    "src/models/event.js": {
+      "expectCount": 5,
+      "actualCount": 0,
+      "undocumentLines": [
+        4,
+        14,
+        44,
+        48,
+        68
+      ]
+    },
+    "src/models/ministry.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        3
+      ]
+    },
+    "src/server/api/Events.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "src/server/api/Ministries.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "src/server/api/index.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "src/server/app.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        9,
+        17,
+        36,
+        37
+      ]
+    },
+    "src/server/pageRouter.jsx": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        14
+      ]
+    }
+  }
+}

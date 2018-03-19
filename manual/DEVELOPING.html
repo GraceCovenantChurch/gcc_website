@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | gcc_website</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Website for Grace Covenant Church"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gcc_website"><meta property="twitter:description" content="Website for Grace Covenant Church"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html" data-ice="link">Contributor&apos;s Guide</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#getting-started" data-ice="link">Getting Started</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#github-issues" data-ice="link">Github Issues</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#making-changes" data-ice="link">Making Changes</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/DEVELOPING.html"><a href="manual/DEVELOPING.html" data-ice="link">Developer&apos;s Guide</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/DEVELOPING.html"><a href="manual/DEVELOPING.html#running-the-code" data-ice="link">Running the Code</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/DEVELOPING.html"><a href="manual/DEVELOPING.html#creating-new-pages" data-ice="link">Creating New Pages</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/DEVELOPING.html"><a href="manual/DEVELOPING.html#creating-separate-bundles" data-ice="link">Creating Separate Bundles</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/DEVELOPING.html"><a href="manual/DEVELOPING.html#styling-components" data-ice="link">Styling Components</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="developer--39-s-guide">Developer&apos;s Guide</h1><h2 id="running-the-code">Running the Code</h2><p>Run <code>npm install</code> to install all project dependencies.</p>
+<p>Create a <code>config.json</code> file in the root of the project repository and populate it with configuration variables. Check <code>src/config.js</code> to see configuration variables used in the code. Also specified in <code>src/config.js</code> are defaults which can be overriden in <code>config.json</code>.</p>
+<pre><code class="lang-javascript"><code class="source-code prettyprint">// Example: config.json
+{
+  &quot;GOOGLE_MAPS_KEY&quot;: &quot;&lt;GOOGLE_MAPS_KEY&gt;&quot;,
+  &quot;COOKIE_SECRET&quot;: &quot;&lt;COOKIE_SECRET&gt;&quot;,
+  &quot;GOOGLE_CLIENT_ID&quot;: &quot;&lt;GOOGLE_CLIENT_ID&gt;&quot;,
+  &quot;GOOGLE_CLIENT_SECRET&quot;: &quot;&lt;GOOGLE_CLIENT_SECRET&gt;&quot;
+}</code>
+</code></pre>
+<p>Make sure that your MongoDB server is running. To check, run <code>mongo</code> in a terminal. This should start a MongoDB client and connect to your local server. If the command fails, open a new terminal and run <code>mongod</code> to run the database server.</p>
+<p>Run <code>npm start</code> and navigate to <code>http://localhost:8080</code> to see the public site or <code>http://localhost:8081</code> to see the admin site.</p>
+<h2 id="creating-new-pages">Creating New Pages</h2><p>Pages should be created in <code>src/admin_client/pages</code> and <code>src/client/pages</code> for admin and public pages, respectively. They should then be added to either <code>src/admin_client/routes.js</code> or <code>src/client/routes.js</code> to match a URL to the page.</p>
+<pre><code class="lang-jsx"><code class="source-code prettyprint">// Example: src/client/pages/NewPage.jsx
+
+import React from &apos;react&apos;;
+import withTitle from &apos;../hoc/withTitle&apos;;
+
+const NewPage = () =&gt; &lt;div&gt;This is a new page!&lt;/div&gt;;
+
+export default withTitle(&apos;New Page&apos;)(NewPage);</code>
+</code></pre>
+<pre><code class="lang-js"><code class="source-code prettyprint">// Example: src/client/routes.js
+
+const routes = [
+  {
+    component: MainTemplate,
+    routes: [
+      // other routes....
+
+      // This maps exactly the url &quot;/new_page&quot; to render the NewPage component
+      {
+        path: &apos;/new_page&apos;,
+        exact: true,
+        component: asyncComponent(path.resolve(__dirname, &apos;./pages/NewPage&apos;), () =&gt; import(&apos;./pages/NewPage&apos;)),
+      },
+
+      // other routes...
+    ]
+  },
+]</code>
+</code></pre>
+<h2 id="creating-separate-bundles">Creating Separate Bundles</h2><p>The build system will generate multiple JavaScript and CSS bundles. Usually it&apos;s best to create a separate bundle for each page so that the contents of that page are isolated. A separate bundle for <code>NewPage</code> allows that code to be loaded <em>only</em> when <code>NewPage</code> is rendered.</p>
+<p>To add additional bundles to the build system, they&apos;ll need to be added to <code>webpack.config.js</code>. Continuing with the example above, adding a bundle is done by adding the following to <code>publicEntry</code>:</p>
+<pre><code class="lang-js"><code class="source-code prettyprint">const publicEntry = {
+  // other entries...
+
+  &apos;pages/NewPage&apos;: &apos;client/pages/NewPage.jsx&apos;
+  // nameOfBundle: path/to/file
+};</code>
+</code></pre>
+<h2 id="styling-components">Styling Components</h2><p>For consistency, each new <code>.jsx</code> file should have a corresonding <code>.css</code> stylesheet. We&apos;re using PostCSS which allows some nice convenient extensions to CSS.</p>
+<pre><code class="lang-scss"><code class="source-code prettyprint">/* Example: nested styles */
+.box {
+  .title {
+    color: white;
+
+    &amp;:hover {
+      color: black;
+    }
+  }
+}
+
+/* Translates to:
+
+.box .title {
+  color: white;
+}
+
+.box .title:hover {
+  color: black;
+}
+
+*/</code>
+</code></pre>
+<p>The build systems also configures <em>local namespacing</em> for each stylesheet which is very different from traditional CSS. When apply styles, the class names are not applied as strings because there may be multiple stylesheets with the same class name.</p>
+<p><strong>Example: Conflicting class names</strong></p>
+<pre><code class="lang-jsx"><code class="source-code prettyprint">// Box1.jsx
+const Box1 = () =&gt; &lt;div className=&quot;box&quot;&gt;&lt;/div&gt;</code>
+</code></pre>
+<pre><code class="lang-css"><code class="source-code prettyprint">/* Box1.css */
+.box {
+  color: white;
+}</code>
+</code></pre>
+<pre><code class="lang-jsx"><code class="source-code prettyprint">// Box2.jsx
+const Box2 = () =&gt; &lt;div className=&quot;box&quot;&gt;&lt;/div&gt;</code>
+</code></pre>
+<pre><code class="lang-css"><code class="source-code prettyprint">/* Box2.css */
+.box {
+  color: black;
+}</code>
+</code></pre>
+<p><strong>CSS Modules</strong></p>
+<p>To avoid these problems, we&apos;re using <a href="https://github.com/css-modules/css-modules">CSS Modules</a>. The above code is instead written as follows:</p>
+<pre><code class="lang-jsx"><code class="source-code prettyprint">// Box1.jsx
+import styles from &apos;./Box1.css&apos;;
+
+const Box1 = () =&gt; &lt;div className={styles.box}&gt;&lt;/div&gt;</code>
+</code></pre>
+<pre><code class="lang-css"><code class="source-code prettyprint">/* Box1.css */
+.box {
+  color: white;
+}</code>
+</code></pre>
+<pre><code class="lang-jsx"><code class="source-code prettyprint">// Box2.jsx
+import styles from &apos;./Box2.css&apos;;
+
+const Box2 = () =&gt; &lt;div className={styles.box}&gt;&lt;/div&gt;</code>
+</code></pre>
+<pre><code class="lang-css"><code class="source-code prettyprint">/* Box2.css */
+.box {
+  color: black;
+}</code>
+</code></pre>
+<p>In each file, <code>styles.box</code> will be replaced with a unique class name to avoid conflicts.</p>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

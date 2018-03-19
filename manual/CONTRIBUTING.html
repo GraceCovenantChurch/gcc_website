@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../">
+  <title data-ice="title">Manual | gcc_website</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Website for Grace Covenant Church"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gcc_website"><meta property="twitter:description" content="Website for Grace Covenant Church"></head>
+<body class="layout-container manual-root" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div class="manual-toc-root">
+  
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html" data-ice="link">Contributor&apos;s Guide</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#getting-started" data-ice="link">Getting Started</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#github-issues" data-ice="link">Github Issues</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/CONTRIBUTING.html"><a href="manual/CONTRIBUTING.html#making-changes" data-ice="link">Making Changes</a></li>
+</ul>
+  </div>
+<div data-ice="manual">
+    <ul class="manual-toc">
+      
+    <li data-ice="manualNav" class="indent-h1" data-link="manual/DEVELOPING.html"><a href="manual/DEVELOPING.html" data-ice="link">Developer&apos;s Guide</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/DEVELOPING.html"><a href="manual/DEVELOPING.html#running-the-code" data-ice="link">Running the Code</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/DEVELOPING.html"><a href="manual/DEVELOPING.html#creating-new-pages" data-ice="link">Creating New Pages</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/DEVELOPING.html"><a href="manual/DEVELOPING.html#creating-separate-bundles" data-ice="link">Creating Separate Bundles</a></li>
+<li data-ice="manualNav" class="indent-h2" data-link="manual/DEVELOPING.html"><a href="manual/DEVELOPING.html#styling-components" data-ice="link">Styling Components</a></li>
+</ul>
+  </div>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="github-markdown" data-ice="content"><h1 id="contributor--39-s-guide">Contributor&apos;s Guide</h1><h2 id="getting-started">Getting Started</h2><p>All work should be done on a separate fork of the repository. To create a fork, go to the main repository <a href="https://github.com/GraceCovenantChurch/gcc_website">https://github.com/GraceCovenantChurch/gcc_website</a> and click &quot;fork&quot; at the top right of the screen to create a copy on your own Github.</p>
+<p>Then, clone your fork of the repository so you have a working copy on your machine:</p>
+<pre><code><code class="source-code prettyprint">git clone git@github.com:YOUR-USERNAME/gcc_website.git</code>
+</code></pre><p>You will now have a local copy of the code as well as a &quot;remote&quot; copy on Github at <code>git@github.com:YOUR-USERNAME/gcc_website.git</code>. By default, this remote is named <code>origin</code>. Next, you should add the GraceCovenantChurch repository as an additional remote so you can stay up to with the latest changes. This remote will be called &quot;upstream&quot;.</p>
+<pre><code><code class="source-code prettyprint">git remote add upstream git@github.com:GraceCovenantChurch/gcc_website.git</code>
+</code></pre><p>Here&apos;s Github&apos;s documentation on creating a fork: <a href="https://help.github.com/articles/fork-a-repo/">https://help.github.com/articles/fork-a-repo/</a></p>
+<h2 id="github-issues">Github Issues</h2><p>Every task that needs to be done will be listed as a Github issue. <a href="https://github.com/GraceCovenantChurch/gcc_website/issues">https://github.com/GraceCovenantChurch/gcc_website/issues</a>. Feel free to take and work on any issue you would like to tackle. Don&apos;t be afraid to comment and ask clarifying questions in the issue as well as post status updates so that you can get feedback early :)</p>
+<h2 id="making-changes">Making Changes</h2><p>All work should be done in a new branch off of the <code>develop</code> branch. To start a new feature or fix an issue, make sure sure your develop branch is up to date.</p>
+<p><strong>Fetch the upstream code</strong></p>
+<pre><code><code class="source-code prettyprint">git fetch upstream</code>
+</code></pre><p><strong>Switch your local repository to the <code>develop</code> branch</strong></p>
+<pre><code><code class="source-code prettyprint">git checkout develop</code>
+</code></pre><p><strong>Update your <code>develop</code> branch</strong></p>
+<pre><code><code class="source-code prettyprint">git merge upstream/develop</code>
+</code></pre><p><strong>Create a new branch for your feature</strong></p>
+<pre><code><code class="source-code prettyprint">git checkout -b my-new-feature</code>
+</code></pre><p><strong>Make your changes on your branch</strong></p>
+<p><strong>Make sure you pass all style checks and tests</strong>. <code>npm run test</code> and <code>npm run lint</code> should pass without errors. Warnings are okay.</p>
+<p><strong>Commit your changes</strong></p>
+<p><strong>Push your branch to your remote repository</strong></p>
+<pre><code><code class="source-code prettyprint">git push origin my-new-feature</code>
+</code></pre><p><strong>Create a pull request to the <code>develop</code> branch of the GraceCovenantChurch repository.</strong> <a href="https://help.github.com/articles/creating-a-pull-request/">https://help.github.com/articles/creating-a-pull-request/</a></p>
+<p>In your pull request, be sure to link to the issue that your code is for. Once your code is reviewed and approved, it will be merged into the <code>develop</code> branch! Good work!</p>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.4)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
