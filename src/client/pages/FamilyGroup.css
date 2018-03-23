@@ -1,29 +1,41 @@
 #familyGroup{
 	.pageContent{
-		margin: 50px 10%;
+		margin: 100px 20%;
 	}
 
 	.video{
 		margin: 30px auto;
-		width: 90%;
+		width: 100%;
 		height: 500px;
-		background: gray;
 	}
 
 	.signupTable{
-		border-top: 8px solid #F3F3F3;
-		border-bottom: 8px solid #F3F3F3;
-		padding: 0px 25px;
+		padding: 20px 0px;
 	}
 
 	.tableRow{
-		width: 90%;
 		margin: auto;
-		padding: 40px 0px;
-		border-bottom: 8px solid #F3F3F3;
-	}
+		padding: 20px 0px;
+		
+		.rowTitle {
+			font-weight: 500;
+			font-size: 26px;
+			color: #444444;
+		}
+		
+		.rowDays {
+			font-style: italic;
+			font-size: 14px;
+			color: #888888;
+			padding: 10px 0px;
+		}
 
-	.signupTable > :last-child{
-		border-bottom: none;
+		.rowDescription {
+			padding: 10px 0px;
+		}
+
+		.rowSignup {
+			padding: 10px 0px;
+		}
 	}
 }
