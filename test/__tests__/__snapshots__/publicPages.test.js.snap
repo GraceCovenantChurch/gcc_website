@@ -147,7 +147,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
           <div id=\\"FamilyGroup__familyGroup\\">
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
-                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/philly.jpg);background-attachment:local;background-position:center;background-size:cover\\"></div>
+                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/familygroup/fg_background.jpg);background-attachment:local;background-position:center;background-size:cover\\"></div>
               </div>
               <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
                 <div class=\\"Center__centered\\">
@@ -164,33 +164,30 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                 <br/>Family groups are divided between the Harvest (undergraduate), Crossroad (post-college), and International groups.
                 <br/>
                 <br/>Please watch the video below to learn more!</div>
-              <div class=\\"FamilyGroup__video\\">Video Placeholder Div</div>
+              <iframe class=\\"FamilyGroup__video\\" src=\\"https://www.youtube.com/embed/rvXubANV7RA\\" frameBorder=\\"0\\" title=\\"intro\\" allow=\\"autoplay; encrypted-media\\" allowfullscreen=\\"\\"></iframe>
               <div class=\\"FamilyGroup__signupTable\\">
                 <div class=\\"FamilyGroup__tableRow\\">
-                  <div class=\\"col-sm-4\\"><strong>College</strong>
-                    <br/>Mondays to Thursdays</div>
-                  <div class=\\"col-sm-8\\">Our College Family Groups meet once a week on Drexel, Moore, Penn, Temple, and USciences!
-                    <br/>
-                    <br/>
-                    <a href=\\"#\\">Signup here!</a>
+                  <div class=\\"FamilyGroup__rowTitle\\">College</div>
+                  <div class=\\"FamilyGroup__rowDays\\">Mondays to Thursdays</div>
+                  <div class=\\"FamilyGroup__rowDescription\\">Our College Family Groups meet once a week on Drexel, Moore, Penn, Temple, and USciences!</div>
+                  <div class=\\"FamilyGroup__rowSignup\\">
+                    <a href=\\"#\\">Sign Up &gt;</a>
                   </div>
                 </div>
                 <div class=\\"FamilyGroup__tableRow\\">
-                  <div class=\\"col-sm-4\\"><strong>Young Adults</strong>
-                    <br/>Mondays to Thursdays</div>
-                  <div class=\\"col-sm-8\\">Our Young Adult Family Groups have a mix of post-undergraduate, grad students, PhD&#x27;s, working adults, and young married couples.
-                    <br/>
-                    <br/>
-                    <a href=\\"#\\">Signup here!</a>
+                  <div class=\\"FamilyGroup__rowTitle\\">Young Adults</div>
+                  <div class=\\"FamilyGroup__rowDays\\">Mondays to Thursdays</div>
+                  <div class=\\"FamilyGroup__rowDescription\\">Our Young Adult Family Groups have a mix of post-undergraduate, grad students, PhD&#x27;s, working adults, and young married couples.</div>
+                  <div class=\\"FamilyGroup__rowSignup\\">
+                    <a href=\\"#\\">Sign Up &gt;</a>
                   </div>
                 </div>
                 <div class=\\"FamilyGroup__tableRow\\">
-                  <div class=\\"col-sm-4\\"><strong>International</strong>
-                    <br/>Thursdays</div>
-                  <div class=\\"col-sm-8\\">Description needed
-                    <br/>
-                    <br/>
-                    <a href=\\"#\\">Signup here!</a>
+                  <div class=\\"FamilyGroup__rowTitle\\">International</div>
+                  <div class=\\"FamilyGroup__rowDays\\">Thursdays</div>
+                  <div class=\\"FamilyGroup__rowDescription\\">Description needed</div>
+                  <div class=\\"FamilyGroup__rowSignup\\">
+                    <a href=\\"#\\">Sign Up &gt;</a>
                   </div>
                 </div>
               </div>
