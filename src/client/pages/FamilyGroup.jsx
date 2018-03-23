@@ -19,7 +19,7 @@ const FamilyGroupRow = props => (
       {props.description}
     </div>
     <div className={styles.rowSignup}>
-      <a href={props.signupLink}>Sign Up ></a>
+      <a href={props.signupLink}>Sign Up &gt;</a>
     </div>
   </div>
 );
@@ -55,12 +55,13 @@ const FamilyGroup = () => (
         {'Please watch the video below to learn more!'}
       </div>
 
-      <iframe className={styles.video}
-              // width="560" height="315"
-              src="https://www.youtube.com/embed/rvXubANV7RA"
-              frameborder="0" allow="autoplay; encrypted-media"
-              allowfullscreen>
-      </iframe>
+      <iframe
+        className={styles.video}
+        src="https://www.youtube.com/embed/rvXubANV7RA"
+        frameBorder="0"
+        title="intro"
+        allow="autoplay; encrypted-media"
+        allowFullScreen />
 
       <div className={styles.signupTable}>
         <FamilyGroupRow
