@@ -9,16 +9,17 @@ import styles from './FamilyGroup.css';
 
 const FamilyGroupRow = props => (
   <div className={styles.tableRow}>
-    <div className="col-sm-4">
-      <strong>{props.title}</strong>
-      <br />
+    <div className={styles.rowTitle}>
+      {props.title}
+    </div>
+    <div className={styles.rowDays}>
       {props.days}
     </div>
-    <div className="col-sm-8">
+    <div className={styles.rowDescription}>
       {props.description}
-      <br />
-      <br />
-      <a href={props.signupLink}>Signup here!</a>
+    </div>
+    <div className={styles.rowSignup}>
+      <a href={props.signupLink}>Sign Up ></a>
     </div>
   </div>
 );
@@ -36,7 +37,7 @@ const FamilyGroup = () => (
       <link rel="stylesheet" type="text/css" href="/public/assets/pages/FamilyGroup.bundle.css" />
     </Helmet>
 
-    <TitleBanner src="/static/images/home/philly.jpg">
+    <TitleBanner src="/static/images/familygroup/fg_background.jpg">
       Family Group
     </TitleBanner>
 
@@ -54,7 +55,12 @@ const FamilyGroup = () => (
         {'Please watch the video below to learn more!'}
       </div>
 
-      <div className={styles.video}>Video Placeholder Div</div>
+      <iframe className={styles.video}
+              // width="560" height="315"
+              src="https://www.youtube.com/embed/rvXubANV7RA"
+              frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen>
+      </iframe>
 
       <div className={styles.signupTable}>
         <FamilyGroupRow
