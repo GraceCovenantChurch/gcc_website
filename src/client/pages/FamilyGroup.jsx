@@ -32,7 +32,7 @@ FamilyGroupRow.propTypes = {
 };
 
 const FamilyGroup = () => (
-  <div id={styles.familyGroup}>
+  <div>
     <Helmet>
       <link rel="stylesheet" type="text/css" href="/public/assets/pages/FamilyGroup.bundle.css" />
     </Helmet>
