@@ -144,7 +144,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
           </div>
         </nav>
         <main>
-          <div id=\\"FamilyGroup__familyGroup\\">
+          <div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
                 <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/familygroup/fg_background.jpg);background-attachment:local;background-position:center;background-size:cover\\"></div>
