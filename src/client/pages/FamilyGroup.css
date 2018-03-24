@@ -1,41 +1,38 @@
-#familyGroup{
-	.pageContent{
-		margin: 100px 20%;
+.pageContent{
+	margin: 100px 20%;
+}
+
+.video{
+	margin: 30px auto;
+	width: 100%;
+	height: 500px;
+}
+
+.signupTable{
+	padding: 20px 0px;
+}
+
+.tableRow{
+	margin: auto;
+	padding: 20px 0px;
+	
+	.rowTitle {
+		font-weight: 500;
+		font-size: 26px;
+		color: #444444;
+	}
+	
+	.rowDays {
+		font-size: 14px;
+		color: #888888;
+		padding: 10px 0px;
 	}
 
-	.video{
-		margin: 30px auto;
-		width: 100%;
-		height: 500px;
+	.rowDescription {
+		padding: 10px 0px;
 	}
 
-	.signupTable{
-		padding: 20px 0px;
-	}
-
-	.tableRow{
-		margin: auto;
-		padding: 20px 0px;
-		
-		.rowTitle {
-			font-weight: 500;
-			font-size: 26px;
-			color: #444444;
-		}
-		
-		.rowDays {
-			font-style: italic;
-			font-size: 14px;
-			color: #888888;
-			padding: 10px 0px;
-		}
-
-		.rowDescription {
-			padding: 10px 0px;
-		}
-
-		.rowSignup {
-			padding: 10px 0px;
-		}
+	.rowSignup {
+		padding: 10px 0px;
 	}
 }
