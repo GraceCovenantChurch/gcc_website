@@ -9,7 +9,7 @@ import AspectRatio from '../components/AspectRatio';
 import styles from './Welcome.css';
 
 const Welcome = () => (
-  <div id={styles.welcome}>
+  <div>
     <Helmet>
       <link rel="stylesheet" type="text/css" href="public/assets/pages/welcome/Welcome.bundle.css" />
     </Helmet>
@@ -22,9 +22,9 @@ const Welcome = () => (
 
     <div className={styles.pageContent}>
       <div className="description">
-      {"We're glad you're exploring our University City Site! As you take a look around, we hope you catch a glimpse of what God is doing at GCC University City."}
-      <br /> <br />
-      {"If you like videos, check out our intro video:"}
+        {"We're glad you're exploring our University City Site! As you take a look around, we hope you catch a glimpse of what God is doing at GCC University City."}
+        <br /> <br />
+        {'If you like videos, check out our intro video:'}
       </div>
 
       <div className={styles.video}>
