@@ -1,4 +1,51 @@
-.pageContent{
-	margin: 100px 20%;
+.pageContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 125px;
 }
 
+.staffBox {
+    margin: 25px;
+    text-align: center;
+}
+
+.staffContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.staffRow {
+    display: flex;
+    justify-content: center;
+    /*width: 100%;*/
+}
+
+.staffDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.staffName {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #555;
+}
+
+.staffTitle {
+    font-size: 14px;
+    color: #AAA;
+}
+
+.staffImage {
+    background: #E3E3E3;
+    width: 250px;
+    height: 250px;
+
+    &:hover{
+        background: #D3D3D3;
+        cursor: pointer;
+    }
+}
