@@ -13,7 +13,7 @@ class StaffBox extends Component {
   render(){
     return(
       <div className={styles.staffBox}>
-        <div className={styles.staffImage}></div>
+        <img className={styles.staffImage} src={this.props.imageURL}></img>
         <div className={styles.staffName}>{this.props.name}</div>
         <div className={styles.staffTitle}>{this.props.title}</div>
       </div>
@@ -34,37 +34,37 @@ class Staff extends Component {
       {
         name: 'Pastor Young Kim',
         title: 'Senior Pastor',
-        imageURL: ''
+        imageURL: '/static/images/staff/youngkim.png'
       },
       {
         name: 'Pastor Kirt Thallman',
         title: 'University City Site Pastor',
-        imageURL: ''
+        imageURL: '/static/images/staff/kirtthallman.png'
       },
       {
         name: 'Chris Chen',
         title: 'University City College Staff',
-        imageURL: ''
+        imageURL: '/static/images/staff/chrischen.jpg'
       },
       {
         name: 'Bryan Mun',
         title: 'University City College Staff',
-        imageURL: ''
+        imageURL: '/static/images/staff/bryanmun.png'
       },
       {
         name: 'Josh Kwon',
         title: 'Mainline College and Young Adult Staff',
-        imageURL: ''
+        imageURL: '/static/images/staff/joshkwon.jpg'
       },
       {
         name: 'Bekah Lee',
         title: 'Mainline Children\'s Pastor',
-        imageURL: ''
+        imageURL: '/static/images/staff/bekahlee.png'
       },
       {
         name: 'Chris Kwon',
         title: 'University City Worship Leader',
-        imageURL: ''
+        imageURL: '/static/images/staff/chriskwon.jpg'
       }
     ]
 
