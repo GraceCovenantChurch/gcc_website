@@ -6,10 +6,6 @@ import styles from './Navbar.css';
 
 /** Navbar component */
 class Navbar extends Component {
-  /** Scroll threshold: 500 */
-  static get scrollThreshold() {
-    return 800;
-  }
 
   /** PropTypes */
   static get propTypes() {
@@ -42,12 +38,9 @@ class Navbar extends Component {
     /**
      * @type {Object}
      * @property {boolean} collapsed - Whether the navbar is open or closed
-     * @property {boolean} colllasing - Whether the navbar is opening or closing
+     * @property {boolean} collapsing - Whether the navbar is opening or closing
      * @property {boolean} in - true when the navbar is completely open
      * @property {string|number} height - The CSS height of the navbar drawer
-     * @property {boolean} atTop - true when the scroll position is at the top
-     * @property {boolean} hidden - true when the navbar is hidden above the page
-     * @property {boolean} hiding - true when the navbar hidden state is animating
      * @property {number} top - The CSS position of the navbar offset from the top of the page
      */
     this.state = {
@@ -55,9 +48,6 @@ class Navbar extends Component {
       collapsing: false,
       in: false,
       height: 'auto',
-      atTop: true,
-      hidden: true,
-      hiding: false,
       top: -100,
     };
 
@@ -67,18 +57,6 @@ class Navbar extends Component {
     this.open = this.open.bind(this);
     this.close = this.close.bind(this);
     this.toggle = this.toggle.bind(this);
-    this.handleScroll = this.handleScroll.bind(this);
-  }
-
-  /** Binds the {@link Navbar.handleScroll} handler */
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-    this.handleScroll();
-  }
-
-  /** Unbinds the {@link Navbar.handleScroll} handler */
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
   }
 
   /** Toggles the state of the navbar */
@@ -123,66 +101,12 @@ class Navbar extends Component {
     }
   }
 
-  /**
-   * Updates the state of the navbar based on scroll position.
-   * Becomes visible when scrolling past {@link Navbar.scrollThreshold}
-   * @listens {ScrollEvent}
-   */
-  handleScroll() {
-    this.setState({
-      atTop: window.scrollY < 200,
-    });
-
-    const hidden = this.state.hidden;
-    const shouldHide = window.scrollY < Navbar.scrollThreshold;
-    if (hidden !== shouldHide && !this.state.hiding) {
-      if (!shouldHide) {
-        this.setState({
-          hiding: true,
-          hidden: false,
-          top: -100,
-        }, () => {
-          setTimeout(() => {
-            this.setState({
-              top: 0,
-            }, () => {
-              this.setState({
-                hiding: false,
-              });
-            });
-          }, 100);
-        });
-      } else {
-        this.setState({
-          hiding: true,
-          top: 0,
-        }, () => {
-          setTimeout(() => {
-            this.setState({
-              top: -100,
-            }, () => {
-              setTimeout(() => {
-                this.setState({
-                  hiding: false,
-                  hidden: true,
-                });
-              }, 300);
-            });
-          }, 100);
-        });
-      }
-    }
-  }
-
   /** @return {ReactElement} */
   render() {
     return (
       <nav
         id={styles.mainNavbar}
-        className={classnames(`navbar navbar-expand-lg ${(this.props.className || '')}`, {
-          [styles.popup]: !this.state.atTop && !this.state.hidden,
-        })}
-        style={{ top: this.state.atTop ? '0px' : this.state.top }}
+        className={`navbar navbar-expand-lg ${(this.props.className || '')}`}
       >
         {this.props.brand && React.cloneElement(this.props.brand, {
           className: `navbar-brand ${styles['navbar-brand']}`,
