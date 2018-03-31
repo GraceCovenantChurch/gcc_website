@@ -511,13 +511,6 @@ exports[`Public ServerTest renders Welcome page 1`] = `
                 <br/>
                 <br/>
               </div>
-              <div class=\\"Welcome__infoLinks\\">
-                <div class=\\"row\\">
-                  <a class=\\"col-sm-4\\" href=\\"./beliefs\\">Learn Our Beliefs &gt;</a>
-                  <a class=\\"col-sm-4\\" href=\\"./staff\\">Meet Our Staff &gt;</a>
-                  <a class=\\"col-sm-4\\" href=\\"http://amichurches.com\\">AMI &gt;</a>
-                </div>
-              </div>
             </div>
           </div>
         </main>

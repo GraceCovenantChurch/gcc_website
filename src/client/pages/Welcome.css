@@ -12,15 +12,3 @@
 .maps {
     margin: 25px auto;
 }
-
-.infoLinks {
-    margin: 50px 10%;
-}
-
-a {
-    color: black;
-
-    &:hover{
-        color: black;
-    }
-}
