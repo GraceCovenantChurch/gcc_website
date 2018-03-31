@@ -63,20 +63,6 @@ const Welcome = () => (
         <br /> <br />
       </div>
 
-      <div className={styles.infoLinks}>
-        <div className="row">
-          <a className="col-sm-4" href="./beliefs">
-            Learn Our Beliefs &gt;
-          </a>
-          <a className="col-sm-4" href="./staff">
-            Meet Our Staff &gt;
-          </a>
-          <a className="col-sm-4" href="http://amichurches.com">
-            AMI &gt;
-          </a>
-        </div>
-      </div>
-
     </div>
   </div>
 );
