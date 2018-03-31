@@ -13,7 +13,9 @@ class StaffBox extends Component {
   render(){
     return(
       <div className={styles.staffBox}>
-        <Center horizontal vertical>{this.props.name}</Center>
+        <div className={styles.staffImage}></div>
+        <div className={styles.staffName}>{this.props.name}</div>
+        <div className={styles.staffTitle}>{this.props.title}</div>
       </div>
     );
   }
