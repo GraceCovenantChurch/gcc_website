@@ -33,11 +33,6 @@ exports[`Navbar component opens and closes 1`] = `
   <nav
     className="navbar navbar-expand-lg "
     id="Navbar__mainNavbar"
-    style={
-      Object {
-        "top": "0px",
-      }
-    }
   >
     <a
       className="navbar-brand Navbar__navbar-brand"
@@ -140,11 +135,6 @@ exports[`Navbar component opens and closes 2`] = `
   <nav
     className="navbar navbar-expand-lg "
     id="Navbar__mainNavbar"
-    style={
-      Object {
-        "top": "0px",
-      }
-    }
   >
     <a
       className="navbar-brand Navbar__navbar-brand"
@@ -247,11 +237,6 @@ exports[`Navbar component opens and closes 3`] = `
   <nav
     className="navbar navbar-expand-lg "
     id="Navbar__mainNavbar"
-    style={
-      Object {
-        "top": "0px",
-      }
-    }
   >
     <a
       className="navbar-brand Navbar__navbar-brand"
@@ -354,11 +339,6 @@ exports[`Navbar component opens and closes 4`] = `
   <nav
     className="navbar navbar-expand-lg "
     id="Navbar__mainNavbar"
-    style={
-      Object {
-        "top": "0px",
-      }
-    }
   >
     <a
       className="navbar-brand Navbar__navbar-brand"
@@ -461,11 +441,6 @@ exports[`Navbar component opens and closes 5`] = `
   <nav
     className="navbar navbar-expand-lg "
     id="Navbar__mainNavbar"
-    style={
-      Object {
-        "top": "0px",
-      }
-    }
   >
     <a
       className="navbar-brand Navbar__navbar-brand"
