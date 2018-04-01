@@ -6,7 +6,6 @@ import styles from './Navbar.css';
 
 /** Navbar component */
 class Navbar extends Component {
-
   /** PropTypes */
   static get propTypes() {
     return {
@@ -41,14 +40,12 @@ class Navbar extends Component {
      * @property {boolean} collapsing - Whether the navbar is opening or closing
      * @property {boolean} in - true when the navbar is completely open
      * @property {string|number} height - The CSS height of the navbar drawer
-     * @property {number} top - The CSS position of the navbar offset from the top of the page
      */
     this.state = {
       collapsed: true,
       collapsing: false,
       in: false,
       height: 'auto',
-      top: -100,
     };
 
     /** @type {HTMLElement} */
