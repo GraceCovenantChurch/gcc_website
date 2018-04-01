@@ -355,7 +355,7 @@ exports[`Public ServerTest renders Home page 1`] = `
               <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
                 <div class=\\"Center__centered\\">
                   <div class=\\"BannerBibleVerse__bibleVerse\\" style=\\"color:black\\">
-                    <h1>March</h1>
+                    <h1>February</h1>
                     <h3>Whom have I in heaven but you? And there is nothing on earth that I desire besides you. My flesh and my heart may fail, but God is the strength of my heart and my portion forever.</h3>
                     <h4>Psalm 73:25-26</h4>
                   </div>
