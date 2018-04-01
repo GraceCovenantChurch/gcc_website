@@ -32,9 +32,10 @@ deploy:
 - provider: s3
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
-  local_dir: dpl_cd_upload
+  local_dir: deploy_upload
   skip_cleanup: true
-  on: staging
+  on:
+    branch: staging
     repo: GraceCovenantChurch/gcc_website
   bucket: s3.web.staging
   region: us-east-1
