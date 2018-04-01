@@ -4,8 +4,11 @@ import request from 'supertest-as-promised';
 import pretty from 'pretty';
 
 import { withPublicServer } from '../serverSetup';
+import { withDate } from '../mocks';
 
 describe('Public ServerTest', () => {
+  withDate('2018-02-28T04:41:20');
+
   let server = withPublicServer();
 
   it('renders Home page', () =>
