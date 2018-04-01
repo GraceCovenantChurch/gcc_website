@@ -16,10 +16,11 @@ exports[`Public ServerTest renders 404 page 1`] = `
   <body>
     <div id=\\"app\\">
       <div>
-        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-transparent navbar-dark Navbar__navbar-transparent\\" style=\\"top:0px\\">
+        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-light Navbar__navbar-light\\">
           <a class=\\"navbar-brand Navbar__navbar-brand\\" href=\\"/\\">
             <h1 class=\\"sr-only\\">Grace Covenant Church</h1>
-            <img id=\\"logo\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-light\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-dark\\" src=\\"/static/images/gcclogo-black.png\\" alt=\\"Grace Covenant Church\\" />
           </a>
           <button class=\\"navbar-toggler Navbar__navbar-toggler\\" type=\\"button\\"><span class=\\"navbar-toggler-icon Navbar__navbar-toggler-icon\\"></span></button>
           <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
@@ -111,10 +112,11 @@ exports[`Public ServerTest renders Family Group page 1`] = `
   <body>
     <div id=\\"app\\">
       <div>
-        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-transparent navbar-dark Navbar__navbar-transparent\\" style=\\"top:0px\\">
+        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-light Navbar__navbar-light\\">
           <a class=\\"navbar-brand Navbar__navbar-brand\\" href=\\"/\\">
             <h1 class=\\"sr-only\\">Grace Covenant Church</h1>
-            <img id=\\"logo\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-light\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-dark\\" src=\\"/static/images/gcclogo-black.png\\" alt=\\"Grace Covenant Church\\" />
           </a>
           <button class=\\"navbar-toggler Navbar__navbar-toggler\\" type=\\"button\\"><span class=\\"navbar-toggler-icon Navbar__navbar-toggler-icon\\"></span></button>
           <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
@@ -254,10 +256,11 @@ exports[`Public ServerTest renders Home page 1`] = `
   <body>
     <div id=\\"app\\">
       <div>
-        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-transparent navbar-dark Navbar__navbar-transparent\\" style=\\"top:0px\\">
+        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-light Navbar__navbar-light\\">
           <a class=\\"navbar-brand Navbar__navbar-brand\\" href=\\"/\\">
             <h1 class=\\"sr-only\\">Grace Covenant Church</h1>
-            <img id=\\"logo\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-light\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-dark\\" src=\\"/static/images/gcclogo-black.png\\" alt=\\"Grace Covenant Church\\" />
           </a>
           <button class=\\"navbar-toggler Navbar__navbar-toggler\\" type=\\"button\\"><span class=\\"navbar-toggler-icon Navbar__navbar-toggler-icon\\"></span></button>
           <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
@@ -421,10 +424,11 @@ exports[`Public ServerTest renders Welcome page 1`] = `
   <body>
     <div id=\\"app\\">
       <div>
-        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-transparent navbar-dark Navbar__navbar-transparent\\" style=\\"top:0px\\">
+        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-light Navbar__navbar-light\\">
           <a class=\\"navbar-brand Navbar__navbar-brand\\" href=\\"/\\">
             <h1 class=\\"sr-only\\">Grace Covenant Church</h1>
-            <img id=\\"logo\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-light\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-dark\\" src=\\"/static/images/gcclogo-black.png\\" alt=\\"Grace Covenant Church\\" />
           </a>
           <button class=\\"navbar-toggler Navbar__navbar-toggler\\" type=\\"button\\"><span class=\\"navbar-toggler-icon Navbar__navbar-toggler-icon\\"></span></button>
           <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
