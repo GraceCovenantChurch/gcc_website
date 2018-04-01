@@ -1,14 +1,14 @@
-#welcome {
-
+.pageContent {
+    margin: 100px 20%;
 }
 
-#welcome .pageContent {
-	margin: 50px 10%;
-}
-
-#welcome .video {
+.video {
 	margin: 30px auto;
-	width: 90%;
+	width: 100%;
 	height: 500px;
 	background: gray;
+}
+
+.maps {
+    margin: 25px auto;
 }
