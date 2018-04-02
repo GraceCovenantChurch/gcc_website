@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /home/gcc_website
-npm start
+npm run serve
