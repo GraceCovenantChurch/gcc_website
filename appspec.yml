@@ -1,0 +1,16 @@
+version 0.0
+
+os: linux
+
+files:
+  - source: ./
+    destination: /home/gcc_website/
+hooks:
+  AfterInstall:
+    - location: scripts/deploy/npm-install.sh
+      runas: root
+      timeout: 300
+  ApplicationStart:
+    - location: scripts/deploy/npm-start.sh
+      runas: root
+      timeout: 300
