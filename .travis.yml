@@ -11,14 +11,16 @@ cache:
     - "bower_components"
 
 script:
-  - zip -r latest *
-  - mkdir -p deploy_upload
-  - mv latest.zip deploy_upload/latest.zip
   - npm run lint
   - npm run babel
   - npm run webpack
   - npm run test
   - npm run esdoc
+
+before_deploy:
+  - zip -r latest *
+  - mkdir -p deploy_upload
+  - mv latest.zip deploy_upload/latest.zip
 
 deploy:
 - provider: pages
