@@ -18,7 +18,7 @@ script:
   - npm run esdoc
 
 before_deploy:
-  - zip -r latest *
+  - zip -r latest * > output.log
   - mkdir -p deploy_upload
   - mv latest.zip deploy_upload/latest.zip
 
