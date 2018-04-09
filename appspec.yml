@@ -8,9 +8,9 @@ files:
 hooks:
   AfterInstall:
     - location: scripts/deploy/npm-install.sh
-      runas: root
+      runas: ec2-user
       timeout: 300
   ApplicationStart:
     - location: scripts/deploy/npm-start.sh
-      runas: root
+      runas: ec2-user
       timeout: 300
