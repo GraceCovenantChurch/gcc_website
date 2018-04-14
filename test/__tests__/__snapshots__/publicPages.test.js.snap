@@ -458,7 +458,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
           </div>
         </nav>
         <main>
-          <div id=\\"Welcome__welcome\\">
+          <div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
                 <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/welcome/welcome_background.jpg);background-attachment:local;background-position:center;background-size:cover\\"></div>
@@ -474,12 +474,16 @@ exports[`Public ServerTest renders Welcome page 1`] = `
               </div>
             </div>
             <div class=\\"Welcome__pageContent\\">
-              <div class=\\"description\\">Our doors are wide open to people from all backgrounds. Whether you are a spiritual seeker just beginning to ask questions about God or a committed Christian wanting to deepen your faith, Grace Covenant Church is a place you can call home
-                and find spiritual help, hope, and encouragement. Wherever you are in your spiritual journey, we invite you to discover GCC—and discover for yourself God’s wonderful love and plan for your life!</div>
+              <div class=\\"description\\">We&#x27;re glad you&#x27;re exploring our University City Site! As you take a look around, we hope you catch a glimpse of what God is doing at GCC University City.
+                <br/>
+                <br/>If you like videos, check out our intro video:</div>
               <div class=\\"Welcome__video\\">
                 <iframe width=\\"100%\\" height=\\"100%\\" title=\\"Grace Covenant Church Intro Video\\" src=\\"https://www.youtube.com/embed/5M8H4xhSPWc\\" frameBorder=\\"0\\" allowfullscreen=\\"\\"></iframe>
               </div>
-              <div class=\\"description\\">What makes us unique? It isn’t our beliefs. We affirm the same basic Christian doctrines that have been a part of the Church for hundreds of years. Rather, we are committed to presenting these truths in a practical, relevant, contemporary,
+              <div class=\\"description\\">Our doors are wide open to people from all backgrounds. Whether you are a spiritual seeker just beginning to ask questions about God or a committed Christian wanting to deepen your faith, Grace Covenant Church is a place you can call home
+                and find spiritual help, hope, and encouragement. Wherever you are in your spiritual journey, we invite you to discover GCC—and discover for yourself God’s wonderful love and plan for your life!
+                <br/>
+                <br/>What makes us unique? It isn’t our beliefs. We affirm the same basic Christian doctrines that have been a part of the Church for hundreds of years. Rather, we are committed to presenting these truths in a practical, relevant, contemporary,
                 and loving manner. Our desire is to introduce you to Jesus Christ and to help you grow and become a kingdom worker. We want to help you to become a kingdom worker who can influence the world around you with the love of Jesus Christ.
                 <br/>
                 <br/>Our church is comprised of a network of “family groups“; small group settings where honest friendships, Bible study, constant prayer, and compassionate care are emphasized. It is within these dynamic family groups where the core of our
@@ -489,21 +493,27 @@ exports[`Public ServerTest renders Welcome page 1`] = `
                 <br/>
                 <br/>Our Sunday Services and Friday Night Large Groups are typically located at Meyerson Hall Room B-1, 3401 Walnut Street Philadelphia, PA 19104. We oftentimes meet at Ralston House, 3615 Chestnut Street Philadelphia, PA 19104, as well. Keep
                 an eye out for Grace Covenant Church signs and our welcomers to find us!</div>
-              <div class=\\"row\\">
-                <div class=\\"col-sm-6\\">
-                  <div style=\\"width:100%;position:relative;padding-top:75%\\">
-                    <div style=\\"position:absolute;top:0;left:0;bottom:0;right:0\\">
-                      <iframe frameBorder=\\"0\\" title=\\"Meyerson Hall\\" src=\\"https://www.google.com/maps/embed/v1/place?q=Meyerson+Hall,+Philadelphia,+PA,+United+States&amp;key=GOOGLE_MAPS_KEY\\" style=\\"width:100%;height:100%\\"></iframe>
+              <div class=\\"Welcome__maps\\">
+                <div class=\\"row\\">
+                  <div class=\\"col-sm-6\\">
+                    <div style=\\"width:100%;position:relative;padding-top:75%\\">
+                      <div style=\\"position:absolute;top:0;left:0;bottom:0;right:0\\">
+                        <iframe frameBorder=\\"0\\" title=\\"Meyerson Hall\\" src=\\"https://www.google.com/maps/embed/v1/place?q=Meyerson+Hall,+Philadelphia,+PA,+United+States&amp;key=GOOGLE_MAPS_KEY\\" style=\\"width:100%;height:100%\\"></iframe>
+                      </div>
+                    </div>
+                  </div>
+                  <div class=\\"col-sm-6\\">
+                    <div style=\\"width:100%;position:relative;padding-top:75%\\">
+                      <div style=\\"position:absolute;top:0;left:0;bottom:0;right:0\\">
+                        <iframe frameBorder=\\"0\\" title=\\"Ralston House\\" src=\\"https://www.google.com/maps/embed/v1/place?q=Ralston+House,+Chestnut+Street,+Philadelphia,+PA,+United+States&amp;key=GOOGLE_MAPS_KEY\\" style=\\"width:100%;height:100%\\"></iframe>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class=\\"col-sm-6\\">
-                  <div style=\\"width:100%;position:relative;padding-top:75%\\">
-                    <div style=\\"position:absolute;top:0;left:0;bottom:0;right:0\\">
-                      <iframe frameBorder=\\"0\\" title=\\"Ralston House\\" src=\\"https://www.google.com/maps/embed/v1/place?q=Ralston+House,+Chestnut+Street,+Philadelphia,+PA,+United+States&amp;key=GOOGLE_MAPS_KEY\\" style=\\"width:100%;height:100%\\"></iframe>
-                    </div>
-                  </div>
-                </div>
+              </div>
+              <div class=\\"description\\">If you would like more information about the church, please continue looking through this website or contact us at web@gracecovenant.net.
+                <br/>
+                <br/>
               </div>
             </div>
           </div>
