@@ -12,7 +12,7 @@ import styles from './Staff.css';
 class StaffBox extends Component {
   render(){
     return(
-      <div className={styles.staffBox}>
+      <div className={`${styles.staffBox} ${styles["box" + this.props.index]}`}>
         <img className={styles.staffImage} src={this.props.imageURL}></img>
         <div className={styles.staffName}>{this.props.name}</div>
         <div className={styles.staffTitle}>{this.props.title}</div>
@@ -34,37 +34,44 @@ class Staff extends Component {
       {
         name: 'Pastor Young Kim',
         title: 'Senior Pastor',
-        imageURL: '/static/images/staff/youngkim.png'
+        imageURL: '/static/images/staff/youngkim.png',
+        description: 'I\'m Pastor Young!!!!'
       },
       {
         name: 'Pastor Kirt Thallman',
         title: 'University City Site Pastor',
-        imageURL: '/static/images/staff/kirtthallman.png'
+        imageURL: '/static/images/staff/kirtthallman.png',
+        description: 'I\'m Pastor Kirt!!!!'
       },
       {
         name: 'Chris Chen',
         title: 'University City College Staff',
-        imageURL: '/static/images/staff/chrischen.jpg'
+        imageURL: '/static/images/staff/chrischen.jpg',
+        description: 'I\'m Pastor Chris!!!!'
       },
       {
         name: 'Bryan Mun',
         title: 'University City College Staff',
-        imageURL: '/static/images/staff/bryanmun.png'
+        imageURL: '/static/images/staff/bryanmun.png',
+        description: 'I\'m Pastor Bryan!!!!'
       },
       {
         name: 'Josh Kwon',
         title: 'Mainline College and Young Adult Staff',
-        imageURL: '/static/images/staff/joshkwon.jpg'
+        imageURL: '/static/images/staff/joshkwon.jpg',
+        description: 'I\'m Pastor Josh!!!!'
       },
       {
         name: 'Bekah Lee',
         title: 'Mainline Children\'s Pastor',
-        imageURL: '/static/images/staff/bekahlee.png'
+        imageURL: '/static/images/staff/bekahlee.png',
+        description: 'I\'m Pastor Bekah!!!!'
       },
       {
         name: 'Chris Kwon',
         title: 'University City Worship Leader',
-        imageURL: '/static/images/staff/chriskwon.jpg'
+        imageURL: '/static/images/staff/chriskwon.jpg',
+        description: 'I\'m Chris Kwon!!!!'
       }
     ]
 
@@ -79,13 +86,19 @@ class Staff extends Component {
         </TitleBanner>
 
         <div className={styles.pageContent}>
-          {staffList.map(staffObj => (
-            <StaffBox
-            name={staffObj.name}
-            title={staffObj.title}
-            imageURL={staffObj.imageURL}
-            />
+          {staffList.map((staffObj, index) => (
+              <StaffBox
+              index={index}
+              name={staffObj.name}
+              title={staffObj.title}
+              imageURL={staffObj.imageURL}
+              />
           ))}
+          {staffList.map((staffObj, index) => (
+              <div className={`${styles.staffDescription} ${styles["desc1"]}`}>
+                {staffObj.description}
+              </div>
+          ))}         
         </div>
       </div>
     );

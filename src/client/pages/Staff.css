@@ -13,6 +13,11 @@
 
     @media(min-width: 900px){
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+        "box0 box1 box2"
+        /*"desc1" "desc1" "desc1"*/
+        "box3 box4 box5"
+        "box6 box7 box8"
     }
 }
 
@@ -38,3 +43,48 @@
         cursor: pointer;
     }
 }
+
+.box0{
+    grid-area: box0;
+}
+
+.box1{
+    grid-area: box1;
+}
+
+.box2{
+    grid-area: box2;
+}
+
+.box3{
+    grid-area: box3;
+}
+
+.box4{
+    grid-area: box4;
+}
+
+.box5{
+    grid-area: box5;
+}
+
+.box6{
+    grid-area: box6;
+}
+
+.box7{
+    grid-area: box7;
+}
+
+.box8{
+    grid-area: box8;
+}
+/*
+.desc1{
+    grid-area: desc1;
+}*/
+
+/*
+.faded {
+    opacity: 0.5;
+}*/
