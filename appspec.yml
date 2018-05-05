@@ -18,4 +18,9 @@ hooks:
   ApplicationStart:
     - location: scripts/deploy/npm-start.sh
       runas: ec2-user
-      timeout: 300
+      timeout: 60
+  ValidateService:
+    - location: scripts/deploy/validate-service.sh
+      runas: root
+      timeout: 180
+
