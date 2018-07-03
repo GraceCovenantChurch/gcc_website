@@ -5,12 +5,15 @@ const nconf = require('nconf');
 const mockConfig = {
   GOOGLE_MAPS_KEY: 'GOOGLE_MAPS_KEY',
   COOKIE_SECRET: 'COOKIE_SECRET',
+  MONGODB_URI: 'mongodb://localhost:27017/gccweb_test',
 };
 
 // secret config needed for testing
 const secretConfig = {
   GOOGLE_CLIENT_ID: 'GOOGLE_CLIENT_ID',
   GOOGLE_CLIENT_SECRET: 'GOOGLE_CLIENT_SECRET',
+  AWS_ACCESS_KEY_ID: 'AWS_ACCESS_KEY_ID',
+  AWS_SECRET_ACCESS_KEY: 'AWS_SECRET_ACCESS_KEY',
 };
 
 const defaultConfig = {
@@ -20,6 +23,8 @@ const defaultConfig = {
   PUBLIC_SERVER_HOST: 'localhost:8080',
   ADMIN_SERVER_HOST: 'localhost:8081',
   MONGODB_URI: 'mongodb://localhost:27017/gccweb',
+  AWS_REGION: 'us-east-1',
+  AWS_ASSET_BUCKET: 's3.web.staging',
 };
 
 nconf

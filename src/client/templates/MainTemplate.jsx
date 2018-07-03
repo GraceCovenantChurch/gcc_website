@@ -16,7 +16,8 @@ const MainTemplate = ({ route }) => (
       brand={
         <Link to="/">
           <h1 className="sr-only">Grace Covenant Church</h1>
-          <img id="logo" src="/static/images/gcclogo.png" alt="Grace Covenant Church" />
+          <img className={`${navStyles['logo-light']}`} src="/static/images/gcclogo.png" alt="Grace Covenant Church" />
+          <img className={`${navStyles['logo-dark']}`} src="/static/images/gcclogo-black.png" alt="Grace Covenant Church" />
         </Link>
       }
       links={[
@@ -28,7 +29,7 @@ const MainTemplate = ({ route }) => (
         <Link to="/pages">Multimedia</Link>,
         <Link to="/pages">Events</Link>,
       ]}
-      className={`navbar-transparent navbar-dark ${navStyles['navbar-transparent']}`}
+      className={`navbar-light ${navStyles['navbar-light']}`}
     />
     <main>{renderRoutes(route.routes)}</main>
     <Footer />
