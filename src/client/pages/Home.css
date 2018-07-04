@@ -9,30 +9,6 @@
   color: 'white';
 }
 
-.subtitle h3, h4 {
-  padding-bottom: 30px;
-  /*font-family: 'Helvetica Neue';
-  font-weight: normal;*/
-}
-
-/**
-* Banner
-*/
-.infoButton {
-  background-color: Transparent;
-  color: white;
-  border: 1px solid white;
-  height: 50px;
-  width: 200px;
-  font-size: 18px;
-  font-weight: 300;
-
-  &:hover{
-    background: rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-  }
-}
-
 .infoSection {
   padding: 120px 0;
   display: flex;
@@ -56,7 +32,36 @@
   font-size: 24px;
 }
 
-.infoSectionLink {
+.infoSectionLink, .infoSectionLink:hover {
   margin-top: 30px;
   color: gray;
 }
+
+
+.fgSection {
+  margin: 0 10px;
+  height: 75%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.fgSectionHeader {
+  margin-top: 20px;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.fgSectionSubtitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.fgSectionLink, .fgSectionLink:hover {
+  font-size: 18px;
+  color: white;
+}
+
+
