@@ -6,10 +6,8 @@ import styles from './EventBox.css';
 
 const EventBox = props => (
   <div className={styles.eventBox}>
-    <Center vertical horizontal>
       <div className={styles.eventName}>{props.eventName}</div>
       <div className={styles.eventDate}>{props.eventDate}</div>
-    </Center>
   </div>
 );
 
