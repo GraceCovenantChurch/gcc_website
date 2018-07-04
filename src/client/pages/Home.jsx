@@ -10,7 +10,6 @@ import withTitle from '../hoc/withTitle';
 import BackgroundImage from '../components/BackgroundImage';
 import Jumbotron from '../components/Jumbotron';
 import Banner from '../components/Banner';
-import BannerBibleVerse from '../components/BannerBibleVerse';
 import EventBox from '../components/EventBox';
 import { fetchModelData } from '../modules/modelData';
 
@@ -23,7 +22,7 @@ class Home extends Component {
   }
 
   render() {
-    const titleSection = 
+    const titleSection = (
       <Jumbotron style={{ height: '100vh' }}>
           <BackgroundImage
             src="/static/images/home/philly.jpg"
@@ -45,9 +44,11 @@ class Home extends Component {
               </h3>
             </div>
           </div>
-        </Jumbotron>
+          <a className={styles.titleSectionLink} href="/welcome">{`Learn More >`}</a>
+      </Jumbotron>
+    );
 
-    const infoSection = 
+    const infoSection = (
       <div className={styles.infoSection}>
         <div className={styles.infoSectionHeader}>
           Service Location and Times
@@ -60,12 +61,12 @@ class Home extends Component {
           Meyerson Hall B-1, 210 South 34th Street <br />
           Philadelphia, PA 19104
         </div>
-        <a className={styles.infoSectionLink} href="/welcome">Learn More > </a>
+        <a className={styles.infoSectionLink} href="/welcome">{`Learn More >`}</a>
       </div>
+    );
 
-    const familyGroupSection = 
+    const familyGroupSection = (
       <Banner src="/static/images/home/familygroup.jpg">
-
         <div className={styles.fgSection}>
           <div>
             Community
@@ -74,39 +75,42 @@ class Home extends Component {
             Family Groups
           </div>
           <div className={styles.fgSectionSubtitle}>
-              You haven't checked out GCC unless <br/>
+              You haven't checked out GCC unless <br />
               you've checked out our family groups.
           </div>
-          <a className={styles.fgSectionLink} href="/familygroup">Sign Up Here ></a>
-          </div>
+          <a className={styles.fgSectionLink} href="/familygroup">{`Sign Up Here >`}</a>
+        </div>
       </Banner>
+    );
 
     let events = null;
-    if(this.props.data.length !== 0) {
-      events = 
+    if (this.props.data.length !== 0) {
+      events = (
         <div className={styles.eventSectionEvents}>
           {this.props.data.map(eventObj => (
-          <EventBox
-            eventName={eventObj.title}
-            eventDate={new Date(eventObj.startDate).toLocaleDateString()}
-            key={eventObj._id}
-          />
-
-        ))}
+            <EventBox
+              eventName={eventObj.title}
+              eventDate={new Date(eventObj.startDate).toLocaleDateString()}
+              key={eventObj._id}
+            />
+          ))}
         </div>
+      );
     } else {
-      events = 
+      events = (
         <div className={styles.eventSectionEventsError}>
           There seem to be no upcoming events
         </div>
+      );
     }
 
-    const eventSection = 
+    const eventSection = (
       <div className={styles.eventSection}>
-        <div className={styles.eventSectionSubtitle}> Upcoming Events </div>
-          {events}
-        <a className={styles.eventSectionSubtitle} href="/events">See All Events ></a>
+        <div className={styles.eventSectionSubtitle}>Upcoming Events</div>
+        {events}
+        <a className={styles.eventSectionSubtitle} href="/events">{`See All Events >`}</a>
       </div>
+    );
 
     return (
       <div id="home">
@@ -117,7 +121,6 @@ class Home extends Component {
         {infoSection}
         {familyGroupSection}
         {eventSection}
-        <BannerBibleVerse />
       </div>
     );
   }
@@ -137,15 +140,13 @@ const mapStateToProps = (state) => {
   return {
     data: modelData ? modelData.ids.map(id => modelData.__DB__[id]) : [],
   };
-}
+};
 
-const mapDispatchToProps = (dispatch) => (
-  {
-    fetchData() {
-      return dispatch(fetchModelData('Event'));
-    },
-  }
-)
+const mapDispatchToProps = (dispatch) => ({
+  fetchData() {
+    return dispatch(fetchModelData('Event'));
+  },
+});
 
 const HomePage = compose(connect(mapStateToProps, mapDispatchToProps), withTitle(), withRouter)(Home);
 
