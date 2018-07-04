@@ -78,7 +78,6 @@ class Home extends Component {
       </Banner>
     );
 
-
     let events = null;
     if (this.props.data.length !== 0) {
       events = (
