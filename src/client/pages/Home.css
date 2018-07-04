@@ -37,7 +37,6 @@
   color: gray;
 }
 
-
 .fgSection {
   margin: 0 10px;
   height: 75%;
@@ -64,4 +63,22 @@
   color: white;
 }
 
+.eventSection {
+  padding: 80px 0;
+  text-align: center;
+}
 
+.eventSectionSubtitle, .eventSectionSubtitle:hover {
+  color: gray;
+  font-size: 18px;
+}
+
+.eventSectionEvents {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.eventSectionEventsError {
+  font-size: 36px;
+}

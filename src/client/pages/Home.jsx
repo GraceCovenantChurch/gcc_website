@@ -81,26 +81,32 @@ class Home extends Component {
           </div>
       </Banner>
 
-    const eventSection = 
-      <Banner src="/static/images/home/events.jpg">
-        <h1 className={templateStyles.header}>
-          Events
-        </h1>
-        <div className={styles.subtitle}>
+    let events = null;
+    if(this.props.data.length !== 0) {
+      events = 
+        <div className={styles.eventSectionEvents}>
           {this.props.data.map(eventObj => (
-            <EventBox
-              eventName={eventObj.title}
-              eventDate={new Date(eventObj.startDate).toLocaleDateString()}
-              key={eventObj._id}
-            />
-          ))}
+          <EventBox
+            eventName={eventObj.title}
+            eventDate={new Date(eventObj.startDate).toLocaleDateString()}
+            key={eventObj._id}
+          />
+
+        ))}
         </div>
-        <div className="subtitle">
-          <a href="/events">
-            <button className={styles.infoButton}>More Info</button>
-          </a>
+    } else {
+      events = 
+        <div className={styles.eventSectionEventsError}>
+          There seem to be no upcoming events
         </div>
-      </Banner>
+    }
+
+    const eventSection = 
+      <div className={styles.eventSection}>
+        <div className={styles.eventSectionSubtitle}> Upcoming Events </div>
+          {events}
+        <a className={styles.eventSectionSubtitle} href="/events">See All Events ></a>
+      </div>
 
     return (
       <div id="home">
