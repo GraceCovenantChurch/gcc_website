@@ -23,13 +23,8 @@ class Home extends Component {
   }
 
   render() {
-    return (
-      <div id="home">
-        <Helmet>
-          <link rel="stylesheet" type="text/css" href="/public/assets/pages/Home.bundle.css" />
-        </Helmet>
-
-        <Jumbotron style={{ height: '100vh' }}>
+    const titleSection = 
+      <Jumbotron style={{ height: '100vh' }}>
           <BackgroundImage
             src="/static/images/home/philly.jpg"
             backgroundSize="cover"
@@ -52,59 +47,67 @@ class Home extends Component {
           </div>
         </Jumbotron>
 
-        <Banner src="/static/images/home/welcome.jpg" topMargin={30}>
-          <h1 className={templateStyles.header}>
-            Join Us In Worship
-          </h1>
-          <div className={styles.subtitle}>
-            <h3>
-              Sunday Service 11:15AM <br />
-              Friday Night Live 7:30PM
-            </h3>
-            <h4>
-              Meyerson Hall B-1, 210 South 34th Street <br />
-              Philadelphia, PA 19104
-            </h4>
-            <a href="/welcome">
-              <button className={styles.infoButton}>More Info</button>
-            </a>
-          </div>
-        </Banner>
+    const infoSection = 
+      <div className={styles.infoSection}>
+        <div className={styles.infoSectionHeader}>
+          Service Location and Times
+        </div>
+        <div className={styles.infoSectionTimes}>
+            Sunday Service: 11:15 AM <br />
+            Friday Night Live: 7:30 PM
+        </div>
+        <div className={styles.infoSectionLocation}>
+          Meyerson Hall B-1, 210 South 34th Street <br />
+          Philadelphia, PA 19104
+        </div>
+        <a className={styles.infoSectionLink} href="/welcome">Learn More > </a>
+      </div>
 
-        <Banner src="/static/images/home/familygroup.jpg" topMargin={30}>
-          <h1 className={templateStyles.header}>
-            Family Group
-          </h1>
-          <div className={styles.subtitle}>
-            <h3>
-              You haven&amp;t checked out GCC if you haven&amp;t checked out our family groups.
-            </h3>
-            <a href="/familygroup">
-              <button className={styles.infoButton}>Sign Up Here</button>
-            </a>
-          </div>
-        </Banner>
+    const familyGroupSection = 
+      <Banner src="/static/images/home/familygroup.jpg" topMargin={30}>
+        <h1 className={templateStyles.header}>
+          Family Group
+        </h1>
+        <div className={styles.subtitle}>
+          <h3>
+            You haven't checked out GCC if you haven't checked out our family groups.
+          </h3>
+          <a href="/familygroup">
+            <button className={styles.infoButton}>Sign Up Here</button>
+          </a>
+        </div>
+      </Banner>
 
-        <Banner src="/static/images/home/events.jpg" topMargin={20}>
-          <h1 className={templateStyles.header}>
-            Events
-          </h1>
-          <div className={styles.subtitle}>
-            {this.props.data.map(eventObj => (
-              <EventBox
-                eventName={eventObj.title}
-                eventDate={new Date(eventObj.startDate).toLocaleDateString()}
-                key={eventObj._id}
-              />
-            ))}
-          </div>
-          <div className="subtitle">
-            <a href="/events">
-              <button className={styles.infoButton}>More Info</button>
-            </a>
-          </div>
-        </Banner>
+    const eventSection = 
+      <Banner src="/static/images/home/events.jpg" topMargin={20}>
+        <h1 className={templateStyles.header}>
+          Events
+        </h1>
+        <div className={styles.subtitle}>
+          {this.props.data.map(eventObj => (
+            <EventBox
+              eventName={eventObj.title}
+              eventDate={new Date(eventObj.startDate).toLocaleDateString()}
+              key={eventObj._id}
+            />
+          ))}
+        </div>
+        <div className="subtitle">
+          <a href="/events">
+            <button className={styles.infoButton}>More Info</button>
+          </a>
+        </div>
+      </Banner>
 
+    return (
+      <div id="home">
+        <Helmet>
+          <link rel="stylesheet" type="text/css" href="/public/assets/pages/Home.bundle.css" />
+        </Helmet>
+        {titleSection}
+        {infoSection}
+        {familyGroupSection}
+        {eventSection}
         <BannerBibleVerse />
       </div>
     );
@@ -120,19 +123,21 @@ Home.propTypes = {
   })).isRequired,
 };
 
-const withData = connect((state) => {
+const mapStateToProps = (state) => {
   const modelData = state.modelData[pluralize('Event')];
   return {
     data: modelData ? modelData.ids.map(id => modelData.__DB__[id]) : [],
   };
-}, dispatch => (
+}
+
+const mapDispatchToProps = (dispatch) => (
   {
     fetchData() {
       return dispatch(fetchModelData('Event'));
     },
   }
-));
+)
 
-const HomePage = compose(withData, withTitle(), withRouter)(Home);
+const HomePage = compose(connect(mapStateToProps, mapDispatchToProps), withTitle(), withRouter)(Home);
 
 export default HomePage;
