@@ -64,22 +64,25 @@ class Home extends Component {
       </div>
 
     const familyGroupSection = 
-      <Banner src="/static/images/home/familygroup.jpg" topMargin={30}>
-        <h1 className={templateStyles.header}>
-          Family Group
-        </h1>
-        <div className={styles.subtitle}>
-          <h3>
-            You haven't checked out GCC if you haven't checked out our family groups.
-          </h3>
-          <a href="/familygroup">
-            <button className={styles.infoButton}>Sign Up Here</button>
-          </a>
-        </div>
+      <Banner src="/static/images/home/familygroup.jpg">
+
+        <div className={styles.fgSection}>
+          <div>
+            Community
+          </div>
+          <div className={styles.fgSectionHeader}>
+            Family Groups
+          </div>
+          <div className={styles.fgSectionSubtitle}>
+              You haven't checked out GCC unless <br/>
+              you've checked out our family groups.
+          </div>
+          <a className={styles.fgSectionLink} href="/familygroup">Sign Up Here ></a>
+          </div>
       </Banner>
 
     const eventSection = 
-      <Banner src="/static/images/home/events.jpg" topMargin={20}>
+      <Banner src="/static/images/home/events.jpg">
         <h1 className={templateStyles.header}>
           Events
         </h1>

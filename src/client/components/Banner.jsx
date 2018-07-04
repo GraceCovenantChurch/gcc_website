@@ -13,10 +13,7 @@ const Banner = props => (
       backgroundPosition="top left"
       backgroundAttachment="local"
     />
-    <div
-      className={styles.title}
-      style={{ color: 'white', top: `${props.topMargin}%` }}
-    >
+    <div className={styles.content}>
       {props.children}
     </div>
   </Jumbotron>
@@ -24,7 +21,6 @@ const Banner = props => (
 
 Banner.propTypes = {
   src: PropTypes.string.isRequired,
-  topMargin: PropTypes.number.isRequired,
   children: PropTypes.node,
 };
 
