@@ -21,7 +21,7 @@ const MainTemplate = ({ route }) => (
         </Link>
       }
       links={[
-        <Link to="/welcome">I&apos;m New</Link>,
+        <Link to="/welcome">I'm New</Link>,
         <Link to="/pages">About</Link>,
         <Link to="/familygroup">Family Groups</Link>,
         <Link to="/ministries">Ministries</Link>,
