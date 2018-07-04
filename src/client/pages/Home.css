@@ -100,3 +100,12 @@
   font-size: 36px;
 }
 
+.eventSectionEvents {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.eventSectionEventsError {
+  font-size: 36px;
+}

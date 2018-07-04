@@ -83,12 +83,13 @@ class Home extends Component {
       events = (
         <div className={styles.eventSectionEvents}>
           {this.props.data.map(eventObj => (
-            <EventBox
-              eventName={eventObj.title}
-              eventDate={new Date(eventObj.startDate).toLocaleDateString()}
-              key={eventObj._id}
-            />
-          ))}
+          <EventBox
+            eventName={eventObj.title}
+            eventDate={new Date(eventObj.startDate).toLocaleDateString()}
+            key={eventObj._id}
+          />
+
+        ))}
         </div>
       );
     } else {
