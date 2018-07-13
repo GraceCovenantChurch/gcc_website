@@ -38,7 +38,7 @@ class Home extends Component {
               who are transformed by Christ <br />
               to change the world.
           </div>
-          <a className={styles.titleSectionLink} href="/welcome">{`Learn More >`}</a>
+          <a className={styles.titleSectionLink} href="/welcome">Learn More ></a>
         </div>
       </Jumbotron>
     );
@@ -56,7 +56,7 @@ class Home extends Component {
           Meyerson Hall B-1, 210 South 34th Street <br />
           Philadelphia, PA 19104
         </div>
-        <a className={styles.infoSectionLink} href="/welcome">{`Learn More >`}</a>
+        <a className={styles.infoSectionLink} href="/welcome">Learn More ></a>
       </div>
     );
 
@@ -73,7 +73,7 @@ class Home extends Component {
               You haven't checked out GCC unless <br />
               you've checked out our family groups.
           </div>
-          <a className={styles.fgSectionLink} href="/familygroup">{`Sign Up Here >`}</a>
+          <a className={styles.fgSectionLink} href="/familygroup">Sign Up Here ></a>
         </div>
       </Banner>
     );
@@ -104,7 +104,7 @@ class Home extends Component {
       <div className={styles.eventSection}>
         <div className={styles.eventSectionSubtitle}>Upcoming Events</div>
         {events}
-        <a className={styles.eventSectionSubtitle} href="/events">{`See All Events >`}</a>
+        <a className={styles.eventSectionSubtitle} href="/events">See All Events ></a>
       </div>
     );
 
@@ -138,12 +138,16 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   fetchData() {
     return dispatch(fetchModelData('Event'));
   },
 });
 
-const HomePage = compose(connect(mapStateToProps, mapDispatchToProps), withTitle(), withRouter)(Home);
+const HomePage = compose(
+  connect(mapStateToProps, mapDispatchToProps),
+  withTitle(),
+  withRouter,
+)(Home);
 
 export default HomePage;
