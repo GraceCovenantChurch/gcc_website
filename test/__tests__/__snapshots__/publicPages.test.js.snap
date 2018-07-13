@@ -55,19 +55,23 @@ exports[`Public ServerTest renders 404 page 1`] = `
         <footer>
           <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
             <div class=\\"Center__centered\\">
-              <div class=\\"container footer\\">
-                <div class=\\"Footer__icons\\">
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
-                    <i class=\\"fa fa-facebook fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
-                    <i class=\\"fa fa-twitter fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
-                    <i class=\\"fa fa-instagram fa-2x\\"></i>
-                  </a>
+              <div class=\\"Footer__footerBorder\\">
+                <div class=\\"Footer__footerContainer container footer\\">
+                  <div class=\\"Footer__copyright\\">
+                    <p>© Grace Covenant Church</p>
+                  </div>
+                  <div class=\\"Footer__icons\\">
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                      <i class=\\"fa fa-facebook fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
+                      <i class=\\"fa fa-twitter fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
+                      <i class=\\"fa fa-instagram fa-2x\\"></i>
+                    </a>
+                  </div>
                 </div>
-                <p>© Grace Covenant Church</p>
               </div>
             </div>
           </div>
@@ -199,19 +203,23 @@ exports[`Public ServerTest renders Family Group page 1`] = `
         <footer>
           <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
             <div class=\\"Center__centered\\">
-              <div class=\\"container footer\\">
-                <div class=\\"Footer__icons\\">
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
-                    <i class=\\"fa fa-facebook fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
-                    <i class=\\"fa fa-twitter fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
-                    <i class=\\"fa fa-instagram fa-2x\\"></i>
-                  </a>
+              <div class=\\"Footer__footerBorder\\">
+                <div class=\\"Footer__footerContainer container footer\\">
+                  <div class=\\"Footer__copyright\\">
+                    <p>© Grace Covenant Church</p>
+                  </div>
+                  <div class=\\"Footer__icons\\">
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                      <i class=\\"fa fa-facebook fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
+                      <i class=\\"fa fa-twitter fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
+                      <i class=\\"fa fa-instagram fa-2x\\"></i>
+                    </a>
+                  </div>
                 </div>
-                <p>© Grace Covenant Church</p>
               </div>
             </div>
           </div>
@@ -335,19 +343,23 @@ exports[`Public ServerTest renders Home page 1`] = `
         <footer>
           <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
             <div class=\\"Center__centered\\">
-              <div class=\\"container footer\\">
-                <div class=\\"Footer__icons\\">
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
-                    <i class=\\"fa fa-facebook fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
-                    <i class=\\"fa fa-twitter fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
-                    <i class=\\"fa fa-instagram fa-2x\\"></i>
-                  </a>
+              <div class=\\"Footer__footerBorder\\">
+                <div class=\\"Footer__footerContainer container footer\\">
+                  <div class=\\"Footer__copyright\\">
+                    <p>© Grace Covenant Church</p>
+                  </div>
+                  <div class=\\"Footer__icons\\">
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                      <i class=\\"fa fa-facebook fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
+                      <i class=\\"fa fa-twitter fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
+                      <i class=\\"fa fa-instagram fa-2x\\"></i>
+                    </a>
+                  </div>
                 </div>
-                <p>© Grace Covenant Church</p>
               </div>
             </div>
           </div>
@@ -489,19 +501,23 @@ exports[`Public ServerTest renders Welcome page 1`] = `
         <footer>
           <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
             <div class=\\"Center__centered\\">
-              <div class=\\"container footer\\">
-                <div class=\\"Footer__icons\\">
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
-                    <i class=\\"fa fa-facebook fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
-                    <i class=\\"fa fa-twitter fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
-                    <i class=\\"fa fa-instagram fa-2x\\"></i>
-                  </a>
+              <div class=\\"Footer__footerBorder\\">
+                <div class=\\"Footer__footerContainer container footer\\">
+                  <div class=\\"Footer__copyright\\">
+                    <p>© Grace Covenant Church</p>
+                  </div>
+                  <div class=\\"Footer__icons\\">
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                      <i class=\\"fa fa-facebook fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
+                      <i class=\\"fa fa-twitter fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
+                      <i class=\\"fa fa-instagram fa-2x\\"></i>
+                    </a>
+                  </div>
                 </div>
-                <p>© Grace Covenant Church</p>
               </div>
             </div>
           </div>
