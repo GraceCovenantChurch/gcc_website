@@ -6,24 +6,6 @@ import styles from './Navbar.css';
 
 /** Navbar component */
 class Navbar extends Component {
-  /** PropTypes */
-  static get propTypes() {
-    return {
-      className: PropTypes.string,
-      brand: PropTypes.element,
-      links: PropTypes.arrayOf(PropTypes.element),
-    };
-  }
-
-  /** Default props */
-  static get defaultProps() {
-    return {
-      className: '',
-      brand: null,
-      links: [],
-    };
-  }
-
   /**
    * @constructor
    * @param {Object} props
@@ -54,6 +36,24 @@ class Navbar extends Component {
     this.open = this.open.bind(this);
     this.close = this.close.bind(this);
     this.toggle = this.toggle.bind(this);
+  }
+
+  /** PropTypes */
+  static get propTypes() {
+    return {
+      className: PropTypes.string,
+      brand: PropTypes.element,
+      links: PropTypes.arrayOf(PropTypes.element),
+    };
+  }
+
+  /** Default props */
+  static get defaultProps() {
+    return {
+      className: '',
+      brand: null,
+      links: [],
+    };
   }
 
   /** Toggles the state of the navbar */
