@@ -63,7 +63,7 @@ class Home extends Component {
     const familyGroupSection = (
       <Banner src="/static/images/home/familygroup.jpg">
         <div className={styles.fgSection}>
-          <div>
+          <div className={styles.titleSectionSubtitle}>
             Community
           </div>
           <div className={styles.fgSectionHeader}>
@@ -95,7 +95,7 @@ class Home extends Component {
     } else {
       events = (
         <div className={styles.eventSectionEventsError}>
-          There seem to be no upcoming events
+          There seems to be no upcoming events
         </div>
       );
     }
