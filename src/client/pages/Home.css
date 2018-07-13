@@ -1,12 +1,29 @@
-/**
-* Title Banner
-*/
-.title {
+.titleSection {
+  margin: 0 10px;
+  height: 80%;
   position: absolute;
-  /*top: 40%;*/
-  left: 10%;
-  width: 70vw;
-  color: 'white';
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.titleSectionMission {
+  font-size: 54px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.titleSectionLink {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.titleSectionLink:hover {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .infoSection {

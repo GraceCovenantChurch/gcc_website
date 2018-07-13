@@ -14,7 +14,6 @@ import EventBox from '../components/EventBox';
 import { fetchModelData } from '../modules/modelData';
 
 import styles from './Home.css';
-import templateStyles from '../templates/MainTemplate.css';
 
 class Home extends Component {
   componentDidMount() {
@@ -24,25 +23,21 @@ class Home extends Component {
   render() {
     const titleSection = (
       <Jumbotron style={{ height: '100vh' }}>
-          <BackgroundImage
-            src="/static/images/home/philly.jpg"
-            backgroundSize="cover"
-            backgroundPosition="top left"
-            backgroundAttachment="local"
-          />
-          <div
-            className={styles.title}
-            style={{ color: 'white', top: '40%' }}
-          >
-            <h1 className={templateStyles.header}>
-              Grace Covenant Church
-            </h1>
-            <div className={styles.subtitle}>
-              <h3>
-                Raising up Kingdom workers who are <br />
-                influenced by Christ to change the world.
-              </h3>
-            </div>
+        <BackgroundImage
+          src="/static/images/home/worship.jpg"
+          backgroundSize="cover"
+          backgroundPosition="top left"
+          backgroundAttachment="local"
+        />
+        <div className={styles.titleSection}>
+          <div className={styles.titleSectionSubtitle}>
+            Our Vision
+          </div>
+          <div className={styles.titleSectionMission}>
+              Raising up kingdom workers <br />
+              who are transformed by Christ <br />
+              to change the world.
+          </div>
           <a className={styles.titleSectionLink} href="/welcome">Learn More ></a>
         </div>
       </Jumbotron>
@@ -82,6 +77,7 @@ class Home extends Component {
         </div>
       </Banner>
     );
+
 
     let events = null;
     if (this.props.data.length !== 0) {
