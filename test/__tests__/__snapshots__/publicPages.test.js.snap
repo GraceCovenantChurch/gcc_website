@@ -153,7 +153,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
               </div>
               <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
                 <div class=\\"Center__centered\\">
-                  <div class=\\"TitleBanner__titleText MainTemplate__header\\" style=\\"color:white\\">Family Group</div>
+                  <div class=\\"TitleBanner__titleText MainTemplate__header\\" style=\\"color:white\\">Family Groups</div>
                 </div>
               </div>
             </div>
