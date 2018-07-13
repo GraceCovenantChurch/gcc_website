@@ -293,74 +293,42 @@ exports[`Public ServerTest renders Home page 1`] = `
           <div id=\\"home\\">
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
-                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/philly.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
+                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/worship.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
               </div>
-              <div class=\\"Home__title\\" style=\\"color:white;top:40%\\">
-                <h1 class=\\"MainTemplate__header\\">Grace Covenant Church</h1>
-                <div class=\\"Home__subtitle\\">
-                  <h3>Raising up Kingdom workers who are
-                    <br/>influenced by Christ to change the world.</h3>
-                </div>
+              <div class=\\"Home__titleSection\\">
+                <div>Our Vision</div>
+                <div class=\\"Home__titleSectionMission\\">Raising up kingdom workers
+                  <br/>who are transformed by Christ
+                  <br/>to change the world.</div>
+                <a class=\\"Home__titleSectionLink\\" href=\\"/welcome\\">Learn More &gt;</a>
               </div>
             </div>
-            <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
-              <div class=\\"BackgroundImage__backgroundImageContainer\\">
-                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/welcome.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
-              </div>
-              <div class=\\"Banner__title\\" style=\\"color:white;top:30%\\">
-                <h1 class=\\"MainTemplate__header\\">Join Us In Worship</h1>
-                <div class=\\"Home__subtitle\\">
-                  <h3>Sunday Service 11:15AM
-                    <br/>Friday Night Live 7:30PM</h3>
-                  <h4>Meyerson Hall B-1, 210 South 34th Street
-                    <br/>Philadelphia, PA 19104</h4>
-                  <a href=\\"/welcome\\">
-                    <button class=\\"Home__infoButton\\">More Info</button>
-                  </a>
-                </div>
-              </div>
+            <div class=\\"Home__infoSection\\">
+              <div class=\\"Home__infoSectionHeader\\">Service Location and Times</div>
+              <div class=\\"Home__infoSectionTimes\\">Sunday Service: 11:15 AM
+                <br/>Friday Night Live: 7:30 PM</div>
+              <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B-1, 210 South 34th Street
+                <br/>Philadelphia, PA 19104</div>
+              <a class=\\"Home__infoSectionLink\\" href=\\"/welcome\\">Learn More &gt;</a>
             </div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
                 <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/familygroup.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
               </div>
-              <div class=\\"Banner__title\\" style=\\"color:white;top:30%\\">
-                <h1 class=\\"MainTemplate__header\\">Family Group</h1>
-                <div class=\\"Home__subtitle\\">
-                  <h3>You haven&amp;t checked out GCC if you haven&amp;t checked out our family groups.</h3>
-                  <a href=\\"/familygroup\\">
-                    <button class=\\"Home__infoButton\\">Sign Up Here</button>
-                  </a>
+              <div class=\\"Banner__content\\">
+                <div class=\\"Home__fgSection\\">
+                  <div>Community</div>
+                  <div class=\\"Home__fgSectionHeader\\">Family Groups</div>
+                  <div class=\\"Home__fgSectionSubtitle\\">You haven&#x27;t checked out GCC unless
+                    <br/>you&#x27;ve checked out our family groups.</div>
+                  <a class=\\"Home__fgSectionLink\\" href=\\"/familygroup\\">Sign Up Here &gt;</a>
                 </div>
               </div>
             </div>
-            <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
-              <div class=\\"BackgroundImage__backgroundImageContainer\\">
-                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/events.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
-              </div>
-              <div class=\\"Banner__title\\" style=\\"color:white;top:20%\\">
-                <h1 class=\\"MainTemplate__header\\">Events</h1>
-                <div class=\\"Home__subtitle\\"></div>
-                <div class=\\"subtitle\\">
-                  <a href=\\"/events\\">
-                    <button class=\\"Home__infoButton\\">More Info</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class=\\"bibleVerse\\" style=\\"height:100vh\\">
-              <div class=\\"BackgroundImage__backgroundImageContainer\\">
-                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(null);background-attachment:fixed;background-position:top left;background-size:cover\\"></div>
-              </div>
-              <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
-                <div class=\\"Center__centered\\">
-                  <div class=\\"BannerBibleVerse__bibleVerse\\" style=\\"color:black\\">
-                    <h1>February</h1>
-                    <h3>Whom have I in heaven but you? And there is nothing on earth that I desire besides you. My flesh and my heart may fail, but God is the strength of my heart and my portion forever.</h3>
-                    <h4>Psalm 73:25-26</h4>
-                  </div>
-                </div>
-              </div>
+            <div class=\\"Home__eventSection\\">
+              <div class=\\"Home__eventSectionSubtitle\\">Upcoming Events</div>
+              <div class=\\"Home__eventSectionEventsError\\">There seem to be no upcoming events</div>
+              <a class=\\"Home__eventSectionSubtitle\\" href=\\"/events\\">See All Events &gt;</a>
             </div>
           </div>
         </main>

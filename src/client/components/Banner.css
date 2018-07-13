@@ -1,11 +1,4 @@
-.titleContainer {
-  padding-bottom: 50px;
-}
-
-.title {
-  position: absolute;
-  top: 30%;
-  left: 10%;
-  width: 70vw;
-  color: white;
+.content {
+    position: absolute;
+    height: 100%;
 }

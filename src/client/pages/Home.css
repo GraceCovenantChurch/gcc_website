@@ -1,34 +1,111 @@
-/**
-* Title Banner
-*/
-.title {
+.titleSection {
+  margin: 0 10px;
+  height: 80%;
   position: absolute;
-  /*top: 40%;*/
-  left: 10%;
-  width: 70vw;
-  color: 'white';
-}
-
-.subtitle h3, h4 {
-  padding-bottom: 30px;
-  /*font-family: 'Helvetica Neue';
-  font-weight: normal;*/
-}
-
-/**
-* Banner
-*/
-.infoButton {
-  background-color: Transparent;
   color: white;
-  border: 1px solid white;
-  height: 50px;
-  width: 200px;
-  font-size: 18px;
-  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
-  &:hover{
-    background: rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-  }
+.titleSectionMission {
+  font-size: 54px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.titleSectionLink {
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+
+.titleSectionLink:hover {
+  color: white;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.infoSection {
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.infoSectionHeader {
+  font-size: 18px;
+  color: gray;
+}
+
+.infoSectionTimes {
+  margin: 30px 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.infoSectionLocation {
+  font-size: 24px;
+}
+
+.infoSectionLink, .infoSectionLink:hover {
+  margin-top: 30px;
+  color: gray;
+}
+
+.fgSection {
+  margin: 0 10px;
+  height: 75%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.fgSectionHeader {
+  margin-top: 20px;
+  font-size: 64px;
+  font-weight: bold;
+}
+
+.fgSectionSubtitle {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.fgSectionLink, .fgSectionLink:hover {
+  font-size: 18px;
+  color: white;
+}
+
+.eventSection {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.eventSectionSubtitle, .eventSectionSubtitle:hover {
+  color: gray;
+  font-size: 18px;
+}
+
+.eventSectionEvents {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.eventSectionEventsError {
+  font-size: 36px;
+}
+
+.eventSectionEvents {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.eventSectionEventsError {
+  font-size: 36px;
 }
