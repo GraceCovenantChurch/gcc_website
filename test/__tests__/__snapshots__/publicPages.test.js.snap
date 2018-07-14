@@ -157,7 +157,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
               </div>
               <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
                 <div class=\\"Center__centered\\">
-                  <div class=\\"TitleBanner__titleText MainTemplate__header\\" style=\\"color:white\\">Family Group</div>
+                  <div class=\\"TitleBanner__titleText MainTemplate__header\\" style=\\"color:white\\">Family Groups</div>
                 </div>
               </div>
             </div>
@@ -304,7 +304,7 @@ exports[`Public ServerTest renders Home page 1`] = `
                 <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/worship.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
               </div>
               <div class=\\"Home__titleSection\\">
-                <div>Our Vision</div>
+                <div class=\\"Home__titleSectionSubtitle\\">Our Vision</div>
                 <div class=\\"Home__titleSectionMission\\">Raising up kingdom workers
                   <br/>who are transformed by Christ
                   <br/>to change the world.</div>
@@ -325,7 +325,7 @@ exports[`Public ServerTest renders Home page 1`] = `
               </div>
               <div class=\\"Banner__content\\">
                 <div class=\\"Home__fgSection\\">
-                  <div>Community</div>
+                  <div class=\\"Home__titleSectionSubtitle\\">Community</div>
                   <div class=\\"Home__fgSectionHeader\\">Family Groups</div>
                   <div class=\\"Home__fgSectionSubtitle\\">You haven&#x27;t checked out GCC unless
                     <br/>you&#x27;ve checked out our family groups.</div>
@@ -335,7 +335,7 @@ exports[`Public ServerTest renders Home page 1`] = `
             </div>
             <div class=\\"Home__eventSection\\">
               <div class=\\"Home__eventSectionSubtitle\\">Upcoming Events</div>
-              <div class=\\"Home__eventSectionEventsError\\">There seem to be no upcoming events</div>
+              <div class=\\"Home__eventSectionEventsError\\">There seems to be no upcoming events</div>
               <a class=\\"Home__eventSectionSubtitle\\" href=\\"/events\\">See All Events &gt;</a>
             </div>
           </div>

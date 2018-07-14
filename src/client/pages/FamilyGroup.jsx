@@ -38,7 +38,7 @@ const FamilyGroup = () => (
     </Helmet>
 
     <TitleBanner src="/static/images/familygroup/fg_background.jpg">
-      Family Group
+      Family Groups
     </TitleBanner>
 
     <div className={styles.pageContent}>
@@ -61,7 +61,8 @@ const FamilyGroup = () => (
         frameBorder="0"
         title="intro"
         allow="autoplay; encrypted-media"
-        allowFullScreen />
+        allowFullScreen
+      />
 
       <div className={styles.signupTable}>
         <FamilyGroupRow
