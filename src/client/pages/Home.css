@@ -9,7 +9,7 @@
 }
 
 .titleSectionMission {
-  font-size: 54px;
+  font-size: 60px;
   font-weight: bold;
   margin: 10px 0;
 }
@@ -24,6 +24,10 @@
   color: white;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.titleSectionSubtitle {
+  font-size: 30px;
 }
 
 .infoSection {
