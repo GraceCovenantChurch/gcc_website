@@ -27,5 +27,6 @@
     "jsx-a11y/label-has-for": "warn",
     "react/jsx-curly-brace-presence": "warn",
     "react/no-unescaped-entities": "warn",
+    "jsx-a11y/click-events-have-key-events": "off",
   }
 }
