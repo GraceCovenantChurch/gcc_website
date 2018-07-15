@@ -18,10 +18,17 @@
 .staffRow {
     display: flex;
     justify-content: center;
-    /*width: 100%;*/
+}
+
+.first {
+    order: -1;
 }
 
 .staffDescription {
+    display: none;
+}
+
+.staffDescriptionOpen {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,12 +47,15 @@
 }
 
 .staffImage {
-    background: #E3E3E3;
     width: 250px;
     height: 250px;
-
     &:hover{
-        background: #D3D3D3;
         cursor: pointer;
     }
 }
+
+.staffImageOpen {
+    width: 400px;
+    height: 400px;
+}
+
