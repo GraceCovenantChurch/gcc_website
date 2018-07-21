@@ -65,7 +65,7 @@ const beliefsList = [
   },
 ];
 
-const Beliefs = (
+const Beliefs = () => (
   <div>
     <Helmet>
       <link rel="stylesheet" type="text/css" href="/public/assets/pages/Beliefs.bundle.css" />
@@ -105,10 +105,6 @@ const Beliefs = (
     </div>
   </div>
 );
-
-Beliefs.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
-};
 
 const BeliefsPage = withTitle('Beliefs')(Beliefs);
 
