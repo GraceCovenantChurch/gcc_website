@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
@@ -13,7 +13,7 @@ const beliefsList = [
     image: '/static/images/beliefs/icons/bible.png',
     imageTitle: 'bible',
     title: 'Bible',
-    description: `We believe the Bible, both the Old and New Testaments, is the only inspired, infallible, and authoritative Word of God. It is the supreme source of truth for Christian faith and living.`,
+    description: 'We believe the Bible, both the Old and New Testaments, is the only inspired, infallible, and authoritative Word of God. It is the supreme source of truth for Christian faith and living.',
   },
   {
     image: '/static/images/beliefs/icons/god.png',
@@ -62,57 +62,53 @@ const beliefsList = [
     imageTitle: 'ordinances',
     title: 'Ordinances',
     description: 'We believe that water baptism and the Lord’s Supper are ordinances to be observed by the Church during the present age. They are, however, not to be regarded as means of salvation.',
-  }
+  },
 ];
 
-class Beliefs extends Component {
-  constructor(props) {
-    super(props);
-  }
+const Beliefs = (
+  <div>
+    <Helmet>
+      <link rel="stylesheet" type="text/css" href="/public/assets/pages/Beliefs.bundle.css" />
+    </Helmet>
 
-  render() {
-    let { classes } = this.props;
+    <div className={customStyles.beliefs}>
+      <TitleBanner src="/static/images/beliefs/beliefs.jpg">
+        Beliefs
+      </TitleBanner>
 
-    return (
-      <div className={customStyles.beliefs}>
-        <Helmet>
-          <link rel="stylesheet" type="text/css" href="/public/assets/pages/Beliefs.bundle.css" />
-        </Helmet>
+      <div className={customStyles.beliefsContent}>
+        <div className={customStyles.section}>
+          <div className={customStyles.subtitle}>Our Vision</div>
+          <div className={customStyles.description}>To raise up kingdom workers who are transformed by Christ to influence the world.</div>
+        </div>
 
-        <TitleBanner src="/static/images/beliefs/beliefs.jpg">
-          Beliefs
-        </TitleBanner>
+        <div className={customStyles.section}>
+          <div className={customStyles.subtitle}>Five Core Values</div>
+          <ul className={customStyles.list}>
+            <li>Bible Based</li>
+            <li>Prayer Driven</li>
+            <li>Spirit Lead</li>
+            <li>Community Centered</li>
+            <li>Missions Focused</li>
+          </ul>
+        </div>
 
-        <div className={customStyles.beliefsContent}>
-          <div className={customStyles.section}>
-            <div className={customStyles.subtitle}>Our Vision</div>
-            <div className={customStyles.description}>To raise up kingdom workers who are transformed by Christ to influence the world.</div>
-          </div>
-
-          <div className={customStyles.section}>
-            <div className={customStyles.subtitle}>Five Core Values</div>
-            <ul className={customStyles.list}>
-              <li>Bible Based</li>
-              <li>Prayer Driven</li>
-              <li>Spirit Lead</li>
-              <li>Community Centered</li>
-              <li>Missions Focused</li>
-            </ul>
-          </div>
-
-          <div className={customStyles.section}>
-            <div className={customStyles.subtitle}>Beliefs</div>
-            <div className={customStyles.description}>
-              <TileDeck
-                data={beliefsList}
-              />
-            </div>
+        <div className={customStyles.section}>
+          <div className={customStyles.subtitle}>Beliefs</div>
+          <div className={customStyles.description}>
+            <TileDeck
+              data={beliefsList}
+            />
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  </div>
+);
+
+Beliefs.propTypes = {
+  classes: PropTypes.shape({}).isRequired,
+};
 
 const BeliefsPage = withTitle('Beliefs')(Beliefs);
 

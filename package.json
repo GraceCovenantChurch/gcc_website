@@ -9,6 +9,7 @@
     "babel": "cross-env NODE_ENV=production BABEL_ENV=server babel src -d build --copy-files --ignore *.test.js,*.snap,*.spec.js",
     "serve": "cross-env NODE_ENV=production node build/main.js",
     "lint": "eslint --ignore-pattern webpack* --ext .jsx,.js src",
+    "lint:fix": "eslint --fix --ignore-pattern webpack* --ext .jsx,.js src",
     "lint:watch": "esw --ignore-pattern webpack* --ext .jsx,.js src --watch --changed",
     "autoformat": "eslint --ignore-pattern webpack* --fix --ext .jsx,.js src",
     "test": "cross-env NODE_ENV=test BABEL_ENV=test jest",
