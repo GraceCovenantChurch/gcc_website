@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import withTitle from '../hoc/withTitle';
 import TitleBanner from '../components/TitleBanner';
 
-import styles from './Staff.css';
+import customStyles from './Staff.css';
 
 
 class StaffBox extends Component {
@@ -21,19 +21,19 @@ class StaffBox extends Component {
   render() {
     return (
       <div
-        className={`${styles.staffRow} ${styles[this.props.open ? 'first' : '']}`}
+        className={`${customStyles.staffRow} ${customStyles[this.props.open ? 'first' : '']}`}
         onClick={this.onClick}
       >
-        <div className={styles.staffBox}>
+        <div className={customStyles.staffBox}>
           <img
             alt="staff"
-            className={`${this.props.open ? styles.staffImageOpen : styles.staffImage}`}
+            className={`${this.props.open ? customStyles.staffImageOpen : customStyles.staffImage}`}
             src={this.props.imageURL}
           />
-          <div className={styles.staffInfoContainer}>
-            <div className={styles.staffName}>{this.props.name}</div>
-            <div className={styles.staffTitle}>{this.props.title}</div>
-            <div className={`${this.props.open ? styles.staffDescriptionOpen : styles.staffDescription}`}>
+          <div className={customStyles.staffInfoContainer}>
+            <div className={customStyles.staffName}>{this.props.name}</div>
+            <div className={customStyles.staffTitle}>{this.props.title}</div>
+            <div className={`${this.props.open ? customStyles.staffDescriptionOpen : customStyles.staffDescription}`}>
               {this.props.description}
             </div>
           </div>
@@ -64,7 +64,7 @@ class Staff extends Component {
 
   componentDidUpdate() {
     document
-      .querySelector(`.${styles.first}`)
+      .querySelector(`.${customStyles.first}`)
       .scrollIntoView({
         behavior: 'smooth',
       });
@@ -187,7 +187,7 @@ class Staff extends Component {
           Staff
         </TitleBanner>
 
-        <div className={styles.pageContent}>
+        <div className={customStyles.pageContent}>
           {staffList.map((staffObj, index) => (
             <StaffBox
               onClick={this.openStaff}

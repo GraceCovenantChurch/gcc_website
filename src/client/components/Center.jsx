@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import styles from './Center.css';
+import customStyles from './Center.css';
 
 const Center = props => (
-  <div className={classnames(styles.center, {
-      [styles.centerVertical]: props.vertical,
-      [styles.centerHorizontal]: props.horizontal,
+  <div className={classnames(customStyles.center, {
+      [customStyles.centerVertical]: props.vertical,
+      [customStyles.centerHorizontal]: props.horizontal,
     })}
   >
-    <div className={styles.centered}>
+    <div className={customStyles.centered}>
       {props.children}
     </div>
   </div>

@@ -5,20 +5,20 @@ import Helmet from 'react-helmet';
 import withTitle from '../hoc/withTitle';
 import TitleBanner from '../components/TitleBanner';
 
-import styles from './FamilyGroup.css';
+import customStyles from './FamilyGroup.css';
 
 const FamilyGroupRow = props => (
-  <div className={styles.tableRow}>
-    <div className={styles.rowTitle}>
+  <div className={customStyles.tableRow}>
+    <div className={customStyles.rowTitle}>
       {props.title}
     </div>
-    <div className={styles.rowDays}>
+    <div className={customStyles.rowDays}>
       {props.days}
     </div>
-    <div className={styles.rowDescription}>
+    <div className={customStyles.rowDescription}>
       {props.description}
     </div>
-    <div className={styles.rowSignup}>
+    <div className={customStyles.rowSignup}>
       <a href={props.signupLink}>Sign Up &gt;</a>
     </div>
   </div>
@@ -41,7 +41,7 @@ const FamilyGroup = () => (
       Family Groups
     </TitleBanner>
 
-    <div className={styles.pageContent}>
+    <div className={customStyles.pageContent}>
       <div className="description">
         {'At GCC we place a high emphasis on Family Groups because we believe that it is in these smaller settings that we are able to meet with God, building meaningful relationships, and develop biblical accountability. Family groups meet on a weekly basis at various places.'}
         <br />
@@ -56,7 +56,7 @@ const FamilyGroup = () => (
       </div>
 
       <iframe
-        className={styles.video}
+        className={customStyles.video}
         src="https://www.youtube.com/embed/rvXubANV7RA"
         frameBorder="0"
         title="intro"
@@ -64,7 +64,7 @@ const FamilyGroup = () => (
         allowFullScreen
       />
 
-      <div className={styles.signupTable}>
+      <div className={customStyles.signupTable}>
         <FamilyGroupRow
           title="College"
           days="Mondays to Thursdays"

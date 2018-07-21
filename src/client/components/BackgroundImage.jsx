@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Optional from './Optional';
 
-import styles from './BackgroundImage.css';
+import customStyles from './BackgroundImage.css';
 
 const BackgroundImage = props => (
   <div
-    className={styles.backgroundImageContainer}
+    className={customStyles.backgroundImageContainer}
     style={{ zIndex: props.zIndex }}
   >
     <div
-      className={styles.backgroundImage}
+      className={customStyles.backgroundImage}
       style={{
         backgroundImage: `url(${props.src})`,
         backgroundAttachment: props.backgroundAttachment,
@@ -26,7 +26,7 @@ const BackgroundImage = props => (
     </div>
     <Optional test={props.overlay}>
       <div
-        className={styles.backgroundImageOverlay}
+        className={customStyles.backgroundImageOverlay}
         style={{
           background: props.overlay,
         }}

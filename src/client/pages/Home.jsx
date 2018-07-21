@@ -13,7 +13,7 @@ import Banner from '../components/Banner';
 import EventBox from '../components/EventBox';
 import { fetchModelData } from '../modules/modelData';
 
-import styles from './Home.css';
+import customStyles from './Home.css';
 
 class Home extends Component {
   componentDidMount() {
@@ -29,51 +29,51 @@ class Home extends Component {
           backgroundPosition="top left"
           backgroundAttachment="local"
         />
-        <div className={styles.titleSection}>
-          <div className={styles.titleSectionSubtitle}>
+        <div className={customStyles.titleSection}>
+          <div className={customStyles.titleSectionSubtitle}>
             Our Vision
           </div>
-          <div className={styles.titleSectionMission}>
+          <div className={customStyles.titleSectionMission}>
               Raising up kingdom workers <br />
               who are transformed by Christ <br />
               to change the world.
           </div>
-          <a className={styles.titleSectionLink} href="/welcome">Learn More ></a>
+          <a className={customStyles.titleSectionLink} href="/welcome">Learn More ></a>
         </div>
       </Jumbotron>
     );
 
     const infoSection = (
-      <div className={styles.infoSection}>
-        <div className={styles.infoSectionHeader}>
+      <div className={customStyles.infoSection}>
+        <div className={customStyles.infoSectionHeader}>
           Service Location and Times
         </div>
-        <div className={styles.infoSectionTimes}>
+        <div className={customStyles.infoSectionTimes}>
             Sunday Service: 11:15 AM <br />
             Friday Night Live: 7:30 PM
         </div>
-        <div className={styles.infoSectionLocation}>
+        <div className={customStyles.infoSectionLocation}>
           Meyerson Hall B-1, 210 South 34th Street <br />
           Philadelphia, PA 19104
         </div>
-        <a className={styles.infoSectionLink} href="/welcome">Learn More ></a>
+        <a className={customStyles.infoSectionLink} href="/welcome">Learn More ></a>
       </div>
     );
 
     const familyGroupSection = (
       <Banner src="/static/images/home/familygroup.jpg">
-        <div className={styles.fgSection}>
-          <div className={styles.titleSectionSubtitle}>
+        <div className={customStyles.fgSection}>
+          <div className={customStyles.titleSectionSubtitle}>
             Community
           </div>
-          <div className={styles.fgSectionHeader}>
+          <div className={customStyles.fgSectionHeader}>
             Family Groups
           </div>
-          <div className={styles.fgSectionSubtitle}>
+          <div className={customStyles.fgSectionSubtitle}>
               You haven't checked out GCC unless <br />
               you've checked out our family groups.
           </div>
-          <a className={styles.fgSectionLink} href="/familygroup">Sign Up Here ></a>
+          <a className={customStyles.fgSectionLink} href="/familygroup">Sign Up Here ></a>
         </div>
       </Banner>
     );
@@ -82,7 +82,7 @@ class Home extends Component {
     let events = null;
     if (this.props.data.length !== 0) {
       events = (
-        <div className={styles.eventSectionEvents}>
+        <div className={customStyles.eventSectionEvents}>
           {this.props.data.map(eventObj => (
             <EventBox
               eventName={eventObj.title}
@@ -94,17 +94,17 @@ class Home extends Component {
       );
     } else {
       events = (
-        <div className={styles.eventSectionEventsError}>
+        <div className={customStyles.eventSectionEventsError}>
           There seems to be no upcoming events
         </div>
       );
     }
 
     const eventSection = (
-      <div className={styles.eventSection}>
-        <div className={styles.eventSectionSubtitle}>Upcoming Events</div>
+      <div className={customStyles.eventSection}>
+        <div className={customStyles.eventSectionSubtitle}>Upcoming Events</div>
         {events}
-        <a className={styles.eventSectionSubtitle} href="/events">See All Events ></a>
+        <a className={customStyles.eventSectionSubtitle} href="/events">See All Events ></a>
       </div>
     );
 

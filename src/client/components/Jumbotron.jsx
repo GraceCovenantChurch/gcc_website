@@ -1,7 +1,7 @@
 import React from 'react';
 
-import styles from './Jumbotron.css';
+import customStyles from './Jumbotron.css';
 
-const Jumbotron = props => <div className={`jumbotron ${styles.jumbotron}`} {...props} />;
+const Jumbotron = props => <div className={`jumbotron ${customStyles.jumbotron}`} {...props} />;
 
 export default Jumbotron;

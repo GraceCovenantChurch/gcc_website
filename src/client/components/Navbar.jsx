@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import styles from './Navbar.css';
+import customStyles from './Navbar.css';
 
 /** Navbar component */
 class Navbar extends Component {
@@ -102,15 +102,15 @@ class Navbar extends Component {
   render() {
     return (
       <nav
-        id={styles.mainNavbar}
+        id={customStyles.mainNavbar}
         className={`navbar navbar-expand-lg ${(this.props.className || '')}`}
       >
         {this.props.brand && React.cloneElement(this.props.brand, {
-          className: `navbar-brand ${styles['navbar-brand']}`,
+          className: `navbar-brand ${customStyles['navbar-brand']}`,
           onClick: this._close,
         })}
-        <button className={`navbar-toggler ${styles['navbar-toggler']}`} type="button" onClick={this.toggle}>
-          <span className={`navbar-toggler-icon ${styles['navbar-toggler-icon']}`} />
+        <button className={`navbar-toggler ${customStyles['navbar-toggler']}`} type="button" onClick={this.toggle}>
+          <span className={`navbar-toggler-icon ${customStyles['navbar-toggler-icon']}`} />
         </button>
 
         <div
@@ -121,12 +121,12 @@ class Navbar extends Component {
           })}
           style={{ height: this.state.height }}
         >
-          <ul className={`navbar-nav ml-auto ${styles['navbar-nav']}`} ref={(el) => { this.navLinkList = el; }}>
+          <ul className={`navbar-nav ml-auto ${customStyles['navbar-nav']}`} ref={(el) => { this.navLinkList = el; }}>
             {React.Children.map(this.props.links, link => (
               <li className="nav-item">
                 {React.cloneElement(link, {
                   onClick: this.close,
-                  className: `nav-link ${styles['nav-link']}`,
+                  className: `nav-link ${customStyles['nav-link']}`,
                 })}
               </li>
             ))}

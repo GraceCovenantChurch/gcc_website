@@ -6,7 +6,7 @@ import Center from '../components/Center';
 import TitleBanner from '../components/TitleBanner';
 import AspectRatio from '../components/AspectRatio';
 
-import styles from './Welcome.css';
+import customStyles from './Welcome.css';
 
 const Welcome = () => (
   <div>
@@ -20,14 +20,14 @@ const Welcome = () => (
       </Center>
     </TitleBanner>
 
-    <div className={styles.pageContent}>
+    <div className={customStyles.pageContent}>
       <div className="description">
         {"We're glad you're exploring our University City Site! As you take a look around, we hope you catch a glimpse of what God is doing at GCC University City."}
         <br /> <br />
         {'If you like videos, check out our intro video:'}
       </div>
 
-      <div className={styles.video}>
+      <div className={customStyles.video}>
         <iframe width="100%" height="100%" title="Grace Covenant Church Intro Video" src="https://www.youtube.com/embed/5M8H4xhSPWc" frameBorder="0" allowFullScreen="true" />
       </div>
 
@@ -43,7 +43,7 @@ const Welcome = () => (
         {'Our Sunday Services and Friday Night Large Groups are typically located at Meyerson Hall Room B-1, 3401 Walnut Street Philadelphia, PA 19104. We oftentimes meet at Ralston House, 3615 Chestnut Street Philadelphia, PA 19104, as well. Keep an eye out for Grace Covenant Church signs and our welcomers to find us!'}
       </div>
 
-      <div className={styles.maps}>
+      <div className={customStyles.maps}>
         <div className="row">
           <div className="col-sm-6">
             <AspectRatio ratio={4 / 3}>

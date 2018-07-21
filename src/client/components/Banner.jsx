@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Jumbotron from './Jumbotron';
 import BackgroundImage from './BackgroundImage';
 
-import styles from './Banner.css';
+import customStyles from './Banner.css';
 
 const Banner = props => (
   <Jumbotron style={{ height: '100vh' }}>
@@ -13,7 +13,7 @@ const Banner = props => (
       backgroundPosition="top left"
       backgroundAttachment="local"
     />
-    <div className={styles.content}>
+    <div className={customStyles.content}>
       {props.children}
     </div>
   </Jumbotron>

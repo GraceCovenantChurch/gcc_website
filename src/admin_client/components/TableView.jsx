@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Promise from 'bluebird';
 
-import styles from './TableView.css';
+import customStyles from './TableView.css';
 
 class TableView extends Component {
   constructor(props) {
@@ -89,7 +89,7 @@ class TableView extends Component {
     return (
       <div
         ref={(el) => { this.tabel = el; }}
-        className={styles['table-view']}
+        className={customStyles['table-view']}
         onMouseMove={this.mouseMoveHandler}
         onMouseUp={this.mouseUpHandler}
       >
@@ -136,7 +136,7 @@ TableView.defaultProps = {
 class TableRow extends Component {
   render() {
     return (
-      <div className={styles['table-row']} {...this.props}>
+      <div className={customStyles['table-row']} {...this.props}>
         {this.context.table.props.columns.map((column) => {
           const cell = React.Children.toArray(this.props.children)
             .find(child => child.props.column === column.key);
@@ -187,14 +187,14 @@ class TableCell extends Component {
     return (
       <div
         ref={(el) => { this.cell = el; }}
-        className={`${styles['table-cell']} ${column}-column`}
+        className={`${customStyles['table-cell']} ${column}-column`}
         style={{
           flexBasis: basis,
         }}
         {...props}
       >
         <div
-          className={`${styles['resize-handle']} ${styles['resize-handle-left']}`}
+          className={`${customStyles['resize-handle']} ${customStyles['resize-handle-left']}`}
           onMouseDown={this.mouseDownHandler}
         />
         {this.props.children}

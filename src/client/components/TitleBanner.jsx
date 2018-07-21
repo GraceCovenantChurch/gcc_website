@@ -5,7 +5,7 @@ import Center from './Center';
 import Jumbotron from './Jumbotron';
 import BackgroundImage from './BackgroundImage';
 
-import styles from './TitleBanner.css';
+import customStyles from './TitleBanner.css';
 import templateStyles from '../templates/MainTemplate.css';
 
 const TitleBanner = props => (
@@ -18,7 +18,7 @@ const TitleBanner = props => (
     />
     <Center horizontal vertical>
       <div
-        className={classnames(styles.titleText, templateStyles.header)}
+        className={classnames(customStyles.titleText, templateStyles.header)}
         style={{ color: 'white' }}
       >
         { props.children }

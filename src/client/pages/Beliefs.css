@@ -1,0 +1,24 @@
+.beliefs {
+	.beliefsContent {
+		margin: 100px 20%;
+
+		.subtitle {
+			font-size: 40px;
+			font-weight: bold;
+		}
+
+		.section {
+			text-align: center;
+			padding-bottom: 75px;
+		}
+
+		.description {
+			padding: 10px;
+		}
+
+		.list {
+			padding: 10px;
+			list-style-type: none;
+		}
+	}
+}

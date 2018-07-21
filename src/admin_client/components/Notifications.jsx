@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import classnames from 'classnames';
 import { clearNotification, SUCCESS, INFO, WARNING, DANGER } from '../modules/notifications';
 
-import styles from './Notifications.css';
+import customStyles from './Notifications.css';
 
 function alertClass(status) {
   switch (status) {
@@ -75,7 +75,7 @@ Notification.propTypes = {
 };
 
 const Notifications = props => (
-  <div className={styles.notifications}>
+  <div className={customStyles.notifications}>
     <div className="container">
       {Object.keys(props.notifications).map(k => (
         <Notification
