@@ -1,5 +1,7 @@
 import mongoose from 'mongoose';
 
+mongoose.Promise = global.Promise;
+
 // Schema for objects tracking expiration
 const ExpireSchema = new mongoose.Schema({
   expireAt: {
