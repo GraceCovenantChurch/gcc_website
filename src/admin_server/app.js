@@ -84,8 +84,6 @@ app.use(PageRouter(routes, reducers, (head, content, state) => `
 mongoose.set('debug', nconf.get('NODE_ENV') !== 'production');
 
 mongoose.connect(nconf.get('MONGODB_URI'), { useMongoClient: true }, (err) => {
-  mongoose.Promise = global.Promise;
-
   if (err) {
     throw err;
   }
