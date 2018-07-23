@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'react-router-dom/Link';
 import { renderRoutes } from 'react-router-config';
+
+import NavbarDropdown from "../components/NavbarDropdown";
 import Head from '../components/Head';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -21,8 +23,13 @@ const MainTemplate = ({ route }) => (
         </Link>
       }
       links={[
-        <Link to="/welcome">I'm New</Link>,
-        <Link to="/pages">About</Link>,
+        <NavbarDropdown
+          text="About">
+          <Link to="/welcome">Welcome</Link>
+          <Link to="/beliefs">Beliefs</Link>
+          <Link to="/staff">Staff</Link>
+          <Link to="/ami">AMI</Link>
+        </NavbarDropdown>,
         <Link to="/familygroup">Family Groups</Link>,
         <Link to="/ministries">Ministries</Link>,
         <Link to="/page">Giving</Link>,
