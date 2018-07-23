@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Link from 'react-router-dom/Link';
 import { renderRoutes } from 'react-router-config';
 
-import NavbarDropdown from "../components/NavbarDropdown";
+import NavbarDropdown from '../components/NavbarDropdown';
 import Head from '../components/Head';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
