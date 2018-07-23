@@ -12,7 +12,7 @@ import TitleBanner from '../components/TitleBanner';
 import { fetchModelData } from '../modules/modelData';
 
 
-import customStyles from './Ministries.css';
+import styles from './Ministries.css';
 
 class Ministries extends Component {
   componentDidMount() {
@@ -23,7 +23,7 @@ class Ministries extends Component {
     const ministryList = this.props.data.map(ministryObj => ministryObj.name);
 
     return (
-      <div id={customStyles.ministries}>
+      <div id={styles.ministries}>
         <Helmet>
           <link rel="stylesheet" type="text/css" href="/public/assets/pages/Ministries.bundle.css" />
         </Helmet>
@@ -32,9 +32,9 @@ class Ministries extends Component {
           Ministries
         </TitleBanner>
 
-        <div className={customStyles.pageContent}>
+        <div className={styles.pageContent}>
           {ministryList.map(ministryName => (
-            <div className={customStyles.ministryBox} key={ministryName}>
+            <div className={styles.ministryBox} key={ministryName}>
               <Center vertical>{ministryName}</Center>
             </div>
           ))}

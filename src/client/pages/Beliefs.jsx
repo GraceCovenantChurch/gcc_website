@@ -5,7 +5,7 @@ import withTitle from '../hoc/withTitle';
 import TitleBanner from '../components/TitleBanner';
 import TileDeck from '../components/TileDeck';
 
-import customStyles from './Beliefs.css';
+import styles from './Beliefs.css';
 
 const beliefsList = [
   {
@@ -70,31 +70,31 @@ const Beliefs = () => (
       <link rel="stylesheet" type="text/css" href="/public/assets/pages/Beliefs.bundle.css" />
     </Helmet>
 
-    <div className={customStyles.beliefs}>
+    <div className={styles.beliefs}>
       <TitleBanner src="/static/images/beliefs/beliefs.jpg">
         Beliefs
       </TitleBanner>
 
-      <div className={customStyles.beliefsContent}>
-        <div className={customStyles.section}>
-          <div className={customStyles.subtitle}>Our Vision</div>
-          <div className={customStyles.description}>To raise up kingdom workers who are transformed by Christ to influence the world.</div>
+      <div className={styles.beliefsContent}>
+        <div className={styles.section}>
+          <div className={styles.subtitle}>Our Vision</div>
+          <div className={styles.description}>To raise up kingdom workers who are transformed by Christ to influence the world.</div>
         </div>
 
-        <div className={customStyles.section}>
-          <div className={customStyles.subtitle}>Five Core Values</div>
-          <ul className={customStyles.list}>
+        <div className={styles.section}>
+          <div className={styles.subtitle}>Five Core Values</div>
+          <ul className={styles.list}>
             <li>Bible Based</li>
             <li>Prayer Driven</li>
-            <li>Spirit Lead</li>
+            <li>Spirit Led</li>
             <li>Community Centered</li>
             <li>Missions Focused</li>
           </ul>
         </div>
 
-        <div className={customStyles.section}>
-          <div className={customStyles.subtitle}>Beliefs</div>
-          <div className={customStyles.description}>
+        <div className={styles.section}>
+          <div className={styles.subtitle}>Beliefs</div>
+          <div className={styles.description}>
             <TileDeck
               data={beliefsList}
             />

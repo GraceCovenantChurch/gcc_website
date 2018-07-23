@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 
 import Tile from './Tile';
 
-const styles = {
+const materialStyles = {
   root: {
     flexGrow: 1,
   },
@@ -39,4 +39,4 @@ TileDeck.propTypes = {
   }).isRequired,
 };
 
-export default withStyles(styles)(TileDeck);
+export default withStyles(materialStyles)(TileDeck);

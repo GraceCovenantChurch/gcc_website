@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import customStyles from './EventBox.css';
+import styles from './EventBox.css';
 
 const EventBox = props => (
-  <div className={customStyles.eventBox}>
-    <div className={customStyles.eventName}>{props.eventName}</div>
-    <div className={customStyles.eventDate}>{props.eventDate}</div>
+  <div className={styles.eventBox}>
+    <div className={styles.eventName}>{props.eventName}</div>
+    <div className={styles.eventDate}>{props.eventDate}</div>
   </div>
 );
 

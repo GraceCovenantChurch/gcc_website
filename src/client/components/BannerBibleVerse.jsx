@@ -5,7 +5,7 @@ import Center from './Center';
 import Jumbotron from './Jumbotron';
 import BackgroundImage from './BackgroundImage';
 
-import customStyles from './BannerBibleVerse.css';
+import styles from './BannerBibleVerse.css';
 
 class BannerBibleVerse extends Component {
   componentDidMount() {
@@ -23,7 +23,7 @@ class BannerBibleVerse extends Component {
         />
         <Center horizontal vertical>
           <div
-            className={customStyles.bibleVerse}
+            className={styles.bibleVerse}
             style={{ color: 'black' }}
           >
             <h1>{this.props.month}</h1>

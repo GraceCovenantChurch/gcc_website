@@ -6,12 +6,12 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
-import customStyles from './Tile.css';
+import styles from './Tile.css';
 
-const styles = {
+const materialStyles = {
   card: {
     height: 500,
-    maxWidth: 345,
+    maxWidth: 350,
   },
   media: {
     height: 0,
@@ -28,11 +28,11 @@ const Tile = props => (
       image={props.image}
       title={props.imageTitle}
     />
-    <CardContent className={customStyles.cardContent}>
-      <h4 className={customStyles.cardTitle}>
+    <CardContent className={styles.cardContent}>
+      <h4 className={styles.cardTitle}>
         {props.title}
       </h4>
-      <p className={customStyles.cardDescription}>
+      <p className={styles.cardDescription}>
         {props.description}
       </p>
     </CardContent>
@@ -50,4 +50,4 @@ Tile.propTypes = {
   }).isRequired,
 };
 
-export default withStyles(styles)(Tile);
+export default withStyles(materialStyles)(Tile);
