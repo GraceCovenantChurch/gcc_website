@@ -29,9 +29,7 @@ class Ministries extends Component {
         </Helmet>
 
         <TitleBanner src="/static/images/ministries/ministries.jpg">
-          <Center horizontal vertical>
-            Ministries
-          </Center>
+          Ministries
         </TitleBanner>
 
         <div className={styles.pageContent}>
