@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import generalStyles from './NavbarDropdown.css';
+import styles from './NavbarDropdown.css';
 
 const NavbarDropdown = props => (
   <div className={`nav-link ${generalStyles.dropdown}`}>
