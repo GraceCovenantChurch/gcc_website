@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import styles from './NavbarDropdown.css';
 
 const NavbarDropdown = props => (
-  <div className={`nav-link ${generalStyles.dropdown}`}>
-    <button className={generalStyles.dropdownButton}>
+  <div className={`nav-link ${styles.dropdown}`}>
+    <button className={styles.dropdownButton}>
       { props.text }
     </button>
-    <div className={`nav-link ${generalStyles.dropdownContent}`}>
+    <div className={`nav-link ${styles.dropdownContent}`}>
       { props.children }
     </div>
   </div>
