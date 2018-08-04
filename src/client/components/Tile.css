@@ -1,0 +1,9 @@
+.cardContent {
+  .cardTitle {
+    font-weight: bold;
+  }
+
+  .cardDescription {
+    font-size: 15px;
+  }
+}

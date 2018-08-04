@@ -8,6 +8,7 @@
   "extends": "airbnb",
   "parser": "babel-eslint",
   "rules": {
+    "max-len": [0],
     "no-plusplus": "off",
     "no-underscore-dangle": "off",
     "linebreak-style": "off",
