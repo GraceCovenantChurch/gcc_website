@@ -26,10 +26,15 @@ exports[`Public ServerTest renders 404 page 1`] = `
           <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
             <ul class=\\"navbar-nav ml-auto Navbar__navbar-nav\\">
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/welcome\\">I&#x27;m New</a>
-              </li>
-              <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">About</a>
+                <div class=\\"nav-link NavbarDropdown__dropdown\\">
+                  <button class=\\"NavbarDropdown__dropdownButton\\">About</button>
+                  <div class=\\"nav-link NavbarDropdown__dropdownContent\\">
+                    <a href=\\"/welcome\\">Welcome</a>
+                    <a href=\\"/beliefs\\">Beliefs</a>
+                    <a href=\\"/staff\\">Staff</a>
+                    <a href=\\"/ami\\">AMI</a>
+                  </div>
+                </div>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/familygroup\\">Family Groups</a>
@@ -126,10 +131,15 @@ exports[`Public ServerTest renders Family Group page 1`] = `
           <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
             <ul class=\\"navbar-nav ml-auto Navbar__navbar-nav\\">
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/welcome\\">I&#x27;m New</a>
-              </li>
-              <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">About</a>
+                <div class=\\"nav-link NavbarDropdown__dropdown\\">
+                  <button class=\\"NavbarDropdown__dropdownButton\\">About</button>
+                  <div class=\\"nav-link NavbarDropdown__dropdownContent\\">
+                    <a href=\\"/welcome\\">Welcome</a>
+                    <a href=\\"/beliefs\\">Beliefs</a>
+                    <a href=\\"/staff\\">Staff</a>
+                    <a href=\\"/ami\\">AMI</a>
+                  </div>
+                </div>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/familygroup\\">Family Groups</a>
@@ -274,10 +284,15 @@ exports[`Public ServerTest renders Home page 1`] = `
           <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
             <ul class=\\"navbar-nav ml-auto Navbar__navbar-nav\\">
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/welcome\\">I&#x27;m New</a>
-              </li>
-              <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">About</a>
+                <div class=\\"nav-link NavbarDropdown__dropdown\\">
+                  <button class=\\"NavbarDropdown__dropdownButton\\">About</button>
+                  <div class=\\"nav-link NavbarDropdown__dropdownContent\\">
+                    <a href=\\"/welcome\\">Welcome</a>
+                    <a href=\\"/beliefs\\">Beliefs</a>
+                    <a href=\\"/staff\\">Staff</a>
+                    <a href=\\"/ami\\">AMI</a>
+                  </div>
+                </div>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/familygroup\\">Family Groups</a>
@@ -414,10 +429,15 @@ exports[`Public ServerTest renders Welcome page 1`] = `
           <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
             <ul class=\\"navbar-nav ml-auto Navbar__navbar-nav\\">
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/welcome\\">I&#x27;m New</a>
-              </li>
-              <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">About</a>
+                <div class=\\"nav-link NavbarDropdown__dropdown\\">
+                  <button class=\\"NavbarDropdown__dropdownButton\\">About</button>
+                  <div class=\\"nav-link NavbarDropdown__dropdownContent\\">
+                    <a href=\\"/welcome\\">Welcome</a>
+                    <a href=\\"/beliefs\\">Beliefs</a>
+                    <a href=\\"/staff\\">Staff</a>
+                    <a href=\\"/ami\\">AMI</a>
+                  </div>
+                </div>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/familygroup\\">Family Groups</a>
