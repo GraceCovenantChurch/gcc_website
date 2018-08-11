@@ -11,7 +11,7 @@ const nconf = require('../config.js');
 nconf.set('APP_ENV', 'server');
 
 process.on('unhandledRejection', (err) => {
-  console.log(err);
+  console.log(err); // eslint-disable-line no-console
 });
 
 const app = express();
@@ -64,11 +64,11 @@ export default new Promise((resolve) => {
     if (err) {
       throw err;
     }
-    console.log('Connected to database');
+    console.log('Connected to database'); // eslint-disable-line no-console
 
     const port = nconf.get('PUBLIC_SERVER_HOST').split(':')[1] || 80;
     const server = app.listen(port, () => {
-      console.log('Server listening on port', port);
+      console.log('Server listening on port', port); // eslint-disable-line no-console
       resolve({ server, db });
     });
   });

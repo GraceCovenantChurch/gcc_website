@@ -14,7 +14,7 @@ router.get('/pages/:page', (req, res) => {
 });
 
 router.use((err, req, res, next) => {
-  console.error(err);
+  console.error(err); // eslint-disable-line no-console
   res.status(500);
   next();
 });
