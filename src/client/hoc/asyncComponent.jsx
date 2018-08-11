@@ -22,7 +22,7 @@ export default function asyncComponent(path, getComponent) {
           AsyncComponent.WrappedAsyncComponent = WrappedAsyncComponent.default;
           this.setState({ WrappedAsyncComponent: WrappedAsyncComponent.default });
         }).catch((err) => {
-          console.error('Dynamic page loading failed:', err);
+          console.error('Dynamic page loading failed:', err); // eslint-disable-line no-console
         });
       }
     }

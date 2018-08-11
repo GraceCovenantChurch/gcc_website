@@ -51,7 +51,7 @@ nconf
 
 Object.keys(secretConfig).forEach((k) => {
   if (nconf.get(k) === secretConfig[k]) {
-    console.warn(`Config variable ${k} is unset`);
+    console.warn(`Config variable ${k} is unset`); // eslint-disable-line no-console
   }
 });
 
