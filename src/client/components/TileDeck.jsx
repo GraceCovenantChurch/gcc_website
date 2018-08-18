@@ -16,12 +16,7 @@ const TileDeck = props => (
   <Grid container justify="center" className={props.classes.root} spacing={40}>
     { props.data.map(dataElement => (
       <Grid item key={dataElement.imageTitle}>
-        <Tile
-          image={dataElement.image}
-          imageTitle={dataElement.imageTitle}
-          title={dataElement.title}
-          description={dataElement.description}
-        />
+        <Tile {...dataElement} />
       </Grid>
     ))}
   </Grid>
@@ -32,6 +27,7 @@ TileDeck.propTypes = {
     image: PropTypes.string.isRequired,
     imageTitle: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
     description: PropTypes.string.isRequired,
   })).isRequired,
   classes: PropTypes.shape({

@@ -32,6 +32,7 @@ const Tile = props => (
       <h4 className={styles.cardTitle}>
         {props.title}
       </h4>
+      {props.subtitle && <div className={styles.cardSubtitle}>{props.subtitle}</div>}
       <p className={styles.cardDescription}>
         {props.description}
       </p>
@@ -43,11 +44,16 @@ Tile.propTypes = {
   image: PropTypes.string.isRequired,
   imageTitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string,
   description: PropTypes.string.isRequired,
   classes: PropTypes.shape({
     card: PropTypes.string.isRequired,
     media: PropTypes.string.isRequired,
   }).isRequired,
+};
+
+Tile.defaultProps = {
+  subtitle: '',
 };
 
 export default withStyles(materialStyles)(Tile);

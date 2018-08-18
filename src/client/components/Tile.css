@@ -6,4 +6,12 @@
   .cardDescription {
     font-size: 15px;
   }
+
+  .cardSubtitle {
+    white-space: pre-wrap;
+    font-size: 12px;
+    font-style: italic;
+    color: gray;
+    padding-bottom: 10px;
+  }
 }
