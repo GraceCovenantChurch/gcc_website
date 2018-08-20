@@ -1,11 +1,16 @@
-.pageContent{
-	margin: 100px 20%;
+.pageContent {
+	margin: 100px 27.5%;
 }
 
-.video{
+.description {
+	padding: 30px 0px;
+}
+
+.media {
 	margin: 30px auto;
 	width: 100%;
 	height: 500px;
+	background-color: gray;
 }
 
 .signupTable{
@@ -15,13 +20,13 @@
 .tableRow{
 	margin: auto;
 	padding: 20px 0px;
-	
+
 	.rowTitle {
-		font-weight: 500;
+		font-weight: bold;
 		font-size: 26px;
 		color: #444444;
 	}
-	
+
 	.rowDays {
 		font-size: 14px;
 		color: #888888;
