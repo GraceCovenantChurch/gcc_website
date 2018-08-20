@@ -31,9 +31,6 @@ class Home extends Component {
           backgroundAttachment="local"
         />
         <div className={styles.titleSection}>
-          <div className={styles.titleSectionSubtitle}>
-            Our Vision
-          </div>
           <div className={styles.titleSectionMission}>
               Raising up kingdom workers <br />
               who are transformed by Christ <br />
@@ -54,7 +51,8 @@ class Home extends Component {
             Friday Night Live: 7:30 PM
         </div>
         <div className={styles.infoSectionLocation}>
-          Meyerson Hall B-1, 210 South 34th Street <br />
+          Meyerson Hall B1 <br />
+          210 South 34th Street <br />
           Philadelphia, PA 19104
         </div>
         <a className={styles.infoSectionLink} href="/welcome">Learn More ></a>
@@ -68,7 +66,7 @@ class Home extends Component {
             Community
           </div>
           <div className={styles.fgSectionHeader}>
-            Family Groups
+            Family Group
           </div>
           <div className={styles.fgSectionSubtitle}>
               You haven't checked out GCC unless <br />

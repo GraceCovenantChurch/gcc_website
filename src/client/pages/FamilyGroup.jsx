@@ -19,7 +19,7 @@ const FamilyGroupRow = props => (
       {props.description}
     </div>
     <div className={styles.rowSignup}>
-      <a href={props.signupLink}>Sign Up &gt;</a>
+      <a href={props.signupLink}>You can sign up here &gt;</a>
     </div>
   </div>
 );
@@ -38,25 +38,16 @@ const FamilyGroup = () => (
     </Helmet>
 
     <TitleBanner src="/static/images/familygroup/fg_background.jpg">
-      Family Groups
+      Family Group
     </TitleBanner>
 
     <div className={styles.pageContent}>
-      <div className="description">
+      <div className={styles.description}>
         {'At GCC we place a high emphasis on Family Groups because we believe that it is in these smaller settings that we are able to meet with God, building meaningful relationships, and develop biblical accountability. Family groups meet on a weekly basis at various places.'}
-        <br />
-        <br />
-        {'Through Bible study, discussions, sharing and prayer, we learn to live out the teachings of the Bible in our daily lives. You are strongly encouraged to join a family group that fits your needs,interests and life situation.'}
-        <br />
-        <br />
-        {'Family groups are divided between the Harvest (undergraduate), Crossroad (post-college), and International groups.'}
-        <br />
-        <br />
-        {'Please watch the video below to learn more!'}
       </div>
 
       <iframe
-        className={styles.video}
+        className={styles.media}
         src="https://www.youtube.com/embed/rvXubANV7RA"
         frameBorder="0"
         title="intro"
@@ -64,23 +55,29 @@ const FamilyGroup = () => (
         allowFullScreen
       />
 
+      <div className={styles.description}>
+        {'Through Bible study, discussions, sharing, prayer, and hangouts, we learn together to live out the teachings of God’s Word in our daily lives. Family groups meet on a weekly basis at various locations. Join us!'}
+      </div>
+
+
       <div className={styles.signupTable}>
+        <div className={styles.media}>
+          Insert Image here
+        </div>
         <FamilyGroupRow
-          title="College"
+          title="College Ministry: Harvest"
           days="Mondays to Thursdays"
-          description="Our College Family Groups meet once a week on Drexel, Moore, Penn, Temple, and USciences!"
+          description="Our college family groups meet once a week at Drexel University, the University of Pennsylvania, Temple University, Moore College of Art & Design, and the University of the Sciences."
           signupLink="#"
         />
+
+        <div className={styles.media}>
+          Insert Image here
+        </div>
         <FamilyGroupRow
-          title="Young Adults"
+          title="Young Adult Ministry: Crossroads"
           days="Mondays to Thursdays"
-          description="Our Young Adult Family Groups have a mix of post-undergraduate, grad students, PhD's, working adults, and young married couples."
-          signupLink="#"
-        />
-        <FamilyGroupRow
-          title="International"
-          days="Thursdays"
-          description="Description needed"
+          description="Our young adult family groups meet once a week and have a mix of post-undergraduates, graduate students, working adults, and young married couples. Crossroads at our University City site exists to serve, love on, and walk with those who are in times of transition and constant change."
           signupLink="#"
         />
       </div>
