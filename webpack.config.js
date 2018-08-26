@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const nconf = require('./src/config.js');
@@ -169,6 +170,7 @@ module.exports = {
     }),
     new webpack.optimize.CommonsChunkPlugin({ name: 'manifest' }),
     nconf.get('NODE_ENV') === 'production' ? extractCSS : null,
+    new CopyWebpackPlugin([ { from: '../favicon.ico' },  ]),
   ].filter(plugin => plugin),
 
   devServer: {
