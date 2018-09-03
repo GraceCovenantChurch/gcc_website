@@ -9,7 +9,6 @@ import pluralize from 'pluralize';
 
 import withTitle from '../hoc/withTitle';
 import BackgroundImage from '../components/BackgroundImage';
-import Center from '../components/Center';
 import Jumbotron from '../components/Jumbotron';
 import Banner from '../components/Banner';
 import EventBox from '../components/EventBox';
@@ -99,14 +98,6 @@ class Home extends Component {
       </div>
     );
 
-    const eventSection = (
-      <div className={styles.eventSection}>
-        <div className={styles.eventSectionSubtitle}>Upcoming Events</div>
-        {events}
-        <a className={styles.eventSectionSubtitle} href="/events">See All Events ></a>
-      </div>
-    );
-
     let events = null;
 
     if (this.props.data.length !== 0) {
@@ -128,6 +119,14 @@ class Home extends Component {
         </div>
       );
     }
+
+    const eventSection = (
+      <div className={styles.eventSection}>
+        <div className={styles.eventSectionSubtitle}>Upcoming Events</div>
+        {events}
+        <a className={styles.eventSectionSubtitle} href="/events">See All Events ></a>
+      </div>
+    );
 
     return (
       <div id="home" className={styles.home}>

@@ -21,8 +21,8 @@ const Banner = props => (
     }
     { !props.centered &&
       <div className={styles.content}>
-       {props.children}
-     </div>
+        {props.children}
+      </div>
     }
   </Jumbotron>
 );
@@ -30,12 +30,12 @@ const Banner = props => (
 Banner.propTypes = {
   src: PropTypes.string.isRequired,
   children: PropTypes.node,
-  centered: PropTypes.bool
+  centered: PropTypes.bool,
 };
 
 Banner.defaultProps = {
   children: null,
-  centered: false
+  centered: false,
 };
 
 export default Banner;
