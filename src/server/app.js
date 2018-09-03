@@ -43,7 +43,6 @@ app.use(PageRouter(routes, reducers, (head, content, state) => `
         ${head.title.toString()}
         ${head.meta.toString()}
         ${head.link.toString()}
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href="/public/assets/app.bundle.css" />
         <link rel="stylesheet" type="text/css" href="/public/assets/public.bundle.css" />
       </head>

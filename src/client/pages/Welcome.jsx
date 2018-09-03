@@ -38,11 +38,7 @@ const Welcome = () => (
         <h3 className={styles.header}>What makes us unique?</h3>
         {'It isn’t our '}<a className={styles.link} href="/beliefs">beliefs</a>{'. We affirm the same basic Christian doctrines that have been a part of the Church for hundreds of years. Rather, we are committed to presenting these truths in a practical, relevant, contemporary, and loving manner. Our desire is to introduce you to Jesus Christ and to help you grow and become a kingdom worker.'}
       </div>
-
-      <div className={styles.media}>
-        Insert image here.
-      </div>
-
+      
       <div className={styles.description}>
         <h3 className={styles.header}>How can you get involved?</h3>
         {'Our church is comprised of a network of '}<a className={styles.link} href="/familygroup">family groups</a>{': small, intimate groups in which honest friendships, Bible study, prayer, and compassionate care for one another are emphasized. Our family groups are where the core of our evangelism and discipleship takes place. We invite you to join one and be able to call GCC your home!'}
