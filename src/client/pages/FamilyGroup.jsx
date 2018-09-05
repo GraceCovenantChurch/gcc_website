@@ -9,17 +9,24 @@ import styles from './FamilyGroup.css';
 
 const FamilyGroupRow = props => (
   <div className={styles.tableRow}>
-    <div className={styles.rowTitle}>
-      {props.title}
+    <div className={styles.column}>
+      <img className={styles.tableMedia} src={props.src} alt="fg-row-media" />
     </div>
-    <div className={styles.rowDays}>
-      {props.days}
-    </div>
-    <div className={styles.rowDescription}>
-      {props.description}
-    </div>
-    <div className={styles.rowSignup}>
-      <a href={props.signupLink}>You can sign up here &gt;</a>
+    <div className={styles.content}>
+      <div className={styles.textContainer}>
+        <div className={styles.rowTitle}>
+          {props.title}
+        </div>
+        <div className={styles.rowDays}>
+          {props.days}
+        </div>
+        <div className={styles.rowDescription}>
+          {props.description}
+        </div>
+        <div className={styles.rowSignup}>
+          <a href={props.signupLink}>You can sign up here &gt;</a>
+        </div>
+      </div>
     </div>
   </div>
 );
@@ -29,6 +36,7 @@ FamilyGroupRow.propTypes = {
   days: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   signupLink: PropTypes.string.isRequired,
+  src: PropTypes.string.isRequired,
 };
 
 const FamilyGroup = () => (
@@ -61,21 +69,17 @@ const FamilyGroup = () => (
 
 
       <div className={styles.signupTable}>
-        <div className={styles.media}>
-          Insert Image here
-        </div>
         <FamilyGroupRow
+          src="/static/images/familygroup/fg_college.jpg"
           title="College Ministry: Harvest"
           days="Mondays to Thursdays"
           description="Our college family groups meet once a week at Drexel University, the University of Pennsylvania, Temple University, Moore College of Art & Design, and the University of the Sciences."
           signupLink="#"
         />
 
-        <div className={styles.media}>
-          Insert Image here
-        </div>
         <FamilyGroupRow
-          title="Young Adult Ministry: Crossroads"
+          title="Young Adult: Crossroads"
+          src="/static/images/familygroup/fg_ya.jpg"
           days="Mondays to Thursdays"
           description="Our young adult family groups meet once a week and have a mix of post-undergraduates, graduate students, working adults, and young married couples. Crossroads at our University City site exists to serve, love on, and walk with those who are in times of transition and constant change."
           signupLink="#"
