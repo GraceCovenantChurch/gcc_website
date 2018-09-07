@@ -77,8 +77,29 @@ class Home extends Component {
       </Banner>
     );
 
+    const amiSection = (
+      <Banner src="/static/images/home/amiqt.jpg" centered>
+        <div className={styles.centeredSection}>
+          <div className={styles.title}>
+            AMI Quiet Times
+          </div>
+          <div className={styles.subtitle}>
+            Mobile apps for iOS and Android are also available.
+          </div>
+        </div>
+      </Banner>
+    );
+
+    const memoryVerseSection = (
+      <div className={styles.emptySection}>
+        <div className={styles.title}>Monthly Memory Verse</div>
+        <div className={styles.memoryVerse}>He who dwells in the shelter of the Most High will abide in the shadow of the Almighty. I will say to the LORD, “My refuge and my fortress, my God, in whom I trust.”</div>
+        <div className={styles.footerText}>Psalm 91:1-2</div>
+      </div>
+    );
 
     let events = null;
+
     if (this.props.data.length !== 0) {
       events = (
         <div className={styles.eventSectionEvents}>
@@ -108,7 +129,7 @@ class Home extends Component {
     );
 
     return (
-      <div id="home">
+      <div id="home" className={styles.home}>
         <Helmet>
           <link rel="stylesheet" type="text/css" href="/public/assets/pages/Home.bundle.css" />
         </Helmet>
@@ -116,6 +137,8 @@ class Home extends Component {
         {infoSection}
         {familyGroupSection}
         {eventSection}
+        {amiSection}
+        {memoryVerseSection}
       </div>
     );
   }

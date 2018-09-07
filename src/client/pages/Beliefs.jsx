@@ -41,7 +41,7 @@ class Beliefs extends Component {
         </Helmet>
 
         <div className={styles.beliefs}>
-          <TitleBanner src="/static/images/beliefs/beliefs.jpg">
+          <TitleBanner src="/static/images/beliefs/beliefs_background.jpg">
             Beliefs
           </TitleBanner>
 

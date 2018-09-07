@@ -6,6 +6,7 @@
   right: 0;
   left: 0;
   z-index: 1030;
+  margin: 1em 3%;
 
   .navbar-brand {
     img {
@@ -19,7 +20,7 @@
     .logo-dark {
       display: none;
     }
-    
+
     @media(max-width: 991px) {
       .logo-light {
         display: none;

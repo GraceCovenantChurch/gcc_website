@@ -1,4 +1,6 @@
-footer {
+.footer {
+  height: 50px;
+
   .footerBorder {
     border-top: 0.5px solid #808080;
     width: 70%;

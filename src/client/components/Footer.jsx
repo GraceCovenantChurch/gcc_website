@@ -5,7 +5,7 @@ import Center from './Center';
 import styles from './Footer.css';
 
 const Footer = () => (
-  <footer>
+  <footer className={styles.footer}>
     <Center vertical horizontal>
       <div className={styles.footerBorder}>
         <div className={`${styles.footerContainer} container footer`}>
