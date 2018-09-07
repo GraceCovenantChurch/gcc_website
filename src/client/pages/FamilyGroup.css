@@ -21,6 +21,7 @@
 	margin: auto;
 	padding: 20px 0px;
 	display: flex;
+	align-items: center;
 
 	.column {
 		flex: 50%;
@@ -29,6 +30,7 @@
 
 	.tableMedia {
 		width: 100%;
+		min-width: 300px;
 	}
 
 	.content {
