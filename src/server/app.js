@@ -45,6 +45,7 @@ app.use(PageRouter(routes, reducers, (head, content, state) => `
         ${head.link.toString()}
         <link rel="stylesheet" type="text/css" href="/public/assets/app.bundle.css" />
         <link rel="stylesheet" type="text/css" href="/public/assets/public.bundle.css" />
+        <link rel="shortcut icon" href="/public/assets/favicon.ico" />
       </head>
       <body ${head.bodyAttributes.toString()}>
         ${content}
