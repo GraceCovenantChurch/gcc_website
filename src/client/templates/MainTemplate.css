@@ -1,11 +1,12 @@
+
 main {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 1em;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
 }
 
 h1.header {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 700;
   font-size: 3em;
 }

@@ -7,10 +7,11 @@ exports[`Public ServerTest renders 404 page 1`] = `
   <head>
     <title data-react-helmet=\\"true\\">Error: Not Found - Grace Covenant Church</title>
 
-    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto:300,700\\" rel=\\"stylesheet\\" />
-    <link href=\\"https://fonts.googleapis.com/css?family=PT+Sans\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
+    <link rel=\\"shortcut icon\\" href=\\"/public/assets/favicon.ico\\" />
   </head>
 
   <body>
@@ -57,7 +58,7 @@ exports[`Public ServerTest renders 404 page 1`] = `
         <main>
           <div>Nothing here!</div>
         </main>
-        <footer>
+        <footer class=\\"Footer__footer\\">
           <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
             <div class=\\"Center__centered\\">
               <div class=\\"Footer__footerBorder\\">
@@ -112,11 +113,12 @@ exports[`Public ServerTest renders Family Group page 1`] = `
   <head>
     <title data-react-helmet=\\"true\\">Family Group - Grace Covenant Church</title>
 
-    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto:300,700\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/pages/FamilyGroup.bundle.css\\" />
-    <link href=\\"https://fonts.googleapis.com/css?family=PT+Sans\\" rel=\\"stylesheet\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
+    <link rel=\\"shortcut icon\\" href=\\"/public/assets/favicon.ico\\" />
   </head>
 
   <body>
@@ -213,7 +215,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
             </div>
           </div>
         </main>
-        <footer>
+        <footer class=\\"Footer__footer\\">
           <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
             <div class=\\"Center__centered\\">
               <div class=\\"Footer__footerBorder\\">
@@ -268,11 +270,12 @@ exports[`Public ServerTest renders Home page 1`] = `
   <head>
     <title data-react-helmet=\\"true\\">Grace Covenant Church</title>
 
-    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto:300,700\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/pages/Home.bundle.css\\" />
-    <link href=\\"https://fonts.googleapis.com/css?family=PT+Sans\\" rel=\\"stylesheet\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
+    <link rel=\\"shortcut icon\\" href=\\"/public/assets/favicon.ico\\" />
   </head>
 
   <body>
@@ -317,7 +320,7 @@ exports[`Public ServerTest renders Home page 1`] = `
           </div>
         </nav>
         <main>
-          <div id=\\"home\\">
+          <div id=\\"home\\" class=\\"Home__home\\">
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
                 <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/worship.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
@@ -357,9 +360,27 @@ exports[`Public ServerTest renders Home page 1`] = `
               <div class=\\"Home__eventSectionEventsError\\">There seems to be no upcoming events</div>
               <a class=\\"Home__eventSectionSubtitle\\" href=\\"/events\\">See All Events &gt;</a>
             </div>
+            <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
+              <div class=\\"BackgroundImage__backgroundImageContainer\\">
+                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/amiqt.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
+              </div>
+              <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
+                <div class=\\"Center__centered\\">
+                  <div class=\\"Home__centeredSection\\">
+                    <div class=\\"Home__title\\">AMI Quiet Times</div>
+                    <div class=\\"Home__subtitle\\">Mobile apps for iOS and Android are also available.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=\\"Home__emptySection\\">
+              <div class=\\"Home__title\\">Monthly Memory Verse</div>
+              <div class=\\"Home__memoryVerse\\">He who dwells in the shelter of the Most High will abide in the shadow of the Almighty. I will say to the LORD, “My refuge and my fortress, my God, in whom I trust.”</div>
+              <div class=\\"Home__footerText\\">Psalm 91:1-2</div>
+            </div>
           </div>
         </main>
-        <footer>
+        <footer class=\\"Footer__footer\\">
           <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
             <div class=\\"Center__centered\\">
               <div class=\\"Footer__footerBorder\\">
@@ -414,11 +435,12 @@ exports[`Public ServerTest renders Welcome page 1`] = `
   <head>
     <title data-react-helmet=\\"true\\">Grace Covenant Church</title>
 
-    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto:300,700\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"public/assets/pages/welcome/Welcome.bundle.css\\" />
-    <link href=\\"https://fonts.googleapis.com/css?family=PT+Sans\\" rel=\\"stylesheet\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
+    <link rel=\\"shortcut icon\\" href=\\"/public/assets/favicon.ico\\" />
   </head>
 
   <body>
@@ -490,7 +512,6 @@ exports[`Public ServerTest renders Welcome page 1`] = `
                 <h3 class=\\"Welcome__header\\">What makes us unique?</h3>It isn’t our
                 <a class=\\"Welcome__link\\" href=\\"/beliefs\\">beliefs</a>. We affirm the same basic Christian doctrines that have been a part of the Church for hundreds of years. Rather, we are committed to presenting these truths in a practical, relevant, contemporary, and loving manner. Our desire
                 is to introduce you to Jesus Christ and to help you grow and become a kingdom worker.</div>
-              <div class=\\"Welcome__media\\">Insert image here.</div>
               <div class=\\"Welcome__description\\">
                 <h3 class=\\"Welcome__header\\">How can you get involved?</h3>Our church is comprised of a network of
                 <a class=\\"Welcome__link\\" href=\\"/familygroup\\">family groups</a>: small, intimate groups in which honest friendships, Bible study, prayer, and compassionate care for one another are emphasized. Our family groups are where the core of our evangelism and discipleship takes place. We
@@ -513,7 +534,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
             </div>
           </div>
         </main>
-        <footer>
+        <footer class=\\"Footer__footer\\">
           <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
             <div class=\\"Center__centered\\">
               <div class=\\"Footer__footerBorder\\">
