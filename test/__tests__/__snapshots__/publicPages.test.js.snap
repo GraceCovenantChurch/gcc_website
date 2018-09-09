@@ -317,7 +317,7 @@ exports[`Public ServerTest renders Home page 1`] = `
                 <div class=\\"Home__titleSectionMission\\">Raising up kingdom workers
                   <br/>who are transformed by Christ
                   <br/>to change the world.</div>
-                <a class=\\"Home__titleSectionLink\\" href=\\"/welcome\\">Learn More &gt;</a>
+                <a class=\\"Home__titleSectionLink\\" href=\\"/welcome\\">Learn more &gt;</a>
               </div>
             </div>
             <div class=\\"Home__infoSection\\">
@@ -327,7 +327,7 @@ exports[`Public ServerTest renders Home page 1`] = `
               <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
                 <br/>210 South 34th Street
                 <br/>Philadelphia, PA 19104</div>
-              <a class=\\"Home__infoSectionLink\\" href=\\"/welcome\\">Learn More &gt;</a>
+              <a class=\\"Home__infoSectionLink\\" href=\\"/welcome\\">Learn more &gt;</a>
             </div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
@@ -339,14 +339,14 @@ exports[`Public ServerTest renders Home page 1`] = `
                   <div class=\\"Home__fgSectionHeader\\">Family Group</div>
                   <div class=\\"Home__fgSectionSubtitle\\">You haven&#x27;t checked out GCC unless
                     <br/>you&#x27;ve checked out our family groups.</div>
-                  <a class=\\"Home__fgSectionLink\\" href=\\"/familygroup\\">Sign Up Here &gt;</a>
+                  <a class=\\"Home__fgSectionLink\\" href=\\"/familygroup\\">Sign up here &gt;</a>
                 </div>
               </div>
             </div>
             <div class=\\"Home__eventSection\\">
               <div class=\\"Home__eventSectionSubtitle\\">Upcoming Events</div>
               <div class=\\"Home__eventSectionEventsError\\">There seems to be no upcoming events</div>
-              <a class=\\"Home__eventSectionSubtitle\\" href=\\"/events\\">See All Events &gt;</a>
+              <a class=\\"Home__eventSectionSubtitle\\" href=\\"/events\\">See all events &gt;</a>
             </div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
