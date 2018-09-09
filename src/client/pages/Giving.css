@@ -1,0 +1,22 @@
+.giving {
+	.givingContent {
+		margin: 100px 20%;
+	}
+
+
+	.description {
+	  padding: 30px 0px;
+
+		.header {
+			font-weight: bold;
+		}
+
+		.payment {
+			margin: 35px 5%;
+
+			.subheader {
+				font-weight: bold;
+			}
+		}
+	}
+}
