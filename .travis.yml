@@ -36,7 +36,7 @@ deploy:
   local_dir: deploy_upload
   skip_cleanup: true
   on:
-    branch: develop
+    branch: staging
     repo: GraceCovenantChurch/gcc_website
   bucket: s3.web.staging
   region: us-east-1
