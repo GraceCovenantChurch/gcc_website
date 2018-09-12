@@ -1,5 +1,5 @@
 .pageContent {
-	margin: 100px 27.5%;
+	margin: 100px 22.5%;
 }
 
 .description {
@@ -20,24 +20,45 @@
 .tableRow{
 	margin: auto;
 	padding: 20px 0px;
+	display: flex;
+	align-items: center;
 
-	.rowTitle {
-		font-weight: bold;
-		font-size: 26px;
-		color: #444444;
+	.column {
+		flex: 50%;
+		margin-right: 3%;
 	}
 
-	.rowDays {
-		font-size: 14px;
-		color: #888888;
-		padding: 10px 0px;
+	.tableMedia {
+		width: 100%;
+		min-width: 300px;
 	}
 
-	.rowDescription {
-		padding: 10px 0px;
-	}
+	.content {
+		flex: 50%;
 
-	.rowSignup {
-		padding: 10px 0px;
+		.textContainer {
+			position: relative;
+
+			.rowTitle {
+				font-weight: bold;
+				font-size: 24px;
+				color: #444444;
+			}
+
+			.rowDays {
+				font-size: 14px;
+				color: #888888;
+				padding-bottom: 5px;
+				font-style: italic;
+			}
+
+			.rowDescription {
+				padding: 10px 0px;
+			}
+
+			.rowSignup {
+				padding: 10px 0px;
+			}
+		}
 	}
 }
