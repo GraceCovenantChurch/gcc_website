@@ -169,7 +169,7 @@ module.exports = {
       minChunks: 2,
     }),
     new HtmlWebpackPlugin({
-      favicon: '../static/icon/favicon.ico'
+      favicon: '../build/public/assets/favicon.ico'
     }),
     new webpack.optimize.CommonsChunkPlugin({ name: 'manifest' }),
     nconf.get('NODE_ENV') === 'production' ? extractCSS : null,
