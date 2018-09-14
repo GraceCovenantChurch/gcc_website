@@ -36,7 +36,7 @@ class Home extends Component {
               who are transformed by Christ <br />
               to change the world.
           </div>
-          <a className={styles.titleSectionLink} href="/welcome">Learn More ></a>
+          <a className={styles.titleSectionLink} href="/welcome">Learn more ></a>
         </div>
       </Jumbotron>
     );
@@ -47,7 +47,7 @@ class Home extends Component {
           Service Location and Times
         </div>
         <div className={styles.infoSectionTimes}>
-            Sunday Service: 11:15 AM <br />
+            Sunday Service: 11:30 AM <br />
             Friday Night Live: 7:30 PM
         </div>
         <div className={styles.infoSectionLocation}>
@@ -55,7 +55,7 @@ class Home extends Component {
           210 South 34th Street <br />
           Philadelphia, PA 19104
         </div>
-        <a className={styles.infoSectionLink} href="/welcome">Learn More ></a>
+        <a className={styles.infoSectionLink} href="/welcome">Learn more ></a>
       </div>
     );
 
@@ -72,7 +72,7 @@ class Home extends Component {
               You haven't checked out GCC unless <br />
               you've checked out our family groups.
           </div>
-          <a className={styles.fgSectionLink} href="/familygroup">Sign Up Here ></a>
+          <a className={styles.fgSectionLink} href="/familygroup">Sign up here ></a>
         </div>
       </Banner>
     );
@@ -124,7 +124,7 @@ class Home extends Component {
       <div className={styles.eventSection}>
         <div className={styles.eventSectionSubtitle}>Upcoming Events</div>
         {events}
-        <a className={styles.eventSectionSubtitle} href="/events">See All Events ></a>
+        <a className={styles.eventSectionSubtitle} href="/events">See all events ></a>
       </div>
     );
 

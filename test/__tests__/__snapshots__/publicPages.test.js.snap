@@ -33,7 +33,7 @@ exports[`Public ServerTest renders 404 page 1`] = `
                     <a href=\\"/welcome\\">Welcome</a>
                     <a href=\\"/beliefs\\">Beliefs</a>
                     <a href=\\"/staff\\">Staff</a>
-                    <a href=\\"/ami\\">AMI</a>
+                    <a href=\\"http://amichurches.com/\\">AMI</a>
                   </div>
                 </div>
               </li>
@@ -140,7 +140,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                     <a href=\\"/welcome\\">Welcome</a>
                     <a href=\\"/beliefs\\">Beliefs</a>
                     <a href=\\"/staff\\">Staff</a>
-                    <a href=\\"/ami\\">AMI</a>
+                    <a href=\\"http://amichurches.com/\\">AMI</a>
                   </div>
                 </div>
               </li>
@@ -180,23 +180,35 @@ exports[`Public ServerTest renders Family Group page 1`] = `
               <iframe class=\\"FamilyGroup__media\\" src=\\"https://www.youtube.com/embed/rvXubANV7RA\\" frameBorder=\\"0\\" title=\\"intro\\" allow=\\"autoplay; encrypted-media\\" allowfullscreen=\\"\\"></iframe>
               <div class=\\"FamilyGroup__description\\">Through Bible study, discussions, sharing, prayer, and hangouts, we learn together to live out the teachings of God’s Word in our daily lives. Family groups meet on a weekly basis at various locations. Join us!</div>
               <div class=\\"FamilyGroup__signupTable\\">
-                <div class=\\"FamilyGroup__media\\">Insert Image here</div>
                 <div class=\\"FamilyGroup__tableRow\\">
-                  <div class=\\"FamilyGroup__rowTitle\\">College Ministry: Harvest</div>
-                  <div class=\\"FamilyGroup__rowDays\\">Mondays to Thursdays</div>
-                  <div class=\\"FamilyGroup__rowDescription\\">Our college family groups meet once a week at Drexel University, the University of Pennsylvania, Temple University, Moore College of Art &amp; Design, and the University of the Sciences.</div>
-                  <div class=\\"FamilyGroup__rowSignup\\">
-                    <a href=\\"#\\">You can sign up here &gt;</a>
+                  <div class=\\"FamilyGroup__column\\">
+                    <img class=\\"FamilyGroup__tableMedia\\" src=\\"/static/images/familygroup/fg_college.jpg\\" alt=\\"fg-row-media\\" />
+                  </div>
+                  <div class=\\"FamilyGroup__content\\">
+                    <div class=\\"FamilyGroup__textContainer\\">
+                      <div class=\\"FamilyGroup__rowTitle\\">College Ministry: Harvest</div>
+                      <div class=\\"FamilyGroup__rowDays\\">Mondays to Thursdays</div>
+                      <div class=\\"FamilyGroup__rowDescription\\">Our college family groups meet once a week at Drexel University, the University of Pennsylvania, Temple University, Moore College of Art &amp; Design, and the University of the Sciences.</div>
+                      <div class=\\"FamilyGroup__rowSignup\\">
+                        <a href=\\"#\\">You can sign up here &gt;</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div class=\\"FamilyGroup__media\\">Insert Image here</div>
                 <div class=\\"FamilyGroup__tableRow\\">
-                  <div class=\\"FamilyGroup__rowTitle\\">Young Adult Ministry: Crossroads</div>
-                  <div class=\\"FamilyGroup__rowDays\\">Mondays to Thursdays</div>
-                  <div class=\\"FamilyGroup__rowDescription\\">Our young adult family groups meet once a week and have a mix of post-undergraduates, graduate students, working adults, and young married couples. Crossroads at our University City site exists to serve, love on, and walk with those
-                    who are in times of transition and constant change.</div>
-                  <div class=\\"FamilyGroup__rowSignup\\">
-                    <a href=\\"#\\">You can sign up here &gt;</a>
+                  <div class=\\"FamilyGroup__column\\">
+                    <img class=\\"FamilyGroup__tableMedia\\" src=\\"/static/images/familygroup/fg_ya.jpg\\" alt=\\"fg-row-media\\" />
+                  </div>
+                  <div class=\\"FamilyGroup__content\\">
+                    <div class=\\"FamilyGroup__textContainer\\">
+                      <div class=\\"FamilyGroup__rowTitle\\">Young Adult: Crossroads</div>
+                      <div class=\\"FamilyGroup__rowDays\\">Mondays to Thursdays</div>
+                      <div class=\\"FamilyGroup__rowDescription\\">Our young adult family groups meet once a week and have a mix of post-undergraduates, graduate students, working adults, and young married couples. Crossroads at our University City site exists to serve, love on, and walk with those
+                        who are in times of transition and constant change.</div>
+                      <div class=\\"FamilyGroup__rowSignup\\">
+                        <a href=\\"#\\">You can sign up here &gt;</a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -285,7 +297,7 @@ exports[`Public ServerTest renders Home page 1`] = `
                     <a href=\\"/welcome\\">Welcome</a>
                     <a href=\\"/beliefs\\">Beliefs</a>
                     <a href=\\"/staff\\">Staff</a>
-                    <a href=\\"/ami\\">AMI</a>
+                    <a href=\\"http://amichurches.com/\\">AMI</a>
                   </div>
                 </div>
               </li>
@@ -317,17 +329,17 @@ exports[`Public ServerTest renders Home page 1`] = `
                 <div class=\\"Home__titleSectionMission\\">Raising up kingdom workers
                   <br/>who are transformed by Christ
                   <br/>to change the world.</div>
-                <a class=\\"Home__titleSectionLink\\" href=\\"/welcome\\">Learn More &gt;</a>
+                <a class=\\"Home__titleSectionLink\\" href=\\"/welcome\\">Learn more &gt;</a>
               </div>
             </div>
             <div class=\\"Home__infoSection\\">
               <div class=\\"Home__infoSectionHeader\\">Service Location and Times</div>
-              <div class=\\"Home__infoSectionTimes\\">Sunday Service: 11:15 AM
+              <div class=\\"Home__infoSectionTimes\\">Sunday Service: 11:30 AM
                 <br/>Friday Night Live: 7:30 PM</div>
               <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
                 <br/>210 South 34th Street
                 <br/>Philadelphia, PA 19104</div>
-              <a class=\\"Home__infoSectionLink\\" href=\\"/welcome\\">Learn More &gt;</a>
+              <a class=\\"Home__infoSectionLink\\" href=\\"/welcome\\">Learn more &gt;</a>
             </div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
@@ -339,14 +351,14 @@ exports[`Public ServerTest renders Home page 1`] = `
                   <div class=\\"Home__fgSectionHeader\\">Family Group</div>
                   <div class=\\"Home__fgSectionSubtitle\\">You haven&#x27;t checked out GCC unless
                     <br/>you&#x27;ve checked out our family groups.</div>
-                  <a class=\\"Home__fgSectionLink\\" href=\\"/familygroup\\">Sign Up Here &gt;</a>
+                  <a class=\\"Home__fgSectionLink\\" href=\\"/familygroup\\">Sign up here &gt;</a>
                 </div>
               </div>
             </div>
             <div class=\\"Home__eventSection\\">
               <div class=\\"Home__eventSectionSubtitle\\">Upcoming Events</div>
               <div class=\\"Home__eventSectionEventsError\\">There seems to be no upcoming events</div>
-              <a class=\\"Home__eventSectionSubtitle\\" href=\\"/events\\">See All Events &gt;</a>
+              <a class=\\"Home__eventSectionSubtitle\\" href=\\"/events\\">See all events &gt;</a>
             </div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
@@ -450,7 +462,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
                     <a href=\\"/welcome\\">Welcome</a>
                     <a href=\\"/beliefs\\">Beliefs</a>
                     <a href=\\"/staff\\">Staff</a>
-                    <a href=\\"/ami\\">AMI</a>
+                    <a href=\\"http://amichurches.com/\\">AMI</a>
                   </div>
                 </div>
               </li>

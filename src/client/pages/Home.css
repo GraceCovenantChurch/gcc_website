@@ -33,10 +33,11 @@
 
 .titleSectionSubtitle {
   font-size: 32px;
+  font-style: italic;
 }
 
 .infoSection {
-  padding: 120px 0;
+  padding: 124px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -46,11 +47,12 @@
 .infoSectionHeader {
   font-size: 18px;
   color: gray;
+  font-style: italic;
 }
 
 .infoSectionTimes {
   margin: 30px 0;
-  font-size: 80px;
+  font-size: 60px;
   font-weight: bold;
 }
 
@@ -61,6 +63,8 @@
 .infoSectionLink, .infoSectionLink:hover {
   margin-top: 30px;
   color: gray;
+  font-style: italic;
+  font-size: 18px;
 }
 
 .fgSection {
@@ -73,19 +77,20 @@
 }
 
 .fgSectionHeader {
-  margin-top: 20px;
-  font-size: 80px;
+  margin-top: 24px;
+  font-size: 60px;
   font-weight: bold;
 }
 
 .fgSectionSubtitle {
-  font-size: 40px;
-  margin: 20px 0;
+  font-size: 32px;
+  margin: 24px 0;
 }
 
 .fgSectionLink, .fgSectionLink:hover {
   font-size: 18px;
   color: white;
+  font-style: italic;
 }
 
 .eventSection {
@@ -96,6 +101,7 @@
 .eventSectionSubtitle, .eventSectionSubtitle:hover {
   color: gray;
   font-size: 18px;
+  font-style: italic;
 }
 
 .eventSectionEvents {
@@ -105,7 +111,7 @@
 }
 
 .eventSectionEventsError {
-  font-size: 40px;
+  font-size: 32px;
 }
 
 .eventSectionEvents {
@@ -115,7 +121,7 @@
 }
 
 .eventSectionEventsError {
-  font-size: 40px;
+  font-size: 32px;
 }
 
 .centeredSection {
@@ -123,7 +129,7 @@
   color: white;
 
   .title {
-    font-size: 80px;
+    font-size: 60px;
     font-weight: bold;
     margin: 40px 0px;
   }
@@ -140,7 +146,7 @@
 
   .title {
     color: #979797;
-    font-size: 14px;
+    font-size: 18px;
     font-style: italic;
     margin: 40px 0px;
   }
@@ -153,7 +159,7 @@
 
   .footerText {
     color: #979797;
-    font-size: 14px;
+    font-size: 18px;
     font-style: italic;
     margin: 40px 0px;
   }
