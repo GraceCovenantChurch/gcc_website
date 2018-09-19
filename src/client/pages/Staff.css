@@ -24,11 +24,11 @@
     order: -1;
 }
 
-.staffDescription {
+.staffBiography {
     display: none;
 }
 
-.staffDescriptionOpen {
+.staffBiographyOpen {
     display: flex;
     flex-direction: column;
     justify-content: center;
