@@ -15,14 +15,6 @@ spawn('babel-watch', ['./src/server/app.js'], {
   }),
 });
 
-spawn('babel-watch', ['./src/admin_server/app.js'], {
-  shell: true,
-  stdio: 'inherit',
-  env: Object.assign({}, process.env, {
-    BABEL_ENV: 'server',
-  }),
-});
-
 const webpackConfig = require('../webpack.config.js');
 Object.keys(webpackConfig.entry).forEach(key => {
   const entry = webpackConfig.entry[key];
