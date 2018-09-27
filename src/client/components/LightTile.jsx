@@ -6,22 +6,21 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
-import styles from './Tile.css';
+import styles from './LightTile.css';
 
 const materialStyles = {
   card: {
-    minHeight: 700,
-    maxHeight: 1500,
-    maxWidth: 500,
+    minHeight: 650,
+    maxWidth: 350,
   },
   media: {
-    height: 500,
+    height: 350,
     margin: 'auto',
     paddingTop: '56.25%',
   },
 };
 
-const Tile = props => (
+const LightTile = props => (
   <Card className={props.classes.card}>
     <CardMedia
       className={props.classes.media}
@@ -40,7 +39,7 @@ const Tile = props => (
   </Card>
 );
 
-Tile.propTypes = {
+LightTile.propTypes = {
   image: PropTypes.string.isRequired,
   imageTitle: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
@@ -52,8 +51,8 @@ Tile.propTypes = {
   }).isRequired,
 };
 
-Tile.defaultProps = {
+LightTile.defaultProps = {
   subtitle: ''
 };
 
-export default withStyles(materialStyles)(Tile);
+export default withStyles(materialStyles)(LightTile);
