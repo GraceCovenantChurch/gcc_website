@@ -10,12 +10,12 @@ import styles from './Tile.css';
 
 const materialStyles = {
   card: {
-    minHeight: 700,
+    minHeight: 850,
     maxHeight: 1500,
-    maxWidth: 500,
+    maxWidth: 400,
   },
   media: {
-    height: 500,
+    height: 400,
     margin: 'auto',
     paddingTop: '56.25%',
   },
