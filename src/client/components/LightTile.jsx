@@ -52,7 +52,7 @@ LightTile.propTypes = {
 };
 
 LightTile.defaultProps = {
-  subtitle: ''
+  subtitle: '',
 };
 
 export default withStyles(materialStyles)(LightTile);

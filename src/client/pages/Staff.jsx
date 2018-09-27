@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import withTitle from '../hoc/withTitle';
@@ -10,8 +9,8 @@ import contentfulClient from '../modules/contentful';
 import styles from './Staff.css';
 
 const INITIAL_STATE = {
-  staffList: []
-}
+  staffList: [],
+};
 
 class Staff extends Component {
   constructor(props) {
@@ -28,7 +27,7 @@ class Staff extends Component {
         description: item.fields.biography,
         image: item.fields.image.fields.file.url,
         imageTitle: item.fields.image.fields.title,
-        subtitle: item.fields.title
+        subtitle: item.fields.title,
       }));
 
       this.setState({

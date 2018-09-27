@@ -38,7 +38,7 @@ TileDeck.propTypes = {
 };
 
 TileDeck.defaultProps = {
-  light: false
+  light: false,
 };
 
 export default withStyles(materialStyles)(TileDeck);

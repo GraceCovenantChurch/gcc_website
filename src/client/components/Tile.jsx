@@ -53,7 +53,7 @@ Tile.propTypes = {
 };
 
 Tile.defaultProps = {
-  subtitle: ''
+  subtitle: '',
 };
 
 export default withStyles(materialStyles)(Tile);
