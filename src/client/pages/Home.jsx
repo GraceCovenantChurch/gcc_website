@@ -47,7 +47,7 @@ class Home extends Component {
           Service Location and Times
         </div>
         <div className={styles.infoSectionTimes}>
-            Sunday Service: 11:15 AM <br />
+            Sunday Service: 11:30 AM <br />
             Friday Night Live: 7:30 PM
         </div>
         <div className={styles.infoSectionLocation}>
