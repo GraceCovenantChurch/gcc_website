@@ -66,6 +66,7 @@ class Beliefs extends Component {
               <div className={styles.subtitle}>Beliefs</div>
               <div className={styles.description}>
                 <TileDeck
+                  light
                   data={this.state.beliefsList}
                 />
               </div>
