@@ -47,6 +47,7 @@ class Ministries extends Component {
 
         <div className={styles.pageContent}>
           <TileDeck
+            light
             data={this.state.ministriesList}
           />
         </div>
