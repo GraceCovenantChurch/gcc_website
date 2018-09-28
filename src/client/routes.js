@@ -48,6 +48,11 @@ const routes = [
         component: asyncComponent(path.resolve(__dirname, './pages/Welcome'), () => import('./pages/Welcome')),
       },
       {
+        path: '/events',
+        exact: true,
+        component: asyncComponent(path.resolve(__dirname, './pages/Events'), () => import('./pages/Events')),
+      },
+      {
         component: NotFound,
       },
     ],

@@ -34,7 +34,7 @@ const MainTemplate = ({ route }) => (
         <Link to="/ministries">Ministries</Link>,
         <Link to="/page">Giving</Link>,
         <Link to="/pages">Multimedia</Link>,
-        <Link to="/pages">Events</Link>,
+        <Link to="/events">Events</Link>,
       ]}
       className={`navbar-light ${navStyles['navbar-light']}`}
     />
