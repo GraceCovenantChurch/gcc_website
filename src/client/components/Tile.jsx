@@ -12,7 +12,7 @@ const materialStyles = {
   card: {
     minHeight: 850,
     maxHeight: 1500,
-    maxWidth: 400,
+    maxWidth: 350,
   },
   media: {
     height: 400,

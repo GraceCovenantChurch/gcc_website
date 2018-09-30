@@ -13,7 +13,7 @@
 }
 
 .titleSectionMission {
-  font-size: 60px;
+  font-size: 45px;
   font-weight: bold;
   margin: 10px 0;
 }
@@ -52,7 +52,7 @@
 
 .infoSectionTimes {
   margin: 30px 0;
-  font-size: 60px;
+  font-size: 45px;
   font-weight: bold;
 }
 
@@ -78,7 +78,7 @@
 
 .fgSectionHeader {
   margin-top: 24px;
-  font-size: 60px;
+  font-size: 45px;
   font-weight: bold;
 }
 
@@ -129,7 +129,7 @@
   color: white;
 
   .title {
-    font-size: 60px;
+    font-size: 45px;
     font-weight: bold;
     margin: 40px 0px;
   }
