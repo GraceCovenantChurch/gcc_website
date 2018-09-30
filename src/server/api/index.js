@@ -1,10 +1,6 @@
 import { Router } from 'express';
-import Ministries from './Ministries';
-import Events from './Events';
 
 const router = Router();
-router.use('/modelData/Ministries', Ministries);
-router.use('/modelData/Events', Events);
 
 router.get('/pages/:page', (req, res) => {
   res.json({

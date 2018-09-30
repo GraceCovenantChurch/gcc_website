@@ -21,7 +21,6 @@ const defaultConfig = {
   NODE_ENV: 'development',
   ASSET_HOST: 'localhost:3000',
   PUBLIC_SERVER_HOST: 'localhost:8080',
-  ADMIN_SERVER_HOST: 'localhost:8081',
   MONGODB_URI: 'mongodb://localhost:27017/gccweb',
   AWS_REGION: 'us-east-1',
   AWS_ASSET_BUCKET: 's3.web.staging',

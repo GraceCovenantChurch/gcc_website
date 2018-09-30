@@ -50,7 +50,7 @@ exports[`Public ServerTest renders 404 page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Events</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
               </li>
             </ul>
           </div>
@@ -157,7 +157,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Events</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
               </li>
             </ul>
           </div>
@@ -314,7 +314,7 @@ exports[`Public ServerTest renders Home page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Events</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
               </li>
             </ul>
           </div>
@@ -479,7 +479,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Events</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
               </li>
             </ul>
           </div>
