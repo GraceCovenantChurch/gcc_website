@@ -177,7 +177,11 @@ exports[`Public ServerTest renders Family Group page 1`] = `
             <div class=\\"FamilyGroup__pageContent\\">
               <div class=\\"FamilyGroup__description\\">At GCC we place a high emphasis on Family Groups because we believe that it is in these smaller settings that we are able to meet with God, building meaningful relationships, and develop biblical accountability. Family groups meet on a weekly
                 basis at various places.</div>
-              <iframe class=\\"FamilyGroup__media\\" src=\\"https://www.youtube.com/embed/rvXubANV7RA\\" frameBorder=\\"0\\" title=\\"intro\\" allow=\\"autoplay; encrypted-media\\" allowfullscreen=\\"\\"></iframe>
+              <div class=\\"Center__center Center__centerHorizontal\\">
+                <div class=\\"Center__centered\\">
+                  <iframe class=\\"FamilyGroup__media\\" src=\\"https://www.youtube.com/embed/rvXubANV7RA\\" frameBorder=\\"0\\" title=\\"intro\\" allow=\\"autoplay; encrypted-media\\" allowfullscreen=\\"\\"></iframe>
+                </div>
+              </div>
               <div class=\\"FamilyGroup__description\\">Through Bible study, discussions, sharing, prayer, and hangouts, we learn together to live out the teachings of God’s Word in our daily lives. Family groups meet on a weekly basis at various locations. Join us!</div>
               <div class=\\"FamilyGroup__signupTable\\">
                 <div class=\\"FamilyGroup__tableRow\\">
