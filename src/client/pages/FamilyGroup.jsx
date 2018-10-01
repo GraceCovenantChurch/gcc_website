@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 
 import withTitle from '../hoc/withTitle';
 import TitleBanner from '../components/TitleBanner';
+import Center from '../components/Center';
 
 import styles from './FamilyGroup.css';
 
@@ -54,14 +55,16 @@ const FamilyGroup = () => (
         {'At GCC we place a high emphasis on Family Groups because we believe that it is in these smaller settings that we are able to meet with God, building meaningful relationships, and develop biblical accountability. Family groups meet on a weekly basis at various places.'}
       </div>
 
-      <iframe
-        className={styles.media}
-        src="https://www.youtube.com/embed/rvXubANV7RA"
-        frameBorder="0"
-        title="intro"
-        allow="autoplay; encrypted-media"
-        allowFullScreen
-      />
+      <Center horizontal>
+        <iframe
+          className={styles.media}
+          src="https://www.youtube.com/embed/rvXubANV7RA"
+          frameBorder="0"
+          title="intro"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+        />
+      </Center>
 
       <div className={styles.description}>
         {'Through Bible study, discussions, sharing, prayer, and hangouts, we learn together to live out the teachings of God’s Word in our daily lives. Family groups meet on a weekly basis at various locations. Join us!'}

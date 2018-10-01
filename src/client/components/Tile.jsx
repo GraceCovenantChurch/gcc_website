@@ -15,7 +15,7 @@ const materialStyles = {
     maxWidth: 350,
   },
   media: {
-    height: 400,
+    height: 350,
     margin: 'auto',
     paddingTop: '56.25%',
   },
