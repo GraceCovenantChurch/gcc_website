@@ -11,7 +11,7 @@ import styles from './LightTile.css';
 const materialStyles = {
   card: {
     minHeight: 700,
-    maxWidth: 300,
+    maxWidth: 400,
   },
   media: {
     height: 350,
