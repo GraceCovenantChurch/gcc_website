@@ -1,7 +1,7 @@
 # GCC Website
+Main Website for Grace Covenant Church
 <div align="center">
  <br /><br />
- Main Website for Grace Covenant Church
   <a href="https://travis-ci.org/GraceCovenantChurch/gcc_website">
     <img src="https://travis-ci.org/GraceCovenantChurch/gcc_website.svg?branch=develop" alt="build status" />
   </a>
