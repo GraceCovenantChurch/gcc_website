@@ -20,12 +20,27 @@ class Beliefs extends Component {
     contentfulClient.getEntries({
       content_type: 'belief',
     }).then((entries) => {
-      const beliefsList = entries.items.map(item => ({
-        title: item.fields.name,
-        description: item.fields.description,
-        image: item.fields.image.fields.file.url,
-        imageTitle: item.fields.image.fields.title,
-      }));
+      const beliefsList = entries.items.map((item) => {
+        const imageComponent = (
+          <img
+            className={styles.image}
+            src={item.fields.image.fields.file.url}
+            alt={item.fields.image.fields.title}
+          />
+        );
+
+        const contentComponent = (
+          <div>
+            <h4><strong>{item.fields.name}</strong></h4>
+            <div className={styles.description}>{item.fields.description}</div>
+          </div>
+        );
+
+        return {
+          contentComponent,
+          imageComponent,
+        };
+      });
 
       this.setState({
         beliefsList,

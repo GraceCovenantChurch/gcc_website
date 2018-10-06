@@ -1,6 +1,6 @@
 .beliefs {
 	.beliefsContent {
-		margin: 100px 17.5%;
+		margin: 50px;
 
 		.subtitle {
 			font-size: 40px;
@@ -20,5 +20,9 @@
 			padding: 10px;
 			list-style-type: none;
 		}
+	}
+
+	.image {
+		height: 25vh;
 	}
 }

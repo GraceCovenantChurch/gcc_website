@@ -20,13 +20,29 @@ class Ministries extends Component {
     contentfulClient.getEntries({
       content_type: 'ministry',
     }).then((entries) => {
-      const ministriesList = entries.items.map(item => ({
-        title: item.fields.name,
-        subtitle: `Coordinator: ${item.fields.coordinator}\nContact: ${item.fields.contact}`,
-        description: item.fields.description,
-        image: item.fields.image.fields.file.url,
-        imageTitle: item.fields.image.fields.title,
-      }));
+      const ministriesList = entries.items.map((item) => {
+        const imageComponent = (
+          <img
+            className={styles.image}
+            src={item.fields.image.fields.file.url}
+            alt={item.fields.image.fields.title}
+          />
+        );
+
+        const contentComponent = (
+          <div>
+            <h4><strong>{item.fields.name}</strong></h4>
+            <div className={styles.subtitle}>Coordinator: {item.fields.coordinator}</div>
+            <div className={styles.subtitle}>Contact: {item.fields.contact}</div>
+            <div className={styles.description}>{item.fields.description}</div>
+          </div>
+        );
+
+        return {
+          contentComponent,
+          imageComponent,
+        };
+      });
 
       this.setState({
         ministriesList,
