@@ -1,10 +1,5 @@
 #ministries{
-<<<<<<< HEAD
 	.pageContent{
-		margin: 100px 12.5%;
-		text-align: center;
-=======
-	.pageContent {
 		margin: 50px;
 	}
 
@@ -20,6 +15,5 @@
 
 	.image {
 		height: 25vh;
->>>>>>> Major Tiledeck rehaul
 	}
 }

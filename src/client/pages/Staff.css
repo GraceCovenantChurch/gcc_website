@@ -1,13 +1,5 @@
 .pageContent {
-<<<<<<< HEAD
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 125px;
-    margin: 100px 12.5%;
-=======
     margin: 50px;
->>>>>>> Major Tiledeck rehaul
 }
 
 .subtitle {
