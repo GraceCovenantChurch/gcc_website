@@ -1,6 +1,10 @@
 .beliefs {
 	.beliefsContent {
+<<<<<<< HEAD
 		margin: 100px 12.5%;
+=======
+		margin: 50px;
+>>>>>>> Major Tiledeck rehaul
 
 		.subtitle {
 			font-size: 40px;
@@ -20,5 +24,9 @@
 			padding: 10px;
 			list-style-type: none;
 		}
+	}
+
+	.image {
+		height: 25vh;
 	}
 }

@@ -1,7 +1,26 @@
 .pageContent {
+<<<<<<< HEAD
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 125px;
     margin: 100px 12.5%;
+=======
+    margin: 50px;
+>>>>>>> Major Tiledeck rehaul
+}
+
+.subtitle {
+    font-size: 12px;
+    font-style: italic;
+    color: rgb(172, 172, 172);
+}
+
+.description {
+    padding-top: 20px;
+}
+
+.image {
+    width: 100%;
+    padding-bottom: 20px;
 }
