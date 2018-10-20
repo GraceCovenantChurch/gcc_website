@@ -44,10 +44,10 @@ exports[`Public ServerTest renders 404 page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/page\\">Giving</a>
+                <a href=\\"http://uc.gracecovenant.net/giving/\\" class=\\"nav-link Navbar__nav-link\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Multimedia</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
@@ -151,10 +151,10 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/page\\">Giving</a>
+                <a href=\\"http://uc.gracecovenant.net/giving/\\" class=\\"nav-link Navbar__nav-link\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Multimedia</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
@@ -194,7 +194,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                       <div class=\\"FamilyGroup__rowDays\\">Mondays to Thursdays</div>
                       <div class=\\"FamilyGroup__rowDescription\\">Our college family groups meet once a week at Drexel University, the University of Pennsylvania, Temple University, Moore College of Art &amp; Design, and the University of the Sciences.</div>
                       <div class=\\"FamilyGroup__rowSignup\\">
-                        <a href=\\"#\\">You can sign up here &gt;</a>
+                        <a href=\\"https://docs.google.com/forms/d/e/1FAIpQLScr4PTK2CrnAU0HxQUKBzsOnwyVxPViIedMsTAgLQesKk0Neg/viewform\\">You can sign up here &gt;</a>
                       </div>
                     </div>
                   </div>
@@ -210,7 +210,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                       <div class=\\"FamilyGroup__rowDescription\\">Our young adult family groups meet once a week and have a mix of post-undergraduates, graduate students, working adults, and young married couples. Crossroads at our University City site exists to serve, love on, and walk with those
                         who are in times of transition and constant change.</div>
                       <div class=\\"FamilyGroup__rowSignup\\">
-                        <a href=\\"#\\">You can sign up here &gt;</a>
+                        <a href=\\"https://docs.google.com/forms/d/e/1FAIpQLSfhDwIaoHAmZgqnG1Cc7JpJybHbPC9zJadcDW4ZnvIZF6msYg/viewform\\">You can sign up here &gt;</a>
                       </div>
                     </div>
                   </div>
@@ -312,10 +312,10 @@ exports[`Public ServerTest renders Home page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/page\\">Giving</a>
+                <a href=\\"http://uc.gracecovenant.net/giving/\\" class=\\"nav-link Navbar__nav-link\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Multimedia</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
@@ -479,10 +479,10 @@ exports[`Public ServerTest renders Welcome page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/page\\">Giving</a>
+                <a href=\\"http://uc.gracecovenant.net/giving/\\" class=\\"nav-link Navbar__nav-link\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Multimedia</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
