@@ -1,6 +1,19 @@
 #ministries{
 	.pageContent{
-		margin: 100px 12.5%;
-		text-align: center;
+		margin: 50px;
+	}
+
+	.subtitle {
+		font-size: 12px;
+		font-style: italic;
+		color: rgb(172, 172, 172);
+	}
+
+	.description {
+		padding-top: 20px;
+	}
+
+	.image {
+		height: 25vh;
 	}
 }

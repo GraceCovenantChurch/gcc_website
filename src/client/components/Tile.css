@@ -1,19 +1,14 @@
+.card {
+  /* height: 80vh; */
+  height: 100%;
+  width: 25vw;
+  overflow: scroll;
+  box-shadow: 0px 0px 7px 1px rgba(224,224,224,0.75);
+  margin: 10px;
+  text-align: center;
+}
+
 .cardContent {
-  .cardTitle {
-    font-weight: bold;
-    text-align: center;
-  }
-
-  .cardDescription {
-    font-size: 14px;
-  }
-
-  .cardSubtitle {
-    white-space: pre-wrap;
-    font-size: 12px;
-    font-style: italic;
-    color: gray;
-    text-align: center;
-    padding-bottom: 10px;
-  }
+  padding: 0 20px 20px 20px;
+  font-size: 12px;
 }

@@ -22,13 +22,28 @@ class Staff extends Component {
     contentfulClient.getEntries({
       content_type: 'staff',
     }).then((entries) => {
-      const staffList = entries.items.map(item => ({
-        title: item.fields.name,
-        description: item.fields.biography,
-        image: item.fields.image.fields.file.url,
-        imageTitle: item.fields.image.fields.title,
-        subtitle: item.fields.title,
-      }));
+      const staffList = entries.items.map((item) => {
+        const imageComponent = (
+          <img
+            className={styles.image}
+            src={item.fields.image.fields.file.url}
+            alt={item.fields.image.fields.title}
+          />
+        );
+
+        const contentComponent = (
+          <div>
+            <h4><strong>{item.fields.name}</strong></h4>
+            <div className={styles.subtitle}>{item.fields.title}</div>
+            <div className={styles.description}>{item.fields.biography}</div>
+          </div>
+        );
+
+        return {
+          contentComponent,
+          imageComponent,
+        };
+      });
 
       this.setState({
         staffList,

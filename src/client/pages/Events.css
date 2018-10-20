@@ -1,3 +1,19 @@
-.eventsContent {
-  padding: 120px;
+.pageContent {
+  margin: 50px;
+
+  .image {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle, .link {
+    font-size: 12px;
+    font-style: italic;
+    color: rgb(172, 172, 172);
+  }
+  
+  .description {
+    padding-top: 20px;
+  }
 }
+
