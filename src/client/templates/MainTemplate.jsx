@@ -32,8 +32,8 @@ const MainTemplate = ({ route }) => (
         </NavbarDropdown>,
         <Link to="/familygroup">Family Groups</Link>,
         <Link to="/ministries">Ministries</Link>,
-        <Link to="/page">Giving</Link>,
-        <Link to="/pages">Multimedia</Link>,
+        <a href="http://uc.gracecovenant.net/giving/">Giving</a>,
+        <Link to="/multimedia">Multimedia</Link>,
         <Link to="/events">Events</Link>,
       ]}
       className={`navbar-light ${navStyles['navbar-light']}`}
