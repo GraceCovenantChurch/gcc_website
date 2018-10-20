@@ -361,7 +361,9 @@ exports[`Public ServerTest renders Home page 1`] = `
             </div>
             <div class=\\"Home__eventSection\\">
               <div class=\\"Home__eventSectionSubtitle\\">Upcoming Events</div>
-              <div class=\\"Home__eventSectionEventsError\\">There seems to be no upcoming events</div>
+              <div class=\\"Home__eventsContainer\\">
+                <div class=\\"Home__eventSectionEventsError\\">There seems to be no upcoming events</div>
+              </div>
               <a class=\\"Home__eventSectionSubtitle\\" href=\\"/events\\">See all events &gt;</a>
             </div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">

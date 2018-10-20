@@ -96,12 +96,31 @@
 .eventSection {
   padding: 80px 0;
   text-align: center;
-}
 
-.eventSectionSubtitle, .eventSectionSubtitle:hover {
-  color: gray;
-  font-size: 18px;
-  font-style: italic;
+  .image {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .subtitle, .link {
+    font-size: 12px;
+    font-style: italic;
+    color: rgb(172, 172, 172);
+  }
+  
+  .description {
+    padding-top: 20px;
+  }
+
+  .eventsContainer {
+    margin: 20px 0px 40px 0px;
+  }
+
+  .eventSectionSubtitle, .eventSectionSubtitle:hover {
+    color: gray;
+    font-size: 18px;
+    font-style: italic;
+  }
 }
 
 .eventSectionEvents {
