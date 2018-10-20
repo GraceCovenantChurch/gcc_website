@@ -66,7 +66,6 @@ class Events extends Component {
 
           <div className={styles.pageContent}>
             <TileDeck
-              light
               data={this.state.eventsList}
             />
           </div>
