@@ -53,6 +53,11 @@ const routes = [
         component: asyncComponent(path.resolve(__dirname, './pages/Events'), () => import('./pages/Events')),
       },
       {
+        path: '/multimedia',
+        exact: true,
+        component: asyncComponent(path.resolve(__dirname, './pages/Multimedia'), () => import('./pages/Multimedia')),
+      },
+      {
         component: NotFound,
       },
     ],

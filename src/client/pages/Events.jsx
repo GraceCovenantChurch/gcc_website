@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
+import moment from 'moment';
 
 import withTitle from '../hoc/withTitle';
 import TitleBanner from '../components/TitleBanner';
@@ -20,15 +21,31 @@ class Events extends Component {
     contentfulClient.getEntries({
       content_type: 'event',
     }).then((entries) => {
-      const eventsList = entries.items.map(item => ({
-        title: item.fields.title,
-        description: item.fields.description,
-        image: item.fields.image.fields.file.url,
-        imageTitle: item.fields.image.fields.title,
-        date: item.fields.date,
-        link: item.fields.link,
-        location: item.fields.location,
-      }));
+      const eventsList = entries.items.map((item) => {
+        const imageComponent = (
+          <img
+            className={styles.image}
+            src={item.fields.image.fields.file.url}
+            alt={item.fields.image.fields.title}
+          />
+        );
+
+        const contentComponent = (
+          <div>
+            <h4><strong>{item.fields.title}</strong></h4>
+            <div className={styles.subtitle}>{moment(item.fields.date).calendar()}</div>
+            <div className={styles.subtitle}>{item.fields.location}</div>
+            <div className={styles.description}>{item.fields.description}</div>
+            <a className={styles.link} href={item.fields.link}>Go to event page ></a>
+          </div>
+        );
+
+        return {
+          imageComponent,
+          contentComponent,
+        };
+      });
+
       this.setState({
         eventsList,
       });
@@ -47,9 +64,8 @@ class Events extends Component {
             Events
           </TitleBanner>
 
-          <div className={styles.eventsContent}>
+          <div className={styles.pageContent}>
             <TileDeck
-              light
               data={this.state.eventsList}
             />
           </div>

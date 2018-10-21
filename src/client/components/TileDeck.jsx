@@ -5,7 +5,6 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 import Tile from './Tile';
-import LightTile from './LightTile';
 
 const materialStyles = {
   root: {
@@ -14,10 +13,10 @@ const materialStyles = {
 };
 
 const TileDeck = props => (
-  <Grid container justify="center" className={props.classes.root} spacing={40}>
-    { props.data.map(dataElement => (
-      <Grid item key={dataElement.imageTitle}>
-        { props.light ? <LightTile {...dataElement} /> : <Tile {...dataElement} /> }
+  <Grid container justify="center" spacing={40}>
+    { props.data.map((dataElement, index) => (
+      <Grid item key={index}>
+        <Tile {...dataElement} />
       </Grid>
     ))}
   </Grid>
@@ -25,20 +24,9 @@ const TileDeck = props => (
 
 TileDeck.propTypes = {
   data: PropTypes.arrayOf(PropTypes.shape({
-    image: PropTypes.string.isRequired,
-    imageTitle: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    subtitle: PropTypes.string,
-    description: PropTypes.string.isRequired,
+    imageComponent: PropTypes.node.isRequired,
+    contentComponent: PropTypes.node.isRequired,
   })).isRequired,
-  light: PropTypes.bool,
-  classes: PropTypes.shape({
-    root: PropTypes.string.isRequired,
-  }).isRequired,
-};
-
-TileDeck.defaultProps = {
-  light: false,
 };
 
 export default withStyles(materialStyles)(TileDeck);
