@@ -51,13 +51,14 @@
 }
 
 .infoSectionTimes {
-  margin: 30px 0;
+  margin: 10px 0;
   font-size: 45px;
   font-weight: bold;
 }
 
 .infoSectionLocation {
   font-size: 32px;
+  margin-bottom: 50px;
 }
 
 .infoSectionLink, .infoSectionLink:hover {
@@ -101,13 +102,13 @@
     width: 100%;
     margin-bottom: 10px;
   }
-  
+
   .subtitle, .link {
     font-size: 12px;
     font-style: italic;
     color: rgb(172, 172, 172);
   }
-  
+
   .description {
     padding-top: 20px;
   }
@@ -151,6 +152,21 @@
     font-size: 45px;
     font-weight: bold;
     margin: 40px 0px;
+
+    .downloadLink {
+      color: white;
+    }
+
+    .downloadLink:hover {
+      text-decoration: none;
+    }
+  }
+
+  .download {
+    .downloadButton{
+      height: 50px;
+      margin: 0px 20px;
+    }
   }
 
   .subtitle {
