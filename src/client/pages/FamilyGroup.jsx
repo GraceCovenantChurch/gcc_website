@@ -53,7 +53,7 @@ const FamilyGroup = () => (
     <div className={styles.pageContent}>
       <p className={styles.description}>
         {'At GCC we place a high emphasis on family groups because we believe that it is in these smaller settings that we are able to '}
-        <i>{'meet with God'}</i>{', '}<i>{'building meaningful relationships'}</i>{', and '}<i>{'develop biblical accountability. '}</i>
+        <i>meet with God</i>{', '}<i>building meaningful relationships</i>{', and '}<i>develop biblical accountability. </i>
         {'Family groups meet on a weekly basis at various places.'}
       </p>
 

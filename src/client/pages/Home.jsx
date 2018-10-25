@@ -141,14 +141,14 @@ class Home extends Component {
           </div>
 
           <div className={styles.download}>
-            <a href="https://itunes.apple.com/us/app/id651172729?mt=8&uo=4" target="_blank">
-              <img className={styles.downloadButton} src="/static/icon/apple_download.svg"/>
+            <a href="https://itunes.apple.com/us/app/id651172729?mt=8&uo=4" target="_blank" rel="noopener noreferrer">
+              <img className={styles.downloadButton} alt="apple_download" src="/static/icon/apple_download.svg" />
             </a>
-            <a href="https://amiquiettimes.com" target="_blank">
-              <img className={styles.downloadButton} src="/static/icon/ami.png"/>
+            <a href="https://amiquiettimes.com" target="_blank" rel="noopener noreferrer">
+              <img className={styles.downloadButton} alt="ami_qt_page" src="/static/icon/ami.png" />
             </a>
-            <a href="https://play.google.com/store/apps/details?id=com.subsplash.thechurchapp.ami&referrer=utm_source%3Dsubsplash%26utm_content%3DeyJoYW5kbGVyIjoiYXBwIiwiYXBwa2V5IjoiNlZaSFZOIn0=" target="_blank">
-              <img className={styles.downloadButton} src="/static/icon/google_download.png"/>
+            <a href="https://play.google.com/store/apps/details?id=com.subsplash.thechurchapp.ami&referrer=utm_source%3Dsubsplash%26utm_content%3DeyJoYW5kbGVyIjoiYXBwIiwiYXBwa2V5IjoiNlZaSFZOIn0=" target="_blank" rel="noopener noreferrer">
+              <img className={styles.downloadButton} alt="google_download" src="/static/icon/google_download.png" />
             </a>
           </div>
         </div>
