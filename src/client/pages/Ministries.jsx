@@ -32,7 +32,7 @@ class Ministries extends Component {
         const contentComponent = (
           <div>
             <h4><strong>{item.fields.name}</strong></h4>
-            <div className={styles.subtitle}>Coordinator: {item.fields.coordinator}</div>
+            <div className={styles.subtitle}>Coordinator(s): {item.fields.coordinator}</div>
             <div className={styles.subtitle}>Contact: {item.fields.contact}</div>
             <div className={styles.description}>{item.fields.description}</div>
           </div>

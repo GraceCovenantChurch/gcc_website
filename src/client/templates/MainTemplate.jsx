@@ -28,7 +28,7 @@ const MainTemplate = ({ route }) => (
           <Link to="/welcome">Welcome</Link>
           <Link to="/beliefs">Beliefs</Link>
           <Link to="/staff">Staff</Link>
-          <a href="http://amichurches.com/">AMI</a>
+          <a href="http://amichurches.com/" target="_blank">AMI</a>
         </NavbarDropdown>,
         <Link to="/familygroup">Family Groups</Link>,
         <Link to="/ministries">Ministries</Link>,

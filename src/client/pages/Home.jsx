@@ -74,7 +74,7 @@ class Home extends Component {
           <div className={styles.titleSectionMission}>
             Raising up kingdom workers <br />
             who are transformed by Christ <br />
-            to change the world.
+            to influence the world.
           </div>
           <a className={styles.titleSectionLink} href="/welcome">Learn more ></a>
         </div>
@@ -84,16 +84,29 @@ class Home extends Component {
     const infoSection = (
       <div className={styles.infoSection}>
         <div className={styles.infoSectionHeader}>
-          Service Location and Times
+          Service Locations and Times
         </div>
         <div className={styles.infoSectionTimes}>
-          Sunday Service: 11:30 AM <br />
-          Friday Night Live: 7:30 PM
+          Sunday Service: 11:30 AM
         </div>
         <div className={styles.infoSectionLocation}>
           Meyerson Hall B1 <br />
           210 South 34th Street <br />
           Philadelphia, PA 19104
+        </div>
+        <div className={styles.infoSectionTimes}>
+          College Friday Night Live: 07:30 PM
+        </div>
+        <div className={styles.infoSectionLocation}>
+          Meyerson Hall B1
+        </div>
+        <div className={styles.infoSectionTimes}>
+          Young Adult Friday Night Live: 07:00 PM
+        </div>
+        <div className={styles.infoSectionLocation}>
+          Ralston House <br />
+          3615 Chestnut Street <br />
+          Philadelphia, PA 19104 <br />
         </div>
         <a className={styles.infoSectionLink} href="/welcome">Learn more ></a>
       </div>
@@ -125,6 +138,18 @@ class Home extends Component {
           </div>
           <div className={styles.subtitle}>
             Mobile apps for iOS and Android are also available.
+          </div>
+
+          <div className={styles.download}>
+            <a href="https://itunes.apple.com/us/app/id651172729?mt=8&uo=4" target="_blank">
+              <img className={styles.downloadButton} src="/static/icon/apple_download.svg"/>
+            </a>
+            <a href="https://amiquiettimes.com" target="_blank">
+              <img className={styles.downloadButton} src="/static/icon/ami.png"/>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.subsplash.thechurchapp.ami&referrer=utm_source%3Dsubsplash%26utm_content%3DeyJoYW5kbGVyIjoiYXBwIiwiYXBwa2V5IjoiNlZaSFZOIn0=" target="_blank">
+              <img className={styles.downloadButton} src="/static/icon/google_download.png"/>
+            </a>
           </div>
         </div>
       </Banner>

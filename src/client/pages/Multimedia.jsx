@@ -54,7 +54,7 @@ class Multimedia extends Component {
           <link rel="stylesheet" type="text/css" href="/public/assets/pages/Multimedia.bundle.css" />
         </Helmet>
 
-        <TitleBanner src="/static/images/ministries/ministries.jpg">
+        <TitleBanner src="/static/images/multimedia/multimedia.jpg">
           Multimedia
         </TitleBanner>
 

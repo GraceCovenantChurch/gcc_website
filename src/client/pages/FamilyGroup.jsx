@@ -25,7 +25,7 @@ const FamilyGroupRow = props => (
           {props.description}
         </div>
         <div className={styles.rowSignup}>
-          <a href={props.signupLink}>You can sign up here &gt;</a>
+          <a href={props.signupLink}>Sign up here &gt;</a>
         </div>
       </div>
     </div>
@@ -51,9 +51,11 @@ const FamilyGroup = () => (
     </TitleBanner>
 
     <div className={styles.pageContent}>
-      <div className={styles.description}>
-        {'At GCC we place a high emphasis on Family Groups because we believe that it is in these smaller settings that we are able to meet with God, building meaningful relationships, and develop biblical accountability. Family groups meet on a weekly basis at various places.'}
-      </div>
+      <p className={styles.description}>
+        {'At GCC we place a high emphasis on family groups because we believe that it is in these smaller settings that we are able to '}
+        <i>{'meet with God'}</i>{', '}<i>{'building meaningful relationships'}</i>{', and '}<i>{'develop biblical accountability. '}</i>
+        {'Family groups meet on a weekly basis at various places.'}
+      </p>
 
       <Center horizontal>
         <iframe
@@ -67,7 +69,7 @@ const FamilyGroup = () => (
       </Center>
 
       <div className={styles.description}>
-        {'Through Bible study, discussions, sharing, prayer, and hangouts, we learn together to live out the teachings of God’s Word in our daily lives. Family groups meet on a weekly basis at various locations. Join us!'}
+        {'Through Bible study, discussions, sharing, prayer, and hangouts, we learn together to live out the teachings of God’s Word in our daily lives. Join us!'}
       </div>
 
 
@@ -75,15 +77,15 @@ const FamilyGroup = () => (
         <FamilyGroupRow
           src="/static/images/familygroup/fg_college.jpg"
           title="College Ministry: Harvest"
-          days="Mondays to Thursdays"
+          days="Mondays through Thursdays"
           description="Our college family groups meet once a week at Drexel University, the University of Pennsylvania, Temple University, Moore College of Art & Design, and the University of the Sciences."
           signupLink="https://docs.google.com/forms/d/e/1FAIpQLScr4PTK2CrnAU0HxQUKBzsOnwyVxPViIedMsTAgLQesKk0Neg/viewform"
         />
 
         <FamilyGroupRow
-          title="Young Adult: Crossroads"
+          title="Young Adult: CROSSroad"
           src="/static/images/familygroup/fg_ya.jpg"
-          days="Mondays to Thursdays"
+          days="Mondays through Thursdays"
           description="Our young adult family groups meet once a week and have a mix of post-undergraduates, graduate students, working adults, and young married couples. Crossroads at our University City site exists to serve, love on, and walk with those who are in times of transition and constant change."
           signupLink="https://docs.google.com/forms/d/e/1FAIpQLSfhDwIaoHAmZgqnG1Cc7JpJybHbPC9zJadcDW4ZnvIZF6msYg/viewform"
         />

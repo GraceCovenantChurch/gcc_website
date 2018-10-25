@@ -43,7 +43,7 @@ const Welcome = () => (
         <h3 className={styles.header}>How can you get involved?</h3>
         {'Our church is comprised of a network of '}<a className={styles.link} href="/familygroup">family groups</a>{': small, intimate groups in which honest friendships, Bible study, prayer, and compassionate care for one another are emphasized. Our family groups are where the core of our evangelism and discipleship takes place. We invite you to join one and be able to call GCC your home!'}
         <br /> <br />
-        {'Our Sunday services and Friday night large groups are typically located at Meyerson Hall, Room B1 (210 South 34th Street).'}
+        {'Our Sunday service is typically located at Meyerson Hall, Room B1 (210 South 34th Street).'}
       </div>
 
       <div className={styles.maps}>
