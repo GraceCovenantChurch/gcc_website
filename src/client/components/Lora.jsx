@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Lora.css';
 
-const Lora = props => <a className={`${styles.lora}`}>{ props.children }</a>;
+const Lora = props => <p className={`${styles.lora}`}>{ props.children }</p>;
 
 Lora.propTypes = {
   children: PropTypes.node.isRequired,
