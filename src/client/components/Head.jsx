@@ -8,6 +8,7 @@ const Head = props => (
     <title>{props.title}</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" />
   </Helmet>
 );
 

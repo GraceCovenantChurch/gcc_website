@@ -1,19 +1,18 @@
 .pageContent {
-  margin: 50px;
+  margin: 100px 22.5%;
 
   .image {
     width: 100%;
     margin-bottom: 10px;
   }
-  
+
   .subtitle, .link {
     font-size: 12px;
     font-style: italic;
     color: rgb(172, 172, 172);
   }
-  
+
   .description {
     padding-top: 20px;
   }
 }
-
