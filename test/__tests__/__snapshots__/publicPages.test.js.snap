@@ -9,6 +9,7 @@ exports[`Public ServerTest renders 404 page 1`] = `
 
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora\\" rel=\\"stylesheet\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
     <link rel=\\"shortcut icon\\" href=\\"/public/assets/favicon.ico\\" />
@@ -115,6 +116,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
 
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/pages/FamilyGroup.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
@@ -278,6 +280,7 @@ exports[`Public ServerTest renders Home page 1`] = `
 
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/pages/Home.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
@@ -335,24 +338,32 @@ exports[`Public ServerTest renders Home page 1`] = `
                 <div class=\\"Home__titleSectionMission\\">Raising up kingdom workers
                   <br/>who are transformed by Christ
                   <br/>to influence the world.</div>
-                <a class=\\"Home__titleSectionLink\\" href=\\"/welcome\\">Learn more &gt;</a>
+                <a class=\\"Home__titleSectionLink\\" href=\\"/welcome\\">
+                  <p class=\\"Lora__lora\\">Learn more &gt;</p>
+                </a>
               </div>
             </div>
             <div class=\\"Home__infoSection\\">
-              <div class=\\"Home__infoSectionHeader\\">Service Locations and Times</div>
+              <div class=\\"Home__infoSectionHeader\\">
+                <p class=\\"Lora__lora\\">Service Locations and Times</p>
+              </div>
               <div class=\\"Home__infoSectionTimes\\">Sunday Service: 11:30 AM</div>
               <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
                 <br/>210 South 34th Street
                 <br/>Philadelphia, PA 19104</div>
               <div class=\\"Home__infoSectionTimes\\">College Friday Night Live: 07:30 PM</div>
-              <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1</div>
+              <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
+                <br/>210 South 34th Street
+                <br/>Philadelphia, PA 19104</div>
               <div class=\\"Home__infoSectionTimes\\">Young Adult Friday Night Live: 07:00 PM</div>
               <div class=\\"Home__infoSectionLocation\\">Ralston House
                 <br/>3615 Chestnut Street
                 <br/>Philadelphia, PA 19104
                 <br/>
               </div>
-              <a class=\\"Home__infoSectionLink\\" href=\\"/welcome\\">Learn more &gt;</a>
+              <a class=\\"Home__infoSectionLink\\" href=\\"/welcome\\">
+                <p class=\\"Lora__lora\\">Learn more &gt;</p>
+              </a>
             </div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
@@ -360,20 +371,28 @@ exports[`Public ServerTest renders Home page 1`] = `
               </div>
               <div class=\\"Banner__content\\">
                 <div class=\\"Home__fgSection\\">
-                  <div class=\\"Home__titleSectionSubtitle\\">Community</div>
+                  <div class=\\"Home__titleSectionSubtitle\\">
+                    <p class=\\"Lora__lora\\">Community</p>
+                  </div>
                   <div class=\\"Home__fgSectionHeader\\">Family Group</div>
                   <div class=\\"Home__fgSectionSubtitle\\">You haven&#x27;t checked out GCC unless
                     <br/>you&#x27;ve checked out our family groups.</div>
-                  <a class=\\"Home__fgSectionLink\\" href=\\"/familygroup\\">Sign up here &gt;</a>
+                  <a class=\\"Home__fgSectionLink\\" href=\\"/familygroup\\">
+                    <p class=\\"Lora__lora\\">Sign up here &gt;</p>
+                  </a>
                 </div>
               </div>
             </div>
             <div class=\\"Home__eventSection\\">
-              <div class=\\"Home__eventSectionSubtitle\\">Upcoming Events</div>
+              <div class=\\"Home__eventSectionSubtitle\\">
+                <p class=\\"Lora__lora\\">Upcoming Events</p>
+              </div>
               <div class=\\"Home__eventsContainer\\">
                 <div class=\\"Home__eventSectionEventsError\\">There seems to be no upcoming events</div>
               </div>
-              <a class=\\"Home__eventSectionSubtitle\\" href=\\"/events\\">See all events &gt;</a>
+              <a class=\\"Home__eventSectionSubtitle\\" href=\\"/events\\">
+                <p class=\\"Lora__lora\\">See all events &gt;</p>
+              </a>
             </div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
@@ -400,9 +419,13 @@ exports[`Public ServerTest renders Home page 1`] = `
               </div>
             </div>
             <div class=\\"Home__emptySection\\">
-              <div class=\\"Home__title\\">Monthly Memory Verse</div>
+              <div class=\\"Home__title\\">
+                <p class=\\"Lora__lora\\">Monthly Memory Verse</p>
+              </div>
               <div class=\\"Home__memoryVerse\\">He who dwells in the shelter of the Most High will abide in the shadow of the Almighty. I will say to the LORD, “My refuge and my fortress, my God, in whom I trust.”</div>
-              <div class=\\"Home__footerText\\">Psalm 91:1-2</div>
+              <div class=\\"Home__footerText\\">
+                <p class=\\"Lora__lora\\">Psalm 91:1-2</p>
+              </div>
             </div>
           </div>
         </main>
@@ -463,6 +486,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
 
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"public/assets/pages/welcome/Welcome.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />

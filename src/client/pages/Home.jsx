@@ -78,7 +78,7 @@ class Home extends Component {
             to influence the world.
           </div>
           <a className={styles.titleSectionLink} href="/welcome">
-            <Lora>{'Learn more >'}</Lora>
+            <Lora>Learn more ></Lora>
           </a>
         </div>
       </Jumbotron>
@@ -114,7 +114,7 @@ class Home extends Component {
           Philadelphia, PA 19104 <br />
         </div>
         <a className={styles.infoSectionLink} href="/welcome">
-          <Lora>{'Learn more >'}</Lora>
+          <Lora>Learn more ></Lora>
         </a>
       </div>
     );
@@ -133,7 +133,7 @@ class Home extends Component {
             you've checked out our family groups.
           </div>
           <a className={styles.fgSectionLink} href="/familygroup">
-            <Lora>{'Sign up here >'}</Lora>
+            <Lora>Sign up here ></Lora>
           </a>
         </div>
       </Banner>
@@ -167,11 +167,11 @@ class Home extends Component {
     const memoryVerseSection = (
       <div className={styles.emptySection}>
         <div className={styles.title}>
-          <Lora>{'Monthly Memory Verse'}</Lora>
+          <Lora>Monthly Memory Verse</Lora>
         </div>
         <div className={styles.memoryVerse}>He who dwells in the shelter of the Most High will abide in the shadow of the Almighty. I will say to the LORD, “My refuge and my fortress, my God, in whom I trust.”</div>
         <div className={styles.footerText}>
-          <Lora>{'Psalm 91:1-2'}</Lora>
+          <Lora>Psalm 91:1-2</Lora>
         </div>
       </div>
     );
@@ -199,7 +199,7 @@ class Home extends Component {
         </div>
         <div className={styles.eventsContainer}>{events}</div>
         <a className={styles.eventSectionSubtitle} href="/events">
-          <Lora>{'See all events >'}</Lora>
+          <Lora>See all events ></Lora>
         </a>
       </div>
     );
