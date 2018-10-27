@@ -5,6 +5,7 @@ import Helmet from 'react-helmet';
 import withTitle from '../hoc/withTitle';
 import TitleBanner from '../components/TitleBanner';
 import Center from '../components/Center';
+import Lora from '../components/Lora';
 
 import styles from './FamilyGroup.css';
 
@@ -25,7 +26,9 @@ const FamilyGroupRow = props => (
           {props.description}
         </div>
         <div className={styles.rowSignup}>
-          <a href={props.signupLink}>Sign up here &gt;</a>
+          <a className={styles.link} href={props.signupLink}>
+            <Lora>Sign up here &gt;</Lora>
+          </a>
         </div>
       </div>
     </div>

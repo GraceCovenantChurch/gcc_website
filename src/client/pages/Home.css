@@ -13,7 +13,7 @@
 }
 
 .titleSectionMission {
-  font-size: 45px;
+  font-size: 37.5px;
   font-weight: bold;
   margin: 10px 0;
 }
@@ -32,7 +32,7 @@
 }
 
 .titleSectionSubtitle {
-  font-size: 32px;
+  font-size: 20px;
   font-style: italic;
 }
 
@@ -45,27 +45,26 @@
 }
 
 .infoSectionHeader {
-  font-size: 22px;
+  font-size: 16px;
   color: gray;
   font-style: italic;
 }
 
 .infoSectionTimes {
   margin: 10px 0;
-  font-size: 45px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 .infoSectionLocation {
-  font-size: 32px;
+  font-size: 20px;
   margin-bottom: 50px;
 }
 
 .infoSectionLink, .infoSectionLink:hover {
-  margin-top: 30px;
   color: gray;
   font-style: italic;
-  font-size: 22px;
+  font-size: 16px;
 }
 
 .fgSection {
@@ -79,17 +78,17 @@
 
 .fgSectionHeader {
   margin-top: 24px;
-  font-size: 45px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 .fgSectionSubtitle {
-  font-size: 32px;
+  font-size: 20px;
   margin: 24px 0;
 }
 
 .fgSectionLink, .fgSectionLink:hover {
-  font-size: 22px;
+  font-size: 16px;
   color: white;
   font-style: italic;
 }
@@ -119,7 +118,7 @@
 
   .eventSectionSubtitle, .eventSectionSubtitle:hover {
     color: gray;
-    font-size: 22px;
+    font-size: 16px;
     font-style: italic;
   }
 }
@@ -131,7 +130,7 @@
 }
 
 .eventSectionEventsError {
-  font-size: 32px;
+  font-size: 20px;
 }
 
 .eventSectionEvents {
@@ -141,7 +140,7 @@
 }
 
 .eventSectionEventsError {
-  font-size: 32px;
+  font-size: 20px;
 }
 
 .centeredSection {
@@ -149,7 +148,7 @@
   color: white;
 
   .title {
-    font-size: 45px;
+    font-size: 30px;
     font-weight: bold;
     margin: 40px 0px;
 
@@ -170,7 +169,7 @@
   }
 
   .subtitle {
-    font-size: 32px;
+    font-size: 20px;
     margin: 40px 0px;
   }
 }
@@ -181,20 +180,20 @@
 
   .title {
     color: #979797;
-    font-size: 22px;
+    font-size: 16px;
     font-style: italic;
     margin: 40px 0px;
   }
 
   .memoryVerse {
-    font-size: 32px;
+    font-size: 20px;
     font-weight: bold;
     margin: 40px 0px;
   }
 
   .footerText {
     color: #979797;
-    font-size: 22px;
+    font-size: 16px;
     font-style: italic;
     margin: 40px 0px;
   }
