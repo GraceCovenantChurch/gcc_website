@@ -1,12 +1,10 @@
 .link {
-  font-weight: bold;
   color: black;
 }
 
 .link:hover {
-  color: black;
+  color: #979797;
   text-decoration: none;
-  opacity: 0.5;
 }
 
 .pageContent {
