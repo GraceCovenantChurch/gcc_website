@@ -21,6 +21,7 @@ class Staff extends Component {
   componentDidMount() {
     contentfulClient.getEntries({
       content_type: 'staff',
+      order: 'fields.id',
     }).then((entries) => {
       const staffList = entries.items.map((item) => {
         const imageComponent = (
@@ -35,6 +36,7 @@ class Staff extends Component {
           <div>
             <h4><strong>{item.fields.name}</strong></h4>
             <div className={styles.subtitle}>{item.fields.title}</div>
+            <a className={styles.email} href={`mailto:${item.fields.email}`}>{item.fields.email}</a>
             <div className={styles.description}>{item.fields.biography}</div>
           </div>
         );
