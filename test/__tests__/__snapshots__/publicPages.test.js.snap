@@ -439,9 +439,9 @@ exports[`Public ServerTest renders Home page 1`] = `
               <div class=\\"Home__title\\">
                 <p class=\\"Lora__lora\\">Monthly Memory Verse</p>
               </div>
-              <div class=\\"Home__memoryVerse\\">He who dwells in the shelter of the Most High will abide in the shadow of the Almighty. I will say to the LORD, “My refuge and my fortress, my God, in whom I trust.”</div>
+              <div class=\\"Home__memoryVerse\\"></div>
               <div class=\\"Home__footerText\\">
-                <p class=\\"Lora__lora\\">Psalm 91:1-2</p>
+                <p class=\\"Lora__lora\\"></p>
               </div>
             </div>
           </div>

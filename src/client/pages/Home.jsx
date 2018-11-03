@@ -195,7 +195,7 @@ class Home extends Component {
           {this.state.memoryVerse.verseText}
         </div>
         <div className={styles.footerText}>
-          <Lora>{this.state.memoryVerse.verseReference}</Lora>
+          <Lora>{this.state.memoryVerse.verseReference || ''}</Lora>
         </div>
       </div>
     );
