@@ -9,7 +9,7 @@ exports[`Public ServerTest renders 404 page 1`] = `
 
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
-    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora:400,400i\\" rel=\\"stylesheet\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
     <link rel=\\"shortcut icon\\" href=\\"/public/assets/favicon.ico\\" />
@@ -116,7 +116,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
 
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
-    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora:400,400i\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/pages/FamilyGroup.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
@@ -284,7 +284,7 @@ exports[`Public ServerTest renders Home page 1`] = `
 
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
-    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora:400,400i\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/pages/Home.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
@@ -351,19 +351,30 @@ exports[`Public ServerTest renders Home page 1`] = `
               <div class=\\"Home__infoSectionHeader\\">
                 <p class=\\"Lora__lora\\">Service Locations and Times</p>
               </div>
-              <div class=\\"Home__infoSectionTimes\\">Sunday Service: 11:30 AM</div>
-              <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
-                <br/>210 South 34th Street
-                <br/>Philadelphia, PA 19104</div>
-              <div class=\\"Home__infoSectionTimes\\">College Friday Night Live: 07:30 PM</div>
-              <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
-                <br/>210 South 34th Street
-                <br/>Philadelphia, PA 19104</div>
-              <div class=\\"Home__infoSectionTimes\\">Young Adult Friday Night Live: 07:00 PM</div>
-              <div class=\\"Home__infoSectionLocation\\">Ralston House
-                <br/>3615 Chestnut Street
-                <br/>Philadelphia, PA 19104
-                <br/>
+              <div class=\\"Home__infoSectionContent\\">
+                <div>
+                  <div class=\\"Home__infoSectionTimes\\">Sunday Service
+                    <br/>11:30 AM</div>
+                  <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
+                    <br/>210 South 34th Street
+                    <br/>Philadelphia, PA 19104</div>
+                </div>
+                <div>
+                  <div class=\\"Home__infoSectionTimes\\">College Friday Night Live
+                    <br/>7:30 PM</div>
+                  <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
+                    <br/>210 South 34th Street
+                    <br/>Philadelphia, PA 19104</div>
+                </div>
+                <div>
+                  <div class=\\"Home__infoSectionTimes\\">Young Adult Friday Night Live
+                    <br/>7:00 PM</div>
+                  <div class=\\"Home__infoSectionLocation\\">Ralston House
+                    <br/>3615 Chestnut Street
+                    <br/>Philadelphia, PA 19104
+                    <br/>
+                  </div>
+                </div>
               </div>
               <a class=\\"Home__infoSectionLink\\" href=\\"/welcome\\">
                 <p class=\\"Lora__lora\\">Learn more &gt;</p>
@@ -490,7 +501,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
 
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
-    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora:400,400i\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"public/assets/pages/welcome/Welcome.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />

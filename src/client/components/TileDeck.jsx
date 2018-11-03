@@ -13,7 +13,7 @@ const materialStyles = {
 };
 
 const TileDeck = props => (
-  <Grid container justify="center" spacing={40}>
+  <Grid container justify="center">
     { props.data.map((dataElement, index) => (
       <Grid item key={index}>
         <Tile {...dataElement} />
