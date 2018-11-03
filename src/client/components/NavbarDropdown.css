@@ -2,6 +2,7 @@
 .dropdown {
   float: left;
   overflow: hidden;
+  font-size: 18px;
 
   a {
     float: left;

@@ -13,7 +13,8 @@
 }
 
 .titleSectionMission {
-  font-size: 37.5px;
+  line-height: 60px;
+  font-size: 45px;
   font-weight: bold;
   margin: 10px 0;
 }
@@ -50,14 +51,25 @@
   font-style: italic;
 }
 
+.infoSectionContent {
+  display: flex;
+  margin: 0 100px;
+  div {
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+  
+}
+
 .infoSectionTimes {
   margin: 10px 0;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
 }
 
 .infoSectionLocation {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 50px;
 }
 

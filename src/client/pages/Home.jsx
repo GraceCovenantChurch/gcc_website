@@ -89,29 +89,40 @@ class Home extends Component {
         <div className={styles.infoSectionHeader}>
           <Lora>Service Locations and Times</Lora>
         </div>
-        <div className={styles.infoSectionTimes}>
-          Sunday Service: 11:30 AM
-        </div>
-        <div className={styles.infoSectionLocation}>
-          Meyerson Hall B1 <br />
-          210 South 34th Street <br />
-          Philadelphia, PA 19104
-        </div>
-        <div className={styles.infoSectionTimes}>
-          College Friday Night Live: 07:30 PM
-        </div>
-        <div className={styles.infoSectionLocation}>
-          Meyerson Hall B1 <br />
-          210 South 34th Street <br />
-          Philadelphia, PA 19104
-        </div>
-        <div className={styles.infoSectionTimes}>
-          Young Adult Friday Night Live: 07:00 PM
-        </div>
-        <div className={styles.infoSectionLocation}>
-          Ralston House <br />
-          3615 Chestnut Street <br />
-          Philadelphia, PA 19104 <br />
+        <div className={styles.infoSectionContent}>
+          <div>
+            <div className={styles.infoSectionTimes}>
+              Sunday Service <br />
+              11:30 AM
+            </div>
+            <div className={styles.infoSectionLocation}>
+              Meyerson Hall B1 <br />
+              210 South 34th Street <br />
+              Philadelphia, PA 19104
+            </div>
+          </div>
+          <div>
+            <div className={styles.infoSectionTimes}>
+              College Friday Night Live <br />
+              7:30 PM
+            </div>
+            <div className={styles.infoSectionLocation}>
+              Meyerson Hall B1 <br />
+              210 South 34th Street <br />
+              Philadelphia, PA 19104
+            </div>
+          </div>
+          <div>
+            <div className={styles.infoSectionTimes}>
+              Young Adult Friday Night Live <br />
+              7:00 PM
+            </div>
+            <div className={styles.infoSectionLocation}>
+              Ralston House <br />
+              3615 Chestnut Street <br />
+              Philadelphia, PA 19104 <br />
+            </div>
+          </div>
         </div>
         <a className={styles.infoSectionLink} href="/welcome">
           <Lora>Learn more ></Lora>
