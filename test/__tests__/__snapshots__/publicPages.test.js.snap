@@ -177,10 +177,8 @@ exports[`Public ServerTest renders Family Group page 1`] = `
               </div>
             </div>
             <div class=\\"FamilyGroup__pageContent\\">
-              <p class=\\"FamilyGroup__description\\">At GCC we place a high emphasis on family groups because we believe that it is in these smaller settings that we are able to
-                <i>meet with God</i>,
-                <i>building meaningful relationships</i>, and
-                <i>develop biblical accountability. </i>Family groups meet on a weekly basis at various places.</p>
+              <p class=\\"FamilyGroup__description\\">At GCC we place a high emphasis on family groups because we believe that it is in these smaller settings that we are able to meet with God, building meaningful relationships, and develop biblical accountability. Family groups meet on a weekly
+                basis at various places.</p>
               <div class=\\"Center__center Center__centerHorizontal\\">
                 <div class=\\"Center__centered\\">
                   <iframe class=\\"FamilyGroup__media\\" src=\\"https://www.youtube.com/embed/rvXubANV7RA\\" frameBorder=\\"0\\" title=\\"intro\\" allow=\\"autoplay; encrypted-media\\" allowfullscreen=\\"\\"></iframe>
@@ -195,7 +193,9 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                   <div class=\\"FamilyGroup__content\\">
                     <div class=\\"FamilyGroup__textContainer\\">
                       <div class=\\"FamilyGroup__rowTitle\\">College Ministry: Harvest</div>
-                      <div class=\\"FamilyGroup__rowDays\\">Mondays through Thursdays</div>
+                      <div class=\\"FamilyGroup__rowDays\\">
+                        <p class=\\"Lora__lora\\">Mondays through Thursdays</p>
+                      </div>
                       <div class=\\"FamilyGroup__rowDescription\\">Our college family groups meet once a week at Drexel University, the University of Pennsylvania, Temple University, Moore College of Art &amp; Design, and the University of the Sciences.</div>
                       <div class=\\"FamilyGroup__rowSignup\\">
                         <a class=\\"FamilyGroup__link\\" href=\\"https://docs.google.com/forms/d/e/1FAIpQLScr4PTK2CrnAU0HxQUKBzsOnwyVxPViIedMsTAgLQesKk0Neg/viewform\\">
@@ -212,7 +212,9 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                   <div class=\\"FamilyGroup__content\\">
                     <div class=\\"FamilyGroup__textContainer\\">
                       <div class=\\"FamilyGroup__rowTitle\\">Young Adult: CROSSroad</div>
-                      <div class=\\"FamilyGroup__rowDays\\">Mondays through Thursdays</div>
+                      <div class=\\"FamilyGroup__rowDays\\">
+                        <p class=\\"Lora__lora\\">Mondays through Thursdays</p>
+                      </div>
                       <div class=\\"FamilyGroup__rowDescription\\">Our young adult family groups meet once a week and have a mix of post-undergraduates, graduate students, working adults, and young married couples. Crossroads at our University City site exists to serve, love on, and walk with those
                         who are in times of transition and constant change.</div>
                       <div class=\\"FamilyGroup__rowSignup\\">
@@ -437,9 +439,9 @@ exports[`Public ServerTest renders Home page 1`] = `
               <div class=\\"Home__title\\">
                 <p class=\\"Lora__lora\\">Monthly Memory Verse</p>
               </div>
-              <div class=\\"Home__memoryVerse\\">He who dwells in the shelter of the Most High will abide in the shadow of the Almighty. I will say to the LORD, “My refuge and my fortress, my God, in whom I trust.”</div>
+              <div class=\\"Home__memoryVerse\\"></div>
               <div class=\\"Home__footerText\\">
-                <p class=\\"Lora__lora\\">Psalm 91:1-2</p>
+                <p class=\\"Lora__lora\\"></p>
               </div>
             </div>
           </div>
@@ -574,11 +576,11 @@ exports[`Public ServerTest renders Welcome page 1`] = `
               <div class=\\"Welcome__description\\">Our doors are wide open to people from all backgrounds. Whether you are a spiritual seeker who’s just beginning to ask questions about God or a committed Christian who wants to deepen one’s faith, GCC is a welcoming community that you can
                 call family and find spiritual help, hope, and encouragement from. We invite you to discover God’s wonderful love and plan for your life through our church!</div>
               <div class=\\"Welcome__description\\">
-                <h3 class=\\"Welcome__header\\">What makes us unique?</h3>It isn’t our
+                <h4 class=\\"Welcome__header\\">What makes us unique?</h4>It isn’t our
                 <a class=\\"Welcome__link\\" href=\\"/beliefs\\">beliefs</a>. We affirm the same basic Christian doctrines that have been a part of the Church for hundreds of years. Rather, we are committed to presenting these truths in a practical, relevant, contemporary, and loving manner. Our desire
                 is to introduce you to Jesus Christ and to help you grow and become a kingdom worker.</div>
               <div class=\\"Welcome__description\\">
-                <h3 class=\\"Welcome__header\\">How can you get involved?</h3>Our church is comprised of a network of
+                <h4 class=\\"Welcome__header\\">How can you get involved?</h4>Our church is comprised of a network of
                 <a class=\\"Welcome__link\\" href=\\"/familygroup\\">family groups</a>: small, intimate groups in which honest friendships, Bible study, prayer, and compassionate care for one another are emphasized. Our family groups are where the core of our evangelism and discipleship takes place. We
                 invite you to join one and be able to call GCC your home!
                 <br/>

@@ -19,6 +19,7 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      memoryVerse: {},
       eventsList: [],
     };
   }
@@ -58,6 +59,16 @@ class Home extends Component {
 
       this.setState({
         eventsList,
+      });
+    });
+
+    contentfulClient.getEntries({
+      content_type: 'memoryVerse',
+      limit: 1,
+      order: 'sys.createdAt',
+    }).then((entries) => {
+      this.setState({
+        memoryVerse: entries.items[0].fields,
       });
     });
   }
@@ -180,9 +191,11 @@ class Home extends Component {
         <div className={styles.title}>
           <Lora>Monthly Memory Verse</Lora>
         </div>
-        <div className={styles.memoryVerse}>He who dwells in the shelter of the Most High will abide in the shadow of the Almighty. I will say to the LORD, “My refuge and my fortress, my God, in whom I trust.”</div>
+        <div className={styles.memoryVerse}>
+          {this.state.memoryVerse.verseText}
+        </div>
         <div className={styles.footerText}>
-          <Lora>Psalm 91:1-2</Lora>
+          <Lora>{this.state.memoryVerse.verseReference || ''}</Lora>
         </div>
       </div>
     );
