@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import withTitle from '../hoc/withTitle';
 import TileDeck from '../components/TileDeck';
 import TitleBanner from '../components/TitleBanner';
+import Lora from '../components/Lora';
 import contentfulClient from '../modules/contentful';
 
 import styles from './Staff.css';
@@ -35,8 +36,12 @@ class Staff extends Component {
         const contentComponent = (
           <div>
             <h4><strong>{item.fields.name}</strong></h4>
-            <div className={styles.subtitle}>{item.fields.title}</div>
-            <a className={styles.email} href={`mailto:${item.fields.email}`}>{item.fields.email}</a>
+            <div className={styles.subtitle}>
+              <Lora>{item.fields.title}</Lora>
+            </div>
+            <a className={styles.email} href={`mailto:${item.fields.email}`}>
+              <Lora>{item.fields.email}</Lora>
+            </a>
             <div className={styles.description}>{item.fields.biography}</div>
           </div>
         );
