@@ -3,6 +3,7 @@ main {
   font-family: 'IBM Plex Sans', sans-serif;
   font-weight: 300;
   font-size: 1em;
+  overflow-x: hidden;
 }
 
 h1.header {
