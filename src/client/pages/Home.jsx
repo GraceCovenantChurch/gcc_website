@@ -19,6 +19,7 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      memoryVerse: {},
       eventsList: [],
     };
   }
@@ -60,6 +61,16 @@ class Home extends Component {
         eventsList,
       });
     });
+
+    contentfulClient.getEntries({
+      content_type: 'memoryVerse',
+      limit: 1,
+      order: 'sys.createdAt',
+    }).then((entries) => {
+      this.setState({
+        memoryVerse: entries.items[0].fields,
+      });
+    });
   }
 
   render() {
@@ -89,29 +100,40 @@ class Home extends Component {
         <div className={styles.infoSectionHeader}>
           <Lora>Service Locations and Times</Lora>
         </div>
-        <div className={styles.infoSectionTimes}>
-          Sunday Service: 11:30 AM
-        </div>
-        <div className={styles.infoSectionLocation}>
-          Meyerson Hall B1 <br />
-          210 South 34th Street <br />
-          Philadelphia, PA 19104
-        </div>
-        <div className={styles.infoSectionTimes}>
-          College Friday Night Live: 07:30 PM
-        </div>
-        <div className={styles.infoSectionLocation}>
-          Meyerson Hall B1 <br />
-          210 South 34th Street <br />
-          Philadelphia, PA 19104
-        </div>
-        <div className={styles.infoSectionTimes}>
-          Young Adult Friday Night Live: 07:00 PM
-        </div>
-        <div className={styles.infoSectionLocation}>
-          Ralston House <br />
-          3615 Chestnut Street <br />
-          Philadelphia, PA 19104 <br />
+        <div className={styles.infoSectionContent}>
+          <div>
+            <div className={styles.infoSectionTimes}>
+              Sunday Service <br />
+              11:30 AM
+            </div>
+            <div className={styles.infoSectionLocation}>
+              Meyerson Hall B1 <br />
+              210 South 34th Street <br />
+              Philadelphia, PA 19104
+            </div>
+          </div>
+          <div>
+            <div className={styles.infoSectionTimes}>
+              College Friday Night Live <br />
+              7:30 PM
+            </div>
+            <div className={styles.infoSectionLocation}>
+              Meyerson Hall B1 <br />
+              210 South 34th Street <br />
+              Philadelphia, PA 19104
+            </div>
+          </div>
+          <div>
+            <div className={styles.infoSectionTimes}>
+              Young Adult Friday Night Live <br />
+              7:00 PM
+            </div>
+            <div className={styles.infoSectionLocation}>
+              Ralston House <br />
+              3615 Chestnut Street <br />
+              Philadelphia, PA 19104 <br />
+            </div>
+          </div>
         </div>
         <a className={styles.infoSectionLink} href="/welcome">
           <Lora>Learn more ></Lora>
@@ -169,9 +191,11 @@ class Home extends Component {
         <div className={styles.title}>
           <Lora>Monthly Memory Verse</Lora>
         </div>
-        <div className={styles.memoryVerse}>He who dwells in the shelter of the Most High will abide in the shadow of the Almighty. I will say to the LORD, “My refuge and my fortress, my God, in whom I trust.”</div>
+        <div className={styles.memoryVerse}>
+          {this.state.memoryVerse.verseText}
+        </div>
         <div className={styles.footerText}>
-          <Lora>Psalm 91:1-2</Lora>
+          <Lora>{this.state.memoryVerse.verseReference || ''}</Lora>
         </div>
       </div>
     );

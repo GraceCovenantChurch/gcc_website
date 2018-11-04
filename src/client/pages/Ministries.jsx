@@ -5,6 +5,7 @@ import withTitle from '../hoc/withTitle';
 import TitleBanner from '../components/TitleBanner';
 import contentfulClient from '../modules/contentful';
 import TileDeck from '../components/TileDeck';
+import Lora from '../components/Lora';
 
 import styles from './Ministries.css';
 
@@ -32,8 +33,8 @@ class Ministries extends Component {
         const contentComponent = (
           <div>
             <h4><strong>{item.fields.name}</strong></h4>
-            <div className={styles.subtitle}>Coordinator(s): {item.fields.coordinator}</div>
-            <div className={styles.subtitle}>Contact: {item.fields.contact}</div>
+            <div className={styles.subtitle}><Lora>Coordinator(s): {item.fields.coordinator}</Lora></div>
+            <div className={styles.subtitle}><Lora>Contact: {item.fields.contact}</Lora></div>
             <div className={styles.description}>{item.fields.description}</div>
           </div>
         );

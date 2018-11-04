@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import withTitle from '../hoc/withTitle';
 import TitleBanner from '../components/TitleBanner';
 import TileDeck from '../components/TileDeck';
+import Lora from '../components/Lora';
 import contentfulClient from '../modules/contentful';
 import styles from './Beliefs.css';
 
@@ -62,23 +63,24 @@ class Beliefs extends Component {
 
           <div className={styles.beliefsContent}>
             <div className={styles.section}>
-              <div className={styles.subtitle}>Our Vision</div>
-              <div className={styles.description}>To raise up kingdom workers who are transformed by Christ to influence the world.</div>
+              <h4 className={styles.subtitle}>Our Vision</h4>
+              <div className={styles.description}>
+                <Lora>To raise up kingdom workers who are transformed by Christ to influence the world.</Lora>
+              </div>
             </div>
 
             <div className={styles.section}>
-              <div className={styles.subtitle}>Five Core Values</div>
+              <h4 className={styles.subtitle}>Five Core Values</h4>
               <ul className={styles.list}>
-                <li>Bible Based</li>
-                <li>Prayer Driven</li>
-                <li>Spirit Led</li>
-                <li>Community Centered</li>
-                <li>Missions Focused</li>
+                <li><Lora>Bible Based</Lora></li>
+                <li><Lora>Prayer Driven</Lora></li>
+                <li><Lora>Spirit Led</Lora></li>
+                <li><Lora>Community Centered</Lora></li>
+                <li><Lora>Missions Focused</Lora></li>
               </ul>
             </div>
 
             <div className={styles.section}>
-              <div className={styles.subtitle}>Beliefs</div>
               <div className={styles.description}>
                 <TileDeck
                   light

@@ -18,8 +18,11 @@ class Events extends Component {
   }
 
   componentDidMount() {
+    const yesterday = moment().subtract(1, 'days').toISOString();
     contentfulClient.getEntries({
       content_type: 'event',
+      'fields.date[gte]': yesterday,
+      order: 'fields.date',
     }).then((entries) => {
       const eventsList = entries.items.map((item) => {
         const imageComponent = (
