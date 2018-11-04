@@ -5,6 +5,7 @@ import moment from 'moment';
 import withTitle from '../hoc/withTitle';
 import TitleBanner from '../components/TitleBanner';
 import TileDeck from '../components/TileDeck';
+import Lora from '../components/Lora';
 import contentfulClient from '../modules/contentful';
 import styles from './Events.css';
 
@@ -36,10 +37,16 @@ class Events extends Component {
         const contentComponent = (
           <div>
             <h4><strong>{item.fields.title}</strong></h4>
-            <div className={styles.subtitle}>{moment(item.fields.date).calendar()}</div>
-            <div className={styles.subtitle}>{item.fields.location}</div>
+            <div className={styles.subtitle}>
+              <Lora>{moment(item.fields.date).calendar()}</Lora>
+            </div>
+            <div className={styles.subtitle}>
+              <Lora>{item.fields.location}</Lora>
+            </div>
             <div className={styles.description}>{item.fields.description}</div>
-            <a className={styles.link} href={item.fields.link}>Go to event page ></a>
+            <a className={styles.link} href={item.fields.link}>
+              <Lora>Go to event page ></Lora>
+            </a>
           </div>
         );
 

@@ -103,8 +103,8 @@ class Home extends Component {
         <div className={styles.infoSectionContent}>
           <div>
             <div className={styles.infoSectionTimes}>
-              Sunday Service <br />
-              11:30 AM
+              College Friday Night Live <br />
+              7:30 PM
             </div>
             <div className={styles.infoSectionLocation}>
               Meyerson Hall B1 <br />
@@ -114,8 +114,8 @@ class Home extends Component {
           </div>
           <div>
             <div className={styles.infoSectionTimes}>
-              College Friday Night Live <br />
-              7:30 PM
+              Sunday Service <br />
+              11:30 AM
             </div>
             <div className={styles.infoSectionLocation}>
               Meyerson Hall B1 <br />

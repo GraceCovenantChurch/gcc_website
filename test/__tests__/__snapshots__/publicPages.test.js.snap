@@ -355,15 +355,15 @@ exports[`Public ServerTest renders Home page 1`] = `
               </div>
               <div class=\\"Home__infoSectionContent\\">
                 <div>
-                  <div class=\\"Home__infoSectionTimes\\">Sunday Service
-                    <br/>11:30 AM</div>
+                  <div class=\\"Home__infoSectionTimes\\">College Friday Night Live
+                    <br/>7:30 PM</div>
                   <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
                     <br/>210 South 34th Street
                     <br/>Philadelphia, PA 19104</div>
                 </div>
                 <div>
-                  <div class=\\"Home__infoSectionTimes\\">College Friday Night Live
-                    <br/>7:30 PM</div>
+                  <div class=\\"Home__infoSectionTimes\\">Sunday Service
+                    <br/>11:30 AM</div>
                   <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
                     <br/>210 South 34th Street
                     <br/>Philadelphia, PA 19104</div>
