@@ -1,25 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { withStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-
+import styles from './TileDeck.css';
 import Tile from './Tile';
 
-const materialStyles = {
-  root: {
-    flexGrow: 1,
-  },
-};
-
 const TileDeck = props => (
-  <Grid container justify="center" spacing={40}>
-    { props.data.map((dataElement, index) => (
-      <Grid item key={index}>
-        <Tile {...dataElement} />
-      </Grid>
-    ))}
-  </Grid>
+  <div className={styles.tileDeck}>
+    { props.data.map(dataElement => <Tile {...dataElement} />) }
+  </div>
 );
 
 TileDeck.propTypes = {
@@ -29,4 +17,4 @@ TileDeck.propTypes = {
   })).isRequired,
 };
 
-export default withStyles(materialStyles)(TileDeck);
+export default TileDeck;
