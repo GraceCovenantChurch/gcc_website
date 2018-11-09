@@ -44,9 +44,11 @@ class Events extends Component {
               <Lora>{item.fields.location}</Lora>
             </div>
             <div className={styles.description}>{item.fields.description}</div>
-            <a className={styles.link} href={item.fields.link}>
-              <Lora>Go to event page ></Lora>
-            </a>
+            { item.fields.link &&
+              <a className={styles.link} href={item.fields.link}>
+                <Lora>Go to event page ></Lora>
+              </a>
+            }
           </div>
         );
 

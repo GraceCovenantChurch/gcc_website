@@ -215,7 +215,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                       <div class=\\"FamilyGroup__rowDays\\">
                         <p class=\\"Lora__lora\\">Mondays through Thursdays</p>
                       </div>
-                      <div class=\\"FamilyGroup__rowDescription\\">Our young adult family groups meet once a week and have a mix of post-undergraduates, graduate students, working adults, and young married couples. Crossroads at our University City site exists to serve, love on, and walk with those
+                      <div class=\\"FamilyGroup__rowDescription\\">Our young adult family groups meet once a week and have a mix of post-undergraduates, graduate students, working adults, and young married couples. CROSSroad at our University City site exists to serve, love on, and walk with those
                         who are in times of transition and constant change.</div>
                       <div class=\\"FamilyGroup__rowSignup\\">
                         <a class=\\"FamilyGroup__link\\" href=\\"https://docs.google.com/forms/d/e/1FAIpQLSfhDwIaoHAmZgqnG1Cc7JpJybHbPC9zJadcDW4ZnvIZF6msYg/viewform\\">
