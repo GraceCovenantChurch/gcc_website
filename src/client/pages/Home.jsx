@@ -47,7 +47,13 @@ class Home extends Component {
             <div className={styles.subtitle}>{moment(item.fields.date).calendar()}</div>
             <div className={styles.subtitle}>{item.fields.location}</div>
             <div className={styles.description}>{item.fields.description}</div>
-            <a className={styles.link} href={item.fields.link}>Go to event page ></a>
+            {item.fields.link &&
+              (
+                <a className={styles.link} href={item.fields.link}>
+                  <Lora>Go to event page ></Lora>
+                </a>
+               )
+            }
           </div>
         );
 
