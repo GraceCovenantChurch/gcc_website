@@ -1,19 +1,41 @@
-footer{
+.footer {
+  height: 50px;
 
-    p {
-        font-weight: bold;
-        font-size: 16px;
-    }
+  .footerBorder {
+    border-top: 0.5px solid #808080;
+    width: 70%;
+    margin: 0 auto;
 
-    i {
+    .footerContainer {
+      height: 50px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+
+      i {
         margin: 0px 15px;
-    }
+      }
 
-    .icons{
+      .copyright {
+        font-weight: lighter;
+        font-size: 14px;
+        display: inline-block;
+        float: left;
+        margin: 13px auto;
+
+        p {
+          margin: 0px;
+        }
+      }
+
+      .icons {
         margin: 10px auto;
-    }
+        display: inline-block;
+        float: right;
+      }
 
-    .footerLinks, .footerLinks:visited, .footerLinks:hover {
+      .footerLinks, .footerLinks:visited, .footerLinks:hover {
         color: black;
+      }
     }
+  }
 }

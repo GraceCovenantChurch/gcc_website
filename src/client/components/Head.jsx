@@ -6,7 +6,9 @@ import { Helmet } from 'react-helmet';
 const Head = props => (
   <Helmet>
     <title>{props.title}</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i" rel="stylesheet" />
   </Helmet>
 );
 

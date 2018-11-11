@@ -1,0 +1,14 @@
+.card {
+  height: 100%;
+  box-shadow: 0px 0px 8px 4px rgba(224,224,224,0.75);
+  text-align: center;
+  border-radius: 15px;
+  max-width: 25vw;
+  min-width: 20vw;
+  overflow: auto;
+}
+
+.cardContent {
+  padding: 0 20px 20px 20px;
+  font-size: 12px;
+}

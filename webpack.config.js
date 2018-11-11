@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const nconf = require('./src/config.js');
@@ -54,11 +55,6 @@ const publicEntry = {
   'pages/Ministries': 'client/pages/Ministries.jsx',
 };
 
-const adminEntry = {
-  adminApp: 'admin_client/app.jsx',
-  adminModelPage: 'admin_client/pages/ModelPage.jsx',
-};
-
 const extractCSS = new ExtractTextPlugin({
   filename: '[name].bundle.css',
   allChunks: true,
@@ -67,7 +63,7 @@ const extractCSS = new ExtractTextPlugin({
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   devtool: nconf.get('NODE_ENV') !== 'production' ? 'cheap-module-eval-source-map' : undefined,
-  entry: Object.assign({}, publicEntry, adminEntry),
+  entry: publicEntry,
   output: {
     path: path.resolve(__dirname, 'build/public/assets'),
     filename: '[name].js',
@@ -131,7 +127,6 @@ module.exports = {
     new webpack.DefinePlugin({
       NCONF: JSON.stringify({
         PUBLIC_SERVER_HOST: nconf.get('PUBLIC_SERVER_HOST'),
-        ADMIN_SERVER_HOST: nconf.get('ADMIN_SERVER_HOST'),
         NODE_ENV: nconf.get('NODE_ENV'),
         APP_ENV: nconf.get('APP_ENV'),
         GOOGLE_MAPS_KEY: nconf.get('GOOGLE_MAPS_KEY'),
@@ -162,15 +157,12 @@ module.exports = {
       chunks: Object.keys(publicEntry),
       minChunks: 2,
     }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: 'admin',
-      chunks: Object.keys(adminEntry),
-      minChunks: 2,
+    new HtmlWebpackPlugin({
+      favicon: '../static/icon/favicon.ico'
     }),
     new webpack.optimize.CommonsChunkPlugin({ name: 'manifest' }),
     nconf.get('NODE_ENV') === 'production' ? extractCSS : null,
   ].filter(plugin => plugin),
-
   devServer: {
     host: assetHost,
     port: assetPort,

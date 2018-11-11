@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "6"
+  - "8.11.3"
 
 services:
   - mongodb
@@ -17,8 +17,12 @@ script:
   - npm run test
   - npm run esdoc
 
+before_deploy:
+  - mkdir -p deploy_upload
+  - git archive HEAD --format=zip --output=deploy_upload/latest.zip
+
 deploy:
-  provider: pages
+- provider: pages
   skip-cleanup: true
   github-token: ${GH_TOKEN}
   keep-history: true
@@ -26,3 +30,45 @@ deploy:
     branch: master
   local-dir: docs
   target-branch: gh-pages
+- provider: s3
+  access_key_id: $TRAVIS_AWS_ACCESS_KEY
+  secret_access_key: $TRAVIS_AWS_SECRET_KEY
+  local_dir: deploy_upload
+  skip_cleanup: true
+  on:
+    branch: staging
+    repo: GraceCovenantChurch/gcc_website
+  bucket: s3.web.staging
+  region: us-east-1
+- provider: codedeploy
+  access_key_id: $TRAVIS_AWS_ACCESS_KEY
+  secret_access_key: $TRAVIS_AWS_SECRET_KEY
+  bucket: s3.web.staging
+  key: latest.zip
+  bundle_type: zip
+  application: gcc.web.staging
+  deployment_group: gccweb
+  region: us-east-1
+  on:
+    branch: staging
+- provider: s3
+  access_key_id: $TRAVIS_AWS_ACCESS_KEY
+  secret_access_key: $TRAVIS_AWS_SECRET_KEY
+  local_dir: deploy_upload
+  skip_cleanup: true
+  on:
+    branch: master
+    repo: GraceCovenantChurch/gcc_website
+  bucket: s3.web.prod
+  region: us-east-1
+- provider: codedeploy
+  access_key_id: $TRAVIS_AWS_ACCESS_KEY
+  secret_access_key: $TRAVIS_AWS_SECRET_KEY
+  bucket: s3.web.prod
+  key: latest.zip
+  bundle_type: zip
+  application: gcc.web.production
+  deployment_group: gccweb
+  region: us-east-1
+  on:
+    branch: master

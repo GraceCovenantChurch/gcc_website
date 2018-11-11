@@ -11,7 +11,7 @@ const nconf = require('../config.js');
 nconf.set('APP_ENV', 'server');
 
 process.on('unhandledRejection', (err) => {
-  console.log(err);
+  console.log(err); // eslint-disable-line no-console
 });
 
 const app = express();
@@ -43,9 +43,9 @@ app.use(PageRouter(routes, reducers, (head, content, state) => `
         ${head.title.toString()}
         ${head.meta.toString()}
         ${head.link.toString()}
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href="/public/assets/app.bundle.css" />
         <link rel="stylesheet" type="text/css" href="/public/assets/public.bundle.css" />
+        <link rel="shortcut icon" href="/public/assets/favicon.ico" />
       </head>
       <body ${head.bodyAttributes.toString()}>
         ${content}
@@ -64,11 +64,11 @@ export default new Promise((resolve) => {
     if (err) {
       throw err;
     }
-    console.log('Connected to database');
+    console.log('Connected to database'); // eslint-disable-line no-console
 
     const port = nconf.get('PUBLIC_SERVER_HOST').split(':')[1] || 80;
     const server = app.listen(port, () => {
-      console.log('Server listening on port', port);
+      console.log('Server listening on port', port); // eslint-disable-line no-console
       resolve({ server, db });
     });
   });

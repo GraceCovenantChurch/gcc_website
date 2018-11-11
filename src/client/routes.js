@@ -13,9 +13,9 @@ const routes = [
         component: asyncComponent(path.resolve(__dirname, './pages/Home'), () => import('./pages/Home')),
       },
       {
-        path: '/welcome',
+        path: '/beliefs',
         exact: true,
-        component: asyncComponent(path.resolve(__dirname, './pages/Welcome'), () => import('./pages/Welcome')),
+        component: asyncComponent(path.resolve(__dirname, './pages/Welcome'), () => import('./pages/Beliefs')),
       },
       {
         path: '/page',
@@ -36,6 +36,26 @@ const routes = [
         path: '/ministries',
         exact: true,
         component: asyncComponent(path.resolve(__dirname, './pages/Ministries'), () => import('./pages/Ministries')),
+      },
+      {
+        path: '/staff',
+        exact: true,
+        component: asyncComponent(path.resolve(__dirname, './pages/Staff'), () => import('./pages/Staff')),
+      },
+      {
+        path: '/welcome',
+        exact: true,
+        component: asyncComponent(path.resolve(__dirname, './pages/Welcome'), () => import('./pages/Welcome')),
+      },
+      {
+        path: '/events',
+        exact: true,
+        component: asyncComponent(path.resolve(__dirname, './pages/Events'), () => import('./pages/Events')),
+      },
+      {
+        path: '/multimedia',
+        exact: true,
+        component: asyncComponent(path.resolve(__dirname, './pages/Multimedia'), () => import('./pages/Multimedia')),
       },
       {
         component: NotFound,

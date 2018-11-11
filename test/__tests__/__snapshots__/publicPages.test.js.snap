@@ -7,28 +7,36 @@ exports[`Public ServerTest renders 404 page 1`] = `
   <head>
     <title data-react-helmet=\\"true\\">Error: Not Found - Grace Covenant Church</title>
 
-    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto:300,700\\" rel=\\"stylesheet\\" />
-    <link href=\\"https://fonts.googleapis.com/css?family=PT+Sans\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora:400,400i\\" rel=\\"stylesheet\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
+    <link rel=\\"shortcut icon\\" href=\\"/public/assets/favicon.ico\\" />
   </head>
 
   <body>
     <div id=\\"app\\">
       <div>
-        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-transparent navbar-dark Navbar__navbar-transparent\\" style=\\"top:0px\\">
+        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-light Navbar__navbar-light\\">
           <a class=\\"navbar-brand Navbar__navbar-brand\\" href=\\"/\\">
             <h1 class=\\"sr-only\\">Grace Covenant Church</h1>
-            <img id=\\"logo\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-light\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-dark\\" src=\\"/static/images/gcclogo-black.png\\" alt=\\"Grace Covenant Church\\" />
           </a>
           <button class=\\"navbar-toggler Navbar__navbar-toggler\\" type=\\"button\\"><span class=\\"navbar-toggler-icon Navbar__navbar-toggler-icon\\"></span></button>
           <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
             <ul class=\\"navbar-nav ml-auto Navbar__navbar-nav\\">
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/welcome\\">I&#x27;m New</a>
-              </li>
-              <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">About</a>
+                <div class=\\"nav-link NavbarDropdown__dropdown\\">
+                  <button class=\\"NavbarDropdown__dropdownButton\\">About</button>
+                  <div class=\\"nav-link NavbarDropdown__dropdownContent\\">
+                    <a href=\\"/welcome\\">Welcome</a>
+                    <a href=\\"/beliefs\\">Beliefs</a>
+                    <a href=\\"/staff\\">Staff</a>
+                    <a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a>
+                  </div>
+                </div>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/familygroup\\">Family Groups</a>
@@ -37,13 +45,13 @@ exports[`Public ServerTest renders 404 page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/page\\">Giving</a>
+                <a href=\\"http://uc.gracecovenant.net/giving/\\" class=\\"nav-link Navbar__nav-link\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Multimedia</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Events</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
               </li>
             </ul>
           </div>
@@ -51,22 +59,27 @@ exports[`Public ServerTest renders 404 page 1`] = `
         <main>
           <div>Nothing here!</div>
         </main>
-        <footer>
+        <footer class=\\"Footer__footer\\">
           <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
             <div class=\\"Center__centered\\">
-              <div class=\\"container footer\\">
-                <div class=\\"Footer__icons\\">
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
-                    <i class=\\"fa fa-facebook fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
-                    <i class=\\"fa fa-twitter fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
-                    <i class=\\"fa fa-instagram fa-2x\\"></i>
-                  </a>
+              <div class=\\"Footer__footerBorder\\">
+                <div class=\\"Footer__footerContainer container footer\\">
+                  <div class=\\"Footer__copyright\\">
+                    <p>Copyright © 1996-2018. Official website of
+                      <a href=\\"/\\">Grace Covenant Church</a> in Philadelphia, PA. All rights reserved.</p>
+                  </div>
+                  <div class=\\"Footer__icons\\">
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                      <i class=\\"fa fa-facebook fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
+                      <i class=\\"fa fa-instagram fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
+                      <i class=\\"fa fa-twitter fa-2x\\"></i>
+                    </a>
+                  </div>
                 </div>
-                <p>© Grace Covenant Church</p>
               </div>
             </div>
           </div>
@@ -101,29 +114,37 @@ exports[`Public ServerTest renders Family Group page 1`] = `
   <head>
     <title data-react-helmet=\\"true\\">Family Group - Grace Covenant Church</title>
 
-    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto:300,700\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora:400,400i\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/pages/FamilyGroup.bundle.css\\" />
-    <link href=\\"https://fonts.googleapis.com/css?family=PT+Sans\\" rel=\\"stylesheet\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
+    <link rel=\\"shortcut icon\\" href=\\"/public/assets/favicon.ico\\" />
   </head>
 
   <body>
     <div id=\\"app\\">
       <div>
-        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-transparent navbar-dark Navbar__navbar-transparent\\" style=\\"top:0px\\">
+        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-light Navbar__navbar-light\\">
           <a class=\\"navbar-brand Navbar__navbar-brand\\" href=\\"/\\">
             <h1 class=\\"sr-only\\">Grace Covenant Church</h1>
-            <img id=\\"logo\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-light\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-dark\\" src=\\"/static/images/gcclogo-black.png\\" alt=\\"Grace Covenant Church\\" />
           </a>
           <button class=\\"navbar-toggler Navbar__navbar-toggler\\" type=\\"button\\"><span class=\\"navbar-toggler-icon Navbar__navbar-toggler-icon\\"></span></button>
           <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
             <ul class=\\"navbar-nav ml-auto Navbar__navbar-nav\\">
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/welcome\\">I&#x27;m New</a>
-              </li>
-              <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">About</a>
+                <div class=\\"nav-link NavbarDropdown__dropdown\\">
+                  <button class=\\"NavbarDropdown__dropdownButton\\">About</button>
+                  <div class=\\"nav-link NavbarDropdown__dropdownContent\\">
+                    <a href=\\"/welcome\\">Welcome</a>
+                    <a href=\\"/beliefs\\">Beliefs</a>
+                    <a href=\\"/staff\\">Staff</a>
+                    <a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a>
+                  </div>
+                </div>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/familygroup\\">Family Groups</a>
@@ -132,22 +153,22 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/page\\">Giving</a>
+                <a href=\\"http://uc.gracecovenant.net/giving/\\" class=\\"nav-link Navbar__nav-link\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Multimedia</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Events</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
               </li>
             </ul>
           </div>
         </nav>
         <main>
-          <div id=\\"FamilyGroup__familyGroup\\">
+          <div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
-                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/philly.jpg);background-attachment:local;background-position:center;background-size:cover\\"></div>
+                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/familygroup/fg_background.jpg);background-attachment:local;background-position:center;background-size:cover\\"></div>
               </div>
               <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
                 <div class=\\"Center__centered\\">
@@ -156,63 +177,79 @@ exports[`Public ServerTest renders Family Group page 1`] = `
               </div>
             </div>
             <div class=\\"FamilyGroup__pageContent\\">
-              <div class=\\"description\\">At GCC we place a high emphasis on Family Groups because we believe that it is in these smaller settings that we are able to meet with God, building meaningful relationships, and develop biblical accountability. Family groups meet on a weekly
-                basis at various places.
-                <br/>
-                <br/>Through Bible study, discussions, sharing and prayer, we learn to live out the teachings of the Bible in our daily lives. You are strongly encouraged to join a family group that fits your needs,interests and life situation.
-                <br/>
-                <br/>Family groups are divided between the Harvest (undergraduate), Crossroad (post-college), and International groups.
-                <br/>
-                <br/>Please watch the video below to learn more!</div>
-              <div class=\\"FamilyGroup__video\\">Video Placeholder Div</div>
+              <p class=\\"FamilyGroup__description\\">At GCC we place a high emphasis on family groups because we believe that it is in these smaller settings that we are able to meet with God, building meaningful relationships, and develop biblical accountability. Family groups meet on a weekly
+                basis at various places.</p>
+              <div class=\\"Center__center Center__centerHorizontal\\">
+                <div class=\\"Center__centered\\">
+                  <iframe class=\\"FamilyGroup__media\\" src=\\"https://www.youtube.com/embed/rvXubANV7RA\\" frameBorder=\\"0\\" title=\\"intro\\" allow=\\"autoplay; encrypted-media\\" allowfullscreen=\\"\\"></iframe>
+                </div>
+              </div>
+              <div class=\\"FamilyGroup__description\\">Through Bible study, discussions, sharing, prayer, and hangouts, we learn together to live out the teachings of God’s Word in our daily lives. Join us!</div>
               <div class=\\"FamilyGroup__signupTable\\">
                 <div class=\\"FamilyGroup__tableRow\\">
-                  <div class=\\"col-sm-4\\"><strong>College</strong>
-                    <br/>Mondays to Thursdays</div>
-                  <div class=\\"col-sm-8\\">Our College Family Groups meet once a week on Drexel, Moore, Penn, Temple, and USciences!
-                    <br/>
-                    <br/>
-                    <a href=\\"#\\">Signup here!</a>
+                  <div class=\\"FamilyGroup__column\\">
+                    <img class=\\"FamilyGroup__tableMedia\\" src=\\"/static/images/familygroup/fg_college.jpg\\" alt=\\"fg-row-media\\" />
+                  </div>
+                  <div class=\\"FamilyGroup__content\\">
+                    <div class=\\"FamilyGroup__textContainer\\">
+                      <div class=\\"FamilyGroup__rowTitle\\">College Ministry: Harvest</div>
+                      <div class=\\"FamilyGroup__rowDays\\">
+                        <p class=\\"Lora__lora\\">Mondays through Thursdays</p>
+                      </div>
+                      <div class=\\"FamilyGroup__rowDescription\\">Our college family groups meet once a week at Drexel University, the University of Pennsylvania, Temple University, Moore College of Art &amp; Design, and the University of the Sciences.</div>
+                      <div class=\\"FamilyGroup__rowSignup\\">
+                        <a class=\\"FamilyGroup__link\\" href=\\"https://docs.google.com/forms/d/e/1FAIpQLScr4PTK2CrnAU0HxQUKBzsOnwyVxPViIedMsTAgLQesKk0Neg/viewform\\">
+                          <p class=\\"Lora__lora\\">Sign up here &gt;</p>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class=\\"FamilyGroup__tableRow\\">
-                  <div class=\\"col-sm-4\\"><strong>Young Adults</strong>
-                    <br/>Mondays to Thursdays</div>
-                  <div class=\\"col-sm-8\\">Our Young Adult Family Groups have a mix of post-undergraduate, grad students, PhD&#x27;s, working adults, and young married couples.
-                    <br/>
-                    <br/>
-                    <a href=\\"#\\">Signup here!</a>
+                  <div class=\\"FamilyGroup__column\\">
+                    <img class=\\"FamilyGroup__tableMedia\\" src=\\"/static/images/familygroup/fg_ya.jpg\\" alt=\\"fg-row-media\\" />
                   </div>
-                </div>
-                <div class=\\"FamilyGroup__tableRow\\">
-                  <div class=\\"col-sm-4\\"><strong>International</strong>
-                    <br/>Thursdays</div>
-                  <div class=\\"col-sm-8\\">Description needed
-                    <br/>
-                    <br/>
-                    <a href=\\"#\\">Signup here!</a>
+                  <div class=\\"FamilyGroup__content\\">
+                    <div class=\\"FamilyGroup__textContainer\\">
+                      <div class=\\"FamilyGroup__rowTitle\\">Young Adult: CROSSroad</div>
+                      <div class=\\"FamilyGroup__rowDays\\">
+                        <p class=\\"Lora__lora\\">Mondays through Thursdays</p>
+                      </div>
+                      <div class=\\"FamilyGroup__rowDescription\\">Our young adult family groups meet once a week and have a mix of post-undergraduates, graduate students, working adults, and young married couples. CROSSroad at our University City site exists to serve, love on, and walk with those
+                        who are in times of transition and constant change.</div>
+                      <div class=\\"FamilyGroup__rowSignup\\">
+                        <a class=\\"FamilyGroup__link\\" href=\\"https://docs.google.com/forms/d/e/1FAIpQLSfhDwIaoHAmZgqnG1Cc7JpJybHbPC9zJadcDW4ZnvIZF6msYg/viewform\\">
+                          <p class=\\"Lora__lora\\">Sign up here &gt;</p>
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </main>
-        <footer>
+        <footer class=\\"Footer__footer\\">
           <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
             <div class=\\"Center__centered\\">
-              <div class=\\"container footer\\">
-                <div class=\\"Footer__icons\\">
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
-                    <i class=\\"fa fa-facebook fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
-                    <i class=\\"fa fa-twitter fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
-                    <i class=\\"fa fa-instagram fa-2x\\"></i>
-                  </a>
+              <div class=\\"Footer__footerBorder\\">
+                <div class=\\"Footer__footerContainer container footer\\">
+                  <div class=\\"Footer__copyright\\">
+                    <p>Copyright © 1996-2018. Official website of
+                      <a href=\\"/\\">Grace Covenant Church</a> in Philadelphia, PA. All rights reserved.</p>
+                  </div>
+                  <div class=\\"Footer__icons\\">
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                      <i class=\\"fa fa-facebook fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
+                      <i class=\\"fa fa-instagram fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
+                      <i class=\\"fa fa-twitter fa-2x\\"></i>
+                    </a>
+                  </div>
                 </div>
-                <p>© Grace Covenant Church</p>
               </div>
             </div>
           </div>
@@ -247,29 +284,37 @@ exports[`Public ServerTest renders Home page 1`] = `
   <head>
     <title data-react-helmet=\\"true\\">Grace Covenant Church</title>
 
-    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto:300,700\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora:400,400i\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/pages/Home.bundle.css\\" />
-    <link href=\\"https://fonts.googleapis.com/css?family=PT+Sans\\" rel=\\"stylesheet\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
+    <link rel=\\"shortcut icon\\" href=\\"/public/assets/favicon.ico\\" />
   </head>
 
   <body>
     <div id=\\"app\\">
       <div>
-        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-transparent navbar-dark Navbar__navbar-transparent\\" style=\\"top:0px\\">
+        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-light Navbar__navbar-light\\">
           <a class=\\"navbar-brand Navbar__navbar-brand\\" href=\\"/\\">
             <h1 class=\\"sr-only\\">Grace Covenant Church</h1>
-            <img id=\\"logo\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-light\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-dark\\" src=\\"/static/images/gcclogo-black.png\\" alt=\\"Grace Covenant Church\\" />
           </a>
           <button class=\\"navbar-toggler Navbar__navbar-toggler\\" type=\\"button\\"><span class=\\"navbar-toggler-icon Navbar__navbar-toggler-icon\\"></span></button>
           <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
             <ul class=\\"navbar-nav ml-auto Navbar__navbar-nav\\">
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/welcome\\">I&#x27;m New</a>
-              </li>
-              <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">About</a>
+                <div class=\\"nav-link NavbarDropdown__dropdown\\">
+                  <button class=\\"NavbarDropdown__dropdownButton\\">About</button>
+                  <div class=\\"nav-link NavbarDropdown__dropdownContent\\">
+                    <a href=\\"/welcome\\">Welcome</a>
+                    <a href=\\"/beliefs\\">Beliefs</a>
+                    <a href=\\"/staff\\">Staff</a>
+                    <a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a>
+                  </div>
+                </div>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/familygroup\\">Family Groups</a>
@@ -278,108 +323,150 @@ exports[`Public ServerTest renders Home page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/page\\">Giving</a>
+                <a href=\\"http://uc.gracecovenant.net/giving/\\" class=\\"nav-link Navbar__nav-link\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Multimedia</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Events</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
               </li>
             </ul>
           </div>
         </nav>
         <main>
-          <div id=\\"home\\">
+          <div id=\\"home\\" class=\\"Home__home\\">
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
-                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/philly.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
+                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/worship.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
               </div>
-              <div class=\\"Home__title\\" style=\\"color:white;top:40%\\">
-                <h1 class=\\"MainTemplate__header\\">Grace Covenant Church</h1>
-                <div class=\\"Home__subtitle\\">
-                  <h3>Raising up Kingdom workers who are
-                    <br/>influenced by Christ to change the world.</h3>
-                </div>
+              <div class=\\"Home__titleSection\\">
+                <div class=\\"Home__titleSectionMission\\">Raising up kingdom workers
+                  <br/>who are transformed by Christ
+                  <br/>to influence the world.</div>
+                <a class=\\"Home__titleSectionLink\\" href=\\"/welcome\\">
+                  <p class=\\"Lora__lora\\">Learn more &gt;</p>
+                </a>
               </div>
             </div>
-            <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
-              <div class=\\"BackgroundImage__backgroundImageContainer\\">
-                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/welcome.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
+            <div class=\\"Home__infoSection\\">
+              <div class=\\"Home__infoSectionHeader\\">
+                <p class=\\"Lora__lora\\">Service Locations and Times</p>
               </div>
-              <div class=\\"Banner__title\\" style=\\"color:white;top:30%\\">
-                <h1 class=\\"MainTemplate__header\\">Join Us In Worship</h1>
-                <div class=\\"Home__subtitle\\">
-                  <h3>Sunday Service 11:15AM
-                    <br/>Friday Night Live 7:30PM</h3>
-                  <h4>Meyerson Hall B-1, 210 South 34th Street
-                    <br/>Philadelphia, PA 19104</h4>
-                  <a href=\\"/welcome\\">
-                    <button class=\\"Home__infoButton\\">More Info</button>
-                  </a>
+              <div class=\\"Home__infoSectionContent\\">
+                <div>
+                  <div class=\\"Home__infoSectionTimes\\">College Friday Night Live
+                    <br/>7:30 PM</div>
+                  <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
+                    <br/>210 South 34th Street
+                    <br/>Philadelphia, PA 19104</div>
+                </div>
+                <div>
+                  <div class=\\"Home__infoSectionTimes\\">Sunday Service
+                    <br/>11:30 AM</div>
+                  <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
+                    <br/>210 South 34th Street
+                    <br/>Philadelphia, PA 19104</div>
+                </div>
+                <div>
+                  <div class=\\"Home__infoSectionTimes\\">Young Adult Friday Night Live
+                    <br/>7:00 PM</div>
+                  <div class=\\"Home__infoSectionLocation\\">Ralston House
+                    <br/>3615 Chestnut Street
+                    <br/>Philadelphia, PA 19104
+                    <br/>
+                  </div>
                 </div>
               </div>
+              <a class=\\"Home__infoSectionLink\\" href=\\"/welcome\\">
+                <p class=\\"Lora__lora\\">Learn more &gt;</p>
+              </a>
             </div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
                 <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/familygroup.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
               </div>
-              <div class=\\"Banner__title\\" style=\\"color:white;top:30%\\">
-                <h1 class=\\"MainTemplate__header\\">Family Group</h1>
-                <div class=\\"Home__subtitle\\">
-                  <h3>You haven&amp;t checked out GCC if you haven&amp;t checked out our family groups.</h3>
-                  <a href=\\"/familygroup\\">
-                    <button class=\\"Home__infoButton\\">Sign Up Here</button>
+              <div class=\\"Banner__content\\">
+                <div class=\\"Home__fgSection\\">
+                  <div class=\\"Home__titleSectionSubtitle\\">
+                    <p class=\\"Lora__lora\\">Community</p>
+                  </div>
+                  <div class=\\"Home__fgSectionHeader\\">Family Group</div>
+                  <div class=\\"Home__fgSectionSubtitle\\">You haven&#x27;t checked out GCC unless
+                    <br/>you&#x27;ve checked out our family groups.</div>
+                  <a class=\\"Home__fgSectionLink\\" href=\\"/familygroup\\">
+                    <p class=\\"Lora__lora\\">Sign up here &gt;</p>
                   </a>
                 </div>
               </div>
+            </div>
+            <div class=\\"Home__eventSection\\">
+              <div class=\\"Home__eventSectionSubtitle\\">
+                <p class=\\"Lora__lora\\">Upcoming Events</p>
+              </div>
+              <div class=\\"Home__eventsContainer\\">
+                <div class=\\"Home__eventSectionEventsError\\">There seems to be no upcoming events</div>
+              </div>
+              <a class=\\"Home__eventSectionSubtitle\\" href=\\"/events\\">
+                <p class=\\"Lora__lora\\">See all events &gt;</p>
+              </a>
             </div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
-                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/events.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
-              </div>
-              <div class=\\"Banner__title\\" style=\\"color:white;top:20%\\">
-                <h1 class=\\"MainTemplate__header\\">Events</h1>
-                <div class=\\"Home__subtitle\\"></div>
-                <div class=\\"subtitle\\">
-                  <a href=\\"/events\\">
-                    <button class=\\"Home__infoButton\\">More Info</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class=\\"bibleVerse\\" style=\\"height:100vh\\">
-              <div class=\\"BackgroundImage__backgroundImageContainer\\">
-                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(null);background-attachment:fixed;background-position:top left;background-size:cover\\"></div>
+                <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/home/amiqt.jpg);background-attachment:local;background-position:top left;background-size:cover\\"></div>
               </div>
               <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
                 <div class=\\"Center__centered\\">
-                  <div class=\\"BannerBibleVerse__bibleVerse\\" style=\\"color:black\\">
-                    <h1>March</h1>
-                    <h3>Whom have I in heaven but you? And there is nothing on earth that I desire besides you. My flesh and my heart may fail, but God is the strength of my heart and my portion forever.</h3>
-                    <h4>Psalm 73:25-26</h4>
+                  <div class=\\"Home__centeredSection\\">
+                    <div class=\\"Home__title\\">AMI Quiet Times</div>
+                    <div class=\\"Home__subtitle\\">Mobile apps for iOS and Android are also available.</div>
+                    <div class=\\"Home__download\\">
+                      <a href=\\"https://itunes.apple.com/us/app/id651172729?mt=8&amp;uo=4\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">
+                        <img class=\\"Home__downloadButton\\" alt=\\"apple_download\\" src=\\"/static/icon/apple_download.svg\\" />
+                      </a>
+                      <a href=\\"https://amiquiettimes.com\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">
+                        <img class=\\"Home__downloadButton\\" alt=\\"ami_qt_page\\" src=\\"/static/icon/ami.png\\" />
+                      </a>
+                      <a href=\\"https://play.google.com/store/apps/details?id=com.subsplash.thechurchapp.ami&amp;referrer=utm_source%3Dsubsplash%26utm_content%3DeyJoYW5kbGVyIjoiYXBwIiwiYXBwa2V5IjoiNlZaSFZOIn0=\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">
+                        <img class=\\"Home__downloadButton\\" alt=\\"google_download\\" src=\\"/static/icon/google_download.png\\" />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
+            <div class=\\"Home__emptySection\\">
+              <div class=\\"Home__title\\">
+                <p class=\\"Lora__lora\\">Monthly Memory Verse</p>
+              </div>
+              <div class=\\"Home__memoryVerse\\"></div>
+              <div class=\\"Home__footerText\\">
+                <p class=\\"Lora__lora\\"></p>
+              </div>
+            </div>
           </div>
         </main>
-        <footer>
+        <footer class=\\"Footer__footer\\">
           <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
             <div class=\\"Center__centered\\">
-              <div class=\\"container footer\\">
-                <div class=\\"Footer__icons\\">
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
-                    <i class=\\"fa fa-facebook fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
-                    <i class=\\"fa fa-twitter fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
-                    <i class=\\"fa fa-instagram fa-2x\\"></i>
-                  </a>
+              <div class=\\"Footer__footerBorder\\">
+                <div class=\\"Footer__footerContainer container footer\\">
+                  <div class=\\"Footer__copyright\\">
+                    <p>Copyright © 1996-2018. Official website of
+                      <a href=\\"/\\">Grace Covenant Church</a> in Philadelphia, PA. All rights reserved.</p>
+                  </div>
+                  <div class=\\"Footer__icons\\">
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                      <i class=\\"fa fa-facebook fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
+                      <i class=\\"fa fa-instagram fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
+                      <i class=\\"fa fa-twitter fa-2x\\"></i>
+                    </a>
+                  </div>
                 </div>
-                <p>© Grace Covenant Church</p>
               </div>
             </div>
           </div>
@@ -414,29 +501,37 @@ exports[`Public ServerTest renders Welcome page 1`] = `
   <head>
     <title data-react-helmet=\\"true\\">Grace Covenant Church</title>
 
-    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto:300,700\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
+    <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Lora:400,400i\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"public/assets/pages/welcome/Welcome.bundle.css\\" />
-    <link href=\\"https://fonts.googleapis.com/css?family=PT+Sans\\" rel=\\"stylesheet\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/app.bundle.css\\" />
     <link rel=\\"stylesheet\\" type=\\"text/css\\" href=\\"/public/assets/public.bundle.css\\" />
+    <link rel=\\"shortcut icon\\" href=\\"/public/assets/favicon.ico\\" />
   </head>
 
   <body>
     <div id=\\"app\\">
       <div>
-        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-transparent navbar-dark Navbar__navbar-transparent\\" style=\\"top:0px\\">
+        <nav id=\\"Navbar__mainNavbar\\" class=\\"navbar navbar-expand-lg navbar-light Navbar__navbar-light\\">
           <a class=\\"navbar-brand Navbar__navbar-brand\\" href=\\"/\\">
             <h1 class=\\"sr-only\\">Grace Covenant Church</h1>
-            <img id=\\"logo\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-light\\" src=\\"/static/images/gcclogo.png\\" alt=\\"Grace Covenant Church\\" />
+            <img class=\\"Navbar__logo-dark\\" src=\\"/static/images/gcclogo-black.png\\" alt=\\"Grace Covenant Church\\" />
           </a>
           <button class=\\"navbar-toggler Navbar__navbar-toggler\\" type=\\"button\\"><span class=\\"navbar-toggler-icon Navbar__navbar-toggler-icon\\"></span></button>
           <div class=\\"navbar-collapse collapse\\" style=\\"height:auto\\">
             <ul class=\\"navbar-nav ml-auto Navbar__navbar-nav\\">
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/welcome\\">I&#x27;m New</a>
-              </li>
-              <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">About</a>
+                <div class=\\"nav-link NavbarDropdown__dropdown\\">
+                  <button class=\\"NavbarDropdown__dropdownButton\\">About</button>
+                  <div class=\\"nav-link NavbarDropdown__dropdownContent\\">
+                    <a href=\\"/welcome\\">Welcome</a>
+                    <a href=\\"/beliefs\\">Beliefs</a>
+                    <a href=\\"/staff\\">Staff</a>
+                    <a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a>
+                  </div>
+                </div>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/familygroup\\">Family Groups</a>
@@ -445,19 +540,19 @@ exports[`Public ServerTest renders Welcome page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/page\\">Giving</a>
+                <a href=\\"http://uc.gracecovenant.net/giving/\\" class=\\"nav-link Navbar__nav-link\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Multimedia</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/pages\\">Events</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
               </li>
             </ul>
           </div>
         </nav>
         <main>
-          <div id=\\"Welcome__welcome\\">
+          <div>
             <div class=\\"jumbotron Jumbotron__jumbotron\\" style=\\"height:100vh\\">
               <div class=\\"BackgroundImage__backgroundImageContainer\\">
                 <div class=\\"BackgroundImage__backgroundImage\\" style=\\"background-image:url(/static/images/welcome/welcome_background.jpg);background-attachment:local;background-position:center;background-size:cover\\"></div>
@@ -466,63 +561,67 @@ exports[`Public ServerTest renders Welcome page 1`] = `
                 <div class=\\"Center__centered\\">
                   <div class=\\"TitleBanner__titleText MainTemplate__header\\" style=\\"color:white\\">
                     <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
-                      <div class=\\"Center__centered\\">Welcome!</div>
+                      <div class=\\"Center__centered\\">Welcome</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class=\\"Welcome__pageContent\\">
-              <div class=\\"description\\">Our doors are wide open to people from all backgrounds. Whether you are a spiritual seeker just beginning to ask questions about God or a committed Christian wanting to deepen your faith, Grace Covenant Church is a place you can call home
-                and find spiritual help, hope, and encouragement. Wherever you are in your spiritual journey, we invite you to discover GCC—and discover for yourself God’s wonderful love and plan for your life!</div>
-              <div class=\\"Welcome__video\\">
+              <div class=\\"Welcome__description\\">Welcome to
+                <a class=\\"Welcome__link\\" href=\\"/\\">Grace Covenant Church (GCC)</a>! During your time with us, we hope you’ll be able to catch a glimpse of how God is faithfully moving in Philadelphia.</div>
+              <div class=\\"Welcome__media\\">
                 <iframe width=\\"100%\\" height=\\"100%\\" title=\\"Grace Covenant Church Intro Video\\" src=\\"https://www.youtube.com/embed/5M8H4xhSPWc\\" frameBorder=\\"0\\" allowfullscreen=\\"\\"></iframe>
               </div>
-              <div class=\\"description\\">What makes us unique? It isn’t our beliefs. We affirm the same basic Christian doctrines that have been a part of the Church for hundreds of years. Rather, we are committed to presenting these truths in a practical, relevant, contemporary,
-                and loving manner. Our desire is to introduce you to Jesus Christ and to help you grow and become a kingdom worker. We want to help you to become a kingdom worker who can influence the world around you with the love of Jesus Christ.
+              <div class=\\"Welcome__description\\">Our doors are wide open to people from all backgrounds. Whether you are a spiritual seeker who’s just beginning to ask questions about God or a committed Christian who wants to deepen one’s faith, GCC is a welcoming community that you can
+                call family and find spiritual help, hope, and encouragement from. We invite you to discover God’s wonderful love and plan for your life through our church!</div>
+              <div class=\\"Welcome__description\\">
+                <h4 class=\\"Welcome__header\\">What makes us unique?</h4>It isn’t our
+                <a class=\\"Welcome__link\\" href=\\"/beliefs\\">beliefs</a>. We affirm the same basic Christian doctrines that have been a part of the Church for hundreds of years. Rather, we are committed to presenting these truths in a practical, relevant, contemporary, and loving manner. Our desire
+                is to introduce you to Jesus Christ and to help you grow and become a kingdom worker.</div>
+              <div class=\\"Welcome__description\\">
+                <h4 class=\\"Welcome__header\\">How can you get involved?</h4>Our church is comprised of a network of
+                <a class=\\"Welcome__link\\" href=\\"/familygroup\\">family groups</a>: small, intimate groups in which honest friendships, Bible study, prayer, and compassionate care for one another are emphasized. Our family groups are where the core of our evangelism and discipleship takes place. We
+                invite you to join one and be able to call GCC your home!
                 <br/>
-                <br/>Our church is comprised of a network of “family groups“; small group settings where honest friendships, Bible study, constant prayer, and compassionate care are emphasized. It is within these dynamic family groups where the core of our
-                evangelism and discipleship take place. We invite you to become of a part of these contagious Christian communities that strive to influence and encourage one another.
-                <br/>
-                <br/>Again, whether you’re a spiritual seeker who’s just starting to ask questions about God, or a committed Christian who wants to sink the roots of your faith even deeper, you can find a home here at Grace Covenant Church.
-                <br/>
-                <br/>Our Sunday Services and Friday Night Large Groups are typically located at Meyerson Hall Room B-1, 3401 Walnut Street Philadelphia, PA 19104. We oftentimes meet at Ralston House, 3615 Chestnut Street Philadelphia, PA 19104, as well. Keep
-                an eye out for Grace Covenant Church signs and our welcomers to find us!</div>
-              <div class=\\"row\\">
-                <div class=\\"col-sm-6\\">
-                  <div style=\\"width:100%;position:relative;padding-top:75%\\">
-                    <div style=\\"position:absolute;top:0;left:0;bottom:0;right:0\\">
-                      <iframe frameBorder=\\"0\\" title=\\"Meyerson Hall\\" src=\\"https://www.google.com/maps/embed/v1/place?q=Meyerson+Hall,+Philadelphia,+PA,+United+States&amp;key=GOOGLE_MAPS_KEY\\" style=\\"width:100%;height:100%\\"></iframe>
-                    </div>
-                  </div>
-                </div>
-                <div class=\\"col-sm-6\\">
-                  <div style=\\"width:100%;position:relative;padding-top:75%\\">
-                    <div style=\\"position:absolute;top:0;left:0;bottom:0;right:0\\">
-                      <iframe frameBorder=\\"0\\" title=\\"Ralston House\\" src=\\"https://www.google.com/maps/embed/v1/place?q=Ralston+House,+Chestnut+Street,+Philadelphia,+PA,+United+States&amp;key=GOOGLE_MAPS_KEY\\" style=\\"width:100%;height:100%\\"></iframe>
-                    </div>
+                <br/>Our Sunday service is typically located at Meyerson Hall, Room B1 (210 South 34th Street).</div>
+              <div class=\\"Welcome__maps\\">
+                <div style=\\"width:100%;position:relative;padding-top:75%\\">
+                  <div style=\\"position:absolute;top:0;left:0;bottom:0;right:0\\">
+                    <iframe frameBorder=\\"0\\" title=\\"Meyerson Hall\\" src=\\"https://www.google.com/maps/embed/v1/place?q=Meyerson+Hall,+Philadelphia,+PA,+United+States&amp;key=GOOGLE_MAPS_KEY\\" style=\\"width:100%;height:100%\\"></iframe>
                   </div>
                 </div>
               </div>
+              <div class=\\"Welcome__description\\">If you would like more information about GCC, please continue to explore this website or feel free contact us at
+                <a class=\\"Welcome__link\\" href=\\"mailto:web@gracecovenant.net\\">web@gracecovenant.net</a>. Stay connected through our
+                <a class=\\"Welcome__link\\" href=\\"https://www.facebook.com/gracecovenant/\\">Facebook</a> and
+                <a class=\\"Welcome__link\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">Instagram</a>, too!
+                <br/>
+                <br/>Thanks for visiting! May God’s grace and peace be with you.</div>
             </div>
           </div>
         </main>
-        <footer>
+        <footer class=\\"Footer__footer\\">
           <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
             <div class=\\"Center__centered\\">
-              <div class=\\"container footer\\">
-                <div class=\\"Footer__icons\\">
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
-                    <i class=\\"fa fa-facebook fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
-                    <i class=\\"fa fa-twitter fa-2x\\"></i>
-                  </a>
-                  <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
-                    <i class=\\"fa fa-instagram fa-2x\\"></i>
-                  </a>
+              <div class=\\"Footer__footerBorder\\">
+                <div class=\\"Footer__footerContainer container footer\\">
+                  <div class=\\"Footer__copyright\\">
+                    <p>Copyright © 1996-2018. Official website of
+                      <a href=\\"/\\">Grace Covenant Church</a> in Philadelphia, PA. All rights reserved.</p>
+                  </div>
+                  <div class=\\"Footer__icons\\">
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                      <i class=\\"fa fa-facebook fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
+                      <i class=\\"fa fa-instagram fa-2x\\"></i>
+                    </a>
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
+                      <i class=\\"fa fa-twitter fa-2x\\"></i>
+                    </a>
+                  </div>
                 </div>
-                <p>© Grace Covenant Church</p>
               </div>
             </div>
           </div>

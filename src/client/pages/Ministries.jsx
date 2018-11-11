@@ -1,71 +1,78 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
 import Helmet from 'react-helmet';
-import pluralize from 'pluralize';
 
 import withTitle from '../hoc/withTitle';
-import Center from '../components/Center';
 import TitleBanner from '../components/TitleBanner';
-import { fetchModelData } from '../modules/modelData';
-
+import contentfulClient from '../modules/contentful';
+import TileDeck from '../components/TileDeck';
+import Lora from '../components/Lora';
 
 import styles from './Ministries.css';
 
 class Ministries extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      ministriesList: [],
+    };
+  }
+
   componentDidMount() {
-    this.props.fetchData();
+    contentfulClient.getEntries({
+      content_type: 'ministry',
+    }).then((entries) => {
+      const ministriesList = entries.items.map((item) => {
+        const imageComponent = (
+          <img
+            className={styles.image}
+            src={item.fields.image.fields.file.url}
+            alt={item.fields.image.fields.title}
+          />
+        );
+
+        const contentComponent = (
+          <div>
+            <h4><strong>{item.fields.name}</strong></h4>
+            <div className={styles.subtitle}><Lora>Coordinator(s): {item.fields.coordinator}</Lora></div>
+            <div className={styles.subtitle}><Lora>Contact: {item.fields.contact}</Lora></div>
+            <div className={styles.description}>{item.fields.description}</div>
+          </div>
+        );
+
+        return {
+          contentComponent,
+          imageComponent,
+        };
+      });
+
+      this.setState({
+        ministriesList,
+      });
+    });
   }
 
   render() {
-    const ministryList = this.props.data.map(ministryObj => ministryObj.name);
-
     return (
       <div id={styles.ministries}>
         <Helmet>
           <link rel="stylesheet" type="text/css" href="/public/assets/pages/Ministries.bundle.css" />
         </Helmet>
 
-        <TitleBanner src="/static/images/home/philly.jpg">
-          <Center horizontal vertical>
-            Ministries
-          </Center>
+        <TitleBanner src="/static/images/ministries/ministries.jpg">
+          Ministries
         </TitleBanner>
 
         <div className={styles.pageContent}>
-          {ministryList.map(ministryName => (
-            <div className={styles.ministryBox} key={ministryName}>
-              <Center vertical>{ministryName}</Center>
-            </div>
-          ))}
+          <TileDeck
+            light
+            data={this.state.ministriesList}
+          />
         </div>
       </div>
     );
   }
 }
 
-Ministries.propTypes = {
-  fetchData: PropTypes.func.isRequired,
-  data: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string,
-  })).isRequired,
-};
-
-const withData = connect((state) => {
-  const modelData = state.modelData[pluralize('Ministry')];
-  return {
-    data: modelData ? modelData.ids.map(id => modelData.__DB__[id]) : [],
-  };
-}, dispatch => (
-  {
-    fetchData() {
-      return dispatch(fetchModelData('Ministry'));
-    },
-  }
-));
-
-const MinistriesPage = compose(withData, withTitle('Ministries'), withRouter)(Ministries);
+const MinistriesPage = withTitle('Ministries')(Ministries);
 
 export default MinistriesPage;

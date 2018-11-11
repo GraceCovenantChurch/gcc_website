@@ -1,10 +1,6 @@
 import { Router } from 'express';
-import Ministries from './Ministries';
-import Events from './Events';
 
 const router = Router();
-router.use('/modelData/Ministries', Ministries);
-router.use('/modelData/Events', Events);
 
 router.get('/pages/:page', (req, res) => {
   res.json({
@@ -14,7 +10,7 @@ router.get('/pages/:page', (req, res) => {
 });
 
 router.use((err, req, res, next) => {
-  console.error(err);
+  console.error(err); // eslint-disable-line no-console
   res.status(500);
   next();
 });

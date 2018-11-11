@@ -1,29 +1,77 @@
-#familyGroup{
-	.pageContent{
-		margin: 50px 10%;
+.link {
+  color: black;
+}
+
+.link:hover {
+  color: #979797;
+  text-decoration: none;
+}
+
+.pageContent {
+	margin: 100px 20%;
+
+	.description {
+		padding: 30px 0px;
+
+		.importantText {
+			font-style: italic;
+		}
+	}
+}
+
+.media {
+	margin: 30px auto;
+	width: 75%;
+	height: 550px;
+	background-color: gray;
+}
+
+.signupTable{
+	padding: 20px 0px;
+}
+
+.tableRow{
+	margin: auto;
+	padding: 20px 0px;
+	display: flex;
+	align-items: center;
+
+	.column {
+		flex: 50%;
+		margin-right: 3%;
 	}
 
-	.video{
-		margin: 30px auto;
-		width: 90%;
-		height: 500px;
-		background: gray;
+	.tableMedia {
+		width: 100%;
+		min-width: 300px;
 	}
 
-	.signupTable{
-		border-top: 8px solid #F3F3F3;
-		border-bottom: 8px solid #F3F3F3;
-		padding: 0px 25px;
-	}
+	.content {
+		flex: 50%;
 
-	.tableRow{
-		width: 90%;
-		margin: auto;
-		padding: 40px 0px;
-		border-bottom: 8px solid #F3F3F3;
-	}
+		.textContainer {
+			position: relative;
 
-	.signupTable > :last-child{
-		border-bottom: none;
+			.rowTitle {
+				font-weight: bold;
+				font-size: 24px;
+				color: #444444;
+			}
+
+			.rowDays {
+				font-size: 14px;
+				color: #888888;
+				padding-bottom: 5px;
+				font-style: italic;
+			}
+
+			.rowDescription {
+				padding: 10px 0px;
+			}
+
+			.rowSignup {
+				padding: 10px 0px;
+			}
+		}
 	}
 }

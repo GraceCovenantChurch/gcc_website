@@ -8,6 +8,7 @@
   "extends": "airbnb",
   "parser": "babel-eslint",
   "rules": {
+    "max-len": [0],
     "no-plusplus": "off",
     "no-underscore-dangle": "off",
     "linebreak-style": "off",
@@ -24,6 +25,10 @@
     "react/no-multi-comp": "off",
     "no-restricted-globals": "warn",
     "jsx-a11y/no-static-element-interactions": "warn",
-    "jsx-a11y/label-has-for": "warn"
+    "jsx-a11y/label-has-for": "warn",
+    "react/jsx-curly-brace-presence": "warn",
+    "react/no-unescaped-entities": "warn",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "react/no-array-index-key": "warn",
   }
 }

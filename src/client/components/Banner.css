@@ -1,11 +1,12 @@
-.titleContainer {
-  padding-bottom: 50px;
+.content {
+  position: absolute;
+  height: 100%;
+  margin: 0 3%;
 }
 
-.title {
+.contentCentered {
   position: absolute;
-  top: 30%;
-  left: 10%;
-  width: 70vw;
-  color: white;
+  width: 100%;
+  height: 100%;
+  top: 50%;
 }

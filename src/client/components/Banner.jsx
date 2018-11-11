@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Jumbotron from './Jumbotron';
 import BackgroundImage from './BackgroundImage';
+import Center from './Center';
 
 import styles from './Banner.css';
 
@@ -13,23 +14,28 @@ const Banner = props => (
       backgroundPosition="top left"
       backgroundAttachment="local"
     />
-    <div
-      className={styles.title}
-      style={{ color: 'white', top: `${props.topMargin}%` }}
-    >
-      {props.children}
-    </div>
+    { props.centered &&
+      <Center vertical horizontal>
+        {props.children}
+      </Center>
+    }
+    { !props.centered &&
+      <div className={styles.content}>
+        {props.children}
+      </div>
+    }
   </Jumbotron>
 );
 
 Banner.propTypes = {
   src: PropTypes.string.isRequired,
-  topMargin: PropTypes.number.isRequired,
   children: PropTypes.node,
+  centered: PropTypes.bool,
 };
 
 Banner.defaultProps = {
   children: null,
+  centered: false,
 };
 
 export default Banner;
