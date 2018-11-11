@@ -51,3 +51,24 @@ deploy:
   region: us-east-1
   on:
     branch: staging
+- provider: s3
+  access_key_id: $TRAVIS_AWS_ACCESS_KEY
+  secret_access_key: $TRAVIS_AWS_SECRET_KEY
+  local_dir: deploy_upload
+  skip_cleanup: true
+  on:
+    branch: master
+    repo: GraceCovenantChurch/gcc_website
+  bucket: s3.web.prod
+  region: us-east-1
+- provider: codedeploy
+  access_key_id: $TRAVIS_AWS_ACCESS_KEY
+  secret_access_key: $TRAVIS_AWS_SECRET_KEY
+  bucket: s3.web.prod
+  key: latest.zip
+  bundle_type: zip
+  application: gcc.web.production
+  deployment_group: gccweb
+  region: us-east-1
+  on:
+    branch: master
