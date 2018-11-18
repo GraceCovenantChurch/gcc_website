@@ -32,7 +32,7 @@ const MainTemplate = ({ route }) => (
         </NavbarDropdown>,
         <Link to="/familygroup">Family Groups</Link>,
         <Link to="/ministries">Ministries</Link>,
-        <a href="http://uc.gracecovenant.net/giving/">Giving</a>,
+        <Link to="/giving">Giving</Link>,
         <Link to="/multimedia">Multimedia</Link>,
         <Link to="/events">Events</Link>,
       ]}

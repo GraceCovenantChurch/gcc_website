@@ -45,7 +45,7 @@ exports[`Public ServerTest renders 404 page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a href=\\"http://uc.gracecovenant.net/giving/\\" class=\\"nav-link Navbar__nav-link\\">Giving</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/giving\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
@@ -153,7 +153,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a href=\\"http://uc.gracecovenant.net/giving/\\" class=\\"nav-link Navbar__nav-link\\">Giving</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/giving\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
@@ -323,7 +323,7 @@ exports[`Public ServerTest renders Home page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a href=\\"http://uc.gracecovenant.net/giving/\\" class=\\"nav-link Navbar__nav-link\\">Giving</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/giving\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
@@ -540,7 +540,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a href=\\"http://uc.gracecovenant.net/giving/\\" class=\\"nav-link Navbar__nav-link\\">Giving</a>
+                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/giving\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
