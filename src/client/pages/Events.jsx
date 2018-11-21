@@ -26,6 +26,7 @@ class Events extends Component {
       order: 'fields.date',
     }).then((entries) => {
       const eventsList = entries.items.map((item) => {
+        console.log(item);
         const imageComponent = (
           <img
             className={styles.image}
@@ -49,7 +50,14 @@ class Events extends Component {
                 <a className={styles.link} href={item.fields.link}>
                   <Lora>Go to event page ></Lora>
                 </a>
-               )
+              )
+            }
+            {item.fields.file &&
+              (
+                <a className={styles.link} href={item.fields.file.fields.file.url}>
+                  <Lora>View the file ></Lora>
+                </a>
+              )
             }
           </div>
         );

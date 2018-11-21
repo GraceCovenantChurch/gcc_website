@@ -54,6 +54,13 @@ class Home extends Component {
                 </a>
                )
             }
+            {item.fields.file &&
+              (
+                <a className={styles.link} href={item.fields.file.fields.file.url}>
+                  <Lora>View the file ></Lora>
+                </a>
+              )
+            }
           </div>
         );
 

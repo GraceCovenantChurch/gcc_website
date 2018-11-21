@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
+import { Form, FormGroup, Label, Col, Input } from 'reactstrap';
+
 import withTitle from '../hoc/withTitle';
 import TitleBanner from '../components/TitleBanner';
 import contentfulClient from '../modules/contentful';
@@ -14,14 +16,17 @@ class Giving extends Component {
     super(props);
     this.state = {
       givingList: [],
+
     };
   }
 
   componentDidMount() {
     contentfulClient.getEntries({
       content_type: 'giving',
+      order: 'fields.name',
     }).then((entries) => {
       const givingList = entries.items.map((item) => {
+        const itemName = item.fields.name;
         const imageComponent = (
           <img
             className={styles.image}
@@ -46,6 +51,7 @@ class Giving extends Component {
         );
 
         return {
+          itemName,
           contentComponent,
           imageComponent,
         };
@@ -58,6 +64,8 @@ class Giving extends Component {
   }
 
   render() {
+    const { givingList } = this.state;
+
     return (
       <div id={styles.Giving}>
         <Helmet>
@@ -90,13 +98,30 @@ class Giving extends Component {
               {'Donating via check or cash will save GCC transaction fees. Alternatively, if you have a PayPal account, sending money directly to paypal@gracecovenant.net via the “send money to friends and family” option in PayPal will also save us transaction fees. Those without a PayPal account can also donate via credit card below!'}
             </div>
 
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-              <input type="hidden" name="cmd" value="_donations" />
-              <input type="hidden" name="business" value="paypal@gracecovenant.net" />
-              <input type="hidden" name="currency_code" value="USD" />
-              <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-              <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-            </form>
+            <div className={styles.donations}>
+              <Form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <h5 className={styles.donationTitle}>Donation Form</h5>
+                <input type="hidden" name="cmd" value="_donations" />
+                <input type="hidden" name="business" value="paypal@gracecovenant.net" />
+                <input type="hidden" name="currency_code" value="USD" />
+                <input type="hidden" name="tax" value="0" />
+                <input type="hidden" name="lc" value="US" />
+                <FormGroup row>
+                  <Label className={styles.label} for="item_name" sm={2}>Donation Options</Label>
+                  <Col sm={10}>
+                    <Input type="select" name="item_name" id="item_name">
+                      <option>General Giving</option>
+                      { givingList.map(item => (
+                        <option>{item.itemName}</option>
+                        ))
+                      }
+                    </Input>
+                  </Col>
+                </FormGroup>
+                <input className={styles.button} type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                <img className={styles.button} alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+              </Form>
+            </div>
 
             <div className={styles.description}>
               <h4 className={styles.header}>Please consider contributing to some of our specific needs.</h4>
@@ -105,7 +130,7 @@ class Giving extends Component {
 
             <TileDeck
               light
-              data={this.state.givingList}
+              data={givingList}
             />
           </div>
         </div>

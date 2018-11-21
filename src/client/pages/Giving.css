@@ -1,5 +1,24 @@
 .pageContent {
   margin: 50px 10% 100px;
+
+  .donations {
+    margin: 25px 90px;
+    padding: 25px 10px;
+    background-color: #f7f7f7;
+    border-radius: 1em;
+
+    .donationTitle {
+      text-align: center;
+      padding-bottom: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .header {
