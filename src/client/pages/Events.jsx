@@ -26,7 +26,6 @@ class Events extends Component {
       order: 'fields.date',
     }).then((entries) => {
       const eventsList = entries.items.map((item) => {
-        console.log(item);
         const imageComponent = (
           <img
             className={styles.image}
