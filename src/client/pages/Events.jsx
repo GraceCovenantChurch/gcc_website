@@ -49,7 +49,14 @@ class Events extends Component {
                 <a className={styles.link} href={item.fields.link}>
                   <Lora>Go to event page ></Lora>
                 </a>
-               )
+              )
+            }
+            {item.fields.file &&
+              (
+                <a className={styles.link} href={item.fields.file.fields.file.url}>
+                  <Lora>View the file ></Lora>
+                </a>
+              )
             }
           </div>
         );
