@@ -94,7 +94,7 @@ class Giving extends Component {
             </div>
 
             <div className={styles.description}>
-              <h4 className={styles.header}>By Paypal or Credit Card</h4>
+              <h4 className={styles.header}>By PayPal or Credit Card</h4>
               {'Donating via check or cash will save GCC transaction fees. Alternatively, if you have a PayPal account, sending money directly to paypal@gracecovenant.net via the “send money to friends and family” option in PayPal will also save us transaction fees. Those without a PayPal account can also donate via credit card below!'}
             </div>
 
