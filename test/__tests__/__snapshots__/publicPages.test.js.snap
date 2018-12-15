@@ -364,8 +364,8 @@ exports[`Public ServerTest renders Home page 1`] = `
                 <div>
                   <div class=\\"Home__infoSectionTimes\\">Sunday Service
                     <br/>11:30 AM</div>
-                  <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
-                    <br/>210 South 34th Street
+                  <div class=\\"Home__infoSectionLocation\\">Sheraton Hotel
+                    <br/>3549 Chestnut Street
                     <br/>Philadelphia, PA 19104</div>
                 </div>
                 <div>
