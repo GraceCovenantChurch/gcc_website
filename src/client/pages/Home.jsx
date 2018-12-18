@@ -1,6 +1,6 @@
 /* eslint react/no-unescaped-entities: 0 */
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["ISOtoDate"] }] */
 import moment from 'moment';
-import nconf from 'nconf';
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { compose } from 'redux';
@@ -24,7 +24,7 @@ class Home extends Component {
       eventsList: [],
       sundayService: null,
       undergradFNL: null,
-      crossroadFNL: null
+      crossroadFNL: null,
     };
   }
 
@@ -93,45 +93,45 @@ class Home extends Component {
       content_type: 'services',
       order: 'fields.time',
     }).then((entries) => {
-      let data = entries.items;
+      const data = entries.items;
 
-      data.forEach((element, index) => {
-        let title = element.fields.title;
-        let date = new Date();
-        let timestamp = date.toISOString();
-        let eventTime = element.fields.time;
+      data.forEach((element) => {
+        const title = element.fields.title;
+        const date = new Date();
+        const timestamp = date.toISOString();
+        const eventTime = element.fields.time;
 
-        if ( timestamp < eventTime ) {
-          let { sundayService, undergradFNL, crossroadFNL } = this.state;
+        if (timestamp < eventTime) {
+          const { sundayService, undergradFNL, crossroadFNL } = this.state;
 
-          if (title.includes("Sunday Service")) {
+          if (title.includes('Sunday Service')) {
             if (sundayService) {
-              let currentState = sundayService.time;
-              let currentData = element.fields.time;
+              const currentState = sundayService.time;
+              const currentData = element.fields.time;
 
-              if ( !(currentState < currentData) ) {
+              if (!(currentState < currentData)) {
                 this.setState({ sundayService: element.fields });
               }
             } else {
               this.setState({ sundayService: element.fields });
             }
-          } else if (title.includes("College Friday Night Live")) {
+          } else if (title.includes('College Friday Night Live')) {
             if (undergradFNL) {
-              let currentState = undergradFNL.time;
-              let currentData = element.fields.time;
+              const currentState = undergradFNL.time;
+              const currentData = element.fields.time;
 
-              if ( !(currentState < currentData) ) {
+              if (!(currentState < currentData)) {
                 this.setState({ undergradFNL: element.fields });
               }
             } else {
               this.setState({ undergradFNL: element.fields });
             }
-          } else if (title.includes("Young Adult Friday Night Live")) {
+          } else if (title.includes('Young Adult Friday Night Live')) {
             if (crossroadFNL) {
-              let currentState = crossroadFNL.time;
-              let currentData = element.fields.time;
+              const currentState = crossroadFNL.time;
+              const currentData = element.fields.time;
 
-              if ( !(currentState < currentData) ) {
+              if (!(currentState < currentData)) {
                 this.setState({ crossroadFNL: element.fields });
               }
             } else {
@@ -143,8 +143,23 @@ class Home extends Component {
     });
   }
 
+  ISOtoDate(date) {
+    const indate = new Date(date);
+    let ampm = '';
+
+    if (indate.getHours() > 12) {
+      ampm = 'PM';
+    } else {
+      ampm = 'AM';
+    }
+
+    const output = `${indate.getHours() % 12}:${indate.getMinutes() < 10 ? '0' : ''}${indate.getMinutes()} ${ampm}`;
+
+    return output;
+  }
+
   render() {
-    let { sundayService, undergradFNL, crossroadFNL } = this.state;
+    const { sundayService, undergradFNL, crossroadFNL } = this.state;
 
     const titleSection = (
       <Jumbotron style={{ height: '100vh' }}>
@@ -363,21 +378,6 @@ class Home extends Component {
         {memoryVerseSection}
       </div>
     );
-  }
-
-  ISOtoDate(date) {
-    let indate = new Date(date);
-    let ampm = "";
-
-    if ( indate.getHours() > 12 ) {
-      ampm = "PM"
-    } else {
-      ampm = "AM";
-    }
-
-    let output = indate.getHours()%12 + ":" + (indate.getMinutes()<10?'0':'') + indate.getMinutes() + " " + ampm;
-
-    return output;
   }
 }
 
