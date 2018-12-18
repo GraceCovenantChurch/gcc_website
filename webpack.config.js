@@ -181,5 +181,5 @@ module.exports = {
       'Access-Control-Allow-Headers': 'X-Requested-With, Accept, Origin, Referer, User-Agent, Content-Type, Authorization',
     },
     publicPath: '/public/assets/',
-  },
+  }
 };
