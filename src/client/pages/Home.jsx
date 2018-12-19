@@ -1,4 +1,5 @@
 /* eslint react/no-unescaped-entities: 0 */
+/* eslint class-methods-use-this: ["error", { "exceptMethods": ["ISOtoDate"] }] */
 import moment from 'moment';
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
@@ -21,6 +22,9 @@ class Home extends Component {
     this.state = {
       memoryVerse: {},
       eventsList: [],
+      sundayService: null,
+      undergradFNL: null,
+      crossroadFNL: null,
     };
   }
 
@@ -84,9 +88,79 @@ class Home extends Component {
         memoryVerse: entries.items[0].fields,
       });
     });
+
+    contentfulClient.getEntries({
+      content_type: 'services',
+      order: 'fields.time',
+    }).then((entries) => {
+      const data = entries.items;
+
+      data.forEach((element) => {
+        const title = element.fields.title;
+        const date = new Date();
+        const timestamp = date.toISOString();
+        const eventTime = element.fields.time;
+
+        if (timestamp < eventTime) {
+          const { sundayService, undergradFNL, crossroadFNL } = this.state;
+
+          if (title.includes('Sunday Service')) {
+            if (sundayService) {
+              const currentState = sundayService.time;
+              const currentData = element.fields.time;
+
+              if (!(currentState < currentData)) {
+                this.setState({ sundayService: element.fields });
+              }
+            } else {
+              this.setState({ sundayService: element.fields });
+            }
+          } else if (title.includes('College Friday Night Live')) {
+            if (undergradFNL) {
+              const currentState = undergradFNL.time;
+              const currentData = element.fields.time;
+
+              if (!(currentState < currentData)) {
+                this.setState({ undergradFNL: element.fields });
+              }
+            } else {
+              this.setState({ undergradFNL: element.fields });
+            }
+          } else if (title.includes('Young Adult Friday Night Live')) {
+            if (crossroadFNL) {
+              const currentState = crossroadFNL.time;
+              const currentData = element.fields.time;
+
+              if (!(currentState < currentData)) {
+                this.setState({ crossroadFNL: element.fields });
+              }
+            } else {
+              this.setState({ crossroadFNL: element.fields });
+            }
+          }
+        }
+      });
+    });
+  }
+
+  ISOtoDate(date) {
+    const indate = new Date(date);
+    let ampm = '';
+
+    if (indate.getHours() > 12) {
+      ampm = 'PM';
+    } else {
+      ampm = 'AM';
+    }
+
+    const output = `${indate.getHours() % 12}:${indate.getMinutes() < 10 ? '0' : ''}${indate.getMinutes()} ${ampm}`;
+
+    return output;
   }
 
   render() {
+    const { sundayService, undergradFNL, crossroadFNL } = this.state;
+
     const titleSection = (
       <Jumbotron style={{ height: '100vh' }}>
         <BackgroundImage
@@ -114,39 +188,89 @@ class Home extends Component {
           <Lora>Service Locations and Times</Lora>
         </div>
         <div className={styles.infoSectionContent}>
-          <div>
-            <div className={styles.infoSectionTimes}>
-              College Friday Night Live <br />
-              7:30 PM
+          { undergradFNL &&
+            <div>
+              <div className={styles.infoSectionTimes}>
+                { undergradFNL.title }<br />
+                { this.ISOtoDate(undergradFNL.time) }
+              </div>
+              <div className={styles.infoSectionLocation}>
+                { undergradFNL.location } <br />
+                { undergradFNL.street } <br />
+                { undergradFNL.citystatezip }
+              </div>
             </div>
-            <div className={styles.infoSectionLocation}>
-              Meyerson Hall B1 <br />
-              210 South 34th Street <br />
-              Philadelphia, PA 19104
+          }
+
+          { !undergradFNL &&
+            <div>
+              <div className={styles.infoSectionTimes}>
+                College Friday Night Live <br />
+                7:30 PM
+              </div>
+              <div className={styles.infoSectionLocation}>
+                Meyerson Hall B1 <br />
+                210 South 34th Street <br />
+                Philadelphia, PA 19104
+              </div>
             </div>
-          </div>
-          <div>
-            <div className={styles.infoSectionTimes}>
-              Sunday Service <br />
-              11:30 AM
+          }
+
+          { sundayService &&
+            <div>
+              <div className={styles.infoSectionTimes}>
+                { sundayService.title }<br />
+                { this.ISOtoDate(sundayService.time) }
+              </div>
+              <div className={styles.infoSectionLocation}>
+                { sundayService.location } <br />
+                { sundayService.street } <br />
+                { sundayService.citystatezip }
+              </div>
             </div>
-            <div className={styles.infoSectionLocation}>
-              Sheraton Hotel <br />
-              3549 Chestnut Street <br />
-              Philadelphia, PA 19104
+          }
+
+          { !sundayService &&
+            <div>
+              <div className={styles.infoSectionTimes}>
+                Sunday Service <br />
+                11:30 AM
+              </div>
+              <div className={styles.infoSectionLocation}>
+                Sheraton Hotel <br />
+                3549 Chestnut Street <br />
+                Philadelphia, PA 19104
+              </div>
             </div>
-          </div>
-          <div>
-            <div className={styles.infoSectionTimes}>
-              Young Adult Friday Night Live <br />
-              7:00 PM
+          }
+
+          { crossroadFNL &&
+            <div>
+              <div className={styles.infoSectionTimes}>
+                { crossroadFNL.title }<br />
+                { this.ISOtoDate(crossroadFNL.time) }
+              </div>
+              <div className={styles.infoSectionLocation}>
+                { crossroadFNL.location } <br />
+                { crossroadFNL.street } <br />
+                { crossroadFNL.citystatezip }
+              </div>
             </div>
-            <div className={styles.infoSectionLocation}>
-              Ralston House <br />
-              3615 Chestnut Street <br />
-              Philadelphia, PA 19104 <br />
+          }
+
+          { !crossroadFNL &&
+            <div>
+              <div className={styles.infoSectionTimes}>
+                Young Adult Friday Night Live <br />
+                7:00 PM
+              </div>
+              <div className={styles.infoSectionLocation}>
+                Ralston House <br />
+                3615 Chestnut Street <br />
+                Philadelphia, PA 19104 <br />
+              </div>
             </div>
-          </div>
+          }
         </div>
         <a className={styles.infoSectionLink} href="/welcome">
           <Lora>Learn more ></Lora>
