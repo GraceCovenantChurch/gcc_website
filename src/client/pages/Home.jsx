@@ -1,6 +1,7 @@
 /* eslint react/no-unescaped-entities: 0 */
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["ISOtoDate"] }] */
-import moment from 'moment';
+
+import moment from 'moment-timezone';
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { compose } from 'redux';
@@ -97,11 +98,9 @@ class Home extends Component {
 
       data.forEach((element) => {
         const title = element.fields.title;
-        const date = new Date();
-        const timestamp = date.toISOString();
         const eventTime = element.fields.time;
 
-        if (timestamp < eventTime) {
+        if (moment.tz(moment(), "America/New_York").isBefore(eventTime)) {
           const { sundayService, undergradFNL, crossroadFNL } = this.state;
 
           if (title.includes('Sunday Service')) {
