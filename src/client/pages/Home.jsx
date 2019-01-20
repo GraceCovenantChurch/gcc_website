@@ -100,7 +100,7 @@ class Home extends Component {
         const title = element.fields.title;
         const eventTime = element.fields.time;
 
-        if (moment.tz(moment(), "America/New_York").isBefore(eventTime)) {
+        if (moment.tz(moment(), 'America/New_York').isBefore(eventTime)) {
           const { sundayService, undergradFNL, crossroadFNL } = this.state;
 
           if (title.includes('Sunday Service')) {
