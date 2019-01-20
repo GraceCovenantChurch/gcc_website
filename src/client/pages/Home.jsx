@@ -237,8 +237,8 @@ class Home extends Component {
                 11:30 AM
               </div>
               <div className={styles.infoSectionLocation}>
-                Sheraton Hotel <br />
-                3549 Chestnut Street <br />
+                Meyerson Hall <br />
+                210 S 34th St <br />
                 Philadelphia, PA 19104
               </div>
             </div>
