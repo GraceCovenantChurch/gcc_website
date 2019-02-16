@@ -1,0 +1,18 @@
+.pageContent {
+  margin: 50px 20% 100px;
+  display: flex;
+}
+
+.sermon {
+  margin: 30px 0;
+
+  div {
+    margin: 5px 0;
+  }
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
