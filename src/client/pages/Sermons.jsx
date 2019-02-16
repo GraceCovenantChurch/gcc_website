@@ -42,11 +42,10 @@ class Sermons extends Component {
   render() {
     const sermonElements = this.state.sermons.map(sermon => (
       <div className={styles.sermon}>
-        <div className={styles.title}>{sermon.title}</div>
+        <a href={sermon.url}><div className={styles.title}>{sermon.title}</div></a>
         <div><Lora>{sermon.date}</Lora></div>
-        <div>{sermon.speaker}</div>
-        <div>{sermon.passage}</div>
-        <div><a href={sermon.url}>Link to sermon</a></div>
+        <div><Lora>{sermon.speaker}</Lora></div>
+        <div><Lora>{sermon.passage}</Lora></div>
       </div>
     ));
 
@@ -57,11 +56,13 @@ class Sermons extends Component {
         </Helmet>
 
         <TitleBanner src="/static/images/multimedia/multimedia.jpg">
-          Sermons (Coming Soon)
+          Sermons
         </TitleBanner>
 
         <div className={styles.pageContent}>
-          {sermonElements}
+          <div>
+            {sermonElements}
+          </div>
         </div>
       </div>
     );
