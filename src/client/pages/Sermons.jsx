@@ -22,6 +22,8 @@ class Sermons extends Component {
   componentDidMount() {
     contentfulClient.getEntries({
       content_type: 'sermon',
+      limit: 25,
+      order: '-fields.date',
     }).then((entries) => {
       const sermons = entries.items.map(item => ({
         title: item.fields.title,
