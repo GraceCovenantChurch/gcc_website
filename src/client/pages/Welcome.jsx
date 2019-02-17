@@ -68,6 +68,6 @@ const Welcome = () => (
   </div>
 );
 
-const WelcomePage = withTitle()(Welcome);
+const WelcomePage = withTitle('Welcome')(Welcome);
 
 export default WelcomePage;
