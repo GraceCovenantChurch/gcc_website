@@ -499,7 +499,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
 <html>
 
   <head>
-    <title data-react-helmet=\\"true\\">Grace Covenant Church</title>
+    <title data-react-helmet=\\"true\\">Welcome - Grace Covenant Church</title>
 
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=Roboto\\" rel=\\"stylesheet\\" />
     <link data-react-helmet=\\"true\\" href=\\"https://fonts.googleapis.com/css?family=IBM+Plex+Sans\\" rel=\\"stylesheet\\" />
@@ -631,7 +631,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
     <script type=\\"text/javascript\\">
       window.__INITIAL_STATE__ = {
         \\"metadata\\": {
-          \\"title\\": \\"Grace Covenant Church\\"
+          \\"title\\": \\"Welcome - Grace Covenant Church\\"
         },
         \\"modelData\\": {},
         \\"page\\": {
