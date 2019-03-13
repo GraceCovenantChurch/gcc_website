@@ -571,7 +571,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
               <div class=\\"Welcome__description\\">Welcome to
                 <a class=\\"Welcome__link\\" href=\\"/\\">Grace Covenant Church (GCC)</a>! During your time with us, we hope you’ll be able to catch a glimpse of how God is faithfully moving in Philadelphia.</div>
               <div class=\\"Welcome__media\\">
-                <iframe width=\\"100%\\" height=\\"100%\\" title=\\"Grace Covenant Church Intro Video\\" src=\\"https://www.youtube.com/embed/5M8H4xhSPWc\\" frameBorder=\\"0\\" allowfullscreen=\\"\\"></iframe>
+                <iframe width=\\"100%\\" height=\\"100%\\" title=\\"Grace Covenant Church Intro Video\\" src=\\"https://www.youtube.com/embed/L8pMq-z8U80\\" frameBorder=\\"0\\" allowfullscreen=\\"\\"></iframe>
               </div>
               <div class=\\"Welcome__description\\">Our doors are wide open to people from all backgrounds. Whether you are a spiritual seeker who’s just beginning to ask questions about God or a committed Christian who wants to deepen one’s faith, GCC is a welcoming community that you can
                 call family and find spiritual help, hope, and encouragement from. We invite you to discover God’s wonderful love and plan for your life through our church!</div>
