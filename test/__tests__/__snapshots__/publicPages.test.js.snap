@@ -418,18 +418,25 @@ exports[`Public ServerTest renders Home page 1`] = `
               <div class=\\"Center__center Center__centerVertical Center__centerHorizontal\\">
                 <div class=\\"Center__centered\\">
                   <div class=\\"Home__centeredSection\\">
-                    <div class=\\"Home__title\\">AMI Quiet Times</div>
-                    <div class=\\"Home__subtitle\\">Mobile apps for iOS and Android are also available.</div>
-                    <div class=\\"Home__download\\">
-                      <a href=\\"https://itunes.apple.com/us/app/id651172729?mt=8&amp;uo=4\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">
-                        <img class=\\"Home__downloadButton\\" alt=\\"apple_download\\" src=\\"/static/icon/apple_download.svg\\" />
-                      </a>
-                      <a href=\\"https://amiquiettimes.com\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">
-                        <img class=\\"Home__downloadButton\\" alt=\\"ami_qt_page\\" src=\\"/static/icon/ami.png\\" />
-                      </a>
-                      <a href=\\"https://play.google.com/store/apps/details?id=com.subsplash.thechurchapp.ami&amp;referrer=utm_source%3Dsubsplash%26utm_content%3DeyJoYW5kbGVyIjoiYXBwIiwiYXBwa2V5IjoiNlZaSFZOIn0=\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">
-                        <img class=\\"Home__downloadButton\\" alt=\\"google_download\\" src=\\"/static/icon/google_download.png\\" />
-                      </a>
+                    <div>
+                      <div class=\\"Home__title\\">AMI Quiet Times</div>
+                      <div class=\\"Home__subtitle\\">Mobile apps for iOS and Android are also available.</div>
+                      <div class=\\"Home__download\\">
+                        <a href=\\"https://itunes.apple.com/us/app/id651172729?mt=8&amp;uo=4\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">
+                          <img class=\\"Home__downloadButton\\" alt=\\"apple_download\\" src=\\"/static/icon/apple_download.svg\\" />
+                        </a>
+                        <a href=\\"https://amiquiettimes.com\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">
+                          <img class=\\"Home__downloadButton\\" alt=\\"ami_qt_page\\" src=\\"/static/icon/ami.png\\" />
+                        </a>
+                        <a href=\\"https://play.google.com/store/apps/details?id=com.subsplash.thechurchapp.ami&amp;referrer=utm_source%3Dsubsplash%26utm_content%3DeyJoYW5kbGVyIjoiYXBwIiwiYXBwa2V5IjoiNlZaSFZOIn0=\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">
+                          <img class=\\"Home__downloadButton\\" alt=\\"google_download\\" src=\\"/static/icon/google_download.png\\" />
+                        </a>
+                      </div>
+                    </div>
+                    <div>
+                      <div class=\\"Home__title\\">Reading Plan</div>
+                      <div class=\\"Home__subtitle\\">This Month: Loading
+                        <br/>Today: Loading</div>
                     </div>
                   </div>
                 </div>
