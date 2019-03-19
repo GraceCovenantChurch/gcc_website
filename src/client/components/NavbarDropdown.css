@@ -4,6 +4,10 @@
   overflow: hidden;
   font-size: 18px;
 
+  @media(max-width: 991px) {
+    display: none;
+  }
+
   a {
     float: left;
     color: white;

@@ -38,20 +38,24 @@ exports[`Public ServerTest renders 404 page 1`] = `
                   </div>
                 </div>
               </li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/welcome\\">Welcome</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/beliefs\\">Beliefs</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/staff\\">Staff</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a></span></li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/familygroup\\">Family Groups</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/familygroup\\">Family Groups</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/giving\\">Giving</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/giving\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/multimedia\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/events\\">Events</a>
               </li>
             </ul>
           </div>
@@ -146,20 +150,24 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                   </div>
                 </div>
               </li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/welcome\\">Welcome</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/beliefs\\">Beliefs</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/staff\\">Staff</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a></span></li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/familygroup\\">Family Groups</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/familygroup\\">Family Groups</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/giving\\">Giving</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/giving\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/multimedia\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/events\\">Events</a>
               </li>
             </ul>
           </div>
@@ -316,20 +324,24 @@ exports[`Public ServerTest renders Home page 1`] = `
                   </div>
                 </div>
               </li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/welcome\\">Welcome</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/beliefs\\">Beliefs</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/staff\\">Staff</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a></span></li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/familygroup\\">Family Groups</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/familygroup\\">Family Groups</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/giving\\">Giving</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/giving\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/multimedia\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/events\\">Events</a>
               </li>
             </ul>
           </div>
@@ -540,20 +552,24 @@ exports[`Public ServerTest renders Welcome page 1`] = `
                   </div>
                 </div>
               </li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/welcome\\">Welcome</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/beliefs\\">Beliefs</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/staff\\">Staff</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a></span></li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/familygroup\\">Family Groups</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/familygroup\\">Family Groups</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/ministries\\">Ministries</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/ministries\\">Ministries</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/giving\\">Giving</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/giving\\">Giving</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/multimedia\\">Multimedia</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/multimedia\\">Multimedia</a>
               </li>
               <li class=\\"nav-item\\">
-                <a class=\\"nav-link Navbar__nav-link\\" href=\\"/events\\">Events</a>
+                <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/events\\">Events</a>
               </li>
             </ul>
           </div>
