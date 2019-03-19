@@ -65,7 +65,7 @@ exports[`Navbar component opens and closes 1`] = `
           key=".0"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -77,7 +77,7 @@ exports[`Navbar component opens and closes 1`] = `
           key=".1"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -89,7 +89,7 @@ exports[`Navbar component opens and closes 1`] = `
           key=".2"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -167,7 +167,7 @@ exports[`Navbar component opens and closes 2`] = `
           key=".0"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -179,7 +179,7 @@ exports[`Navbar component opens and closes 2`] = `
           key=".1"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -191,7 +191,7 @@ exports[`Navbar component opens and closes 2`] = `
           key=".2"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -269,7 +269,7 @@ exports[`Navbar component opens and closes 3`] = `
           key=".0"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -281,7 +281,7 @@ exports[`Navbar component opens and closes 3`] = `
           key=".1"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -293,7 +293,7 @@ exports[`Navbar component opens and closes 3`] = `
           key=".2"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -371,7 +371,7 @@ exports[`Navbar component opens and closes 4`] = `
           key=".0"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -383,7 +383,7 @@ exports[`Navbar component opens and closes 4`] = `
           key=".1"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -395,7 +395,7 @@ exports[`Navbar component opens and closes 4`] = `
           key=".2"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -473,7 +473,7 @@ exports[`Navbar component opens and closes 5`] = `
           key=".0"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -485,7 +485,7 @@ exports[`Navbar component opens and closes 5`] = `
           key=".1"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >
@@ -497,7 +497,7 @@ exports[`Navbar component opens and closes 5`] = `
           key=".2"
         >
           <a
-            className="nav-link Navbar__nav-link"
+            className="nav-link Navbar__nav-link undefined"
             href="/"
             onClick={[Function]}
           >

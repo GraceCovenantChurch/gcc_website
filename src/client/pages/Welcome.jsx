@@ -27,7 +27,7 @@ const Welcome = () => (
       </div>
 
       <div className={styles.media}>
-        <iframe width="100%" height="100%" title="Grace Covenant Church Intro Video" src="https://www.youtube.com/embed/5M8H4xhSPWc" frameBorder="0" allowFullScreen="true" />
+        <iframe width="100%" height="100%" title="Grace Covenant Church Intro Video" src="https://www.youtube.com/embed/L8pMq-z8U80" frameBorder="0" allowFullScreen="true" />
       </div>
 
       <div className={styles.description}>

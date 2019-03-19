@@ -126,7 +126,7 @@ class Navbar extends Component {
               <li className="nav-item">
                 {React.cloneElement(link, {
                   onClick: this.close,
-                  className: `nav-link ${styles['nav-link']}`,
+                  className: `nav-link ${styles['nav-link']} ${link.props.className}`,
                 })}
               </li>
             ))}
