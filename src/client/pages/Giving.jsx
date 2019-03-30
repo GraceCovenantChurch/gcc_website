@@ -94,38 +94,17 @@ class Giving extends Component {
             </div>
 
             <div className={styles.description}>
-              <h4 className={styles.header}>By PayPal or Credit Card</h4>
-              {'Donating via check or cash will save GCC transaction fees. Alternatively, if you have a PayPal account, sending money directly to paypal@gracecovenant.net via the “send money to friends and family” option in PayPal will also save us transaction fees. Those without a PayPal account can also donate via credit card below!'}
+              <h4 className={styles.header}>Online</h4>
+              {'Donating via check or cash will save GCC transaction fees. Alternatively, if you would like to give online, please use the module below. If it is your first time giving online, you will need to set up an account.'}
             </div>
 
             <div className={styles.donations}>
-              <Form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                <h5 className={styles.donationTitle}>Donation Form</h5>
-                <input type="hidden" name="cmd" value="_donations" />
-                <input type="hidden" name="business" value="paypal@gracecovenant.net" />
-                <input type="hidden" name="currency_code" value="USD" />
-                <input type="hidden" name="tax" value="0" />
-                <input type="hidden" name="lc" value="US" />
-                <FormGroup row>
-                  <Label className={styles.label} for="item_name" sm={2}>Donation Options</Label>
-                  <Col sm={10}>
-                    <Input type="select" name="item_name" id="item_name">
-                      <option>General Giving</option>
-                      { givingList.map(item => (
-                        <option>{item.itemName}</option>
-                        ))
-                      }
-                    </Input>
-                  </Col>
-                </FormGroup>
-                <input className={styles.button} type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-                <img className={styles.button} alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-              </Form>
+              <iframe title="donate" src="https://wallet.subsplash.com/ui/embed/QZRM2D/" width="100%" height="630" style={{ border: 'none', overflow: 'hidden' }} frameBorder="0" scrolling="no" />
             </div>
 
             <div className={styles.description}>
               <h4 className={styles.header}>Please consider contributing to some of our specific needs.</h4>
-              {'If you feel the heart to, you can choose the specific cause/person you’d like to donate to. Whether you’re donating in person, by mail, or sending directly through your PayPal account, please include a note (i.e. “for UC Ministry Center”). Thank you ❤️'}
+              {'If you feel the heart to, you can choose the specific cause/person you’d like to donate to. Whether you’re donating in person, by mail, or online, please include a note (i.e. “for UC Ministry Center”). Thank you ❤️'}
             </div>
 
             <TileDeck
