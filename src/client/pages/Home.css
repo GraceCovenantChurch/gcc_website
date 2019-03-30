@@ -155,8 +155,7 @@
   font-size: 20px;
 }
 
-.centeredSection {
-  display: flex;
+.readingSection {
   justify-content: space-between;
   width: 65%;
   margin-left: auto;
@@ -167,7 +166,6 @@
   .title {
     font-size: 30px;
     font-weight: bold;
-    margin: 40px 0px;
 
     .downloadLink {
       color: white;
@@ -179,9 +177,13 @@
   }
 
   .download {
-    .downloadButton{
+    .downloadButton {
       height: 50px;
-      margin: 0px 20px;
+    }
+
+    div {
+      display: inline-block;
+      padding: 10px 20px;
     }
   }
 
