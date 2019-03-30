@@ -15,8 +15,6 @@ Create a `config.json` file in the root of the project repository and populate i
 }
 ```
 
-Make sure that your MongoDB server is running. To check, run `mongo` in a terminal. This should start a MongoDB client and connect to your local server. If the command fails, open a new terminal and run `mongod` to run the database server.
-
 Run `npm start` and navigate to `http://localhost:8080` to see the public site or `http://localhost:8081` to see the admin site.
 
 ## Creating New Pages
