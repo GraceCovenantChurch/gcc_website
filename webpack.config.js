@@ -131,7 +131,6 @@ module.exports = {
         APP_ENV: nconf.get('APP_ENV'),
         GOOGLE_MAPS_KEY: nconf.get('GOOGLE_MAPS_KEY'),
       }),
-      'typeof window': '\"object\"', // for client-side mongoose build
     }),
     new webpack.NormalModuleReplacementPlugin(/nconf/, ((resource) => {
       resource.request = resource.request.replace(/nconf/, path.resolve(__dirname, 'src/nconf-browser'));
