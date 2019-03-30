@@ -1,7 +1,6 @@
 import express from 'express';
 import path from 'path';
 import compression from 'compression';
-import mongoose from 'mongoose';
 import logger from 'morgan';
 import api from './api';
 import PageRouter from './pageRouter';
@@ -59,17 +58,9 @@ app.use(PageRouter(routes, reducers, (head, content, state) => `
   `));
 
 export default new Promise((resolve) => {
-  mongoose.set('debug', nconf.get('NODE_ENV') !== 'production');
-  const db = mongoose.connect(nconf.get('MONGODB_URI'), { useMongoClient: true }, (err) => {
-    if (err) {
-      throw err;
-    }
-    console.log('Connected to database'); // eslint-disable-line no-console
-
-    const port = nconf.get('PUBLIC_SERVER_HOST').split(':')[1] || 80;
-    const server = app.listen(port, () => {
-      console.log('Server listening on port', port); // eslint-disable-line no-console
-      resolve({ server, db });
-    });
+  const port = nconf.get('PUBLIC_SERVER_HOST').split(':')[1] || 80;
+  const server = app.listen(port, () => {
+    console.log('Server listening on port', port); // eslint-disable-line no-console
+    resolve({ server });
   });
 });
