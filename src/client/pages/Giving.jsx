@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 
-import { Form, FormGroup, Label, Col, Input } from 'reactstrap';
-
 import withTitle from '../hoc/withTitle';
 import TitleBanner from '../components/TitleBanner';
 import contentfulClient from '../modules/contentful';
