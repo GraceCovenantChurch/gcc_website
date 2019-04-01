@@ -179,6 +179,10 @@ class Home extends Component {
           j++;
         }
       }
+      if (sectionsIdx === -1) {
+        sectionsIdx++;
+        j = sections[sectionsIdx].start;
+      }
 
       const readingPlan = {
         books,
