@@ -41,7 +41,7 @@ class Giving extends Component {
             {item.fields.link &&
               (
                 <a className={styles.link} href={item.fields.link}>
-                  <Lora>Learn More ></Lora>
+                  <Lora>Learn More {'>'}</Lora>
                 </a>
                )
             }
