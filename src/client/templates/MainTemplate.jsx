@@ -28,11 +28,13 @@ const MainTemplate = ({ route }) => (
           <Link to="/welcome">Welcome</Link>
           <Link to="/beliefs">Beliefs</Link>
           <Link to="/staff">Staff</Link>
+          <a href="http://ml.gracecovenant.net/" target="_blank" rel="noopener noreferrer">Mainline Site</a>
           <a href="http://amichurches.com/" target="_blank" rel="noopener noreferrer">AMI</a>
         </NavbarDropdown>,
         <span className={navStyles.aboutLink}><Link to="/welcome">Welcome</Link></span>,
         <span className={navStyles.aboutLink}><Link to="/beliefs">Beliefs</Link></span>,
         <span className={navStyles.aboutLink}><Link to="/staff">Staff</Link></span>,
+        <span className={navStyles.aboutLink}><a href="http://ml.gracecovenant.net/" target="_blank" rel="noopener noreferrer">Mainline Site</a></span>,
         <span className={navStyles.aboutLink}><a href="http://amichurches.com/" target="_blank" rel="noopener noreferrer">AMI</a></span>,
         <Link to="/familygroup">Family Groups</Link>,
         <Link to="/ministries">Ministries</Link>,
