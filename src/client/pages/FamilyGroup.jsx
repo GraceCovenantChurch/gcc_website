@@ -80,7 +80,7 @@ const FamilyGroup = () => (
           title="College Ministry: Harvest"
           days="Mondays through Thursdays"
           description="Our college family groups meet once a week at Drexel University, the University of Pennsylvania, Temple University, Moore College of Art & Design, and the University of the Sciences."
-          signupLink="https://docs.google.com/forms/d/e/1FAIpQLScTPKsfIa2zajTjJ7u3Hcp7n90N3I6Lcy8kqPKCe2elDRV6cg/viewform"
+          signupLink="https://forms.gle/5jidpZX2QLRhRtda9"
         />
 
         <FamilyGroupRow
@@ -88,7 +88,7 @@ const FamilyGroup = () => (
           src="/static/images/familygroup/fg_ya.jpg"
           days="Mondays through Thursdays"
           description="Our young adult family groups meet once a week and have a mix of post-undergraduates, graduate students, working adults, and young married couples. CROSSroad at our University City site exists to serve, love on, and walk with those who are in times of transition and constant change."
-          signupLink="https://docs.google.com/forms/d/e/1FAIpQLSfhDwIaoHAmZgqnG1Cc7JpJybHbPC9zJadcDW4ZnvIZF6msYg/viewform"
+          signupLink="https://forms.gle/d2bNx495G1iZcALq9"
         />
       </div>
     </div>
