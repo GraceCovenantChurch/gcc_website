@@ -153,7 +153,16 @@ class Home extends Component {
       let books = [];
       let sections = entries.items[0].fields.chapters.split('\n');
       sections = sections.map((section) => {
-        const [book, range] = section.split(' ');
+        const tokens = section.split(' ');
+        let book;
+        let range;
+        if (!Number.isNaN(parseInt(tokens[0], 10))) {
+          book = `${tokens[0]} ${tokens[1]}`;
+          range = tokens[2];
+        } else {
+          book = tokens[0];
+          range = tokens[1];
+        }
         books.push(book);
         const start = parseInt(range.includes('-') ? range.substring(0, range.indexOf('-')) : range, 10);
         const end = parseInt(range.includes('-') ? range.substring(range.indexOf('-') + 1) : range, 10);
@@ -351,46 +360,48 @@ class Home extends Component {
     const amiSection = (
       <Banner src="/static/images/home/amiqt.jpg" centered>
         <table className={styles.readingSection}>
-          <tr>
-            <td>
-              <div className={styles.title}>
-                AMI Quiet Times
-              </div>
-            </td>
-            <td>
-              <div className={styles.title}>
-                Reading Plan
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div className={styles.download}>
-                <div>
-                  <a href="https://itunes.apple.com/us/app/id651172729?mt=8&uo=4" target="_blank" rel="noopener noreferrer">
-                    <img className={styles.downloadButton} alt="apple_download" src="/static/icon/apple_download.svg" />
-                  </a>
+          <tbody>
+            <tr>
+              <td>
+                <div className={styles.title}>
+                  AMI Quiet Times
                 </div>
-                <div>
-                  <a href="https://amiquiettimes.com" target="_blank" rel="noopener noreferrer">
-                    <img className={styles.downloadButton} alt="ami_qt_page" src="/static/icon/ami.png" />
-                  </a>
+              </td>
+              <td>
+                <div className={styles.title}>
+                  Reading Plan
                 </div>
-                <div>
-                  <a href="https://play.google.com/store/apps/details?id=com.subsplash.thechurchapp.ami&referrer=utm_source%3Dsubsplash%26utm_content%3DeyJoYW5kbGVyIjoiYXBwIiwiYXBwa2V5IjoiNlZaSFZOIn0=" target="_blank" rel="noopener noreferrer">
-                    <img className={styles.downloadButton} alt="google_download" src="/static/icon/google_download.png" />
-                  </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div className={styles.download}>
+                  <div>
+                    <a href="https://itunes.apple.com/us/app/id651172729?mt=8&uo=4" target="_blank" rel="noopener noreferrer">
+                      <img className={styles.downloadButton} alt="apple_download" src="/static/icon/apple_download.svg" />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://amiquiettimes.com" target="_blank" rel="noopener noreferrer">
+                      <img className={styles.downloadButton} alt="ami_qt_page" src="/static/icon/ami.png" />
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://play.google.com/store/apps/details?id=com.subsplash.thechurchapp.ami&referrer=utm_source%3Dsubsplash%26utm_content%3DeyJoYW5kbGVyIjoiYXBwIiwiYXBwa2V5IjoiNlZaSFZOIn0=" target="_blank" rel="noopener noreferrer">
+                      <img className={styles.downloadButton} alt="google_download" src="/static/icon/google_download.png" />
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </td>
-            <td>
-              <div className={styles.subtitle}>
-                This Month: {this.state.readingPlan.books.join(' + ')}
-                <br />
-                Today: {this.state.readingPlan.today}
-              </div>
-            </td>
-          </tr>
+              </td>
+              <td>
+                <div className={styles.subtitle}>
+                  This Month: {this.state.readingPlan.books.join(', ')}
+                  <br />
+                  Today: {this.state.readingPlan.today}
+                </div>
+              </td>
+            </tr>
+          </tbody>
         </table>
       </Banner>
     );
