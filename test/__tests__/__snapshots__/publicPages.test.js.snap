@@ -71,18 +71,15 @@ exports[`Public ServerTest renders 404 page 1`] = `
               <div class=\\"Footer__footerBorder\\">
                 <div class=\\"Footer__footerContainer container footer\\">
                   <div class=\\"Footer__copyright\\">
-                    <p>Copyright © 1996-2018. Official website of
+                    <p>Copyright © 1996-2019. Official website of
                       <a href=\\"/\\">Grace Covenant Church</a> in Philadelphia, PA. All rights reserved.</p>
                   </div>
                   <div class=\\"Footer__icons\\">
-                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gccphiladelphia/\\">
                       <i class=\\"fa fa-facebook fa-2x\\"></i>
                     </a>
                     <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
                       <i class=\\"fa fa-instagram fa-2x\\"></i>
-                    </a>
-                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
-                      <i class=\\"fa fa-twitter fa-2x\\"></i>
                     </a>
                   </div>
                 </div>
@@ -247,18 +244,15 @@ exports[`Public ServerTest renders Family Group page 1`] = `
               <div class=\\"Footer__footerBorder\\">
                 <div class=\\"Footer__footerContainer container footer\\">
                   <div class=\\"Footer__copyright\\">
-                    <p>Copyright © 1996-2018. Official website of
+                    <p>Copyright © 1996-2019. Official website of
                       <a href=\\"/\\">Grace Covenant Church</a> in Philadelphia, PA. All rights reserved.</p>
                   </div>
                   <div class=\\"Footer__icons\\">
-                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gccphiladelphia/\\">
                       <i class=\\"fa fa-facebook fa-2x\\"></i>
                     </a>
                     <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
                       <i class=\\"fa fa-instagram fa-2x\\"></i>
-                    </a>
-                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
-                      <i class=\\"fa fa-twitter fa-2x\\"></i>
                     </a>
                   </div>
                 </div>
@@ -492,18 +486,15 @@ exports[`Public ServerTest renders Home page 1`] = `
               <div class=\\"Footer__footerBorder\\">
                 <div class=\\"Footer__footerContainer container footer\\">
                   <div class=\\"Footer__copyright\\">
-                    <p>Copyright © 1996-2018. Official website of
+                    <p>Copyright © 1996-2019. Official website of
                       <a href=\\"/\\">Grace Covenant Church</a> in Philadelphia, PA. All rights reserved.</p>
                   </div>
                   <div class=\\"Footer__icons\\">
-                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gccphiladelphia/\\">
                       <i class=\\"fa fa-facebook fa-2x\\"></i>
                     </a>
                     <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
                       <i class=\\"fa fa-instagram fa-2x\\"></i>
-                    </a>
-                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
-                      <i class=\\"fa fa-twitter fa-2x\\"></i>
                     </a>
                   </div>
                 </div>
@@ -653,18 +644,15 @@ exports[`Public ServerTest renders Welcome page 1`] = `
               <div class=\\"Footer__footerBorder\\">
                 <div class=\\"Footer__footerContainer container footer\\">
                   <div class=\\"Footer__copyright\\">
-                    <p>Copyright © 1996-2018. Official website of
+                    <p>Copyright © 1996-2019. Official website of
                       <a href=\\"/\\">Grace Covenant Church</a> in Philadelphia, PA. All rights reserved.</p>
                   </div>
                   <div class=\\"Footer__icons\\">
-                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gracecovenant/\\">
+                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.facebook.com/gccphiladelphia/\\">
                       <i class=\\"fa fa-facebook fa-2x\\"></i>
                     </a>
                     <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">
                       <i class=\\"fa fa-instagram fa-2x\\"></i>
-                    </a>
-                    <a target=\\"_blank\\" rel=\\"noopener noreferrer\\" class=\\"Footer__footerLinks\\" href=\\"https://twitter.com/gccphiladelphia\\">
-                      <i class=\\"fa fa-twitter fa-2x\\"></i>
                     </a>
                   </div>
                 </div>
