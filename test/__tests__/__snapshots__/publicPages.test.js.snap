@@ -369,7 +369,7 @@ exports[`Public ServerTest renders Home page 1`] = `
                 <div>
                   <div class=\\"Home__infoSectionTimes\\">College Friday Night Live
                     <br/>7:30 PM</div>
-                  <div class=\\"Home__infoSectionLocation\\">Meyerson Hall B1
+                  <div class=\\"Home__infoSectionLocation\\">Meyerson Hall
                     <br/>210 South 34th Street
                     <br/>Philadelphia, PA 19104</div>
                 </div>
@@ -383,11 +383,9 @@ exports[`Public ServerTest renders Home page 1`] = `
                 <div>
                   <div class=\\"Home__infoSectionTimes\\">Young Adult Friday Night Live
                     <br/>7:00 PM</div>
-                  <div class=\\"Home__infoSectionLocation\\">Ralston House
-                    <br/>3615 Chestnut Street
-                    <br/>Philadelphia, PA 19104
-                    <br/>
-                  </div>
+                  <div class=\\"Home__infoSectionLocation\\">Meyerson Hall
+                    <br/>210 South 34th Street
+                    <br/>Philadelphia, PA 19104</div>
                 </div>
               </div>
               <a class=\\"Home__infoSectionLink\\" href=\\"/welcome\\">
