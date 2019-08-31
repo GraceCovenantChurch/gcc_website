@@ -268,7 +268,7 @@ class Home extends Component {
                 7:30 PM
               </div>
               <div className={styles.infoSectionLocation}>
-                Meyerson Hall B1 <br />
+                Meyerson Hall <br />
                 210 South 34th Street <br />
                 Philadelphia, PA 19104
               </div>
@@ -296,7 +296,7 @@ class Home extends Component {
                 11:30 AM
               </div>
               <div className={styles.infoSectionLocation}>
-                Meyerson Hall <br />
+                Meyerson Hall<br />
                 210 S 34th St <br />
                 Philadelphia, PA 19104
               </div>
@@ -324,9 +324,9 @@ class Home extends Component {
                 7:00 PM
               </div>
               <div className={styles.infoSectionLocation}>
-                Ralston House <br />
-                3615 Chestnut Street <br />
-                Philadelphia, PA 19104 <br />
+                Meyerson Hall <br />
+                210 South 34th Street <br />
+                Philadelphia, PA 19104
               </div>
             </div>
           }
