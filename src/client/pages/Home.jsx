@@ -297,7 +297,7 @@ class Home extends Component {
               </div>
               <div className={styles.infoSectionLocation}>
                 Meyerson Hall<br />
-                210 S 34th St <br />
+                210 South 34th Street <br />
                 Philadelphia, PA 19104
               </div>
             </div>
