@@ -321,7 +321,7 @@ class Home extends Component {
             <div>
               <div className={styles.infoSectionTimes}>
                 Young Adult Friday Night Live <br />
-                7:00 PM
+                7:30 PM
               </div>
               <div className={styles.infoSectionLocation}>
                 Meyerson Hall <br />

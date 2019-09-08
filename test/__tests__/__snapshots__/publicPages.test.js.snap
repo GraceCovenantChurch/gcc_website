@@ -382,7 +382,7 @@ exports[`Public ServerTest renders Home page 1`] = `
                 </div>
                 <div>
                   <div class=\\"Home__infoSectionTimes\\">Young Adult Friday Night Live
-                    <br/>7:00 PM</div>
+                    <br/>7:30 PM</div>
                   <div class=\\"Home__infoSectionLocation\\">Meyerson Hall
                     <br/>210 South 34th Street
                     <br/>Philadelphia, PA 19104</div>
