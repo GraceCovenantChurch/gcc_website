@@ -22,14 +22,11 @@ class Home extends Component {
     super(props);
     this.state = {
       memoryVerse: {},
+      memoryVerseAsset: [],
       eventsList: [],
       sundayService: null,
       undergradFNL: null,
       crossroadFNL: null,
-      readingPlan: {
-        books: ['Loading'],
-        today: 'Loading',
-      },
     };
   }
 
@@ -86,11 +83,23 @@ class Home extends Component {
 
     contentfulClient.getEntries({
       content_type: 'memoryVerse',
-      limit: 1,
       order: 'sys.createdAt',
     }).then((entries) => {
-      this.setState({
-        memoryVerse: entries.items[0].fields,
+      const data = entries.items;
+
+      data.forEach((element) => {
+        if (element.fields.key === 'verse') {
+          this.setState({
+            memoryVerse: element.fields,
+          });
+        } else if (element.fields.key === 'asset') {
+          const newAssetList = this.state.memoryVerseAsset;
+          newAssetList.push(element.fields);
+
+          this.setState({
+            memoryVerseAsset: newAssetList,
+          });
+        }
       });
     });
 
@@ -143,62 +152,6 @@ class Home extends Component {
           }
         }
       });
-    });
-
-    contentfulClient.getEntries({
-      content_type: 'readingPlan',
-      limit: 1,
-      order: '-sys.createdAt',
-    }).then((entries) => {
-      let books = [];
-      let sections = entries.items[0].fields.chapters.split('\n');
-      sections = sections.map((section) => {
-        const tokens = section.split(' ');
-        let book;
-        let range;
-        if (!Number.isNaN(parseInt(tokens[0], 10))) {
-          book = `${tokens[0]} ${tokens[1]}`;
-          range = tokens[2];
-        } else {
-          book = tokens[0];
-          range = tokens[1];
-        }
-        books.push(book);
-        const start = parseInt(range.includes('-') ? range.substring(0, range.indexOf('-')) : range, 10);
-        const end = parseInt(range.includes('-') ? range.substring(range.indexOf('-') + 1) : range, 10);
-        return {
-          book,
-          start,
-          end,
-        };
-      });
-      books = books.filter((v, i) => books.indexOf(v) === i);
-
-      // this algorithm could be improved by considering intervals rather than
-      // iterating day by day.
-      const today = (new Date()).getDate();
-      let sectionsIdx = -1;
-      let i = 1;
-      let j = -1;
-      while (i < today) {
-        sectionsIdx++;
-        j = sections[sectionsIdx].start;
-        while (i < today && j <= sections[sectionsIdx].end) {
-          i++;
-          j++;
-        }
-      }
-      if (sectionsIdx === -1) {
-        sectionsIdx++;
-        j = sections[sectionsIdx].start;
-      }
-
-      const readingPlan = {
-        books,
-        today: `${sections[sectionsIdx].book} ${j}`,
-      };
-
-      this.setState({ readingPlan });
     });
   }
 
@@ -395,9 +348,9 @@ class Home extends Component {
               </td>
               <td>
                 <div className={styles.subtitle}>
-                  This Month: {this.state.readingPlan.books.join(', ')}
+                  GCC Reading Plan
                   <br />
-                  Today: {this.state.readingPlan.today}
+                  <a href="https://drive.google.com/file/d/0B0tvne167dF0YUlXbDJzdUcwSUh2c0JyOTFheU5EbEQwelFJ/view">5x5x5 New Testament Reading Plan</a>
                 </div>
               </td>
             </tr>
@@ -416,6 +369,13 @@ class Home extends Component {
         </div>
         <div className={styles.footerText}>
           <Lora>{this.state.memoryVerse.verseReference || ''}</Lora>
+        </div>
+        <div className={styles.memoryVerseAssets} >
+          <div className={styles.memoryLine} />
+          <div className={styles.memoryText}>
+            <Lora>Click below for downloadable mobile backgrounds!</Lora>
+          </div>
+          { this.state.memoryVerseAsset.map(element => <a target="_blank" rel="noopener noreferrer" className={styles.memoryAssetsLinks} href={element.asset.fields.file.url}><i className="fa fa-mobile fa-4x" /></a>)}
         </div>
       </div>
     );

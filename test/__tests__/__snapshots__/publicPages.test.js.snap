@@ -71,7 +71,7 @@ exports[`Public ServerTest renders 404 page 1`] = `
               <div class=\\"Footer__footerBorder\\">
                 <div class=\\"Footer__footerContainer container footer\\">
                   <div class=\\"Footer__copyright\\">
-                    <p>Copyright © 1996-2019. Official website of
+                    <p>Copyright © 1996-2020. Official website of
                       <a href=\\"/\\">Grace Covenant Church</a> in Philadelphia, PA. All rights reserved.</p>
                   </div>
                   <div class=\\"Footer__icons\\">
@@ -244,7 +244,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
               <div class=\\"Footer__footerBorder\\">
                 <div class=\\"Footer__footerContainer container footer\\">
                   <div class=\\"Footer__copyright\\">
-                    <p>Copyright © 1996-2019. Official website of
+                    <p>Copyright © 1996-2020. Official website of
                       <a href=\\"/\\">Grace Covenant Church</a> in Philadelphia, PA. All rights reserved.</p>
                   </div>
                   <div class=\\"Footer__icons\\">
@@ -458,8 +458,10 @@ exports[`Public ServerTest renders Home page 1`] = `
                           </div>
                         </td>
                         <td>
-                          <div class=\\"Home__subtitle\\">This Month: Loading
-                            <br/>Today: Loading</div>
+                          <div class=\\"Home__subtitle\\">GCC Reading Plan
+                            <br/>
+                            <a href=\\"https://drive.google.com/file/d/0B0tvne167dF0YUlXbDJzdUcwSUh2c0JyOTFheU5EbEQwelFJ/view\\">5x5x5 New Testament Reading Plan</a>
+                          </div>
                         </td>
                       </tr>
                     </tbody>
@@ -475,6 +477,12 @@ exports[`Public ServerTest renders Home page 1`] = `
               <div class=\\"Home__footerText\\">
                 <p class=\\"Lora__lora\\"></p>
               </div>
+              <div class=\\"Home__memoryVerseAssets\\">
+                <div class=\\"Home__memoryLine\\"></div>
+                <div class=\\"Home__memoryText\\">
+                  <p class=\\"Lora__lora\\">Click below for downloadable mobile backgrounds!</p>
+                </div>
+              </div>
             </div>
           </div>
         </main>
@@ -484,7 +492,7 @@ exports[`Public ServerTest renders Home page 1`] = `
               <div class=\\"Footer__footerBorder\\">
                 <div class=\\"Footer__footerContainer container footer\\">
                   <div class=\\"Footer__copyright\\">
-                    <p>Copyright © 1996-2019. Official website of
+                    <p>Copyright © 1996-2020. Official website of
                       <a href=\\"/\\">Grace Covenant Church</a> in Philadelphia, PA. All rights reserved.</p>
                   </div>
                   <div class=\\"Footer__icons\\">
@@ -642,7 +650,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
               <div class=\\"Footer__footerBorder\\">
                 <div class=\\"Footer__footerContainer container footer\\">
                   <div class=\\"Footer__copyright\\">
-                    <p>Copyright © 1996-2019. Official website of
+                    <p>Copyright © 1996-2020. Official website of
                       <a href=\\"/\\">Grace Covenant Church</a> in Philadelphia, PA. All rights reserved.</p>
                   </div>
                   <div class=\\"Footer__icons\\">
