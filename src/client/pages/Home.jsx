@@ -17,6 +17,19 @@ import Lora from '../components/Lora';
 
 import styles from './Home.css';
 
+function validURL(str) {
+  const pattern = new RegExp(
+    '^(https?:\\/\\/)?' + // protocol
+    '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+    '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+    '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+    '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+      '(\\#[-a-z\\d_]*)?$',
+    'i',
+  ); // fragment locator
+  return !!pattern.test(str);
+}
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -185,19 +198,6 @@ class Home extends Component {
     return output;
   }
 
-  validURL = (str) => {
-    const pattern = new RegExp(
-      '^(https?:\\/\\/)?' + // protocol
-      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
-      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
-      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
-      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
-        '(\\#[-a-z\\d_]*)?$',
-      'i',
-    ); // fragment locator
-    return !!pattern.test(str);
-  };
-
   render() {
     const { sundayService, undergradFNL, crossroadFNL } = this.state;
 
@@ -228,7 +228,7 @@ class Home extends Component {
           <Lora>Service Locations and Times</Lora>
         </div>
         <div className={styles.infoSectionContent}>
-          {undergradFNL && !this.validURL(undergradFNL.location) && (
+          {undergradFNL && !validURL(undergradFNL.location) && (
             <div>
               <div className={styles.infoSectionTimes}>
                 {undergradFNL.title}
@@ -243,7 +243,7 @@ class Home extends Component {
             </div>
           )}
 
-          {undergradFNL && this.validURL(undergradFNL.location) && (
+          {undergradFNL && validURL(undergradFNL.location) && (
             <div>
               <div className={styles.infoSectionTimes}>
                 {undergradFNL.title}
@@ -271,7 +271,7 @@ class Home extends Component {
             </div>
           )}
 
-          {sundayService && !this.validURL(sundayService.location) && (
+          {sundayService && !validURL(sundayService.location) && (
             <div>
               <div className={styles.infoSectionTimes}>
                 {sundayService.title}
@@ -286,7 +286,7 @@ class Home extends Component {
             </div>
           )}
 
-          {sundayService && this.validURL(sundayService.location) && (
+          {sundayService && validURL(sundayService.location) && (
             <div>
               <div className={styles.infoSectionTimes}>
                 {sundayService.title}
@@ -315,7 +315,7 @@ class Home extends Component {
             </div>
           )}
 
-          {crossroadFNL && !this.validURL(crossroadFNL.location) && (
+          {crossroadFNL && !validURL(crossroadFNL.location) && (
             <div>
               <div className={styles.infoSectionTimes}>
                 {crossroadFNL.title}
@@ -330,7 +330,7 @@ class Home extends Component {
             </div>
           )}
 
-          {crossroadFNL && this.validURL(crossroadFNL.location) && (
+          {crossroadFNL && validURL(crossroadFNL.location) && (
             <div>
               <div className={styles.infoSectionTimes}>
                 {crossroadFNL.title}
