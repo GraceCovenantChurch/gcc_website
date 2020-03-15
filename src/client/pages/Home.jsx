@@ -97,10 +97,30 @@ class Home extends Component {
             contentComponent,
           };
         });
+      this.setState({
+        eventsList,
+      });
+    });
 
-        this.setState({
-          eventsList,
-        });
+    contentfulClient.getEntries({
+      content_type: 'memoryVerse',
+      order: 'sys.createdAt',
+    }).then((entries) => {
+      const data = entries.items;
+
+      data.forEach((element) => {
+        if (element.fields.key === 'verse') {
+          this.setState({
+            memoryVerse: element.fields,
+          });
+        } else if (element.fields.key === 'asset') {
+          const newAssetList = this.state.memoryVerseAsset;
+          newAssetList.push(element.fields);
+
+          this.setState({
+            memoryVerseAsset: newAssetList,
+          });
+        }
       });
 
     contentfulClient
@@ -177,8 +197,9 @@ class Home extends Component {
               }
             }
           }
-        });
+        }
       });
+    });
   }
 
   ISOtoDate(date) {
@@ -442,9 +463,7 @@ class Home extends Component {
                 <div className={styles.subtitle}>
                   GCC Reading Plan
                   <br />
-                  <a href="https://drive.google.com/file/d/0B0tvne167dF0YUlXbDJzdUcwSUh2c0JyOTFheU5EbEQwelFJ/view">
-                    5x5x5 New Testament Reading Plan
-                  </a>
+                  <a href="https://drive.google.com/file/d/0B0tvne167dF0YUlXbDJzdUcwSUh2c0JyOTFheU5EbEQwelFJ/view">5x5x5 New Testament Reading Plan</a>
                 </div>
               </td>
             </tr>
@@ -464,21 +483,12 @@ class Home extends Component {
         <div className={styles.footerText}>
           <Lora>{this.state.memoryVerse.verseReference || ''}</Lora>
         </div>
-        <div className={styles.memoryVerseAssets}>
+        <div className={styles.memoryVerseAssets} >
           <div className={styles.memoryLine} />
           <div className={styles.memoryText}>
             <Lora>Click below for downloadable mobile backgrounds!</Lora>
           </div>
-          {this.state.memoryVerseAsset.map(element => (
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.memoryAssetsLinks}
-              href={element.asset.fields.file.url}
-            >
-              <i className="fa fa-mobile fa-4x" />
-            </a>
-          ))}
+          { this.state.memoryVerseAsset.map(element => <a target="_blank" rel="noopener noreferrer" className={styles.memoryAssetsLinks} href={element.asset.fields.file.url}><i className="fa fa-mobile fa-4x" /></a>)}
         </div>
       </div>
     );
