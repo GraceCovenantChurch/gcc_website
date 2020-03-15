@@ -1,21 +1,21 @@
 /* eslint react/no-unescaped-entities: 0 */
 /* eslint class-methods-use-this: ["error", { "exceptMethods": ["ISOtoDate"] }] */
 
-import moment from "moment-timezone";
-import React, { Component } from "react";
-import Helmet from "react-helmet";
-import { compose } from "redux";
-import { withRouter } from "react-router-dom";
+import moment from 'moment-timezone';
+import React, { Component } from 'react';
+import Helmet from 'react-helmet';
+import { compose } from 'redux';
+import { withRouter } from 'react-router-dom';
 
-import contentfulClient from "../modules/contentful";
-import withTitle from "../hoc/withTitle";
-import BackgroundImage from "../components/BackgroundImage";
-import Jumbotron from "../components/Jumbotron";
-import Banner from "../components/Banner";
-import TileDeck from "../components/TileDeck";
-import Lora from "../components/Lora";
+import contentfulClient from '../modules/contentful';
+import withTitle from '../hoc/withTitle';
+import BackgroundImage from '../components/BackgroundImage';
+import Jumbotron from '../components/Jumbotron';
+import Banner from '../components/Banner';
+import TileDeck from '../components/TileDeck';
+import Lora from '../components/Lora';
 
-import styles from "./Home.css";
+import styles from './Home.css';
 
 class Home extends Component {
   constructor(props) {
@@ -26,23 +26,23 @@ class Home extends Component {
       eventsList: [],
       sundayService: null,
       undergradFNL: null,
-      crossroadFNL: null
+      crossroadFNL: null,
     };
   }
 
   componentDidMount() {
     const yesterday = moment()
-      .subtract(1, "days")
+      .subtract(1, 'days')
       .toISOString();
     contentfulClient
       .getEntries({
-        content_type: "event",
-        "fields.date[gte]": yesterday,
+        content_type: 'event',
+        'fields.date[gte]': yesterday,
         limit: 3,
-        order: "fields.date"
+        order: 'fields.date',
       })
-      .then(entries => {
-        const eventsList = entries.items.map(item => {
+      .then((entries) => {
+        const eventsList = entries.items.map((item) => {
           const imageComponent = (
             <img
               className={styles.image}
@@ -81,34 +81,34 @@ class Home extends Component {
 
           return {
             imageComponent,
-            contentComponent
+            contentComponent,
           };
         });
 
         this.setState({
-          eventsList
+          eventsList,
         });
       });
 
     contentfulClient
       .getEntries({
-        content_type: "memoryVerse",
-        order: "sys.createdAt"
+        content_type: 'memoryVerse',
+        order: 'sys.createdAt',
       })
-      .then(entries => {
+      .then((entries) => {
         const data = entries.items;
 
-        data.forEach(element => {
-          if (element.fields.key === "verse") {
+        data.forEach((element) => {
+          if (element.fields.key === 'verse') {
             this.setState({
-              memoryVerse: element.fields
+              memoryVerse: element.fields,
             });
-          } else if (element.fields.key === "asset") {
+          } else if (element.fields.key === 'asset') {
             const newAssetList = this.state.memoryVerseAsset;
             newAssetList.push(element.fields);
 
             this.setState({
-              memoryVerseAsset: newAssetList
+              memoryVerseAsset: newAssetList,
             });
           }
         });
@@ -116,20 +116,20 @@ class Home extends Component {
 
     contentfulClient
       .getEntries({
-        content_type: "services",
-        order: "fields.time"
+        content_type: 'services',
+        order: 'fields.time',
       })
-      .then(entries => {
+      .then((entries) => {
         const data = entries.items;
 
-        data.forEach(element => {
+        data.forEach((element) => {
           const title = element.fields.title;
           const eventTime = element.fields.time;
 
-          if (moment.tz(moment(), "America/New_York").isBefore(eventTime)) {
+          if (moment.tz(moment(), 'America/New_York').isBefore(eventTime)) {
             const { sundayService, undergradFNL, crossroadFNL } = this.state;
 
-            if (title.includes("Sunday Service")) {
+            if (title.includes('Sunday Service')) {
               if (sundayService) {
                 const currentState = sundayService.time;
                 const currentData = element.fields.time;
@@ -140,7 +140,7 @@ class Home extends Component {
               } else {
                 this.setState({ sundayService: element.fields });
               }
-            } else if (title.includes("College Friday Night Live")) {
+            } else if (title.includes('College Friday Night Live')) {
               if (undergradFNL) {
                 const currentState = undergradFNL.time;
                 const currentData = element.fields.time;
@@ -151,7 +151,7 @@ class Home extends Component {
               } else {
                 this.setState({ undergradFNL: element.fields });
               }
-            } else if (title.includes("Young Adult Friday Night Live")) {
+            } else if (title.includes('Young Adult Friday Night Live')) {
               if (crossroadFNL) {
                 const currentState = crossroadFNL.time;
                 const currentData = element.fields.time;
@@ -170,40 +170,39 @@ class Home extends Component {
 
   ISOtoDate(date) {
     const indate = new Date(date);
-    let ampm = "";
+    let ampm = '';
 
     if (indate.getHours() > 12) {
-      ampm = "PM";
+      ampm = 'PM';
     } else {
-      ampm = "AM";
+      ampm = 'AM';
     }
 
     const output = `${indate.getHours() % 12}:${
-      indate.getMinutes() < 10 ? "0" : ""
+      indate.getMinutes() < 10 ? '0' : ''
     }${indate.getMinutes()} ${ampm}`;
 
     return output;
   }
 
-  validURL(str) {
-    console.log(str);
-    var pattern = new RegExp(
-      "^(https?:\\/\\/)?" + // protocol
-      "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
-      "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
-      "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
-      "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
-        "(\\#[-a-z\\d_]*)?$",
-      "i"
+  validURL = (str) => {
+    const pattern = new RegExp(
+      '^(https?:\\/\\/)?' + // protocol
+      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' + // domain name
+      '((\\d{1,3}\\.){3}\\d{1,3}))' + // OR ip (v4) address
+      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' + // port and path
+      '(\\?[;&a-z\\d%_.~+=-]*)?' + // query string
+        '(\\#[-a-z\\d_]*)?$',
+      'i',
     ); // fragment locator
     return !!pattern.test(str);
-  }
+  };
 
   render() {
     const { sundayService, undergradFNL, crossroadFNL } = this.state;
 
     const titleSection = (
-      <Jumbotron style={{ height: "100vh" }}>
+      <Jumbotron style={{ height: '100vh' }}>
         <BackgroundImage
           src="/static/images/home/worship.jpg"
           backgroundSize="cover"
@@ -463,7 +462,7 @@ class Home extends Component {
           {this.state.memoryVerse.verseText}
         </div>
         <div className={styles.footerText}>
-          <Lora>{this.state.memoryVerse.verseReference || ""}</Lora>
+          <Lora>{this.state.memoryVerse.verseReference || ''}</Lora>
         </div>
         <div className={styles.memoryVerseAssets}>
           <div className={styles.memoryLine} />
@@ -530,7 +529,7 @@ class Home extends Component {
 
 const HomePage = compose(
   withTitle(),
-  withRouter
+  withRouter,
 )(Home);
 
 export default HomePage;
