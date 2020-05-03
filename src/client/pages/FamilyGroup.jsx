@@ -1,30 +1,26 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
 
-import withTitle from '../hoc/withTitle';
-import TitleBanner from '../components/TitleBanner';
-import Center from '../components/Center';
-import Lora from '../components/Lora';
+import withTitle from "../hoc/withTitle";
+import TitleBanner from "../components/TitleBanner";
+import Center from "../components/Center";
+import Lora from "../components/Lora";
 
-import styles from './FamilyGroup.css';
+import styles from "./FamilyGroup.css";
 
-const FamilyGroupRow = props => (
+const FamilyGroupRow = (props) => (
   <div className={styles.tableRow}>
     <div className={styles.column}>
       <img className={styles.tableMedia} src={props.src} alt="fg-row-media" />
     </div>
     <div className={styles.content}>
       <div className={styles.textContainer}>
-        <div className={styles.rowTitle}>
-          {props.title}
-        </div>
+        <div className={styles.rowTitle}>{props.title}</div>
         <div className={styles.rowDays}>
           <Lora>{props.days}</Lora>
         </div>
-        <div className={styles.rowDescription}>
-          {props.description}
-        </div>
+        <div className={styles.rowDescription}>{props.description}</div>
         <div className={styles.rowSignup}>
           <a className={styles.link} href={props.signupLink}>
             <Lora>Sign up here &gt;</Lora>
@@ -46,7 +42,11 @@ FamilyGroupRow.propTypes = {
 const FamilyGroup = () => (
   <div>
     <Helmet>
-      <link rel="stylesheet" type="text/css" href="/public/assets/pages/FamilyGroup.bundle.css" />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="/public/assets/pages/FamilyGroup.bundle.css"
+      />
     </Helmet>
 
     <TitleBanner src="/static/images/familygroup/fg_background.jpg">
@@ -55,7 +55,9 @@ const FamilyGroup = () => (
 
     <div className={styles.pageContent}>
       <p className={styles.description}>
-        {'At GCC we place a high emphasis on family groups because we believe that it is in these smaller settings that we are able to meet with God, building meaningful relationships, and develop biblical accountability. Family groups meet on a weekly basis at various places.'}
+        {
+          "At GCC we place a high emphasis on family groups because we believe that it is in these smaller settings that we are able to meet with God, building meaningful relationships, and develop biblical accountability. Family groups meet on a weekly basis at various places."
+        }
       </p>
 
       <Center horizontal>
@@ -70,9 +72,10 @@ const FamilyGroup = () => (
       </Center>
 
       <div className={styles.description}>
-        {'Through Bible study, discussions, sharing, prayer, and hangouts, we learn together to live out the teachings of God’s Word in our daily lives. Join us!'}
+        {
+          "Through Bible study, discussions, sharing, prayer, and hangouts, we learn together to live out the teachings of God’s Word in our daily lives. Join us!"
+        }
       </div>
-
 
       <div className={styles.signupTable}>
         <FamilyGroupRow
@@ -80,7 +83,7 @@ const FamilyGroup = () => (
           title="College Ministry: Harvest"
           days="Mondays through Thursdays"
           description="Our college family groups meet once a week at Drexel University, the University of Pennsylvania, Temple University, Moore College of Art & Design, and the University of the Sciences."
-          signupLink="https://forms.gle/5jidpZX2QLRhRtda9"
+          signupLink="https://forms.gle/gnYq9HofvFzQJNse7"
         />
 
         <FamilyGroupRow
@@ -95,6 +98,6 @@ const FamilyGroup = () => (
   </div>
 );
 
-const FamilyGroupPage = withTitle('Family Group')(FamilyGroup);
+const FamilyGroupPage = withTitle("Family Group")(FamilyGroup);
 
 export default FamilyGroupPage;
