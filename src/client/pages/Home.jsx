@@ -44,9 +44,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    const yesterday = moment()
-      .subtract(1, 'days')
-      .toISOString();
+    const yesterday = moment().subtract(1, 'days').toISOString();
     contentfulClient
       .getEntries({
         content_type: 'event',
@@ -252,7 +250,7 @@ class Home extends Component {
               </div>
               <div className={styles.infoSectionLocation}>
                 For this week, we'll be live streaming our service! <br />
-                <a href={undergradFNL.location}>Click here for live stream</a>
+                <a href={undergradFNL.location}>Click here for live stream!</a>
               </div>
             </div>
           )}
@@ -527,9 +525,6 @@ class Home extends Component {
   }
 }
 
-const HomePage = compose(
-  withTitle(),
-  withRouter,
-)(Home);
+const HomePage = compose(withTitle(), withRouter)(Home);
 
 export default HomePage;
