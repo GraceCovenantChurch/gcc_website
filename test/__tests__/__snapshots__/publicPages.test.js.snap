@@ -207,7 +207,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                       </div>
                       <div class=\\"FamilyGroup__rowDescription\\">Our college family groups meet once a week at Drexel University, the University of Pennsylvania, Temple University, Moore College of Art &amp; Design, and the University of the Sciences.</div>
                       <div class=\\"FamilyGroup__rowSignup\\">
-                        <a class=\\"FamilyGroup__link\\" href=\\"https://forms.gle/5jidpZX2QLRhRtda9\\">
+                        <a class=\\"FamilyGroup__link\\" href=\\"https://forms.gle/gnYq9HofvFzQJNse7\\">
                           <p class=\\"Lora__lora\\">Sign up here &gt;</p>
                         </a>
                       </div>
@@ -637,7 +637,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
               </div>
               <div class=\\"Welcome__description\\">If you would like more information about GCC, please continue to explore this website or feel free contact us at
                 <a class=\\"Welcome__link\\" href=\\"mailto:web@gracecovenant.net\\">web@gracecovenant.net</a>. Stay connected through our
-                <a class=\\"Welcome__link\\" href=\\"https://www.facebook.com/gracecovenant/\\">Facebook</a> and
+                <a class=\\"Welcome__link\\" href=\\"https://www.facebook.com/gccphiladelphia\\">Facebook</a> and
                 <a class=\\"Welcome__link\\" href=\\"https://www.instagram.com/gccphiladelphia/\\">Instagram</a>, too!
                 <br/>
                 <br/>Thanks for visiting! May God’s grace and peace be with you.</div>
