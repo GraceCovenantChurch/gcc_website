@@ -34,7 +34,7 @@ exports[`Public ServerTest renders 404 page 1`] = `
                     <a href=\\"/welcome\\">Welcome</a>
                     <a href=\\"/beliefs\\">Beliefs</a>
                     <a href=\\"/staff\\">Staff</a>
-                    <a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Mainline Site</a>
+                    <a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Main Line Site</a>
                     <a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a>
                   </div>
                 </div>
@@ -42,7 +42,7 @@ exports[`Public ServerTest renders 404 page 1`] = `
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/welcome\\">Welcome</a></span></li>
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/beliefs\\">Beliefs</a></span></li>
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/staff\\">Staff</a></span></li>
-              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Mainline Site</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Main Line Site</a></span></li>
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a></span></li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/familygroup\\">Family Groups</a>
@@ -145,7 +145,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                     <a href=\\"/welcome\\">Welcome</a>
                     <a href=\\"/beliefs\\">Beliefs</a>
                     <a href=\\"/staff\\">Staff</a>
-                    <a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Mainline Site</a>
+                    <a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Main Line Site</a>
                     <a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a>
                   </div>
                 </div>
@@ -153,7 +153,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/welcome\\">Welcome</a></span></li>
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/beliefs\\">Beliefs</a></span></li>
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/staff\\">Staff</a></span></li>
-              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Mainline Site</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Main Line Site</a></span></li>
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a></span></li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/familygroup\\">Family Groups</a>
@@ -318,7 +318,7 @@ exports[`Public ServerTest renders Home page 1`] = `
                     <a href=\\"/welcome\\">Welcome</a>
                     <a href=\\"/beliefs\\">Beliefs</a>
                     <a href=\\"/staff\\">Staff</a>
-                    <a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Mainline Site</a>
+                    <a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Main Line Site</a>
                     <a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a>
                   </div>
                 </div>
@@ -326,7 +326,7 @@ exports[`Public ServerTest renders Home page 1`] = `
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/welcome\\">Welcome</a></span></li>
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/beliefs\\">Beliefs</a></span></li>
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/staff\\">Staff</a></span></li>
-              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Mainline Site</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Main Line Site</a></span></li>
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a></span></li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/familygroup\\">Family Groups</a>
@@ -566,7 +566,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
                     <a href=\\"/welcome\\">Welcome</a>
                     <a href=\\"/beliefs\\">Beliefs</a>
                     <a href=\\"/staff\\">Staff</a>
-                    <a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Mainline Site</a>
+                    <a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Main Line Site</a>
                     <a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a>
                   </div>
                 </div>
@@ -574,7 +574,7 @@ exports[`Public ServerTest renders Welcome page 1`] = `
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/welcome\\">Welcome</a></span></li>
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/beliefs\\">Beliefs</a></span></li>
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"/staff\\">Staff</a></span></li>
-              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Mainline Site</a></span></li>
+              <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://ml.gracecovenant.net/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">Main Line Site</a></span></li>
               <li class=\\"nav-item\\"><span class=\\"nav-link Navbar__nav-link Navbar__aboutLink\\"><a href=\\"http://amichurches.com/\\" target=\\"_blank\\" rel=\\"noopener noreferrer\\">AMI</a></span></li>
               <li class=\\"nav-item\\">
                 <a class=\\"nav-link Navbar__nav-link undefined\\" href=\\"/familygroup\\">Family Groups</a>
