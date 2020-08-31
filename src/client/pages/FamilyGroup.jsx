@@ -1,13 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 
-import withTitle from "../hoc/withTitle";
-import TitleBanner from "../components/TitleBanner";
-import Center from "../components/Center";
-import Lora from "../components/Lora";
+import withTitle from '../hoc/withTitle';
+import TitleBanner from '../components/TitleBanner';
+import Center from '../components/Center';
+import Lora from '../components/Lora';
 
-import styles from "./FamilyGroup.css";
+import styles from './FamilyGroup.css';
 
 const FamilyGroupRow = props => (
   <div className={styles.tableRow}>
@@ -36,7 +36,7 @@ FamilyGroupRow.propTypes = {
   days: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   signupLink: PropTypes.string.isRequired,
-  src: PropTypes.string.isRequired
+  src: PropTypes.string.isRequired,
 };
 
 const FamilyGroup = () => (
@@ -56,7 +56,7 @@ const FamilyGroup = () => (
     <div className={styles.pageContent}>
       <p className={styles.description}>
         {
-          "At GCC we place a high emphasis on family groups because we believe that it is in these smaller settings that we are able to meet with God, building meaningful relationships, and develop biblical accountability. Family groups meet on a weekly basis at various places."
+          'At GCC we place a high emphasis on family groups because we believe that it is in these smaller settings that we are able to meet with God, building meaningful relationships, and develop biblical accountability. Family groups meet on a weekly basis at various places.'
         }
       </p>
 
@@ -73,7 +73,7 @@ const FamilyGroup = () => (
 
       <div className={styles.description}>
         {
-          "Through Bible study, discussions, sharing, prayer, and hangouts, we learn together to live out the teachings of God’s Word in our daily lives. Join us!"
+          'Through Bible study, discussions, sharing, prayer, and hangouts, we learn together to live out the teachings of God’s Word in our daily lives. Join us!'
         }
       </div>
 
@@ -98,6 +98,6 @@ const FamilyGroup = () => (
   </div>
 );
 
-const FamilyGroupPage = withTitle("Family Group")(FamilyGroup);
+const FamilyGroupPage = withTitle('Family Group')(FamilyGroup);
 
 export default FamilyGroupPage;
