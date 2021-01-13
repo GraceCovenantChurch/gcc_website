@@ -440,8 +440,8 @@ class Home extends Component {
                 <div className={styles.subtitle}>
                   GCC Reading Plan
                   <br />
-                  <a href="https://drive.google.com/file/d/0B0tvne167dF0YUlXbDJzdUcwSUh2c0JyOTFheU5EbEQwelFJ/view">
-                    5x5x5 New Testament Reading Plan
+                  <a href="https://drive.google.com/file/d/1WlAnsToU4EI6bjMKcAaY_WeOag0bi8tJ/view?usp=sharing">
+                    GCC Bible Reading Plan 2021
                   </a>
                 </div>
               </td>
