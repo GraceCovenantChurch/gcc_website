@@ -83,7 +83,7 @@ const FamilyGroup = () => (
           title="College Ministry: Harvest"
           days="Mondays through Thursdays"
           description="Our college family groups meet once a week at Drexel University, the University of Pennsylvania, Temple University, Moore College of Art & Design, and the University of the Sciences."
-          signupLink="https://forms.gle/47ghfb9Q9fhXa38c8"
+          signupLink="https://docs.google.com/forms/d/e/1FAIpQLSffWPkVrEFrw-3TzXfdP_dDimokS7lcJ6fLgqfpZZ649-4kpQ/viewform"
         />
 
         <FamilyGroupRow

@@ -207,7 +207,7 @@ exports[`Public ServerTest renders Family Group page 1`] = `
                       </div>
                       <div class=\\"FamilyGroup__rowDescription\\">Our college family groups meet once a week at Drexel University, the University of Pennsylvania, Temple University, Moore College of Art &amp; Design, and the University of the Sciences.</div>
                       <div class=\\"FamilyGroup__rowSignup\\">
-                        <a class=\\"FamilyGroup__link\\" href=\\"https://forms.gle/47ghfb9Q9fhXa38c8\\">
+                        <a class=\\"FamilyGroup__link\\" href=\\"https://docs.google.com/forms/d/e/1FAIpQLSffWPkVrEFrw-3TzXfdP_dDimokS7lcJ6fLgqfpZZ649-4kpQ/viewform\\">
                           <p class=\\"Lora__lora\\">Sign up here &gt;</p>
                         </a>
                       </div>
